@@ -14,17 +14,17 @@ stbi_write_png_compression_level DD 08H
 stbi_write_force_png_filter DD 0ffffffffH
 _DATA	ENDS
 CONST	SEGMENT
-$SG81948 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG81949 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
-$SG8280	DB	00H
-$SG86965 DB	00H
-$SG81999 DB	'rb', 00H
+$SG8281	DB	00H
+$SG86966 DB	00H
+$SG82000 DB	'rb', 00H
 	ORG $+5
-$SG81949 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
+$SG81950 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
 	DB	's', 00H, '_', 00H, 'p', 00H, 'e', 00H, 'r', 00H, '_', 00H, 'c'
 	DB	00H, 'h', 00H, 'a', 00H, 'n', 00H, 'n', 00H, 'e', 00H, 'l', 00H
 	DB	' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '8', 00H, ' ', 00H, '|'
@@ -34,16 +34,16 @@ $SG81949 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
 	DB	'e', 00H, 'l', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '1'
 	DB	00H, '6', 00H, 00H, 00H
 	ORG $+4
-$SG81968 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG81969 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82036 DB	'rb', 00H
+$SG82037 DB	'rb', 00H
 	ORG $+5
-$SG81969 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
+$SG81970 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
 	DB	's', 00H, '_', 00H, 'p', 00H, 'e', 00H, 'r', 00H, '_', 00H, 'c'
 	DB	00H, 'h', 00H, 'a', 00H, 'n', 00H, 'n', 00H, 'e', 00H, 'l', 00H
 	DB	' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '8', 00H, ' ', 00H, '|'
@@ -52,80 +52,80 @@ $SG81969 DB	'r', 00H, 'i', 00H, '.', 00H, 'b', 00H, 'i', 00H, 't', 00H
 	DB	00H, '_', 00H, 'c', 00H, 'h', 00H, 'a', 00H, 'n', 00H, 'n', 00H
 	DB	'e', 00H, 'l', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '1'
 	DB	00H, '6', 00H, 00H, 00H
-$SG8294	DB	00H, 00H
+$SG8295	DB	00H, 00H
 	ORG $+2
-$SG82001 DB	'can''t fopen', 00H
-$SG82137 DB	'rb', 00H
+$SG82002 DB	'can''t fopen', 00H
+$SG82138 DB	'rb', 00H
 	ORG $+1
-$SG82038 DB	'can''t fopen', 00H
-$SG82158 DB	'rb', 00H
+$SG82039 DB	'can''t fopen', 00H
+$SG82159 DB	'rb', 00H
 	ORG $+1
-$SG82106 DB	'unknown image type', 00H
+$SG82107 DB	'unknown image type', 00H
 	ORG $+1
-$SG82340 DB	'0', 00H, 00H, 00H
-$SG82139 DB	'can''t fopen', 00H
-$SG82432 DB	'0', 00H, 00H, 00H
-$SG82638 DB	'bad code lengths', 00H
+$SG82341 DB	'0', 00H, 00H, 00H
+$SG82140 DB	'can''t fopen', 00H
+$SG82433 DB	'0', 00H, 00H, 00H
+$SG82639 DB	'bad code lengths', 00H
 	ORG $+7
-$SG82322 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG82323 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82323 DB	'r', 00H, 'e', 00H, 'q', 00H, '_', 00H, 'c', 00H, 'o', 00H
+$SG82324 DB	'r', 00H, 'e', 00H, 'q', 00H, '_', 00H, 'c', 00H, 'o', 00H
 	DB	'm', 00H, 'p', 00H, ' ', 00H, '>', 00H, '=', 00H, ' ', 00H, '1'
 	DB	00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, 'r', 00H, 'e', 00H
 	DB	'q', 00H, '_', 00H, 'c', 00H, 'o', 00H, 'm', 00H, 'p', 00H, ' '
 	DB	00H, '<', 00H, '=', 00H, ' ', 00H, '4', 00H, 00H, 00H
 	ORG $+2
-$SG82325 DB	'outofmem', 00H
+$SG82326 DB	'outofmem', 00H
 	ORG $+7
-$SG82341 DB	'unsupported', 00H
-$SG84204 DB	'bad H', 00H
+$SG82342 DB	'unsupported', 00H
+$SG84205 DB	'bad H', 00H
 	ORG $+6
-$SG82339 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG82340 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82742 DB	'bad huffman code', 00H
+$SG82743 DB	'bad huffman code', 00H
 	ORG $+7
-$SG82414 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG82415 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82415 DB	'r', 00H, 'e', 00H, 'q', 00H, '_', 00H, 'c', 00H, 'o', 00H
+$SG82416 DB	'r', 00H, 'e', 00H, 'q', 00H, '_', 00H, 'c', 00H, 'o', 00H
 	DB	'm', 00H, 'p', 00H, ' ', 00H, '>', 00H, '=', 00H, ' ', 00H, '1'
 	DB	00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, 'r', 00H, 'e', 00H
 	DB	'q', 00H, '_', 00H, 'c', 00H, 'o', 00H, 'm', 00H, 'p', 00H, ' '
 	DB	00H, '<', 00H, '=', 00H, ' ', 00H, '4', 00H, 00H, 00H
 	ORG $+2
-$SG82417 DB	'outofmem', 00H
+$SG82418 DB	'outofmem', 00H
 	ORG $+7
-$SG82433 DB	'unsupported', 00H
-$SG84207 DB	'bad V', 00H
+$SG82434 DB	'unsupported', 00H
+$SG84208 DB	'bad V', 00H
 	ORG $+6
-$SG82431 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG82432 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82460 DB	'outofmem', 00H
+$SG82461 DB	'outofmem', 00H
 	ORG $+3
-$SG84209 DB	'bad TQ', 00H
+$SG84210 DB	'bad TQ', 00H
 	ORG $+1
-$SG10864 DB	'%f', 00H
+$SG10865 DB	'%f', 00H
 	ORG $+1
-$SG82492 DB	'outofmem', 00H
+$SG82493 DB	'outofmem', 00H
 	ORG $+7
 ?stbi__bmask@@3QBIB DD 00H				; stbi__bmask
 	DD	01H
@@ -144,18 +144,18 @@ $SG82492 DB	'outofmem', 00H
 	DD	03fffH
 	DD	07fffH
 	DD	0ffffH
-$SG84216 DB	'bad H', 00H
+$SG84217 DB	'bad H', 00H
 	ORG $+6
-$SG82693 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG82694 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG82747 DB	'bad huffman code', 00H
+$SG82748 DB	'bad huffman code', 00H
 	ORG $+7
-$SG82694 DB	'(', 00H, '(', 00H, '(', 00H, 'j', 00H, '-', 00H, '>', 00H
+$SG82695 DB	'(', 00H, '(', 00H, '(', 00H, 'j', 00H, '-', 00H, '>', 00H
 	DB	'c', 00H, 'o', 00H, 'd', 00H, 'e', 00H, '_', 00H, 'b', 00H, 'u'
 	DB	00H, 'f', 00H, 'f', 00H, 'e', 00H, 'r', 00H, ')', 00H, ' ', 00H
 	DB	'>', 00H, '>', 00H, ' ', 00H, '(', 00H, '3', 00H, '2', 00H, ' '
@@ -168,7 +168,7 @@ $SG82694 DB	'(', 00H, '(', 00H, '(', 00H, 'j', 00H, '-', 00H, '>', 00H
 	DB	00H, ']', 00H, ')', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H
 	DB	'h', 00H, '-', 00H, '>', 00H, 'c', 00H, 'o', 00H, 'd', 00H, 'e'
 	DB	00H, '[', 00H, 'c', 00H, ']', 00H, 00H, 00H
-$SG84218 DB	'bad V', 00H
+$SG84219 DB	'bad V', 00H
 	ORG $+6
 ?stbi__jbias@@3QBHB DD 00H				; stbi__jbias
 	DD	0ffffffffH
@@ -266,204 +266,204 @@ $SG84218 DB	'bad V', 00H
 	DB	03fH
 	DB	03fH
 	ORG $+1
-$SG82763 DB	'can''t merge dc and ac', 00H
+$SG82764 DB	'can''t merge dc and ac', 00H
 	ORG $+2
-$SG82769 DB	'can''t merge dc and ac', 00H
+$SG82770 DB	'can''t merge dc and ac', 00H
 	ORG $+2
-$SG82806 DB	'can''t merge dc and ac', 00H
+$SG82807 DB	'can''t merge dc and ac', 00H
 	ORG $+2
-$SG82814 DB	'bad huffman code', 00H
+$SG82815 DB	'bad huffman code', 00H
 	ORG $+3
-$SG84234 DB	'no SOI', 00H
+$SG84235 DB	'no SOI', 00H
 	ORG $+1
-$SG10868 DB	'%s', 00H
+$SG10869 DB	'%s', 00H
 	ORG $+1
-$SG82827 DB	'bad huffman code', 00H
+$SG82828 DB	'bad huffman code', 00H
 	ORG $+3
-$SG84238 DB	'no SOF', 00H
+$SG84239 DB	'no SOF', 00H
 	ORG $+1
-$SG87390 DB	'-Y ', 00H
-$SG82834 DB	'bad huffman code', 00H
+$SG87391 DB	'-Y ', 00H
+$SG82835 DB	'bad huffman code', 00H
 	ORG $+3
-$SG87382 DB	'#?RGBE', 00H
+$SG87383 DB	'#?RGBE', 00H
 	ORG $+1
-$SG87393 DB	'+X ', 00H
-$SG9513	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG87394 DB	'+X ', 00H
+$SG9514	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG9514	DB	'V <= ((unsigned __int64)(0x000000000000000F))', 00H
+$SG9515	DB	'V <= ((unsigned __int64)(0x000000000000000F))', 00H
 	ORG $+2
-$SG9515	DB	'safe_cast_u4', 00H
+$SG9516	DB	'safe_cast_u4', 00H
 	ORG $+3
-$SG9516	DB	'W:\cpp\void\dr/pack.h', 00H
+$SG9517	DB	'W:\cpp\void\dr/pack.h', 00H
 	ORG $+2
-$SG9523	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG9524	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG9524	DB	'V <= ((unsigned __int64)(0x00000000000000FF))', 00H
+$SG9525	DB	'V <= ((unsigned __int64)(0x00000000000000FF))', 00H
 	ORG $+2
-$SG9525	DB	'safe_cast_u8', 00H
+$SG9526	DB	'safe_cast_u8', 00H
 	ORG $+3
-$SG9526	DB	'W:\cpp\void\dr/pack.h', 00H
+$SG9527	DB	'W:\cpp\void\dr/pack.h', 00H
 	ORG $+2
-$SG9533	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG9534	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG9534	DB	'V <= ((unsigned __int64)(0x000000000000FFFF))', 00H
+$SG9535	DB	'V <= ((unsigned __int64)(0x000000000000FFFF))', 00H
 	ORG $+2
-$SG9535	DB	'safe_cast_u16', 00H
+$SG9536	DB	'safe_cast_u16', 00H
 	ORG $+2
-$SG9536	DB	'W:\cpp\void\dr/pack.h', 00H
+$SG9537	DB	'W:\cpp\void\dr/pack.h', 00H
 	ORG $+2
-$SG9543	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG9544	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG9544	DB	'V <= ((unsigned __int64)(0x00000000FFFFFFFF))', 00H
+$SG9545	DB	'V <= ((unsigned __int64)(0x00000000FFFFFFFF))', 00H
 	ORG $+2
-$SG9545	DB	'safe_cast_u32', 00H
+$SG9546	DB	'safe_cast_u32', 00H
 	ORG $+2
-$SG9546	DB	'W:\cpp\void\dr/pack.h', 00H
+$SG9547	DB	'W:\cpp\void\dr/pack.h', 00H
 	ORG $+2
-$SG9553	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG9554	DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG9554	DB	'V <= ((unsigned __int64)(0xFFFFFFFFFFFFFFFF))', 00H
+$SG9555	DB	'V <= ((unsigned __int64)(0xFFFFFFFFFFFFFFFF))', 00H
 	ORG $+2
-$SG9555	DB	'safe_cast_u64', 00H
+$SG9556	DB	'safe_cast_u64', 00H
 	ORG $+2
-$SG9556	DB	'W:\cpp\void\dr/pack.h', 00H
+$SG9557	DB	'W:\cpp\void\dr/pack.h', 00H
 	ORG $+2
-$SG84068 DB	'expected marker', 00H
-$SG84071 DB	'bad DRI len', 00H
-$SG87448 DB	'-Y ', 00H
-$SG84074 DB	'bad DQT type', 00H
+$SG84069 DB	'expected marker', 00H
+$SG84072 DB	'bad DRI len', 00H
+$SG87449 DB	'-Y ', 00H
+$SG84075 DB	'bad DQT type', 00H
 	ORG $+3
-$SG84076 DB	'bad DQT table', 00H
+$SG84077 DB	'bad DQT table', 00H
 	ORG $+2
-$SG84080 DB	'bad DHT header', 00H
+$SG84081 DB	'bad DHT header', 00H
 	ORG $+1
-$SG84092 DB	'bad COM len', 00H
-$SG87450 DB	'+X ', 00H
-$SG84093 DB	'bad APP len', 00H
-$SG87650 DB	'rb', 00H
+$SG84093 DB	'bad COM len', 00H
+$SG87451 DB	'+X ', 00H
+$SG84094 DB	'bad APP len', 00H
+$SG87651 DB	'rb', 00H
 	ORG $+1
-$SG84101 DB	'unknown marker', 00H
+$SG84102 DB	'unknown marker', 00H
 	ORG $+1
-$SG84120 DB	'bad SOS component count', 00H
-$SG84122 DB	'bad SOS len', 00H
-$SG87667 DB	'rb', 00H
+$SG84121 DB	'bad SOS component count', 00H
+$SG84123 DB	'bad SOS len', 00H
+$SG87668 DB	'rb', 00H
 	ORG $+1
-$SG84126 DB	'bad DC huff', 00H
-$SG87830 DB	'wb', 00H
+$SG84127 DB	'bad DC huff', 00H
+$SG87831 DB	'wb', 00H
 	ORG $+1
-$SG84128 DB	'bad AC huff', 00H
-$SG87896 DB	'0', 00H, 00H, 00H
-$SG84133 DB	'bad SOS', 00H
-$SG84135 DB	'bad SOS', 00H
-$SG84138 DB	'bad SOS', 00H
-$SG84186 DB	'bad SOF len', 00H
-$SG88272 DB	'p', 00H, 00H, 00H
-$SG84188 DB	'only 8-bit', 00H
+$SG84129 DB	'bad AC huff', 00H
+$SG87897 DB	'0', 00H, 00H, 00H
+$SG84134 DB	'bad SOS', 00H
+$SG84136 DB	'bad SOS', 00H
+$SG84139 DB	'bad SOS', 00H
+$SG84187 DB	'bad SOF len', 00H
+$SG88273 DB	'p', 00H, 00H, 00H
+$SG84189 DB	'only 8-bit', 00H
 	ORG $+1
-$SG80336 DB	'C:', 00H
+$SG80337 DB	'C:', 00H
 	ORG $+1
-$SG84190 DB	'no header height', 00H
+$SG84191 DB	'no header height', 00H
 	ORG $+3
-$SG79741 DB	'%', 00H, 's', 00H, 00H, 00H
+$SG79742 DB	'%', 00H, 's', 00H, 00H, 00H
 	ORG $+2
-$SG80362 DB	'*', 00H
+$SG80363 DB	'*', 00H
 	ORG $+2
-$SG84192 DB	'0 width', 00H
-$SG84194 DB	'too large', 00H
+$SG84193 DB	'0 width', 00H
+$SG84195 DB	'too large', 00H
 	ORG $+2
-$SG88726 DB	'wb', 00H
+$SG88727 DB	'wb', 00H
 	ORG $+1
-$SG84196 DB	'too large', 00H
+$SG84197 DB	'too large', 00H
 	ORG $+2
-$SG80611 DB	'DEVICE', 00H
+$SG80612 DB	'DEVICE', 00H
 	ORG $+1
-$SG80646 DB	'%s,', 00H
-$SG84198 DB	'bad component count', 00H
+$SG80647 DB	'%s,', 00H
+$SG84199 DB	'bad component count', 00H
 	ORG $+4
-$SG84200 DB	'bad SOF len', 00H
+$SG84201 DB	'bad SOF len', 00H
 	ORG $+4
-$SG10483 DB	'u', 00H, 's', 00H, 'i', 00H, 'n', 00H, 'g', 00H, ' ', 00H
+$SG10484 DB	'u', 00H, 's', 00H, 'i', 00H, 'n', 00H, 'g', 00H, ' ', 00H
 	DB	'd', 00H, 'e', 00H, 'p', 00H, 'r', 00H, 'e', 00H, 'c', 00H, 'a'
 	DB	00H, 't', 00H, 'e', 00H, 'd', 00H, ' ', 00H, 'o', 00H, 'p', 00H
 	DB	'e', 00H, 'r', 00H, 'a', 00H, 't', 00H, 'o', 00H, 'r', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG84212 DB	'too large', 00H
+$SG84213 DB	'too large', 00H
 	ORG $+6
-$SG10484 DB	'operator *', 00H
+$SG10485 DB	'operator *', 00H
 	ORG $+5
-$SG10485 DB	'W:\cpp\void\dr/wide.c', 00H
+$SG10486 DB	'W:\cpp\void\dr/wide.c', 00H
 	ORG $+2
-$SG84220 DB	'outofmem', 00H
+$SG84221 DB	'outofmem', 00H
 	ORG $+7
-$SG84223 DB	'outofmem', 00H
+$SG84224 DB	'outofmem', 00H
 	ORG $+7
-$SG84264 DB	'bad DNL len', 00H
+$SG84265 DB	'bad DNL len', 00H
 	ORG $+4
-$SG84266 DB	'bad DNL height', 00H
+$SG84267 DB	'bad DNL height', 00H
 	ORG $+1
-$SG10711 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG10712 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG10712 DB	'invalid aspect ratio!', 00H
+$SG10713 DB	'invalid aspect ratio!', 00H
 	ORG $+2
-$SG10713 DB	'AspectRatio != 0 && "invalid aspect ratio!"', 00H
+$SG10714 DB	'AspectRatio != 0 && "invalid aspect ratio!"', 00H
 	ORG $+4
-$SG10714 DB	'MatrixP', 00H
-$SG10715 DB	'W:\cpp\void\dr/wide.c', 00H
+$SG10715 DB	'MatrixP', 00H
+$SG10716 DB	'W:\cpp\void\dr/wide.c', 00H
 	ORG $+2
-$SG10866 DB	'%lli', 00H
+$SG10867 DB	'%lli', 00H
 	ORG $+3
-$SG10870 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG10871 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG10871 DB	'Unsupported Format Specifier!', 00H
+$SG10872 DB	'Unsupported Format Specifier!', 00H
 	ORG $+2
-$SG10872 DB	'! "Unsupported Format Specifier!"', 00H
+$SG10873 DB	'! "Unsupported Format Specifier!"', 00H
 	ORG $+6
-$SG10873 DB	'rx__printf', 00H
+$SG10874 DB	'rx__printf', 00H
 	ORG $+5
-$SG10874 DB	'W:\cpp\void\dr/text.c', 00H
+$SG10875 DB	'W:\cpp\void\dr/text.c', 00H
 	ORG $+2
-$SG84771 DB	'bad req_comp', 00H
+$SG84772 DB	'bad req_comp', 00H
 	ORG $+3
-$SG84777 DB	'outofmem', 00H
+$SG84778 DB	'outofmem', 00H
 	ORG $+7
-$SG84787 DB	'outofmem', 00H
+$SG84788 DB	'outofmem', 00H
 	ORG $+7
-$SG84829 DB	'outofmem', 00H
+$SG84830 DB	'outofmem', 00H
 	ORG $+7
-$SG84838 DB	'outofmem', 00H
+$SG84839 DB	'outofmem', 00H
 	ORG $+7
-$SG84860 DB	'outofmem', 00H
+$SG84861 DB	'outofmem', 00H
 	ORG $+7
-$SG84888 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG84889 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG84889 DB	'b', 00H, 'i', 00H, 't', 00H, 's', 00H, ' ', 00H, '<', 00H
+$SG84890 DB	'b', 00H, 'i', 00H, 't', 00H, 's', 00H, ' ', 00H, '<', 00H
 	DB	'=', 00H, ' ', 00H, '1', 00H, '6', 00H, 00H, 00H
 	ORG $+2
-$SG84924 DB	'bad sizes', 00H
+$SG84925 DB	'bad sizes', 00H
 	ORG $+6
-$SG84927 DB	'bad codelengths', 00H
-$SG85012 DB	'output buffer limit', 00H
+$SG84928 DB	'bad codelengths', 00H
+$SG85013 DB	'output buffer limit', 00H
 	ORG $+4
-$SG85014 DB	'outofmem', 00H
+$SG85015 DB	'outofmem', 00H
 	ORG $+7
-$SG85016 DB	'outofmem', 00H
+$SG85017 DB	'outofmem', 00H
 	ORG $+7
-$SG85018 DB	'outofmem', 00H
+$SG85019 DB	'outofmem', 00H
 	ORG $+7
-$SG85046 DB	'bad huffman code', 00H
+$SG85047 DB	'bad huffman code', 00H
 	ORG $+7
 ?stbi__zlength_base@@3QBHB DD 03H			; stbi__zlength_base
 	DD	04H
@@ -592,26 +592,26 @@ $SG85046 DB	'bad huffman code', 00H
 	DD	0dH
 	DD	0dH
 	ORG $+8
-$SG85052 DB	'bad huffman code', 00H
+$SG85053 DB	'bad huffman code', 00H
 	ORG $+7
-$SG85055 DB	'bad dist', 00H
+$SG85056 DB	'bad dist', 00H
 	ORG $+7
-$SG85089 DB	'bad codelengths', 00H
-$SG85095 DB	'bad codelengths', 00H
-$SG85100 DB	'bad codelengths', 00H
-$SG85102 DB	'bad codelengths', 00H
-$SG85104 DB	'bad codelengths', 00H
-$SG85121 DB	'zlib corrupt', 00H
+$SG85090 DB	'bad codelengths', 00H
+$SG85096 DB	'bad codelengths', 00H
+$SG85101 DB	'bad codelengths', 00H
+$SG85103 DB	'bad codelengths', 00H
+$SG85105 DB	'bad codelengths', 00H
+$SG85122 DB	'zlib corrupt', 00H
 	ORG $+3
-$SG85123 DB	'zlib corrupt', 00H
+$SG85124 DB	'zlib corrupt', 00H
 	ORG $+3
-$SG85125 DB	'read past buffer', 00H
+$SG85126 DB	'read past buffer', 00H
 	ORG $+7
-$SG85135 DB	'bad zlib header', 00H
-$SG85137 DB	'bad zlib header', 00H
-$SG85139 DB	'no preset dict', 00H
+$SG85136 DB	'bad zlib header', 00H
+$SG85138 DB	'bad zlib header', 00H
+$SG85140 DB	'no preset dict', 00H
 	ORG $+1
-$SG85141 DB	'bad compression', 00H
+$SG85142 DB	'bad compression', 00H
 ?stbi__zdefault_length@@3QBEB DB 08H			; stbi__zdefault_length
 	DB	08H
 	DB	08H
@@ -932,7 +932,7 @@ $SG85141 DB	'bad compression', 00H
 	DB	05H
 	DB	05H
 	DB	05H
-$SG85278 DB	'bad png sig', 00H
+$SG85279 DB	'bad png sig', 00H
 	ORG $+4
 ?stbi__depth_scale_table@@3QBEB DB 00H			; stbi__depth_scale_table
 	DB	0ffH
@@ -944,16 +944,16 @@ $SG85278 DB	'bad png sig', 00H
 	DB	00H
 	DB	01H
 	ORG $+7
-$SG85468 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85469 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85475 DB	'not enough pixels', 00H
+$SG85476 DB	'not enough pixels', 00H
 	ORG $+6
-$SG85469 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
+$SG85470 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
 	DB	'=', 00H, '=', 00H, ' ', 00H, 's', 00H, '-', 00H, '>', 00H, 'i'
 	DB	00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, ' ', 00H, '|', 00H
 	DB	'|', 00H, ' ', 00H, 'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n'
@@ -961,349 +961,349 @@ $SG85469 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
 	DB	'>', 00H, 'i', 00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, '+'
 	DB	00H, '1', 00H, 00H, 00H
 	ORG $+6
-$SG85471 DB	'outofmem', 00H
+$SG85472 DB	'outofmem', 00H
 	ORG $+7
-$SG85473 DB	'too large', 00H
+$SG85474 DB	'too large', 00H
 	ORG $+6
-$SG85477 DB	'invalid filter', 00H
+$SG85478 DB	'invalid filter', 00H
 	ORG $+1
-$SG85480 DB	'invalid width', 00H
+$SG85481 DB	'invalid width', 00H
 	ORG $+2
-$SG85506 DB	'i', 00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, '+', 00H
+$SG85507 DB	'i', 00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, '+', 00H
 	DB	'1', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, 'o', 00H, 'u'
 	DB	00H, 't', 00H, '_', 00H, 'n', 00H, 00H, 00H
 	ORG $+6
-$SG85505 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85506 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85537 DB	'i', 00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, ' ', 00H
+$SG85538 DB	'i', 00H, 'm', 00H, 'g', 00H, '_', 00H, 'n', 00H, ' ', 00H
 	DB	'=', 00H, '=', 00H, ' ', 00H, '3', 00H, 00H, 00H
 	ORG $+2
-$SG85536 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85537 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85575 DB	'outofmem', 00H
+$SG85576 DB	'outofmem', 00H
 	ORG $+7
-$SG85596 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
+$SG85597 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
 	DB	'=', 00H, '=', 00H, ' ', 00H, '2', 00H, ' ', 00H, '|', 00H, '|'
 	DB	00H, ' ', 00H, 'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H
 	DB	' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '4', 00H, 00H, 00H
 	ORG $+6
-$SG85595 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85596 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85619 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
+$SG85620 DB	'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' ', 00H
 	DB	'=', 00H, '=', 00H, ' ', 00H, '2', 00H, ' ', 00H, '|', 00H, '|'
 	DB	00H, ' ', 00H, 'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H
 	DB	' ', 00H, '=', 00H, '=', 00H, ' ', 00H, '4', 00H, 00H, 00H
 	ORG $+6
-$SG85618 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85619 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85645 DB	'outofmem', 00H
+$SG85646 DB	'outofmem', 00H
 	ORG $+7
-$SG85692 DB	's', 00H, '-', 00H, '>', 00H, 'i', 00H, 'm', 00H, 'g', 00H
+$SG85693 DB	's', 00H, '-', 00H, '>', 00H, 'i', 00H, 'm', 00H, 'g', 00H
 	DB	'_', 00H, 'o', 00H, 'u', 00H, 't', 00H, '_', 00H, 'n', 00H, ' '
 	DB	00H, '=', 00H, '=', 00H, ' ', 00H, '4', 00H, 00H, 00H
 	ORG $+4
-$SG85691 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85692 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85789 DB	'multiple IHDR', 00H
+$SG85790 DB	'multiple IHDR', 00H
 	ORG $+2
-$SG85791 DB	'bad IHDR len', 00H
+$SG85792 DB	'bad IHDR len', 00H
 	ORG $+3
-$SG85793 DB	'too large', 00H
+$SG85794 DB	'too large', 00H
 	ORG $+6
-$SG85795 DB	'too large', 00H
+$SG85796 DB	'too large', 00H
 	ORG $+6
-$SG85797 DB	'1/2/4/8/16-bit only', 00H
+$SG85798 DB	'1/2/4/8/16-bit only', 00H
 	ORG $+4
-$SG85799 DB	'bad ctype', 00H
+$SG85800 DB	'bad ctype', 00H
 	ORG $+6
-$SG85801 DB	'bad ctype', 00H
+$SG85802 DB	'bad ctype', 00H
 	ORG $+6
-$SG85805 DB	'bad ctype', 00H
+$SG85806 DB	'bad ctype', 00H
 	ORG $+6
-$SG85807 DB	'bad comp method', 00H
-$SG85809 DB	'bad filter method', 00H
+$SG85808 DB	'bad comp method', 00H
+$SG85810 DB	'bad filter method', 00H
 	ORG $+6
-$SG85811 DB	'bad interlace method', 00H
+$SG85812 DB	'bad interlace method', 00H
 	ORG $+3
-$SG85814 DB	'0-pixel image', 00H
+$SG85815 DB	'0-pixel image', 00H
 	ORG $+2
-$SG85818 DB	'too large', 00H
+$SG85819 DB	'too large', 00H
 	ORG $+6
-$SG85821 DB	'too large', 00H
+$SG85822 DB	'too large', 00H
 	ORG $+6
-$SG85824 DB	'first not IHDR', 00H
+$SG85825 DB	'first not IHDR', 00H
 	ORG $+1
-$SG85826 DB	'invalid PLTE', 00H
+$SG85827 DB	'invalid PLTE', 00H
 	ORG $+3
-$SG85828 DB	'invalid PLTE', 00H
+$SG85829 DB	'invalid PLTE', 00H
 	ORG $+3
-$SG85831 DB	'first not IHDR', 00H
+$SG85832 DB	'first not IHDR', 00H
 	ORG $+1
-$SG85833 DB	'tRNS after IDAT', 00H
-$SG85838 DB	'tRNS before PLTE', 00H
+$SG85834 DB	'tRNS after IDAT', 00H
+$SG85839 DB	'tRNS before PLTE', 00H
 	ORG $+7
-$SG85840 DB	'bad tRNS len', 00H
+$SG85841 DB	'bad tRNS len', 00H
 	ORG $+3
-$SG85842 DB	'tRNS with alpha', 00H
-$SG85844 DB	'bad tRNS len', 00H
+$SG85843 DB	'tRNS with alpha', 00H
+$SG85845 DB	'bad tRNS len', 00H
 	ORG $+3
-$SG85849 DB	'first not IHDR', 00H
+$SG85850 DB	'first not IHDR', 00H
 	ORG $+1
-$SG85851 DB	'no PLTE', 00H
-$SG85857 DB	'outofmem', 00H
+$SG85852 DB	'no PLTE', 00H
+$SG85858 DB	'outofmem', 00H
 	ORG $+7
-$SG85859 DB	'outofdata', 00H
+$SG85860 DB	'outofdata', 00H
 	ORG $+6
-$SG85862 DB	'first not IHDR', 00H
+$SG85863 DB	'first not IHDR', 00H
 	ORG $+1
-$SG85865 DB	'no IDAT', 00H
-$SG85885 DB	'first not IHDR', 00H
+$SG85866 DB	'no IDAT', 00H
+$SG85886 DB	'first not IHDR', 00H
 	ORG $+1
-$SG85904 DB	'bad req_comp', 00H
+$SG85905 DB	'bad req_comp', 00H
 	ORG $+3
-$SG85910 DB	'bad bits_per_channel', 00H
+$SG85911 DB	'bad bits_per_channel', 00H
 	ORG $+3
-$SG85993 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG85994 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85994 DB	'v', 00H, ' ', 00H, '<', 00H, ' ', 00H, '2', 00H, '5', 00H
+$SG85995 DB	'v', 00H, ' ', 00H, '<', 00H, ' ', 00H, '2', 00H, '5', 00H
 	DB	'6', 00H, 00H, 00H
-$SG86061 DB	'not BMP', 00H
-$SG85995 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG86062 DB	'not BMP', 00H
+$SG85996 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG85996 DB	'b', 00H, 'i', 00H, 't', 00H, 's', 00H, ' ', 00H, '>', 00H
+$SG85997 DB	'b', 00H, 'i', 00H, 't', 00H, 's', 00H, ' ', 00H, '>', 00H
 	DB	'=', 00H, ' ', 00H, '0', 00H, ' ', 00H, '&', 00H, '&', 00H, ' '
 	DB	00H, 'b', 00H, 'i', 00H, 't', 00H, 's', 00H, ' ', 00H, '<', 00H
 	DB	'=', 00H, ' ', 00H, '8', 00H, 00H, 00H
 	ORG $+2
-$SG86063 DB	'bad BMP', 00H
-$SG86065 DB	'unknown BMP', 00H
+$SG86064 DB	'bad BMP', 00H
+$SG86066 DB	'unknown BMP', 00H
 	ORG $+4
-$SG86069 DB	'bad BMP', 00H
-$SG86073 DB	'BMP RLE', 00H
-$SG86075 DB	'BMP JPEG/PNG', 00H
+$SG86070 DB	'bad BMP', 00H
+$SG86074 DB	'BMP RLE', 00H
+$SG86076 DB	'BMP JPEG/PNG', 00H
 	ORG $+3
-$SG86077 DB	'bad BMP', 00H
-$SG86089 DB	'bad BMP', 00H
+$SG86078 DB	'bad BMP', 00H
 $SG86090 DB	'bad BMP', 00H
-$SG86092 DB	'bad BMP', 00H
-$SG86214 DB	'too large', 00H
+$SG86091 DB	'bad BMP', 00H
+$SG86093 DB	'bad BMP', 00H
+$SG86215 DB	'too large', 00H
 	ORG $+6
-$SG86216 DB	'too large', 00H
+$SG86217 DB	'too large', 00H
 	ORG $+6
-$SG86223 DB	'bad offset', 00H
+$SG86224 DB	'bad offset', 00H
 	ORG $+5
-$SG86229 DB	'too large', 00H
+$SG86230 DB	'too large', 00H
 	ORG $+6
-$SG86231 DB	'outofmem', 00H
+$SG86232 DB	'outofmem', 00H
 	ORG $+7
-$SG86236 DB	'invalid', 00H
-$SG86244 DB	'bad bpp', 00H
-$SG86265 DB	'bad masks', 00H
+$SG86237 DB	'invalid', 00H
+$SG86245 DB	'bad bpp', 00H
+$SG86266 DB	'bad masks', 00H
 	ORG $+6
-$SG86268 DB	'bad masks', 00H
+$SG86269 DB	'bad masks', 00H
 	ORG $+6
-$SG86456 DB	'too large', 00H
+$SG86457 DB	'too large', 00H
 	ORG $+6
-$SG86458 DB	'too large', 00H
+$SG86459 DB	'too large', 00H
 	ORG $+6
-$SG86463 DB	'bad format', 00H
+$SG86464 DB	'bad format', 00H
 	ORG $+5
-$SG86466 DB	'too large', 00H
+$SG86467 DB	'too large', 00H
 	ORG $+6
-$SG86468 DB	'outofmem', 00H
+$SG86469 DB	'outofmem', 00H
 	ORG $+7
-$SG86473 DB	'bad palette', 00H
+$SG86474 DB	'bad palette', 00H
 	ORG $+4
-$SG86475 DB	'outofmem', 00H
+$SG86476 DB	'outofmem', 00H
 	ORG $+7
-$SG86478 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG86479 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG86479 DB	't', 00H, 'g', 00H, 'a', 00H, '_', 00H, 'c', 00H, 'o', 00H
+$SG86480 DB	't', 00H, 'g', 00H, 'a', 00H, '_', 00H, 'c', 00H, 'o', 00H
 	DB	'm', 00H, 'p', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, 'S'
 	DB	00H, 'T', 00H, 'B', 00H, 'I', 00H, '_', 00H, 'r', 00H, 'g', 00H
 	DB	'b', 00H, 00H, 00H
 	ORG $+6
-$SG86481 DB	'bad palette', 00H
-$SG86691 DB	'S', 080H, 0f6H, '4', 00H
+$SG86482 DB	'bad palette', 00H
+$SG86692 DB	'S', 080H, 0f6H, '4', 00H
 	ORG $+7
-$SG86493 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG86494 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
 	DB	00H, '_', 00H, 'i', 00H, 'm', 00H, 'a', 00H, 'g', 00H, 'e', 00H
 	DB	'.', 00H, 'h', 00H, 00H, 00H
 	ORG $+2
-$SG86494 DB	't', 00H, 'g', 00H, 'a', 00H, '_', 00H, 'c', 00H, 'o', 00H
+$SG86495 DB	't', 00H, 'g', 00H, 'a', 00H, '_', 00H, 'c', 00H, 'o', 00H
 	DB	'm', 00H, 'p', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, 'S'
 	DB	00H, 'T', 00H, 'B', 00H, 'I', 00H, '_', 00H, 'r', 00H, 'g', 00H
 	DB	'b', 00H, 00H, 00H
 	ORG $+6
-$SG86627 DB	'not PSD', 00H
-$SG86629 DB	'wrong version', 00H
+$SG86628 DB	'not PSD', 00H
+$SG86630 DB	'wrong version', 00H
 	ORG $+2
-$SG86632 DB	'wrong channel count', 00H
+$SG86633 DB	'wrong channel count', 00H
 	ORG $+4
-$SG86634 DB	'too large', 00H
+$SG86635 DB	'too large', 00H
 	ORG $+6
-$SG86636 DB	'too large', 00H
+$SG86637 DB	'too large', 00H
 	ORG $+6
-$SG86638 DB	'unsupported bit depth', 00H
+$SG86639 DB	'unsupported bit depth', 00H
 	ORG $+2
-$SG86640 DB	'wrong color format', 00H
+$SG86641 DB	'wrong color format', 00H
 	ORG $+5
-$SG86642 DB	'bad compression', 00H
-$SG86644 DB	'too large', 00H
+$SG86643 DB	'bad compression', 00H
+$SG86645 DB	'too large', 00H
 	ORG $+6
-$SG86648 DB	'outofmem', 00H
+$SG86649 DB	'outofmem', 00H
 	ORG $+7
-$SG86654 DB	'corrupt', 00H
-$SG86693 DB	'PICT', 00H
+$SG86655 DB	'corrupt', 00H
+$SG86694 DB	'PICT', 00H
 	ORG $+3
-$SG86723 DB	'bad file', 00H
+$SG86724 DB	'bad file', 00H
 	ORG $+7
-$SG86805 DB	'bad format', 00H
+$SG86806 DB	'bad format', 00H
 	ORG $+5
-$SG86807 DB	'bad file', 00H
+$SG86808 DB	'bad file', 00H
 	ORG $+7
-$SG86809 DB	'bad format', 00H
+$SG86810 DB	'bad format', 00H
 	ORG $+5
-$SG86811 DB	'bad format', 00H
+$SG86812 DB	'bad format', 00H
 	ORG $+5
-$SG86816 DB	'bad file', 00H
+$SG86817 DB	'bad file', 00H
 	ORG $+7
-$SG86821 DB	'bad file', 00H
+$SG86822 DB	'bad file', 00H
 	ORG $+7
-$SG86827 DB	'bad file', 00H
+$SG86828 DB	'bad file', 00H
 	ORG $+7
-$SG86830 DB	'bad file', 00H
+$SG86831 DB	'bad file', 00H
 	ORG $+7
-$SG86862 DB	'too large', 00H
+$SG86863 DB	'too large', 00H
 	ORG $+6
-$SG86864 DB	'too large', 00H
+$SG86865 DB	'too large', 00H
 	ORG $+6
-$SG86866 DB	'bad file', 00H
+$SG86867 DB	'bad file', 00H
 	ORG $+7
-$SG86868 DB	'too large', 00H
+$SG86869 DB	'too large', 00H
 	ORG $+6
-$SG86870 DB	'outofmem', 00H
+$SG86871 DB	'outofmem', 00H
 	ORG $+7
-$SG86960 DB	'not GIF', 00H
-$SG86962 DB	'not GIF', 00H
-$SG86964 DB	'not GIF', 00H
-$SG86967 DB	'too large', 00H
+$SG86961 DB	'not GIF', 00H
+$SG86963 DB	'not GIF', 00H
+$SG86965 DB	'not GIF', 00H
+$SG86968 DB	'too large', 00H
 	ORG $+6
-$SG86969 DB	'too large', 00H
+$SG86970 DB	'too large', 00H
 	ORG $+6
-$SG86983 DB	'outofmem', 00H
+$SG86984 DB	'outofmem', 00H
 	ORG $+7
-$SG87050 DB	'no clear code', 00H
+$SG87051 DB	'no clear code', 00H
 	ORG $+2
-$SG87054 DB	'too many codes', 00H
+$SG87055 DB	'too many codes', 00H
 	ORG $+1
-$SG87056 DB	'illegal code in raster', 00H
+$SG87057 DB	'illegal code in raster', 00H
 	ORG $+1
-$SG87058 DB	'illegal code in raster', 00H
+$SG87059 DB	'illegal code in raster', 00H
 	ORG $+1
-$SG87115 DB	'too large', 00H
+$SG87116 DB	'too large', 00H
 	ORG $+6
-$SG87118 DB	'outofmem', 00H
+$SG87119 DB	'outofmem', 00H
 	ORG $+7
-$SG87129 DB	'bad Image Descriptor', 00H
+$SG87130 DB	'bad Image Descriptor', 00H
 	ORG $+3
-$SG87137 DB	'missing color table', 00H
+$SG87138 DB	'missing color table', 00H
 	ORG $+4
-$SG87151 DB	'unknown code', 00H
+$SG87152 DB	'unknown code', 00H
 	ORG $+3
-$SG87161 DB	'outofmem', 00H
+$SG87162 DB	'outofmem', 00H
 	ORG $+7
-$SG87215 DB	'not GIF', 00H
-$SG87252 DB	'#?RADIANCE', 0aH, 00H
+$SG87216 DB	'not GIF', 00H
+$SG87253 DB	'#?RADIANCE', 0aH, 00H
 	ORG $+4
-$SG87254 DB	'#?RGBE', 0aH, 00H
-$SG87381 DB	'#?RADIANCE', 00H
+$SG87255 DB	'#?RGBE', 0aH, 00H
+$SG87382 DB	'#?RADIANCE', 00H
 	ORG $+5
-$SG87383 DB	'not HDR', 00H
-$SG87386 DB	'FORMAT=32-bit_rle_rgbe', 00H
+$SG87384 DB	'not HDR', 00H
+$SG87387 DB	'FORMAT=32-bit_rle_rgbe', 00H
 	ORG $+1
-$SG87388 DB	'unsupported format', 00H
+$SG87389 DB	'unsupported format', 00H
 	ORG $+5
-$SG87391 DB	'unsupported data layout', 00H
-$SG87394 DB	'unsupported data layout', 00H
-$SG87396 DB	'too large', 00H
+$SG87392 DB	'unsupported data layout', 00H
+$SG87395 DB	'unsupported data layout', 00H
+$SG87397 DB	'too large', 00H
 	ORG $+6
-$SG87398 DB	'too large', 00H
+$SG87399 DB	'too large', 00H
 	ORG $+6
-$SG87402 DB	'too large', 00H
+$SG87403 DB	'too large', 00H
 	ORG $+6
-$SG87404 DB	'outofmem', 00H
+$SG87405 DB	'outofmem', 00H
 	ORG $+7
-$SG87411 DB	'invalid decoded scanline length', 00H
-$SG87414 DB	'outofmem', 00H
+$SG87412 DB	'invalid decoded scanline length', 00H
+$SG87415 DB	'outofmem', 00H
 	ORG $+7
-$SG87418 DB	'corrupt', 00H
-$SG87420 DB	'corrupt', 00H
-$SG87445 DB	'FORMAT=32-bit_rle_rgbe', 00H
+$SG87419 DB	'corrupt', 00H
+$SG87421 DB	'corrupt', 00H
+$SG87446 DB	'FORMAT=32-bit_rle_rgbe', 00H
 	ORG $+1
-$SG87514 DB	'S', 080H, 0f6H, '4', 00H
+$SG87515 DB	'S', 080H, 0f6H, '4', 00H
 	ORG $+3
-$SG87553 DB	'too large', 00H
+$SG87554 DB	'too large', 00H
 	ORG $+6
-$SG87555 DB	'too large', 00H
+$SG87556 DB	'too large', 00H
 	ORG $+6
-$SG87558 DB	'too large', 00H
+$SG87559 DB	'too large', 00H
 	ORG $+6
-$SG87560 DB	'outofmem', 00H
+$SG87561 DB	'outofmem', 00H
 	ORG $+7
-$SG87613 DB	'max value > 65535', 00H
+$SG87614 DB	'max value > 65535', 00H
 	ORG $+6
-$SG87635 DB	'unknown image type', 00H
+$SG87636 DB	'unknown image type', 00H
 	ORG $+5
-$SG87652 DB	'can''t fopen', 00H
+$SG87653 DB	'can''t fopen', 00H
 	ORG $+4
-$SG87669 DB	'can''t fopen', 00H
-$SG88699 DB	'IHDR', 00H
+$SG87670 DB	'can''t fopen', 00H
+$SG88700 DB	'IHDR', 00H
 	ORG $+7
-$SG87895 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG87896 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1311,38 +1311,38 @@ $SG87895 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG79706 DB	'[WARNING] write console failed, are you using visual stu'
+$SG79707 DB	'[WARNING] write console failed, are you using visual stu'
 	DB	'dio?', 0aH, 00H
 	ORG $+2
-$SG79712 DB	'[WARNING] write console failed, are you using visual stu'
+$SG79713 DB	'[WARNING] write console failed, are you using visual stu'
 	DB	'dio?', 0aH, 00H
 	ORG $+2
-$SG79737 DB	'%s, %i %s() [%i] %s', 00H
+$SG79738 DB	'%s, %i %s() [%i] %s', 00H
 	ORG $+4
-$SG79738 DB	'Break Handler Invoked', 00H
+$SG79739 DB	'Break Handler Invoked', 00H
 	ORG $+2
-$SG79739 DB	'B', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'k', 00H, ' ', 00H
+$SG79740 DB	'B', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'k', 00H, ' ', 00H
 	DB	'H', 00H, 'a', 00H, 'n', 00H, 'd', 00H, 'l', 00H, 'e', 00H, 'r'
 	DB	00H, ' ', 00H, 'I', 00H, 'n', 00H, 'v', 00H, 'o', 00H, 'k', 00H
 	DB	'e', 00H, 'd', 00H, 00H, 00H
 	ORG $+4
-$SG79740 DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
+$SG79741 DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
 	DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*'
 	DB	00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
 	DB	'*', 00H, '*', 00H, 00H, 00H
 	ORG $+4
-$SG79742 DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
+$SG79743 DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
 	DB	'*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*'
 	DB	00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H, '*', 00H
 	DB	'*', 00H, '*', 00H, 00H, 00H
 	ORG $+4
-$SG79743 DB	'Choose Your Poison', 00H
+$SG79744 DB	'Choose Your Poison', 00H
 	ORG $+5
-$SG79744 DB	'Would You Like To Exit (Abort), Debug (Retry) or Continu'
+$SG79745 DB	'Would You Like To Exit (Abort), Debug (Retry) or Continu'
 	DB	'e (Ignore)?', 00H
-$SG88700 DB	'IHDR', 00H
+$SG88701 DB	'IHDR', 00H
 	ORG $+7
-$SG79759 DB	'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'i', 00H
+$SG79760 DB	'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'i', 00H
 	DB	'd', 00H, ' ', 00H, 'e', 00H, 'r', 00H, 'r', 00H, 'o', 00H, 'r'
 	DB	00H, ' ', 00H, 'c', 00H, 'l', 00H, 'a', 00H, 's', 00H, 's', 00H
 	DB	',', 00H, ' ', 00H, 'e', 00H, 'x', 00H, 'p', 00H, 'e', 00H, 'c'
@@ -1355,11 +1355,11 @@ $SG79759 DB	'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'i', 00H
 	DB	00H, 'S', 00H, 'S', 00H, '_', 00H, 'N', 00H, 'E', 00H, 'T', 00H
 	DB	'W', 00H, 'O', 00H, 'R', 00H, 'K', 00H, '''', 00H, 00H, 00H
 	ORG $+6
-$SG79760 DB	'GetErrorCode', 00H
+$SG79761 DB	'GetErrorCode', 00H
 	ORG $+3
-$SG79761 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79762 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79784 DB	'e', 00H, 'r', 00H, 'r', 00H, 'o', 00H, 'r', 00H, ' ', 00H
+$SG79785 DB	'e', 00H, 'r', 00H, 'r', 00H, 'o', 00H, 'r', 00H, ' ', 00H
 	DB	'c', 00H, 'l', 00H, 'a', 00H, 's', 00H, 's', 00H, ' ', 00H, 'i'
 	DB	00H, 'g', 00H, 'n', 00H, 'o', 00H, 'r', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 'w', 00H, 'h', 00H, 'e', 00H, 'n', 00H, ' ', 00H, 'e'
@@ -1368,10 +1368,10 @@ $SG79784 DB	'e', 00H, 'r', 00H, 'r', 00H, 'o', 00H, 'r', 00H, ' ', 00H
 	DB	00H, 'c', 00H, 'i', 00H, 'f', 00H, 'i', 00H, 'e', 00H, 'd', 00H
 	DB	00H, 00H
 	ORG $+4
-$SG79785 DB	'GetErrorStringA', 00H
-$SG79786 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79786 DB	'GetErrorStringA', 00H
+$SG79787 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79791 DB	'n', 00H, 'o', 00H, ' ', 00H, 'e', 00H, 'r', 00H, 'r', 00H
+$SG79792 DB	'n', 00H, 'o', 00H, ' ', 00H, 'e', 00H, 'r', 00H, 'r', 00H
 	DB	'o', 00H, 'r', 00H, ' ', 00H, 'm', 00H, 'e', 00H, 's', 00H, 's'
 	DB	00H, 'a', 00H, 'g', 00H, 'e', 00H, ',', 00H, ' ', 00H, 'o', 00H
 	DB	'r', 00H, ' ', 00H, 'm', 00H, 'e', 00H, 's', 00H, 's', 00H, 'a'
@@ -1379,46 +1379,46 @@ $SG79791 DB	'n', 00H, 'o', 00H, ' ', 00H, 'e', 00H, 'r', 00H, 'r', 00H
 	DB	' ', 00H, 'l', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 00H
 	DB	00H
 	ORG $+2
-$SG79792 DB	'GetErrorStringA', 00H
-$SG79793 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79793 DB	'GetErrorStringA', 00H
+$SG79794 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79794 DB	'no error message, or message too large', 00H
+$SG79795 DB	'no error message, or message too large', 00H
 	ORG $+1
-$SG79809 DB	'CreateInheritablePipe', 00H
+$SG79810 DB	'CreateInheritablePipe', 00H
 	ORG $+2
-$SG79808 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG79809 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 'T', 00H, 'o', 00H, ' ', 00H, 'S', 00H, 'e', 00H, 't'
 	DB	00H, ' ', 00H, 'H', 00H, 'a', 00H, 'n', 00H, 'd', 00H, 'l', 00H
 	DB	'e', 00H, ' ', 00H, 'I', 00H, 'n', 00H, 'f', 00H, 'o', 00H, 'r'
 	DB	00H, 'm', 00H, 'a', 00H, 't', 00H, 'i', 00H, 'o', 00H, 'n', 00H
 	DB	' ', 00H, '[', 00H, '%', 00H, 's', 00H, ']', 00H, 00H, 00H
 	ORG $+4
-$SG79810 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79811 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG88017 DB	'11 4 22 44 44 22 444444', 00H
-$SG88018 DB	'11 4 22 44 44 22 444444 4444 4 444 444 444 444', 00H
+$SG88018 DB	'11 4 22 44 44 22 444444', 00H
+$SG88019 DB	'11 4 22 44 44 22 444444 4444 4 444 444 444 444', 00H
 	ORG $+1
-$SG79851 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG79852 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 't', 00H, 'o', 00H, ' ', 00H, 'c', 00H, 'r', 00H, 'e'
 	DB	00H, 'a', 00H, 't', 00H, 'e', 00H, ' ', 00H, 'p', 00H, 'r', 00H
 	DB	'o', 00H, 'c', 00H, 'e', 00H, 's', 00H, 's', 00H, ' ', 00H, 'p'
 	DB	00H, 'i', 00H, 'p', 00H, 'e', 00H, 's', 00H, 00H, 00H
 	ORG $+2
-$SG79852 DB	'CreateProcessWithArguments', 00H
+$SG79853 DB	'CreateProcessWithArguments', 00H
 	ORG $+5
-$SG79853 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79854 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79854 DB	'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'i', 00H
+$SG79855 DB	'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'i', 00H
 	DB	'd', 00H, ' ', 00H, 'p', 00H, 'r', 00H, 'o', 00H, 'c', 00H, 'e'
 	DB	00H, 's', 00H, 's', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H
 	DB	'u', 00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, 's', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG79855 DB	'CreateProcessWithArguments', 00H
+$SG79856 DB	'CreateProcessWithArguments', 00H
 	ORG $+5
-$SG79856 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79857 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79890 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
+$SG79891 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
 	DB	'c', 00H, 'o', 00H, 'n', 00H, 's', 00H, 'o', 00H, 'l', 00H, 'e'
 	DB	00H, ' ', 00H, 'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H
 	DB	'd', 00H, ',', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'e', 00H, ' '
@@ -1427,12 +1427,12 @@ $SG79890 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
 	DB	00H, 'u', 00H, 'a', 00H, 'l', 00H, ' ', 00H, 's', 00H, 't', 00H
 	DB	'u', 00H, 'd', 00H, 'i', 00H, 'o', 00H, '?', 00H, 00H, 00H
 	ORG $+2
-$SG79891 DB	'FlushProcessOutputAndErrorToStandardOut', 00H
-$SG88084 DB	'111 221 2222 11', 00H
-$SG79892 DB	'W:\cpp\void\dr/plat-win32.c', 00H
-	ORG $+4
+$SG79892 DB	'FlushProcessOutputAndErrorToStandardOut', 00H
 $SG88085 DB	'111 221 2222 11', 00H
-$SG79894 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
+$SG79893 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+	ORG $+4
+$SG88086 DB	'111 221 2222 11', 00H
+$SG79895 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
 	DB	'c', 00H, 'o', 00H, 'n', 00H, 's', 00H, 'o', 00H, 'l', 00H, 'e'
 	DB	00H, ' ', 00H, 'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H
 	DB	'd', 00H, ',', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'e', 00H, ' '
@@ -1441,10 +1441,10 @@ $SG79894 DB	'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, ' ', 00H
 	DB	00H, 'u', 00H, 'a', 00H, 'l', 00H, ' ', 00H, 's', 00H, 't', 00H
 	DB	'u', 00H, 'd', 00H, 'i', 00H, 'o', 00H, '?', 00H, 00H, 00H
 	ORG $+2
-$SG79895 DB	'FlushProcessOutputAndErrorToStandardOut', 00H
-$SG79896 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79896 DB	'FlushProcessOutputAndErrorToStandardOut', 00H
+$SG79897 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG88143 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG88144 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1452,22 +1452,22 @@ $SG88143 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG79951 DB	'user32.dll', 00H
+$SG79952 DB	'user32.dll', 00H
 	ORG $+5
-$SG88144 DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H
+$SG88145 DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H
 	DB	'+', 00H, '1', 00H, '2', 00H, '8', 00H, ' ', 00H, '<', 00H, '='
 	DB	00H, ' ', 00H, '2', 00H, '5', 00H, '5', 00H, 00H, 00H
 	ORG $+4
-$SG79952 DB	'SetProcessDPIAwarenessContext', 00H
+$SG79953 DB	'SetProcessDPIAwarenessContext', 00H
 	ORG $+2
-$SG79953 DB	'SetProcessDPIAware', 00H
+$SG79954 DB	'SetProcessDPIAware', 00H
 	ORG $+5
-$SG88155 DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H
+$SG88156 DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H
 	DB	' ', 00H, '<', 00H, '=', 00H, ' ', 00H, '1', 00H, '2', 00H, '8'
 	DB	00H, 00H, 00H
-$SG88701 DB	'IHDR', 00H
+$SG88702 DB	'IHDR', 00H
 	ORG $+7
-$SG88154 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG88155 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1475,50 +1475,50 @@ $SG88154 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG79990 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG79991 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 'T', 00H, 'o', 00H, ' ', 00H, 'R', 00H, 'e', 00H, 'a'
 	DB	00H, 'd', 00H, ' ', 00H, 'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H
 	DB	' ', 00H, '[', 00H, '%', 00H, 's', 00H, ']', 00H, 00H, 00H
 	ORG $+6
-$SG79991 DB	'LoadFileData', 00H
+$SG79992 DB	'LoadFileData', 00H
 	ORG $+3
-$SG79992 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79993 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG79994 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG79995 DB	'F', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 'T', 00H, 'o', 00H, ' ', 00H, 'L', 00H, 'o', 00H, 'a'
 	DB	00H, 'd', 00H, ' ', 00H, 'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H
 	DB	' ', 00H, '[', 00H, '%', 00H, 's', 00H, ']', 00H, 00H, 00H
 	ORG $+6
-$SG79995 DB	'LoadFileData', 00H
+$SG79996 DB	'LoadFileData', 00H
 	ORG $+3
-$SG79996 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG79997 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80011 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG80012 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 't', 00H, 'o', 00H, ' ', 00H, 'r', 00H, 'e', 00H, 'a'
 	DB	00H, 'd', 00H, ' ', 00H, 'f', 00H, 'i', 00H, 'l', 00H, 'e', 00H
 	DB	' ', 00H, '[', 00H, '%', 00H, 's', 00H, ']', 00H, 00H, 00H
 	ORG $+6
-$SG80012 DB	'WriteFileData', 00H
+$SG80013 DB	'WriteFileData', 00H
 	ORG $+2
-$SG80013 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80014 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80014 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG80015 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 't', 00H, 'o', 00H, ' ', 00H, 'w', 00H, 'r', 00H, 'i'
 	DB	00H, 't', 00H, 'e', 00H, ' ', 00H, 't', 00H, 'o', 00H, ' ', 00H
 	DB	'f', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, '[', 00H, '%'
 	DB	00H, 's', 00H, ']', 00H, 00H, 00H
 	ORG $+6
-$SG80015 DB	'WriteFileData', 00H
+$SG80016 DB	'WriteFileData', 00H
 	ORG $+2
-$SG80016 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80017 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG88228 DB	'#?RADIANCE', 0aH, '# Written by stb_image_write.h', 0aH, 'F'
+$SG88229 DB	'#?RADIANCE', 0aH, '# Written by stb_image_write.h', 0aH, 'F'
 	DB	'ORMAT=32-bit_rle_rgbe', 0aH, 00H
 	ORG $+6
-$SG88229 DB	'EXPOSURE=          1.0000000000000', 0aH, 0aH, '-Y %d +X'
+$SG88230 DB	'EXPOSURE=          1.0000000000000', 0aH, 0aH, '-Y %d +X'
 	DB	' %d', 0aH, 00H
 	ORG $+7
-$SG88271 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG88272 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1526,11 +1526,11 @@ $SG88271 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG80142 DB	'FileNameMerge', 00H
+$SG80143 DB	'FileNameMerge', 00H
 	ORG $+2
-$SG80209 DB	'CreateCompleteFilePath', 00H
+$SG80210 DB	'CreateCompleteFilePath', 00H
 	ORG $+1
-$SG80141 DB	'w', 00H, 'r', 00H, 'o', 00H, 'n', 00H, 'g', 00H, ' ', 00H
+$SG80142 DB	'w', 00H, 'r', 00H, 'o', 00H, 'n', 00H, 'g', 00H, ' ', 00H
 	DB	'o', 00H, 'r', 00H, 'd', 00H, 'e', 00H, 'r', 00H, ' ', 00H, 'o'
 	DB	00H, 'f', 00H, ' ', 00H, 'i', 00H, 'n', 00H, 'p', 00H, 'u', 00H
 	DB	't', 00H, 's', 00H, ',', 00H, ' ', 00H, 'a', 00H, 'b', 00H, 's'
@@ -1540,71 +1540,71 @@ $SG80141 DB	'w', 00H, 'r', 00H, 'o', 00H, 'n', 00H, 'g', 00H, ' ', 00H
 	DB	'o', 00H, ' ', 00H, 'f', 00H, 'i', 00H, 'r', 00H, 's', 00H, 't'
 	DB	00H, 00H, 00H
 	ORG $+6
-$SG80143 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80144 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80208 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
+$SG80209 DB	'f', 00H, 'a', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'd', 00H
 	DB	' ', 00H, 't', 00H, 'o', 00H, ' ', 00H, 'c', 00H, 'r', 00H, 'e'
 	DB	00H, 'a', 00H, 't', 00H, 'e', 00H, ' ', 00H, 'c', 00H, 'o', 00H
 	DB	'm', 00H, 'p', 00H, 'l', 00H, 'e', 00H, 't', 00H, 'e', 00H, ' '
 	DB	00H, 'p', 00H, 'a', 00H, 't', 00H, 'h', 00H, ',', 00H, ' ', 00H
 	DB	'%', 00H, 's', 00H, 00H, 00H
 	ORG $+2
-$SG80210 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80211 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80275 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'P', 00H
+$SG80276 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'P', 00H
 	DB	'r', 00H, 'e', 00H, 's', 00H, 'e', 00H, 'n', 00H, 't', 00H, ' '
 	DB	00H, '%', 00H, 's', 00H, 00H, 00H
-$SG80276 DB	'FileTreeReviseSingle', 00H
+$SG80277 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80277 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80278 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80280 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'R', 00H
+$SG80281 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'R', 00H
 	DB	'e', 00H, 'm', 00H, 'o', 00H, 'v', 00H, 'e', 00H, 'd', 00H, ' '
 	DB	00H, '%', 00H, 's', 00H, 00H, 00H
-$SG80281 DB	'FileTreeReviseSingle', 00H
+$SG80282 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80282 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80283 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80284 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG80285 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG80285 DB	'Old->File.IsFile == New->File.IsFile', 00H
+$SG80286 DB	'Old->File.IsFile == New->File.IsFile', 00H
 	ORG $+3
-$SG80286 DB	'FileTreeReviseSingle', 00H
+$SG80287 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80287 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80288 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80289 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
+$SG80290 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
 	DB	'i', 00H, 'm', 00H, 'e', 00H, ' ', 00H, 'M', 00H, 'a', 00H, 'd'
 	DB	00H, 'e', 00H, ' ', 00H, 'C', 00H, 'h', 00H, 'a', 00H, 'n', 00H
 	DB	'g', 00H, 'e', 00H, 'd', 00H, ' ', 00H, '%', 00H, 's', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80290 DB	'FileTreeReviseSingle', 00H
+$SG80291 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80291 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80292 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80293 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
+$SG80294 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
 	DB	'i', 00H, 'm', 00H, 'e', 00H, ' ', 00H, 'E', 00H, 'd', 00H, 'i'
 	DB	00H, 't', 00H, ' ', 00H, 'C', 00H, 'h', 00H, 'a', 00H, 'n', 00H
 	DB	'g', 00H, 'e', 00H, 'd', 00H, ' ', 00H, '%', 00H, 's', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80294 DB	'FileTreeReviseSingle', 00H
+$SG80295 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80295 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80296 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80297 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
+$SG80298 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, ' ', 00H, 'T', 00H
 	DB	'i', 00H, 'm', 00H, 'e', 00H, ' ', 00H, 'R', 00H, 'e', 00H, 'a'
 	DB	00H, 'd', 00H, ' ', 00H, 'C', 00H, 'h', 00H, 'a', 00H, 'n', 00H
 	DB	'g', 00H, 'e', 00H, 'd', 00H, ' ', 00H, '%', 00H, 's', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80298 DB	'FileTreeReviseSingle', 00H
+$SG80299 DB	'FileTreeReviseSingle', 00H
 	ORG $+3
-$SG80299 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80300 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG88516 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG88517 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1612,31 +1612,31 @@ $SG88516 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG88517 DB	'd', 00H, ' ', 00H, '<', 00H, '=', 00H, ' ', 00H, '3', 00H
+$SG88518 DB	'd', 00H, ' ', 00H, '<', 00H, '=', 00H, ' ', 00H, '3', 00H
 	DB	'2', 00H, '7', 00H, '6', 00H, '7', 00H, ' ', 00H, '&', 00H, '&'
 	DB	00H, ' ', 00H, 'b', 00H, 'e', 00H, 's', 00H, 't', 00H, ' ', 00H
 	DB	'<', 00H, '=', 00H, ' ', 00H, '2', 00H, '5', 00H, '8', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80449 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG80450 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG80450 DB	'Queue->ConsumerTail <= Queue->Consumer', 00H
+$SG80451 DB	'Queue->ConsumerTail <= Queue->Consumer', 00H
 	ORG $+1
-$SG80451 DB	'FileQueueGetTask', 00H
+$SG80452 DB	'FileQueueGetTask', 00H
 	ORG $+7
-$SG80452 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80453 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80453 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG80454 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG80454 DB	'Queue->ProducerTail <= Queue->Producer', 00H
+$SG80455 DB	'Queue->ProducerTail <= Queue->Producer', 00H
 	ORG $+1
-$SG80455 DB	'FileQueueGetTask', 00H
+$SG80456 DB	'FileQueueGetTask', 00H
 	ORG $+7
-$SG80456 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80457 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80460 DB	'N', 00H, 'o', 00H, 't', 00H, ' ', 00H, 'E', 00H, 'n', 00H
+$SG80461 DB	'N', 00H, 'o', 00H, 't', 00H, ' ', 00H, 'E', 00H, 'n', 00H
 	DB	'o', 00H, 'u', 00H, 'g', 00H, 'h', 00H, ' ', 00H, 'T', 00H, 'a'
 	DB	00H, 's', 00H, 'k', 00H, 's', 00H, ',', 00H, ' ', 00H, 'A', 00H
 	DB	's', 00H, 'k', 00H, 'e', 00H, 'd', 00H, ' ', 00H, 'F', 00H, 'o'
@@ -1646,38 +1646,36 @@ $SG80460 DB	'N', 00H, 'o', 00H, 't', 00H, ' ', 00H, 'E', 00H, 'n', 00H
 	DB	'l', 00H, 'y', 00H, ' ', 00H, '[', 00H, '%', 00H, 'i', 00H, ']'
 	DB	00H, 00H, 00H
 	ORG $+6
-$SG80461 DB	'FileQueueGetTask', 00H
+$SG80462 DB	'FileQueueGetTask', 00H
 	ORG $+7
-$SG80462 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80463 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80481 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG80482 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG80482 DB	'Queue->ConsumerTail <= Queue->Consumer', 00H
+$SG80483 DB	'Queue->ConsumerTail <= Queue->Consumer', 00H
 	ORG $+1
-$SG80483 DB	'FileQueueSetTask', 00H
+$SG80484 DB	'FileQueueSetTask', 00H
 	ORG $+7
-$SG80484 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80485 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80485 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG80486 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG80486 DB	'Queue->ProducerTail <= Queue->Producer', 00H
+$SG80487 DB	'Queue->ProducerTail <= Queue->Producer', 00H
 	ORG $+1
-$SG80487 DB	'FileQueueSetTask', 00H
+$SG80488 DB	'FileQueueSetTask', 00H
 	ORG $+7
-$SG80488 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80489 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80492 DB	'T', 00H, 'o', 00H, 'o', 00H, ' ', 00H, 'M', 00H, 'a', 00H
+$SG80493 DB	'T', 00H, 'o', 00H, 'o', 00H, ' ', 00H, 'M', 00H, 'a', 00H
 	DB	'n', 00H, 'y', 00H, ' ', 00H, 'T', 00H, 'a', 00H, 's', 00H, 'k'
 	DB	00H, 's', 00H, 00H, 00H
 	ORG $+2
-$SG80493 DB	'FileQueueSetTask', 00H
+$SG80494 DB	'FileQueueSetTask', 00H
 	ORG $+7
-$SG80494 DB	'W:\cpp\void\dr/plat-win32.c', 00H
-$SG88702 DB	'IHDR', 00H
-	ORG $+3
-$SG88703 DB	'IDAT', 00H
+$SG80495 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG88703 DB	'IHDR', 00H
 	ORG $+3
 $SG88704 DB	'IDAT', 00H
 	ORG $+3
@@ -1685,20 +1683,22 @@ $SG88705 DB	'IDAT', 00H
 	ORG $+3
 $SG88706 DB	'IDAT', 00H
 	ORG $+3
-$SG88707 DB	'IEND', 00H
+$SG88707 DB	'IDAT', 00H
 	ORG $+3
 $SG88708 DB	'IEND', 00H
 	ORG $+3
 $SG88709 DB	'IEND', 00H
 	ORG $+3
 $SG88710 DB	'IEND', 00H
+	ORG $+3
+$SG88711 DB	'IEND', 00H
 	ORG $+7
-$SG80518 DB	'T', 00H, 'h', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'd', 00H
+$SG80519 DB	'T', 00H, 'h', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'd', 00H
 	DB	' ', 00H, 'E', 00H, 'n', 00H, 't', 00H, 'e', 00H, 'r', 00H, 's'
 	DB	00H, 00H, 00H
-$SG80614 DB	'HIDDEN', 00H
+$SG80615 DB	'HIDDEN', 00H
 	ORG $+5
-$SG88711 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
+$SG88712 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'\', 00H, 'v', 00H, 'o', 00H, 'i', 00H, 'd', 00H, '\', 00H, 'v'
 	DB	00H, 'e', 00H, 'n', 00H, 'd', 00H, 'o', 00H, 'r', 00H, '\', 00H
 	DB	's', 00H, 't', 00H, 'b', 00H, '\', 00H, 's', 00H, 't', 00H, 'b'
@@ -1706,32 +1706,32 @@ $SG88711 DB	'W', 00H, ':', 00H, '\', 00H, 'c', 00H, 'p', 00H, 'p', 00H
 	DB	'_', 00H, 'w', 00H, 'r', 00H, 'i', 00H, 't', 00H, 'e', 00H, '.'
 	DB	00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG80519 DB	'FileQueueThreadRoutine', 00H
+$SG80520 DB	'FileQueueThreadRoutine', 00H
 	ORG $+1
-$SG88712 DB	'o', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, 'o', 00H
+$SG88713 DB	'o', 00H, ' ', 00H, '=', 00H, '=', 00H, ' ', 00H, 'o', 00H
 	DB	'u', 00H, 't', 00H, ' ', 00H, '+', 00H, ' ', 00H, '*', 00H, 'o'
 	DB	00H, 'u', 00H, 't', 00H, '_', 00H, 'l', 00H, 'e', 00H, 'n', 00H
 	DB	00H, 00H
-$SG80520 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80521 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80521 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'T', 00H, 'a', 00H
+$SG80522 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'T', 00H, 'a', 00H
 	DB	's', 00H, 'k', 00H, '.', 00H, 'W', 00H, 'o', 00H, 'r', 00H, 'k'
 	DB	00H, ' ', 00H, 'N', 00H, 'U', 00H, 'L', 00H, 'L', 00H, 00H, 00H
 	ORG $+2
-$SG80522 DB	'FileTask.Work != NULL', 00H
+$SG80523 DB	'FileTask.Work != NULL', 00H
 	ORG $+2
-$SG80523 DB	'FileQueueThreadRoutine', 00H
+$SG80524 DB	'FileQueueThreadRoutine', 00H
 	ORG $+1
-$SG80524 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80525 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80528 DB	'T', 00H, 'h', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'd', 00H
+$SG80529 DB	'T', 00H, 'h', 00H, 'r', 00H, 'e', 00H, 'a', 00H, 'd', 00H
 	DB	' ', 00H, 'L', 00H, 'e', 00H, 'a', 00H, 'v', 00H, 'e', 00H, 's'
 	DB	00H, 00H, 00H
 	ORG $+4
-$SG80529 DB	'FileQueueThreadRoutine', 00H
+$SG80530 DB	'FileQueueThreadRoutine', 00H
 	ORG $+1
-$SG80530 DB	'W:\cpp\void\dr/plat-win32.c', 00H
-$SG80616 DB	'NORMAL', 00H
+$SG80531 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80617 DB	'NORMAL', 00H
 	ORG $+5
 ?stbiw__jpg_ZigZag@@3QBEB DB 00H			; stbiw__jpg_ZigZag
 	DB	01H
@@ -1797,1242 +1797,1271 @@ $SG80616 DB	'NORMAL', 00H
 	DB	03aH
 	DB	03eH
 	DB	03fH
-$SG80580 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'Q', 00H, 'u', 00H
+$SG80581 DB	'F', 00H, 'i', 00H, 'l', 00H, 'e', 00H, 'Q', 00H, 'u', 00H
 	DB	'e', 00H, 'u', 00H, 'e', 00H, '.', 00H, 'C', 00H, 'o', 00H, 'r'
 	DB	00H, 'e', 00H, '[', 00H, '%', 00H, 'i', 00H, ']', 00H, '.', 00H
 	DB	'S', 00H, 'e', 00H, 't', 00H, 's', 00H, ' ', 00H, '=', 00H, ' '
 	DB	00H, '%', 00H, 'i', 00H, ',', 00H, ' ', 00H, 'G', 00H, 'e', 00H
 	DB	't', 00H, 's', 00H, ' ', 00H, '=', 00H, ' ', 00H, '%', 00H, 'i'
 	DB	00H, 00H, 00H
-$SG80581 DB	'FileQueueBegin', 00H
+$SG80582 DB	'FileQueueBegin', 00H
 	ORG $+1
-$SG80582 DB	'W:\cpp\void\dr/plat-win32.c', 00H
+$SG80583 DB	'W:\cpp\void\dr/plat-win32.c', 00H
 	ORG $+4
-$SG80609 DB	'ARCHIVE', 00H
-$SG80610 DB	'COMPRESSED', 00H
+$SG80610 DB	'ARCHIVE', 00H
+$SG80611 DB	'COMPRESSED', 00H
 	ORG $+5
-$SG80612 DB	'DIRECTORY', 00H
+$SG80613 DB	'DIRECTORY', 00H
 	ORG $+6
-$SG80613 DB	'ENCRYPTED', 00H
+$SG80614 DB	'ENCRYPTED', 00H
 	ORG $+6
-$SG80615 DB	'INTEGRITY_STREAM', 00H
+$SG80616 DB	'INTEGRITY_STREAM', 00H
 	ORG $+7
-$SG80617 DB	'NOT_CONTENT_INDEXED', 00H
+$SG80618 DB	'NOT_CONTENT_INDEXED', 00H
 	ORG $+4
-$SG80618 DB	'NO_SCRUB_DATA', 00H
+$SG80619 DB	'NO_SCRUB_DATA', 00H
 	ORG $+2
-$SG80619 DB	'OFFLINE', 00H
-$SG80620 DB	'READONLY', 00H
+$SG80620 DB	'OFFLINE', 00H
+$SG80621 DB	'READONLY', 00H
 	ORG $+7
-$SG80621 DB	'RECALL_ON_DATA_ACCESS', 00H
+$SG80622 DB	'RECALL_ON_DATA_ACCESS', 00H
 	ORG $+2
-$SG80622 DB	'RECALL_ON_OPEN', 00H
+$SG80623 DB	'RECALL_ON_OPEN', 00H
 	ORG $+1
-$SG80623 DB	'REPARSE_POINT', 00H
+$SG80624 DB	'REPARSE_POINT', 00H
 	ORG $+2
-$SG80624 DB	'SPARSE_FILE', 00H
-$SG80625 DB	'SYSTEM', 00H
+$SG80625 DB	'SPARSE_FILE', 00H
+$SG80626 DB	'SYSTEM', 00H
 	ORG $+5
-$SG80626 DB	'TEMPORARY', 00H
+$SG80627 DB	'TEMPORARY', 00H
 	ORG $+6
-$SG80627 DB	'VIRTUAL', 00H
-$SG80628 DB	'PINNED', 00H
+$SG80628 DB	'VIRTUAL', 00H
+$SG80629 DB	'PINNED', 00H
 	ORG $+1
-$SG80629 DB	'UNPINNED', 00H
+$SG80630 DB	'UNPINNED', 00H
 	ORG $+7
-$SG80643 DB	'INVALID_FILE_ATTRIBUTES', 00H
-$SG80647 DB	'%s %s', 00H
+$SG80644 DB	'INVALID_FILE_ATTRIBUTES', 00H
+$SG80648 DB	'%s %s', 00H
 	ORG $+2
-$SG80654 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'U', 00H, 'L', 00H
+$SG80655 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'U', 00H, 'L', 00H
 	DB	'L', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '0'
 	DB	00H, '0', 00H, ')', 00H, 00H, 00H
-$SG80656 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'R', 00H, 'E', 00H
+$SG80657 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'R', 00H, 'E', 00H
 	DB	'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '0', 00H, '0', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80658 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'S', 00H
+$SG80659 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'S', 00H
 	DB	'T', 00H, 'R', 00H, 'O', 00H, 'Y', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '0', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80660 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'V', 00H
+$SG80661 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'V', 00H
 	DB	'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '0'
 	DB	00H, '3', 00H, ')', 00H, 00H, 00H
-$SG80662 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
+$SG80663 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
 	DB	'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '0'
 	DB	00H, '5', 00H, ')', 00H, 00H, 00H
-$SG80664 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'C', 00H, 'T', 00H
+$SG80665 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'C', 00H, 'T', 00H
 	DB	'I', 00H, 'V', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '0', 00H, '0', 00H, '6', 00H, ')', 00H
 	DB	00H, 00H
-$SG80666 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80667 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'F', 00H, 'O', 00H, 'C', 00H, 'U', 00H, 'S', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '0', 00H, '0', 00H, '7', 00H, ')', 00H
 	DB	00H, 00H
-$SG80668 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'I', 00H, 'L', 00H
+$SG80669 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'I', 00H, 'L', 00H
 	DB	'L', 00H, 'F', 00H, 'O', 00H, 'C', 00H, 'U', 00H, 'S', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '0', 00H, '8', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80670 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'A', 00H
+$SG80671 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'A', 00H
 	DB	'B', 00H, 'L', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '0', 00H, '0', 00H, 'A', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80672 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80673 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'R', 00H, 'E', 00H, 'D', 00H, 'R', 00H, 'A', 00H, 'W', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '0', 00H, 'B', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80674 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80675 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '0', 00H, 'C', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80676 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80677 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '0', 00H, 'D', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80678 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80679 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, 'L', 00H, 'E', 00H, 'N'
 	DB	00H, 'G', 00H, 'T', 00H, 'H', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '0', 00H, 'E', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80680 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
+$SG80681 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0'
 	DB	00H, '0', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80682 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'O', 00H
+$SG80683 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'O', 00H
 	DB	'S', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0'
 	DB	00H, '1', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80684 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG80685 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'R', 00H, 'Y', 00H, 'E', 00H, 'N', 00H, 'D', 00H, 'S', 00H, 'E'
 	DB	00H, 'S', 00H, 'S', 00H, 'I', 00H, 'O', 00H, 'N', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H, '1', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80686 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG80687 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'R', 00H, 'Y', 00H, 'O', 00H, 'P', 00H, 'E', 00H, 'N', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80688 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'D', 00H
+$SG80689 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'D', 00H
 	DB	'S', 00H, 'E', 00H, 'S', 00H, 'S', 00H, 'I', 00H, 'O', 00H, 'N'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'6', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80690 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'I', 00H
+$SG80691 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'I', 00H
 	DB	'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1'
 	DB	00H, '2', 00H, ')', 00H, 00H, 00H
-$SG80692 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'R', 00H, 'A', 00H
+$SG80693 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'R', 00H, 'A', 00H
 	DB	'S', 00H, 'E', 00H, 'B', 00H, 'K', 00H, 'G', 00H, 'N', 00H, 'D'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'4', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80694 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80695 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'C', 00H, 'H'
 	DB	00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '0', 00H, '1', 00H, '5', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80696 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'H', 00H, 'O', 00H
+$SG80697 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'H', 00H, 'O', 00H
 	DB	'W', 00H, 'W', 00H, 'I', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'8', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80698 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
+$SG80699 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
 	DB	'I', 00H, 'N', 00H, 'I', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N'
 	DB	00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'0', 00H, '1', 00H, 'A', 00H, ')', 00H, 00H, 00H
-$SG80700 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'V', 00H
+$SG80701 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'V', 00H
 	DB	'M', 00H, 'O', 00H, 'D', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '1', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80702 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'C', 00H, 'T', 00H
+$SG80703 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'C', 00H, 'T', 00H
 	DB	'I', 00H, 'V', 00H, 'A', 00H, 'T', 00H, 'E', 00H, 'A', 00H, 'P'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'1', 00H, 'C', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80704 DB	'W', 00H, 'M', 00H, '_', 00H, 'F', 00H, 'O', 00H, 'N', 00H
+$SG80705 DB	'W', 00H, 'M', 00H, '_', 00H, 'F', 00H, 'O', 00H, 'N', 00H
 	DB	'T', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'D', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80706 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'I', 00H, 'M', 00H
+$SG80707 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'I', 00H, 'M', 00H
 	DB	'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'E', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80708 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'N', 00H
+$SG80709 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'N', 00H
 	DB	'C', 00H, 'E', 00H, 'L', 00H, 'M', 00H, 'O', 00H, 'D', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '1', 00H
 	DB	'F', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80710 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80711 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'C', 00H, 'U', 00H, 'R', 00H, 'S', 00H, 'O', 00H, 'R', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H, '0', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80712 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG80713 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'A', 00H, 'C', 00H, 'T', 00H, 'I', 00H, 'V'
 	DB	00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '2', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80714 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'I', 00H
+$SG80715 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'I', 00H
 	DB	'L', 00H, 'D', 00H, 'A', 00H, 'C', 00H, 'T', 00H, 'I', 00H, 'V'
 	DB	00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '2', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80716 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG80717 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'U', 00H, 'E', 00H, 'S', 00H, 'Y', 00H, 'N', 00H, 'C', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80718 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80719 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'M', 00H, 'I', 00H, 'N', 00H, 'M', 00H, 'A', 00H, 'X', 00H, 'I'
 	DB	00H, 'N', 00H, 'F', 00H, 'O', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '2', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80720 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
+$SG80721 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'I', 00H, 'C', 00H, 'O', 00H, 'N', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H, '6', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80722 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'C', 00H, 'O', 00H
+$SG80723 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'C', 00H, 'O', 00H
 	DB	'N', 00H, 'E', 00H, 'R', 00H, 'A', 00H, 'S', 00H, 'E', 00H, 'B'
 	DB	00H, 'K', 00H, 'G', 00H, 'N', 00H, 'D', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '0', 00H, '2', 00H, '7', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80724 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'E', 00H, 'X', 00H
+$SG80725 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'E', 00H, 'X', 00H
 	DB	'T', 00H, 'D', 00H, 'L', 00H, 'G', 00H, 'C', 00H, 'T', 00H, 'L'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H
 	DB	'8', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80726 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'P', 00H, 'O', 00H
+$SG80727 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'P', 00H, 'O', 00H
 	DB	'O', 00H, 'L', 00H, 'E', 00H, 'R', 00H, 'S', 00H, 'T', 00H, 'A'
 	DB	00H, 'T', 00H, 'U', 00H, 'S', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '2', 00H, 'A', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80728 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'A', 00H
+$SG80729 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'A', 00H
 	DB	'W', 00H, 'I', 00H, 'T', 00H, 'E', 00H, 'M', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H, 'B', 00H, ')', 00H
 	DB	00H, 00H
-$SG80730 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'A', 00H
+$SG80731 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'A', 00H
 	DB	'S', 00H, 'U', 00H, 'R', 00H, 'E', 00H, 'I', 00H, 'T', 00H, 'E'
 	DB	00H, 'M', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'2', 00H, 'C', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80732 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'L', 00H
+$SG80733 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'L', 00H
 	DB	'E', 00H, 'T', 00H, 'E', 00H, 'I', 00H, 'T', 00H, 'E', 00H, 'M'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H
 	DB	'D', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80734 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'K', 00H, 'E', 00H
+$SG80735 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'K', 00H, 'E', 00H
 	DB	'Y', 00H, 'T', 00H, 'O', 00H, 'I', 00H, 'T', 00H, 'E', 00H, 'M'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H
 	DB	'E', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80736 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
+$SG80737 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'R', 00H, 'T', 00H, 'O', 00H, 'I', 00H, 'T', 00H, 'E', 00H, 'M'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '2', 00H
 	DB	'F', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80738 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80739 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'F', 00H, 'O', 00H, 'N', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '3', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80740 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80741 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'F', 00H, 'O', 00H, 'N', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '3', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80742 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80743 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'H', 00H, 'O', 00H, 'T', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '3', 00H, '2', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80744 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80745 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'H', 00H, 'O', 00H, 'T', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '3', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80746 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG80747 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'R', 00H, 'Y', 00H, 'D', 00H, 'R', 00H, 'A', 00H, 'G', 00H, 'I'
 	DB	00H, 'C', 00H, 'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '3', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80748 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
+$SG80749 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
 	DB	'P', 00H, 'A', 00H, 'R', 00H, 'E', 00H, 'I', 00H, 'T', 00H, 'E'
 	DB	00H, 'M', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'3', 00H, '9', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80750 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80751 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'O', 00H, 'B', 00H, 'J', 00H, 'E', 00H, 'C', 00H, 'T', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '3', 00H, 'D', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80752 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
+$SG80753 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
 	DB	'P', 00H, 'A', 00H, 'C', 00H, 'T', 00H, 'I', 00H, 'N', 00H, 'G'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '4', 00H
 	DB	'1', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80754 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
+$SG80755 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
 	DB	'M', 00H, 'N', 00H, 'O', 00H, 'T', 00H, 'I', 00H, 'F', 00H, 'Y'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '4', 00H
 	DB	'2', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80756 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
+$SG80757 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
 	DB	'D', 00H, 'O', 00H, 'W', 00H, 'P', 00H, 'O', 00H, 'S', 00H, 'C'
 	DB	00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'I', 00H, 'N', 00H
 	DB	'G', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '4'
 	DB	00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80758 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
+$SG80759 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'I', 00H, 'N', 00H
 	DB	'D', 00H, 'O', 00H, 'W', 00H, 'P', 00H, 'O', 00H, 'S', 00H, 'C'
 	DB	00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '4', 00H, '7'
 	DB	00H, ')', 00H, 00H, 00H
-$SG80760 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'W', 00H
+$SG80761 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'W', 00H
 	DB	'E', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0'
 	DB	00H, '4', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80762 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'P', 00H
+$SG80763 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'P', 00H
 	DB	'Y', 00H, 'D', 00H, 'A', 00H, 'T', 00H, 'A', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '0', 00H, '4', 00H, 'A', 00H, ')', 00H
 	DB	00H, 00H
-$SG80764 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'N', 00H
+$SG80765 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'N', 00H
 	DB	'C', 00H, 'E', 00H, 'L', 00H, 'J', 00H, 'O', 00H, 'U', 00H, 'R'
 	DB	00H, 'N', 00H, 'A', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '4', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80766 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'O', 00H, 'T', 00H
+$SG80767 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'O', 00H, 'T', 00H
 	DB	'I', 00H, 'F', 00H, 'Y', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '0', 00H, '4', 00H, 'E', 00H, ')', 00H, 00H, 00H
-$SG81295 DB	'%', 00H, 's', 00H, 00H, 00H
-	ORG $+6
-$SG80768 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
+$SG89316 DB	'MAIN', 00H
+	ORG $+7
+$SG80769 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
 	DB	'U', 00H, 'T', 00H, 'L', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'C'
 	DB	00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'R', 00H
 	DB	'E', 00H, 'Q', 00H, 'U', 00H, 'E', 00H, 'S', 00H, 'T', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '5', 00H, '0', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+4
-$SG80770 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
+$SG80771 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
 	DB	'U', 00H, 'T', 00H, 'L', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'C'
 	DB	00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, '5', 00H, '1', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80772 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'C', 00H, 'A', 00H
+$SG80773 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'C', 00H, 'A', 00H
 	DB	'R', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0'
 	DB	00H, '5', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80774 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'E', 00H, 'L', 00H
+$SG80775 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'E', 00H, 'L', 00H
 	DB	'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '5'
 	DB	00H, '3', 00H, ')', 00H, 00H, 00H
-$SG80776 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'S', 00H, 'E', 00H
+$SG80777 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'S', 00H, 'E', 00H
 	DB	'R', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E'
 	DB	00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'5', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80778 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'O', 00H, 'T', 00H
+$SG80779 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'O', 00H, 'T', 00H
 	DB	'I', 00H, 'F', 00H, 'Y', 00H, 'F', 00H, 'O', 00H, 'R', 00H, 'M'
 	DB	00H, 'A', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'0', 00H, '5', 00H, '5', 00H, ')', 00H, 00H, 00H
-$SG80780 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'N', 00H
+$SG80781 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'N', 00H
 	DB	'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, 'M', 00H, 'E', 00H, 'N'
 	DB	00H, 'U', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'7', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80782 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'T', 00H, 'Y', 00H
+$SG80783 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'T', 00H, 'Y', 00H
 	DB	'L', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G'
 	DB	00H, 'I', 00H, 'N', 00H, 'G', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '7', 00H, 'C', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80784 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'T', 00H, 'Y', 00H
+$SG80785 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'T', 00H, 'Y', 00H
 	DB	'L', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G'
 	DB	00H, 'E', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'0', 00H, '7', 00H, 'D', 00H, ')', 00H, 00H, 00H
-$SG80786 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'I', 00H, 'S', 00H
+$SG80787 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'I', 00H, 'S', 00H
 	DB	'P', 00H, 'L', 00H, 'A', 00H, 'Y', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, '7', 00H, 'E', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80788 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80789 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'I', 00H, 'C', 00H, 'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '7', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80790 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
+$SG80791 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'E', 00H, 'T', 00H
 	DB	'I', 00H, 'C', 00H, 'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '8', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80792 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'C', 00H
+$SG80793 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'C', 00H
 	DB	'R', 00H, 'E', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H, '1', 00H, ')', 00H
 	DB	00H, 00H
-$SG80794 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'D', 00H
+$SG80795 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'D', 00H
 	DB	'E', 00H, 'S', 00H, 'T', 00H, 'R', 00H, 'O', 00H, 'Y', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H, '2', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80796 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'C', 00H
+$SG80797 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'C', 00H
 	DB	'A', 00H, 'L', 00H, 'C', 00H, 'S', 00H, 'I', 00H, 'Z', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H
 	DB	'3', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80798 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'H', 00H
+$SG80799 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'H', 00H
 	DB	'I', 00H, 'T', 00H, 'T', 00H, 'E', 00H, 'S', 00H, 'T', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H, '4', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80800 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
+$SG80801 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
 	DB	'A', 00H, 'I', 00H, 'N', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '0', 00H, '8', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80802 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'A', 00H
+$SG80803 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'A', 00H
 	DB	'C', 00H, 'T', 00H, 'I', 00H, 'V', 00H, 'A', 00H, 'T', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H
 	DB	'6', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80804 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80805 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'D', 00H, 'L', 00H, 'G', 00H, 'C', 00H, 'O', 00H, 'D', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H
 	DB	'7', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80806 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'N', 00H
+$SG80807 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'N', 00H
 	DB	'C', 00H, 'P', 00H, 'A', 00H, 'I', 00H, 'N', 00H, 'T', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H, '8', 00H, '8', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80808 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG80809 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'O', 00H, 'U', 00H, 'S', 00H, 'E', 00H, 'M', 00H, 'O', 00H, 'V'
 	DB	00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'A', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80810 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
+$SG80811 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'O', 00H, 'W', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, 'A', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80812 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
+$SG80813 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'A', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80814 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
+$SG80815 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'L', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'B', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, 'A', 00H, '3', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80816 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
+$SG80817 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'O', 00H, 'W', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, 'A', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80818 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
+$SG80819 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'A', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80820 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
+$SG80821 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'R', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'B', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, 'A', 00H, '6', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80822 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG80823 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'O', 00H, 'W', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, 'A', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80824 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG80825 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'A', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80826 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG80827 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'B', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, 'A', 00H, '9', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80828 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
+$SG80829 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'O', 00H, 'W', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '0', 00H, 'A', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80830 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
+$SG80831 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0', 00H
 	DB	'A', 00H, 'C', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80832 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
+$SG80833 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'X', 00H
 	DB	'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D'
 	DB	00H, 'B', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '0', 00H, 'A', 00H, 'D', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80834 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
+$SG80835 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
 	DB	'U', 00H, 'T', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'V', 00H, 'I'
 	DB	00H, 'C', 00H, 'E', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '0', 00H, 'F', 00H, 'E', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80836 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
+$SG80837 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'P', 00H
 	DB	'U', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '0'
 	DB	00H, 'F', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80838 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
+$SG80839 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
 	DB	'D', 00H, 'O', 00H, 'W', 00H, 'N', 00H, '_', 00H, 'O', 00H, 'R'
 	DB	00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, 'F', 00H, 'I', 00H
 	DB	'R', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '1', 00H, '0', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80840 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
+$SG80841 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
 	DB	'U', 00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1'
 	DB	00H, '0', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80842 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
+$SG80843 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '0'
 	DB	00H, '2', 00H, ')', 00H, 00H, 00H
-$SG80844 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'A', 00H
+$SG80845 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'A', 00H
 	DB	'D', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'R', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, '0', 00H, '3', 00H, ')', 00H
 	DB	00H, 00H
-$SG80846 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80847 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'K', 00H, 'E', 00H, 'Y', 00H, 'D', 00H, 'O', 00H, 'W', 00H, 'N'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '0', 00H
 	DB	'4', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80848 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80849 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'K', 00H, 'E', 00H, 'Y', 00H, 'U', 00H, 'P', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, '0', 00H, '5', 00H, ')', 00H
 	DB	00H, 00H
-$SG80850 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80851 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'C', 00H, 'H', 00H, 'A', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '0', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80852 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80853 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'D', 00H, 'E', 00H, 'A', 00H, 'D', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H
 	DB	'0', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80854 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
+$SG80855 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
 	DB	'L', 00H, 'A', 00H, 'S', 00H, 'T', 00H, '_', 00H, 'O', 00H, 'R'
 	DB	00H, '_', 00H, 'U', 00H, 'N', 00H, 'I', 00H, 'C', 00H, 'H', 00H
 	DB	'A', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1'
 	DB	00H, '0', 00H, '9', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80856 DB	'U', 00H, 'N', 00H, 'I', 00H, 'C', 00H, 'O', 00H, 'D', 00H
+$SG80857 DB	'U', 00H, 'N', 00H, 'I', 00H, 'C', 00H, 'O', 00H, 'D', 00H
 	DB	'E', 00H, '_', 00H, 'N', 00H, 'O', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, 'F', 00H, 'F', 00H
 	DB	'F', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80858 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
+$SG80859 DB	'W', 00H, 'M', 00H, '_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H
 	DB	'L', 00H, 'A', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '0', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80868 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
+$SG80869 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'M', 00H
 	DB	'M', 00H, 'A', 00H, 'N', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '1', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80860 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG80861 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'S', 00H, 'T', 00H, 'A', 00H, 'R', 00H, 'T', 00H, 'C'
 	DB	00H, 'O', 00H, 'M', 00H, 'P', 00H, 'O', 00H, 'S', 00H, 'I', 00H
 	DB	'T', 00H, 'I', 00H, 'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '0', 00H, 'D', 00H, ')', 00H, 00H, 00H
-$SG80862 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG80863 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'E', 00H, 'N', 00H, 'D', 00H, 'C', 00H, 'O', 00H, 'M'
 	DB	00H, 'P', 00H, 'O', 00H, 'S', 00H, 'I', 00H, 'T', 00H, 'I', 00H
 	DB	'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1'
 	DB	00H, '0', 00H, 'E', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80864 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG80865 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, 'L', 00H, 'A', 00H, 'S'
 	DB	00H, 'T', 00H, '_', 00H, 'O', 00H, 'R', 00H, '_', 00H, 'C', 00H
 	DB	'O', 00H, 'M', 00H, 'P', 00H, 'O', 00H, 'S', 00H, 'I', 00H, 'T'
 	DB	00H, 'I', 00H, 'O', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '0', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80866 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
+$SG80867 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
 	DB	'T', 00H, 'D', 00H, 'I', 00H, 'A', 00H, 'L', 00H, 'O', 00H, 'G'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '1', 00H
 	DB	'0', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80870 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
+$SG80871 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'Y', 00H, 'S', 00H
 	DB	'C', 00H, 'O', 00H, 'M', 00H, 'M', 00H, 'A', 00H, 'N', 00H, 'D'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '1', 00H
 	DB	'2', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80872 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'I', 00H, 'M', 00H
+$SG80873 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'I', 00H, 'M', 00H
 	DB	'E', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1'
 	DB	00H, '1', 00H, '3', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80874 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'S', 00H, 'C', 00H
+$SG80875 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'S', 00H, 'C', 00H
 	DB	'R', 00H, 'O', 00H, 'L', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '1', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80876 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'S', 00H, 'C', 00H
+$SG80877 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'S', 00H, 'C', 00H
 	DB	'R', 00H, 'O', 00H, 'L', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '1', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80878 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
+$SG80879 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
 	DB	'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, '1', 00H, '6', 00H, ')', 00H
 	DB	00H, 00H
-$SG80880 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
+$SG80881 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'N', 00H, 'I', 00H
 	DB	'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, 'P', 00H, 'O'
 	DB	00H, 'P', 00H, 'U', 00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '1', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80882 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'S', 00H
+$SG80883 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'S', 00H
 	DB	'T', 00H, 'U', 00H, 'R', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '1', 00H, '1', 00H, '9', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80884 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'S', 00H
+$SG80885 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'S', 00H
 	DB	'T', 00H, 'U', 00H, 'R', 00H, 'E', 00H, 'N', 00H, 'O', 00H, 'T'
 	DB	00H, 'I', 00H, 'F', 00H, 'Y', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '1', 00H, 'A', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80886 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80887 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'S', 00H, 'E', 00H, 'L', 00H, 'E', 00H, 'C', 00H, 'T'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '1', 00H
 	DB	'F', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80888 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80889 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'R', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, '2', 00H, '0', 00H, ')', 00H
 	DB	00H, 00H
-$SG80890 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
+$SG80891 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
 	DB	'E', 00H, 'R', 00H, 'I', 00H, 'D', 00H, 'L', 00H, 'E', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '2', 00H, '1', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80892 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80893 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'R', 00H, 'B', 00H, 'U', 00H, 'T', 00H, 'T', 00H, 'O'
 	DB	00H, 'N', 00H, 'U', 00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '2', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80894 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80895 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'D', 00H, 'R', 00H, 'A', 00H, 'G', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, '2', 00H, '3', 00H, ')', 00H
 	DB	00H, 00H
-$SG80896 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80897 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'G', 00H, 'E', 00H, 'T', 00H, 'O', 00H, 'B', 00H, 'J'
 	DB	00H, 'E', 00H, 'C', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '2', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80898 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'N', 00H, 'I', 00H
+$SG80899 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'N', 00H, 'I', 00H
 	DB	'N', 00H, 'I', 00H, 'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U'
 	DB	00H, 'P', 00H, 'O', 00H, 'P', 00H, 'U', 00H, 'P', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '1', 00H, '2', 00H, '5', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80900 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
+$SG80901 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'N', 00H
 	DB	'U', 00H, 'C', 00H, 'O', 00H, 'M', 00H, 'M', 00H, 'A', 00H, 'N'
 	DB	00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H
 	DB	'2', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80902 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
+$SG80903 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'N', 00H, 'G', 00H, 'E', 00H, 'U', 00H, 'I', 00H, 'S', 00H, 'T'
 	DB	00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '2', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80904 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'P', 00H, 'D', 00H
+$SG80905 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'P', 00H, 'D', 00H
 	DB	'A', 00H, 'T', 00H, 'E', 00H, 'U', 00H, 'I', 00H, 'S', 00H, 'T'
 	DB	00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '1', 00H, '2', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80906 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG80907 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'R', 00H, 'Y', 00H, 'U', 00H, 'I', 00H, 'S', 00H, 'T', 00H, 'A'
 	DB	00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'1', 00H, '2', 00H, '9', 00H, ')', 00H, 00H, 00H
-$SG80908 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80909 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'M', 00H, 'S'
 	DB	00H, 'G', 00H, 'B', 00H, 'O', 00H, 'X', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '1', 00H, '3', 00H, '2', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80910 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80911 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'E', 00H, 'D'
 	DB	00H, 'I', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'1', 00H, '3', 00H, '3', 00H, ')', 00H, 00H, 00H
-$SG80912 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80913 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'L', 00H, 'I'
 	DB	00H, 'S', 00H, 'T', 00H, 'B', 00H, 'O', 00H, 'X', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '1', 00H, '3', 00H, '4', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG80914 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80915 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'B', 00H, 'T'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H
 	DB	'3', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80916 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80917 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'D', 00H, 'L'
 	DB	00H, 'G', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H
 	DB	'3', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80918 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80919 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'S', 00H, 'C'
 	DB	00H, 'R', 00H, 'O', 00H, 'L', 00H, 'L', 00H, 'B', 00H, 'A', 00H
 	DB	'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '1', 00H, '3'
 	DB	00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80920 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
+$SG80921 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'T', 00H, 'L', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'S', 00H, 'T'
 	DB	00H, 'A', 00H, 'T', 00H, 'I', 00H, 'C', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '1', 00H, '3', 00H, '8', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80922 DB	'M', 00H, 'N', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG80923 DB	'M', 00H, 'N', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'H', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '1', 00H, 'E', 00H, '1', 00H, ')', 00H
 	DB	00H, 00H
-$SG80924 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG80925 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'M', 00H, 'O', 00H, 'V', 00H, 'E', 00H, '_'
 	DB	00H, 'O', 00H, 'R', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'F', 00H, 'I', 00H, 'R', 00H, 'S', 00H, 'T'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H
 	DB	'0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80926 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
+$SG80927 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'0', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80928 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
+$SG80929 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H, '2', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80930 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
+$SG80931 DB	'W', 00H, 'M', 00H, '_', 00H, 'L', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'B', 00H, 'L'
 	DB	00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '0', 00H, '3', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG89123 DB	'data\train-labels.idx1-ubyte', 00H
-	ORG $+3
-$SG89124 DB	'data\train-images.idx3-ubyte', 00H
-	ORG $+3
-$SG80932 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
+$SG80933 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'0', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80934 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
+$SG80935 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H, '5', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80936 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
+$SG80937 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'B', 00H, 'L'
 	DB	00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '0', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80938 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
+$SG80939 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'0', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80940 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
+$SG80941 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H, '8', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80942 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
+$SG80943 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'B', 00H, 'L'
 	DB	00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '0', 00H, '9', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80944 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG80945 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'W', 00H, 'H', 00H, 'E', 00H, 'E', 00H, 'L'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H
 	DB	'A', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80946 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
+$SG80947 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'0', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80948 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
+$SG80949 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '0', 00H, 'C', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80950 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
+$SG80951 DB	'W', 00H, 'M', 00H, '_', 00H, 'X', 00H, 'B', 00H, 'U', 00H
 	DB	'T', 00H, 'T', 00H, 'O', 00H, 'N', 00H, 'D', 00H, 'B', 00H, 'L'
 	DB	00H, 'C', 00H, 'L', 00H, 'K', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '0', 00H, 'D', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80954 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'R', 00H
+$SG80955 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'R', 00H
 	DB	'E', 00H, 'N', 00H, 'T', 00H, 'N', 00H, 'O', 00H, 'T', 00H, 'I'
 	DB	00H, 'F', 00H, 'Y', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '1', 00H, '0', 00H, ')', 00H, 00H, 00H
-$SG80956 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
+$SG80957 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
 	DB	'E', 00H, 'R', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, 'L'
 	DB	00H, 'O', 00H, 'O', 00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '1', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80952 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG80953 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'H', 00H, 'W', 00H, 'H', 00H, 'E', 00H, 'E'
 	DB	00H, 'L', 00H, '_', 00H, 'O', 00H, 'R', 00H, '_', 00H, 'M', 00H
 	DB	'O', 00H, 'U', 00H, 'S', 00H, 'E', 00H, 'L', 00H, 'A', 00H, 'S'
 	DB	00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'0', 00H, 'E', 00H, ')', 00H, 00H, 00H
-$SG80958 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'X', 00H, 'I', 00H
+$SG80959 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'X', 00H, 'I', 00H
 	DB	'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, 'L', 00H, 'O'
 	DB	00H, 'O', 00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '1', 00H, '2', 00H, ')', 00H, 00H, 00H
-$SG80960 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'E', 00H, 'X', 00H
+$SG80961 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'E', 00H, 'X', 00H
 	DB	'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '2', 00H, '1', 00H, '3', 00H, ')', 00H
 	DB	00H, 00H
-$SG80962 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
+$SG80963 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
 	DB	'I', 00H, 'N', 00H, 'G', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '2', 00H, '1', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80964 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'P', 00H
+$SG80965 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'A', 00H, 'P', 00H
 	DB	'T', 00H, 'U', 00H, 'R', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '2', 00H, '1', 00H, '5', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80966 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'V', 00H
+$SG89158 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
+	ORG $+2
+$SG89159 DB	'lhs.len == rhs.len', 00H
+	ORG $+5
+$SG80967 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'V', 00H
 	DB	'I', 00H, 'N', 00H, 'G', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '2', 00H, '1', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80968 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'W', 00H
+$SG89160 DB	'vec_dot', 00H
+$SG89161 DB	'W:\cpp\void\dr-ai\num-ai.h', 00H
+	ORG $+5
+$SG80969 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'W', 00H
 	DB	'E', 00H, 'R', 00H, 'B', 00H, 'R', 00H, 'O', 00H, 'A', 00H, 'D'
 	DB	00H, 'C', 00H, 'A', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '2', 00H, '1', 00H, '8', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80970 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'V', 00H
+$SG80971 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'V', 00H
 	DB	'I', 00H, 'C', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N'
 	DB	00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '1', 00H, '9', 00H, ')', 00H, 00H, 00H
-$SG80972 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80973 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'C', 00H, 'R', 00H, 'E', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '2', 00H, '0', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG80974 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80975 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'D', 00H, 'E', 00H, 'S', 00H, 'T', 00H, 'R', 00H, 'O', 00H, 'Y'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '2', 00H
 	DB	'1', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80976 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80977 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'A', 00H, 'C', 00H, 'T', 00H, 'I', 00H, 'V', 00H, 'A', 00H, 'T'
 	DB	00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'2', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80978 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80979 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'R', 00H, 'E', 00H, 'S', 00H, 'T', 00H, 'O', 00H, 'R', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '2', 00H
 	DB	'3', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80980 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80981 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'N', 00H, 'E', 00H, 'X', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '2', 00H, '2', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80982 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80983 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'M', 00H, 'A', 00H, 'X', 00H, 'I', 00H, 'M', 00H, 'I', 00H, 'Z'
 	DB	00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'2', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80984 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80985 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'T', 00H, 'I', 00H, 'L', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '0', 00H, '2', 00H, '2', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG80986 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80987 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'C', 00H, 'A', 00H, 'S', 00H, 'C', 00H, 'A', 00H, 'D', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '2', 00H
 	DB	'7', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80988 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80989 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'I', 00H, 'C', 00H, 'O', 00H, 'N', 00H, 'A', 00H, 'R', 00H, 'R'
 	DB	00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '2', 00H, '2', 00H, '8', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG80990 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80991 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'G', 00H, 'E', 00H, 'T', 00H, 'A', 00H, 'C', 00H, 'T', 00H, 'I'
 	DB	00H, 'V', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '2', 00H, '9', 00H, ')', 00H, 00H, 00H
-$SG80992 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG80993 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'S', 00H, 'E', 00H, 'T', 00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '3', 00H
 	DB	'0', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG80994 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
+$SG80995 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'N', 00H, 'T', 00H
 	DB	'E', 00H, 'R', 00H, 'S', 00H, 'I', 00H, 'Z', 00H, 'E', 00H, 'M'
 	DB	00H, 'O', 00H, 'V', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '3', 00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG80996 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'X', 00H, 'I', 00H
+$SG80997 DB	'W', 00H, 'M', 00H, '_', 00H, 'E', 00H, 'X', 00H, 'I', 00H
 	DB	'T', 00H, 'S', 00H, 'I', 00H, 'Z', 00H, 'E', 00H, 'M', 00H, 'O'
 	DB	00H, 'V', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '3', 00H, '2', 00H, ')', 00H, 00H, 00H
-$SG80998 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'O', 00H
+$SG80999 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'O', 00H
 	DB	'P', 00H, 'F', 00H, 'I', 00H, 'L', 00H, 'E', 00H, 'S', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '3', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG81000 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
+$SG81001 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'D', 00H, 'I', 00H
 	DB	'R', 00H, 'E', 00H, 'F', 00H, 'R', 00H, 'E', 00H, 'S', 00H, 'H'
 	DB	00H, 'M', 00H, 'E', 00H, 'N', 00H, 'U', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '2', 00H, '3', 00H, '4', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG81002 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81003 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'D', 00H, 'E', 00H, 'V'
 	DB	00H, 'I', 00H, 'C', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '2'
 	DB	00H, '3', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81004 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81005 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'D', 00H, 'E', 00H, 'V'
 	DB	00H, 'I', 00H, 'C', 00H, 'E', 00H, 'I', 00H, 'N', 00H, 'R', 00H
 	DB	'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x'
 	DB	00H, '2', 00H, '3', 00H, '9', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81008 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'O', 00H, 'U', 00H
-	DB	'C', 00H, 'H', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2'
-	DB	00H, '4', 00H, '0', 00H, ')', 00H, 00H, 00H
-	ORG $+6
-$SG81006 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81007 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'D', 00H, 'E', 00H, 'V'
 	DB	00H, 'I', 00H, 'C', 00H, 'E', 00H, 'O', 00H, 'U', 00H, 'T', 00H
 	DB	'O', 00H, 'F', 00H, 'R', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '2', 00H, '3', 00H, 'A', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+4
-$SG81010 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
+$SG81009 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'O', 00H, 'U', 00H
+	DB	'C', 00H, 'H', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2'
+	DB	00H, '4', 00H, '0', 00H, ')', 00H, 00H, 00H
+	ORG $+6
+$SG81011 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
 	DB	'O', 00H, 'I', 00H, 'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'U'
 	DB	00H, 'P', 00H, 'D', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, '1', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81012 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
+$SG81013 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
 	DB	'O', 00H, 'I', 00H, 'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'D'
 	DB	00H, 'O', 00H, 'W', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '4', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81014 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
+$SG81015 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'P', 00H
 	DB	'O', 00H, 'I', 00H, 'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'U'
 	DB	00H, 'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'4', 00H, '3', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81016 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81017 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'U', 00H, 'P', 00H, 'D'
 	DB	00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '4', 00H, '5', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81018 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81019 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'4', 00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81020 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81021 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, '7', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG81022 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81023 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'E', 00H, 'N', 00H, 'T'
 	DB	00H, 'E', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '4', 00H, '9', 00H, ')', 00H, 00H, 00H
-$SG81024 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81025 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'L', 00H, 'E', 00H, 'A'
 	DB	00H, 'V', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '4', 00H, 'A', 00H, ')', 00H, 00H, 00H
-$SG81026 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81027 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'T'
 	DB	00H, 'I', 00H, 'V', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, 'B', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81030 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'O', 00H, 'U', 00H
-	DB	'C', 00H, 'H', 00H, 'H', 00H, 'I', 00H, 'T', 00H, 'T', 00H, 'E'
-	DB	00H, 'S', 00H, 'T', 00H, 'I', 00H, 'N', 00H, 'G', 00H, '(', 00H
-	DB	'0', 00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, 'D', 00H, ')'
-	DB	00H, 00H, 00H
-	ORG $+2
-$SG81028 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81029 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'C', 00H, 'A', 00H, 'P'
 	DB	00H, 'T', 00H, 'U', 00H, 'R', 00H, 'E', 00H, 'C', 00H, 'H', 00H
 	DB	'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, 'C', 00H, ')', 00H
 	DB	00H, 00H
 	ORG $+6
-$SG81032 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81031 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'O', 00H, 'U', 00H
+	DB	'C', 00H, 'H', 00H, 'H', 00H, 'I', 00H, 'T', 00H, 'T', 00H, 'E'
+	DB	00H, 'S', 00H, 'T', 00H, 'I', 00H, 'N', 00H, 'G', 00H, '(', 00H
+	DB	'0', 00H, 'x', 00H, '0', 00H, '2', 00H, '4', 00H, 'D', 00H, ')'
+	DB	00H, 00H, 00H
+	ORG $+2
+$SG81033 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'W', 00H, 'H', 00H, 'E'
 	DB	00H, 'E', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, '4', 00H, 'E', 00H, ')', 00H, 00H, 00H
-$SG81034 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81035 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'H', 00H, 'W', 00H, 'H'
 	DB	00H, 'E', 00H, 'E', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '2', 00H, '4', 00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81036 DB	'D', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81037 DB	'D', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'H', 00H, 'I', 00H, 'T'
 	DB	00H, 'T', 00H, 'E', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '2', 00H, '5', 00H, '0', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG81038 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81039 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'R', 00H, 'O', 00H, 'U'
 	DB	00H, 'T', 00H, 'E', 00H, 'D', 00H, 'T', 00H, 'O', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '2', 00H, '5', 00H, '1', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81040 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81041 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'R', 00H, 'O', 00H, 'U'
 	DB	00H, 'T', 00H, 'E', 00H, 'D', 00H, 'A', 00H, 'W', 00H, 'A', 00H
 	DB	'Y', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '5'
 	DB	00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81042 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
+$SG81045 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+	DB	'_', 00H, 'S', 00H, 'E', 00H, 'T', 00H, 'C', 00H, 'O', 00H, 'N'
+	DB	00H, 'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, '(', 00H, '0', 00H
+	DB	'x', 00H, '0', 00H, '2', 00H, '8', 00H, '1', 00H, ')', 00H, 00H
+	DB	00H
+	ORG $+4
+$SG81043 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'O', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'E', 00H, 'R', 00H, 'R', 00H, 'O', 00H, 'U'
 	DB	00H, 'T', 00H, 'E', 00H, 'D', 00H, 'R', 00H, 'E', 00H, 'L', 00H
 	DB	'E', 00H, 'A', 00H, 'S', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '2', 00H, '5', 00H, '3', 00H, ')', 00H
 	DB	00H, 00H
 	ORG $+6
-$SG81044 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
-	DB	'_', 00H, 'S', 00H, 'E', 00H, 'T', 00H, 'C', 00H, 'O', 00H, 'N'
-	DB	00H, 'T', 00H, 'E', 00H, 'X', 00H, 'T', 00H, '(', 00H, '0', 00H
-	DB	'x', 00H, '0', 00H, '2', 00H, '8', 00H, '1', 00H, ')', 00H, 00H
-	DB	00H
-	ORG $+4
-$SG81046 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81047 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'N', 00H, 'O', 00H, 'T', 00H, 'I', 00H, 'F', 00H, 'Y'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '8', 00H
 	DB	'2', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81048 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81049 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'C', 00H, 'O', 00H, 'N', 00H, 'T', 00H, 'R', 00H, 'O'
 	DB	00H, 'L', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'8', 00H, '3', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81050 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81051 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'C', 00H, 'O', 00H, 'M', 00H, 'P', 00H, 'O', 00H, 'S'
 	DB	00H, 'I', 00H, 'T', 00H, 'I', 00H, 'O', 00H, 'N', 00H, 'F', 00H
 	DB	'U', 00H, 'L', 00H, 'L', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '2', 00H, '8', 00H, '4', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81052 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81053 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'S', 00H, 'E', 00H, 'L', 00H, 'E', 00H, 'C', 00H, 'T'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '8', 00H
 	DB	'5', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81054 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81055 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'R', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '2', 00H, '8', 00H, '6', 00H, ')', 00H
 	DB	00H, 00H
-$SG81056 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81057 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'R', 00H, 'E', 00H, 'Q', 00H, 'U', 00H, 'E', 00H, 'S'
 	DB	00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'8', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81058 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81059 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, 'D', 00H, 'O', 00H, 'W'
 	DB	00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'9', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81060 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
+$SG81061 DB	'W', 00H, 'M', 00H, '_', 00H, 'I', 00H, 'M', 00H, 'E', 00H
 	DB	'_', 00H, 'K', 00H, 'E', 00H, 'Y', 00H, 'U', 00H, 'P', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, '9', 00H, '1', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+6
-$SG81062 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG81063 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'H', 00H, 'O', 00H, 'V', 00H, 'E', 00H, 'R'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'A', 00H
 	DB	'1', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81064 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
+$SG81065 DB	'W', 00H, 'M', 00H, '_', 00H, 'M', 00H, 'O', 00H, 'U', 00H
 	DB	'S', 00H, 'E', 00H, 'L', 00H, 'E', 00H, 'A', 00H, 'V', 00H, 'E'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'A', 00H
 	DB	'3', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81066 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG81067 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'O', 00H, 'U', 00H, 'S', 00H, 'E', 00H, 'H', 00H, 'O', 00H, 'V'
 	DB	00H, 'E', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, 'A', 00H, '0', 00H, ')', 00H, 00H, 00H
-$SG81068 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
+$SG81069 DB	'W', 00H, 'M', 00H, '_', 00H, 'N', 00H, 'C', 00H, 'M', 00H
 	DB	'O', 00H, 'U', 00H, 'S', 00H, 'E', 00H, 'L', 00H, 'E', 00H, 'A'
 	DB	00H, 'V', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, 'A', 00H, '2', 00H, ')', 00H, 00H, 00H
-$SG81070 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'T', 00H, 'S', 00H
+$SG81071 DB	'W', 00H, 'M', 00H, '_', 00H, 'W', 00H, 'T', 00H, 'S', 00H
 	DB	'S', 00H, 'E', 00H, 'S', 00H, 'S', 00H, 'I', 00H, 'O', 00H, 'N'
 	DB	00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H
 	DB	'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'B'
 	DB	00H, '1', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81072 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'A', 00H, 'B', 00H
+$SG81073 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'A', 00H, 'B', 00H
 	DB	'L', 00H, 'E', 00H, 'T', 00H, '_', 00H, 'F', 00H, 'I', 00H, 'R'
 	DB	00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'2', 00H, 'c', 00H, '0', 00H, ')', 00H, 00H, 00H
-$SG81074 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'A', 00H, 'B', 00H
+$SG81075 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'A', 00H, 'B', 00H
 	DB	'L', 00H, 'E', 00H, 'T', 00H, '_', 00H, 'L', 00H, 'A', 00H, 'S'
 	DB	00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H
 	DB	'd', 00H, 'f', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81076 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
+$SG81077 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
 	DB	'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'E', 00H
 	DB	'0', 00H, ')', 00H, 00H, 00H
-	ORG $+12
-$SG81078 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
+	ORG $+4
+$SG81079 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
 	DB	'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D'
 	DB	00H, '_', 00H, 'B', 00H, 'E', 00H, 'F', 00H, 'O', 00H, 'R', 00H
 	DB	'E', 00H, 'P', 00H, 'A', 00H, 'R', 00H, 'E', 00H, 'N', 00H, 'T'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'E', 00H
 	DB	'2', 00H, ')', 00H, 00H, 00H
-	ORG $+10
-$SG81080 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
+	ORG $+2
+$SG81083 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+	DB	'D', 00H, 'P', 00H, 'I', 00H, 'S', 00H, 'C', 00H, 'A', 00H, 'L'
+	DB	00H, 'E', 00H, 'D', 00H, 'S', 00H, 'I', 00H, 'Z', 00H, 'E', 00H
+	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'E', 00H, '4'
+	DB	00H, ')', 00H, 00H, 00H
+$SG81081 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'P', 00H, 'I', 00H
 	DB	'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D'
 	DB	00H, '_', 00H, 'A', 00H, 'F', 00H, 'T', 00H, 'E', 00H, 'R', 00H
 	DB	'P', 00H, 'A', 00H, 'R', 00H, 'E', 00H, 'N', 00H, 'T', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'E', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+4
-$SG81082 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
-	DB	'D', 00H, 'P', 00H, 'I', 00H, 'S', 00H, 'C', 00H, 'A', 00H, 'L'
-	DB	00H, 'E', 00H, 'D', 00H, 'S', 00H, 'I', 00H, 'Z', 00H, 'E', 00H
-	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '2', 00H, 'E', 00H, '4'
-	DB	00H, ')', 00H, 00H, 00H
-$SG81084 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'U', 00H, 'T', 00H
+$SG81085 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'U', 00H, 'T', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, '0'
 	DB	00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81086 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'P', 00H
+$SG81087 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'O', 00H, 'P', 00H
 	DB	'Y', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0'
 	DB	00H, '1', 00H, ')', 00H, 00H, 00H
-$SG81088 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'S', 00H
+$SG81089 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'S', 00H
 	DB	'T', 00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3'
 	DB	00H, '0', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81090 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'E', 00H
+$SG81091 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'E', 00H
 	DB	'A', 00H, 'R', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3'
 	DB	00H, '0', 00H, '3', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81092 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'N', 00H, 'D', 00H
+$SG81093 DB	'W', 00H, 'M', 00H, '_', 00H, 'U', 00H, 'N', 00H, 'D', 00H
 	DB	'O', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0'
 	DB	00H, '4', 00H, ')', 00H, 00H, 00H
-$SG81094 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'E', 00H, 'N', 00H
+$SG81095 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'E', 00H, 'N', 00H
 	DB	'D', 00H, 'E', 00H, 'R', 00H, 'F', 00H, 'O', 00H, 'R', 00H, 'M'
 	DB	00H, 'A', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'3', 00H, '0', 00H, '5', 00H, ')', 00H, 00H, 00H
-$SG81096 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'E', 00H, 'N', 00H
+$SG81097 DB	'W', 00H, 'M', 00H, '_', 00H, 'R', 00H, 'E', 00H, 'N', 00H
 	DB	'D', 00H, 'E', 00H, 'R', 00H, 'A', 00H, 'L', 00H, 'L', 00H, 'F'
 	DB	00H, 'O', 00H, 'R', 00H, 'M', 00H, 'A', 00H, 'T', 00H, 'S', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, '6'
 	DB	00H, ')', 00H, 00H, 00H
-$SG81098 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'S', 00H
+$SG81099 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'E', 00H, 'S', 00H
 	DB	'T', 00H, 'R', 00H, 'O', 00H, 'Y', 00H, 'C', 00H, 'L', 00H, 'I'
 	DB	00H, 'P', 00H, 'B', 00H, 'O', 00H, 'A', 00H, 'R', 00H, 'D', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, '7'
 	DB	00H, ')', 00H, 00H, 00H
-$SG81100 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'A', 00H
+$SG81101 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'R', 00H, 'A', 00H
 	DB	'W', 00H, 'C', 00H, 'L', 00H, 'I', 00H, 'P', 00H, 'B', 00H, 'O'
 	DB	00H, 'A', 00H, 'R', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '3', 00H, '0', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81102 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
+$SG81103 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'C', 00H, 'L', 00H, 'I', 00H, 'P', 00H, 'B'
 	DB	00H, 'O', 00H, 'A', 00H, 'R', 00H, 'D', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '3', 00H, '0', 00H, '9', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG81104 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'S', 00H, 'C', 00H
+$SG81105 DB	'W', 00H, 'M', 00H, '_', 00H, 'V', 00H, 'S', 00H, 'C', 00H
 	DB	'R', 00H, 'O', 00H, 'L', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'I'
 	DB	00H, 'P', 00H, 'B', 00H, 'O', 00H, 'A', 00H, 'R', 00H, 'D', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, 'A'
 	DB	00H, ')', 00H, 00H, 00H
-$SG81106 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
+$SG81107 DB	'W', 00H, 'M', 00H, '_', 00H, 'S', 00H, 'I', 00H, 'Z', 00H
 	DB	'E', 00H, 'C', 00H, 'L', 00H, 'I', 00H, 'P', 00H, 'B', 00H, 'O'
 	DB	00H, 'A', 00H, 'R', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '3', 00H, '0', 00H, 'B', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81108 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'S', 00H, 'K', 00H
+$SG81109 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'S', 00H, 'K', 00H
 	DB	'C', 00H, 'B', 00H, 'F', 00H, 'O', 00H, 'R', 00H, 'M', 00H, 'A'
 	DB	00H, 'T', 00H, 'N', 00H, 'A', 00H, 'M', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, 'C', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81110 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
+$SG81111 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'H', 00H, 'A', 00H
 	DB	'N', 00H, 'G', 00H, 'E', 00H, 'C', 00H, 'B', 00H, 'C', 00H, 'H'
 	DB	00H, 'A', 00H, 'I', 00H, 'N', 00H, '(', 00H, '0', 00H, 'x', 00H
 	DB	'0', 00H, '3', 00H, '0', 00H, 'D', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81112 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'S', 00H, 'C', 00H
+$SG81113 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'S', 00H, 'C', 00H
 	DB	'R', 00H, 'O', 00H, 'L', 00H, 'L', 00H, 'C', 00H, 'L', 00H, 'I'
 	DB	00H, 'P', 00H, 'B', 00H, 'O', 00H, 'A', 00H, 'R', 00H, 'D', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, 'E'
 	DB	00H, ')', 00H, 00H, 00H
-$SG81114 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
+$SG81115 DB	'W', 00H, 'M', 00H, '_', 00H, 'Q', 00H, 'U', 00H, 'E', 00H
 	DB	'R', 00H, 'Y', 00H, 'N', 00H, 'E', 00H, 'W', 00H, 'P', 00H, 'A'
 	DB	00H, 'L', 00H, 'E', 00H, 'T', 00H, 'T', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '3', 00H, '0', 00H, 'F', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81116 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'L', 00H
+$SG81117 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'L', 00H
 	DB	'E', 00H, 'T', 00H, 'T', 00H, 'E', 00H, 'I', 00H, 'S', 00H, 'C'
 	DB	00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G', 00H, 'I', 00H, 'N', 00H
 	DB	'G', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '1'
 	DB	00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81118 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'L', 00H
+$SG81119 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'A', 00H, 'L', 00H
 	DB	'E', 00H, 'T', 00H, 'T', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A'
 	DB	00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0', 00H
 	DB	'x', 00H, '0', 00H, '3', 00H, '1', 00H, '1', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+4
-$SG81120 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'O', 00H, 'T', 00H
+$SG89313 DB	'data\train-labels.idx1-ubyte', 00H
+	ORG $+3
+$SG81121 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'O', 00H, 'T', 00H
 	DB	'K', 00H, 'E', 00H, 'Y', 00H, '(', 00H, '0', 00H, 'x', 00H, '0'
 	DB	00H, '3', 00H, '1', 00H, '2', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81122 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'R', 00H, 'I', 00H
+$SG89314 DB	'data\train-images.idx3-ubyte', 00H
+	ORG $+3
+$SG89315 DB	'T', 00H, 'I', 00H, 'M', 00H, 'E', 00H, 'D', 00H, 00H, 00H
+	ORG $+4
+$SG81123 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'R', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3'
 	DB	00H, '1', 00H, '7', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81124 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'R', 00H, 'I', 00H
+$SG89317 DB	'num-ai.c', 00H
+	ORG $+7
+$SG81125 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'R', 00H, 'I', 00H
 	DB	'N', 00H, 'T', 00H, 'C', 00H, 'L', 00H, 'I', 00H, 'E', 00H, 'N'
 	DB	00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H
 	DB	'1', 00H, '8', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81126 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'P', 00H, 'P', 00H
+$SG81127 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'P', 00H, 'P', 00H
 	DB	'C', 00H, 'O', 00H, 'M', 00H, 'M', 00H, 'A', 00H, 'N', 00H, 'D'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '1', 00H
 	DB	'9', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81128 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'H', 00H, 'E', 00H
+$SG81129 DB	'W', 00H, 'M', 00H, '_', 00H, 'T', 00H, 'H', 00H, 'E', 00H
 	DB	'M', 00H, 'E', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G'
 	DB	00H, 'E', 00H, 'D', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
 	DB	'3', 00H, '1', 00H, 'A', 00H, ')', 00H, 00H, 00H
-$SG81130 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'I', 00H
+$SG81131 DB	'W', 00H, 'M', 00H, '_', 00H, 'C', 00H, 'L', 00H, 'I', 00H
 	DB	'P', 00H, 'B', 00H, 'O', 00H, 'A', 00H, 'R', 00H, 'D', 00H, 'U'
 	DB	00H, 'P', 00H, 'D', 00H, 'A', 00H, 'T', 00H, 'E', 00H, '(', 00H
 	DB	'0', 00H, 'x', 00H, '0', 00H, '3', 00H, '1', 00H, 'D', 00H, ')'
 	DB	00H, 00H, 00H
 	ORG $+2
-$SG81132 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+$SG81147 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'A', 00H, 'N', 00H
+	DB	'D', 00H, 'H', 00H, 'E', 00H, 'L', 00H, 'D', 00H, 'F', 00H, 'I'
+	DB	00H, 'R', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H
+	DB	'0', 00H, '3', 00H, '5', 00H, '8', 00H, ')', 00H, 00H, 00H
+	ORG $+6
+$SG81133 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'C', 00H, 'O', 00H, 'M', 00H, 'P', 00H, 'O', 00H, 'S', 00H, 'I'
 	DB	00H, 'T', 00H, 'I', 00H, 'O', 00H, 'N', 00H, 'C', 00H, 'H', 00H
 	DB	'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '3', 00H, '1', 00H, 'E', 00H, ')', 00H
 	DB	00H, 00H
-	ORG $+14
-$SG81134 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+	ORG $+6
+$SG81149 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'A', 00H, 'N', 00H
+	DB	'D', 00H, 'H', 00H, 'E', 00H, 'L', 00H, 'D', 00H, 'L', 00H, 'A'
+	DB	00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
+	DB	'3', 00H, '5', 00H, 'F', 00H, ')', 00H, 00H, 00H
+$SG81151 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'F', 00H, 'X', 00H
+	DB	'F', 00H, 'I', 00H, 'R', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0'
+	DB	00H, 'x', 00H, '0', 00H, '3', 00H, '6', 00H, '0', 00H, ')', 00H
+	DB	00H, 00H
+$SG81135 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'N', 00H, 'C', 00H, 'R', 00H, 'E', 00H, 'N', 00H, 'D', 00H, 'E'
 	DB	00H, 'R', 00H, 'I', 00H, 'N', 00H, 'G', 00H, 'C', 00H, 'H', 00H
 	DB	'A', 00H, 'N', 00H, 'G', 00H, 'E', 00H, 'D', 00H, '(', 00H, '0'
 	DB	00H, 'x', 00H, '0', 00H, '3', 00H, '1', 00H, 'F', 00H, ')', 00H
 	DB	00H, 00H
-	ORG $+14
-$SG81136 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+	ORG $+6
+$SG81153 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'F', 00H, 'X', 00H
+	DB	'L', 00H, 'A', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
+	DB	00H, '0', 00H, '3', 00H, '7', 00H, 'F', 00H, ')', 00H, 00H, 00H
+	ORG $+2
+$SG81137 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'C', 00H, 'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'I', 00H, 'Z'
 	DB	00H, 'A', 00H, 'T', 00H, 'I', 00H, 'O', 00H, 'N', 00H, 'C', 00H
 	DB	'O', 00H, 'L', 00H, 'O', 00H, 'R', 00H, 'C', 00H, 'H', 00H, 'A'
@@ -3040,21 +3069,23 @@ $SG81136 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'x', 00H, '0', 00H, '3', 00H, '2', 00H, '0', 00H, ')', 00H, 00H
 	DB	00H
 	ORG $+2
-$SG81138 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+$SG81139 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'W', 00H, 'I', 00H, 'N', 00H, 'D', 00H, 'O', 00H, 'W', 00H, 'M'
 	DB	00H, 'A', 00H, 'X', 00H, 'I', 00H, 'M', 00H, 'I', 00H, 'Z', 00H
 	DB	'E', 00H, 'D', 00H, 'C', 00H, 'H', 00H, 'A', 00H, 'N', 00H, 'G'
 	DB	00H, 'E', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H
 	DB	'2', 00H, '1', 00H, ')', 00H, 00H, 00H
-	ORG $+8
-$SG81140 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+$SG81185 DB	'STATIC_ALLOCATOR', 00H
+	ORG $+7
+$SG81141 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'S', 00H, 'E', 00H, 'N', 00H, 'D', 00H, 'I', 00H, 'C', 00H, 'O'
 	DB	00H, 'N', 00H, 'I', 00H, 'C', 00H, 'T', 00H, 'H', 00H, 'U', 00H
 	DB	'M', 00H, 'B', 00H, 'N', 00H, 'A', 00H, 'I', 00H, 'L', 00H, '('
 	DB	00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '2', 00H, '3', 00H
 	DB	')', 00H, 00H, 00H
-	ORG $+12
-$SG81142 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
+$SG81296 DB	'%', 00H, 's', 00H, 00H, 00H
+	ORG $+6
+$SG81143 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'S', 00H, 'E', 00H, 'N', 00H, 'D', 00H, 'I', 00H, 'C', 00H, 'O'
 	DB	00H, 'N', 00H, 'I', 00H, 'C', 00H, 'L', 00H, 'I', 00H, 'V', 00H
 	DB	'E', 00H, 'P', 00H, 'R', 00H, 'E', 00H, 'V', 00H, 'I', 00H, 'E'
@@ -3062,109 +3093,90 @@ $SG81142 DB	'W', 00H, 'M', 00H, '_', 00H, 'D', 00H, 'W', 00H, 'M', 00H
 	DB	'P', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '2'
 	DB	00H, '6', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81144 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
+$SG81145 DB	'W', 00H, 'M', 00H, '_', 00H, 'G', 00H, 'E', 00H, 'T', 00H
 	DB	'T', 00H, 'I', 00H, 'T', 00H, 'L', 00H, 'E', 00H, 'B', 00H, 'A'
 	DB	00H, 'R', 00H, 'I', 00H, 'N', 00H, 'F', 00H, 'O', 00H, 'E', 00H
 	DB	'X', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '3'
 	DB	00H, 'F', 00H, ')', 00H, 00H, 00H
 	ORG $+6
-$SG81146 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'A', 00H, 'N', 00H
-	DB	'D', 00H, 'H', 00H, 'E', 00H, 'L', 00H, 'D', 00H, 'F', 00H, 'I'
-	DB	00H, 'R', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H
-	DB	'0', 00H, '3', 00H, '5', 00H, '8', 00H, ')', 00H, 00H, 00H
-	ORG $+6
-$SG81148 DB	'W', 00H, 'M', 00H, '_', 00H, 'H', 00H, 'A', 00H, 'N', 00H
-	DB	'D', 00H, 'H', 00H, 'E', 00H, 'L', 00H, 'D', 00H, 'L', 00H, 'A'
-	DB	00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H
-	DB	'3', 00H, '5', 00H, 'F', 00H, ')', 00H, 00H, 00H
-$SG81150 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'F', 00H, 'X', 00H
-	DB	'F', 00H, 'I', 00H, 'R', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0'
-	DB	00H, 'x', 00H, '0', 00H, '3', 00H, '6', 00H, '0', 00H, ')', 00H
-	DB	00H, 00H
-$SG81152 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'F', 00H, 'X', 00H
-	DB	'L', 00H, 'A', 00H, 'S', 00H, 'T', 00H, '(', 00H, '0', 00H, 'x'
-	DB	00H, '0', 00H, '3', 00H, '7', 00H, 'F', 00H, ')', 00H, 00H, 00H
-	ORG $+2
-$SG81154 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'E', 00H, 'N', 00H
+$SG81155 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'E', 00H, 'N', 00H
 	DB	'W', 00H, 'I', 00H, 'N', 00H, 'F', 00H, 'I', 00H, 'R', 00H, 'S'
 	DB	00H, 'T', 00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H
 	DB	'8', 00H, '0', 00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81156 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'E', 00H, 'N', 00H
+$SG81157 DB	'W', 00H, 'M', 00H, '_', 00H, 'P', 00H, 'E', 00H, 'N', 00H
 	DB	'W', 00H, 'I', 00H, 'N', 00H, 'L', 00H, 'A', 00H, 'S', 00H, 'T'
 	DB	00H, '(', 00H, '0', 00H, 'x', 00H, '0', 00H, '3', 00H, '8', 00H
 	DB	'F', 00H, ')', 00H, 00H, 00H
 	ORG $+4
-$SG81158 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'P', 00H, 'P', 00H
+$SG81159 DB	'W', 00H, 'M', 00H, '_', 00H, 'A', 00H, 'P', 00H, 'P', 00H
 	DB	'(', 00H, '0', 00H, 'x', 00H, '8', 00H, '0', 00H, '0', 00H, '0'
 	DB	00H, ')', 00H, 00H, 00H
 	ORG $+2
-$SG81159 DB	'U', 00H, 'N', 00H, 'K', 00H, 'N', 00H, 'O', 00H, 'W', 00H
+$SG81160 DB	'U', 00H, 'N', 00H, 'K', 00H, 'N', 00H, 'O', 00H, 'W', 00H
 	DB	'N', 00H, 00H, 00H
-$SG81183 DB	's', 00H, 'i', 00H, 'z', 00H, 'e', 00H, ' ', 00H, 't', 00H
+$SG81184 DB	's', 00H, 'i', 00H, 'z', 00H, 'e', 00H, ' ', 00H, 't', 00H
 	DB	'o', 00H, 'o', 00H, ' ', 00H, 'b', 00H, 'i', 00H, 'g', 00H, 00H
 	DB	00H
 	ORG $+6
-$SG81184 DB	'STATIC_ALLOCATOR', 00H
-	ORG $+7
-$SG81185 DB	'W:\cpp\void\dr/cator.c', 00H
+$SG81186 DB	'W:\cpp\void\dr/cator.c', 00H
 	ORG $+1
-$SG81189 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
+$SG81190 DB	'N', 00H, 'O', 00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H
 	DB	'S', 00H, 'A', 00H, 'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+2
-$SG81190 DB	'not supported for static allocations', 00H
+$SG81191 DB	'not supported for static allocations', 00H
 	ORG $+3
-$SG81191 DB	'!"not supported for static allocations"', 00H
-$SG81192 DB	'STATIC_ALLOCATOR', 00H
+$SG81192 DB	'!"not supported for static allocations"', 00H
+$SG81193 DB	'STATIC_ALLOCATOR', 00H
 	ORG $+7
-$SG81193 DB	'W:\cpp\void\dr/cator.c', 00H
+$SG81194 DB	'W:\cpp\void\dr/cator.c', 00H
 	ORG $+1
-$SG81209 DB	'W:\cpp\void\dr/cator.c', 00H
+$SG81210 DB	'W:\cpp\void\dr/cator.c', 00H
 	ORG $+1
-$SG81232 DB	'T', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'E', 00H, ':', 00H
+$SG81233 DB	'T', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'E', 00H, ':', 00H
 	DB	' ', 00H, ' ', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81234 DB	'D', 00H, 'E', 00H, 'B', 00H, 'U', 00H, 'G', 00H, ':', 00H
+$SG81235 DB	'D', 00H, 'E', 00H, 'B', 00H, 'U', 00H, 'G', 00H, ':', 00H
 	DB	' ', 00H, ' ', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81236 DB	'I', 00H, 'N', 00H, 'F', 00H, 'O', 00H, ':', 00H, ' ', 00H
+$SG81237 DB	'I', 00H, 'N', 00H, 'F', 00H, 'O', 00H, ':', 00H, ' ', 00H
 	DB	' ', 00H, ' ', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81238 DB	'W', 00H, 'A', 00H, 'R', 00H, 'N', 00H, 'I', 00H, 'N', 00H
+$SG81239 DB	'W', 00H, 'A', 00H, 'R', 00H, 'N', 00H, 'I', 00H, 'N', 00H
 	DB	'G', 00H, ':', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81240 DB	'E', 00H, 'R', 00H, 'R', 00H, 'O', 00H, 'R', 00H, ':', 00H
+$SG81241 DB	'E', 00H, 'R', 00H, 'R', 00H, 'O', 00H, 'R', 00H, ':', 00H
 	DB	' ', 00H, ' ', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81242 DB	'F', 00H, 'A', 00H, 'T', 00H, 'A', 00H, 'L', 00H, ':', 00H
+$SG81243 DB	'F', 00H, 'A', 00H, 'T', 00H, 'A', 00H, 'L', 00H, ':', 00H
 	DB	' ', 00H, ' ', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81244 DB	'V', 00H, 'E', 00H, 'R', 00H, 'B', 00H, 'O', 00H, 'S', 00H
+$SG81245 DB	'V', 00H, 'E', 00H, 'R', 00H, 'B', 00H, 'O', 00H, 'S', 00H
 	DB	'E', 00H, ':', 00H, ' ', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81246 DB	'P', 00H, 'E', 00H, 'D', 00H, 'A', 00H, 'N', 00H, 'T', 00H
+$SG81247 DB	'P', 00H, 'E', 00H, 'D', 00H, 'A', 00H, 'N', 00H, 'T', 00H
 	DB	'I', 00H, 'C', 00H, ':', 00H, ' ', 00H, 00H, 00H
 	ORG $+2
-$SG81247 DB	'I', 00H, 'N', 00H, 'V', 00H, 'A', 00H, 'L', 00H, 'I', 00H
+$SG81248 DB	'I', 00H, 'N', 00H, 'V', 00H, 'A', 00H, 'L', 00H, 'I', 00H
 	DB	'D', 00H, '_', 00H, 'T', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'E'
 	DB	00H, '_', 00H, 'M', 00H, 'E', 00H, 'S', 00H, 'S', 00H, 'A', 00H
 	DB	'G', 00H, 'E', 00H, 00H, 00H
 	ORG $+4
-$SG81264 DB	'K', 00H, 'L', 00H, 'A', 00H, 'R', 00H, 'K', 00H, '_', 00H
+$SG81265 DB	'K', 00H, 'L', 00H, 'A', 00H, 'R', 00H, 'K', 00H, '_', 00H
 	DB	'A', 00H, 'P', 00H, 'P', 00H, ' ', 00H, '%', 00H, 's', 00H, ' '
 	DB	00H, '%', 00H, 's', 00H, ',', 00H, ' ', 00H, '%', 00H, 's', 00H
 	DB	'(', 00H, ')', 00H, ' ', 00H, '[', 00H, '%', 00H, 'i', 00H, ']'
 	DB	00H, ' ', 00H, '%', 00H, 's', 00H, 0aH, 00H, 00H, 00H
 	ORG $+2
-$SG81278 DB	'T', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'E', 00H, '_', 00H
+$SG81279 DB	'T', 00H, 'R', 00H, 'A', 00H, 'C', 00H, 'E', 00H, '_', 00H
 	DB	'B', 00H, 'L', 00H, 'O', 00H, 'C', 00H, 'K', 00H, ' ', 00H, '['
 	DB	00H, '%', 00H, 's', 00H, ']', 00H, ' ', 00H, '%', 00H, 'f', 00H
 	DB	'(', 00H, 'm', 00H, 's', 00H, ')', 00H, 00H, 00H
-$SG81859 DB	'unknown image type', 00H
+$SG81860 DB	'unknown image type', 00H
 	ORG $+5
-$SG81877 DB	'outofmem', 00H
+$SG81878 DB	'outofmem', 00H
 	ORG $+7
-$SG81896 DB	'outofmem', 00H
+$SG81897 DB	'outofmem', 00H
 CONST	ENDS
 PUBLIC	__local_stdio_printf_options
 PUBLIC	_vsnwprintf_l
@@ -3245,7 +3257,9 @@ PUBLIC	stbi_zlib_compress
 PUBLIC	stbi_write_png_to_mem
 PUBLIC	?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA ; `__local_stdio_printf_options'::`2'::_OptionsStorage
 PUBLIC	__real@0a4fb11f
+PUBLIC	__real@3b808081
 PUBLIC	__real@3da685db
+PUBLIC	__real@3dcccccd
 PUBLIC	__real@3de978d5
 PUBLIC	__real@3e800000
 PUBLIC	__real@3e991687
@@ -3258,18 +3272,14 @@ PUBLIC	__real@3f1645a2
 PUBLIC	__real@3f3504f3
 PUBLIC	__real@3f800000
 PUBLIC	__real@3fa73d75
-PUBLIC	__real@3fe0000000000000
 PUBLIC	__real@3ff0000000000000
 PUBLIC	__real@40400000
 PUBLIC	__real@408f400000000000
-PUBLIC	__real@40dfffc000000000
 PUBLIC	__real@43000000
 PUBLIC	__real@437f0000
 PUBLIC	__real@43800000
 PUBLIC	__real@477fff00
-PUBLIC	__real@5f000000
 PUBLIC	__real@be2cca2e
-PUBLIC	__real@bfe0000000000000
 PUBLIC	__xmm@00000200000002000000020000000200
 PUBLIC	__xmm@00080008000800080008000800080008
 PUBLIC	__xmm@00ff00ff00ff00ff00ff00ff00ff00ff
@@ -3311,8 +3321,8 @@ EXTRN	__imp___stdio_common_vsprintf_s:PROC
 EXTRN	__imp_free:PROC
 EXTRN	__imp_malloc:PROC
 EXTRN	__imp_realloc:PROC
+EXTRN	__imp__aligned_malloc:PROC
 EXTRN	_lrotl:PROC
-EXTRN	__imp_rand:PROC
 EXTRN	__imp_strtol:PROC
 EXTRN	memcmp:PROC
 EXTRN	memcpy:PROC
@@ -3500,7 +3510,7 @@ $pdata$?strtoi@@YA_JUstr32@@@Z DD imagerel ?strtoi@@YA_JUstr32@@@Z
 	DD	imagerel ?strtoi@@YA_JUstr32@@@Z+71
 	DD	imagerel $unwind$?strtoi@@YA_JUstr32@@@Z
 $pdata$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ
-	DD	imagerel ?MAIN@@YAXXZ+1276
+	DD	imagerel ?MAIN@@YAXXZ+2688
 	DD	imagerel $unwind$?MAIN@@YAXXZ
 $pdata$?GetThreadID@@YAHXZ DD imagerel ?GetThreadID@@YAHXZ
 	DD	imagerel ?GetThreadID@@YAHXZ+15
@@ -4276,9 +4286,12 @@ $pdata$?stbiw__jpg_processDU@@YAHPEAUstbi__write_context@@PEAH1PEAMH2HQEAY01$$CB
 $pdata$?stbi_write_jpg_core@@YAHPEAUstbi__write_context@@HHHPEBXH@Z DD imagerel ?stbi_write_jpg_core@@YAHPEAUstbi__write_context@@HHHPEBXH@Z
 	DD	imagerel ?stbi_write_jpg_core@@YAHPEAUstbi__write_context@@HHHPEBXH@Z+4895
 	DD	imagerel $unwind$?stbi_write_jpg_core@@YAHPEAUstbi__write_context@@HHHPEBXH@Z
-$pdata$?rand_f@@YANNN@Z DD imagerel ?rand_f@@YANNN@Z
-	DD	imagerel ?rand_f@@YANNN@Z+68
-	DD	imagerel $unwind$?rand_f@@YANNN@Z
+$pdata$?vec_new@@YA?AUai_vec@@H@Z DD imagerel ?vec_new@@YA?AUai_vec@@H@Z
+	DD	imagerel ?vec_new@@YA?AUai_vec@@H@Z+113
+	DD	imagerel $unwind$?vec_new@@YA?AUai_vec@@H@Z
+$pdata$?mat_new@@YA?AUai_mat@@HH@Z DD imagerel ?mat_new@@YA?AUai_mat@@HH@Z
+	DD	imagerel ?mat_new@@YA?AUai_mat@@HH@Z+318
+	DD	imagerel $unwind$?mat_new@@YA?AUai_mat@@HH@Z
 pdata	ENDS
 ;	COMDAT ?Min@?1??STATIC_ALLOCATOR@@YAPEAXPEAXHH_K01@Z@4HA
 _TLS	SEGMENT
@@ -4369,17 +4382,9 @@ CONST	SEGMENT
 __xmm@00000200000002000000020000000200 DB 00H, 02H, 00H, 00H, 00H, 02H, 00H
 	DB	00H, 00H, 02H, 00H, 00H, 00H, 02H, 00H, 00H
 CONST	ENDS
-;	COMDAT __real@bfe0000000000000
-CONST	SEGMENT
-__real@bfe0000000000000 DQ 0bfe0000000000000r	; -0.5
-CONST	ENDS
 ;	COMDAT __real@be2cca2e
 CONST	SEGMENT
 __real@be2cca2e DD 0be2cca2er			; -0.16874
-CONST	ENDS
-;	COMDAT __real@5f000000
-CONST	SEGMENT
-__real@5f000000 DD 05f000000r			; 9.22337e+18
 CONST	ENDS
 ;	COMDAT __real@477fff00
 CONST	SEGMENT
@@ -4397,10 +4402,6 @@ CONST	ENDS
 CONST	SEGMENT
 __real@43000000 DD 043000000r			; 128
 CONST	ENDS
-;	COMDAT __real@40dfffc000000000
-CONST	SEGMENT
-__real@40dfffc000000000 DQ 040dfffc000000000r	; 32767
-CONST	ENDS
 ;	COMDAT __real@408f400000000000
 CONST	SEGMENT
 __real@408f400000000000 DQ 0408f400000000000r	; 1000
@@ -4412,10 +4413,6 @@ CONST	ENDS
 ;	COMDAT __real@3ff0000000000000
 CONST	SEGMENT
 __real@3ff0000000000000 DQ 03ff0000000000000r	; 1
-CONST	ENDS
-;	COMDAT __real@3fe0000000000000
-CONST	SEGMENT
-__real@3fe0000000000000 DQ 03fe0000000000000r	; 0.5
 CONST	ENDS
 ;	COMDAT __real@3fa73d75
 CONST	SEGMENT
@@ -4465,9 +4462,17 @@ CONST	ENDS
 CONST	SEGMENT
 __real@3de978d5 DD 03de978d5r			; 0.114
 CONST	ENDS
+;	COMDAT __real@3dcccccd
+CONST	SEGMENT
+__real@3dcccccd DD 03dcccccdr			; 0.1
+CONST	ENDS
 ;	COMDAT __real@3da685db
 CONST	SEGMENT
 __real@3da685db DD 03da685dbr			; 0.08131
+CONST	ENDS
+;	COMDAT __real@3b808081
+CONST	SEGMENT
+__real@3b808081 DD 03b808081r			; 0.00392157
 CONST	ENDS
 ;	COMDAT __real@0a4fb11f
 CONST	SEGMENT
@@ -6935,8 +6940,8 @@ _volmd	DD	0ffffffffH
 	DD	073H
 _volmd	DD	0ffffffffH
 	DDSymXIndex: 	FLAT:?MAIN@@YAXXZ
-	DD	017H
-	DD	04e4H
+	DD	014H
+	DD	0a66H
 voltbl	ENDS
 xdata	SEGMENT
 $unwind$?rx7__stoi@@YAHHPEA_JPEBD1@Z DD 011701H
@@ -6984,10 +6989,11 @@ $unwind$??7str32@@QEAAHXZ DD 010901H
 	DD	02209H
 $unwind$?strtoi@@YA_JUstr32@@@Z DD 010901H
 	DD	06209H
-$unwind$?MAIN@@YAXXZ DD 021f19H
-	DD	01a89010dH
+$unwind$?MAIN@@YAXXZ DD 041c19H
+	DD	0d5010aH
+	DD	060027003H
 	DD	imagerel __GSHandlerCheck
-	DD	0d430H
+	DD	0690H
 $unwind$?GetThreadID@@YAHXZ DD 010401H
 	DD	04204H
 $unwind$?GetPerformanceFrequency@@YA_KXZ DD 010401H
@@ -7636,8 +7642,12 @@ $unwind$?stbi_write_jpg_core@@YAHPEAUstbi__write_context@@HHHPEBXH@Z DD 023219H
 	DD	02ab0120H
 	DD	imagerel __GSHandlerCheck
 	DD	01540H
-$unwind$?rand_f@@YANNN@Z DD 011001H
-	DD	04210H
+$unwind$?vec_new@@YA?AUai_vec@@H@Z DD 030f01H
+	DD	0700b620fH
+	DD	0600aH
+$unwind$?mat_new@@YA?AUai_mat@@HH@Z DD 041701H
+	DD	0150117H
+	DD	0600f7010H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -7686,36 +7696,11 @@ $unwind$_vsnwprintf_l DD 011801H
 xdata	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
-min$ = 48
-max$ = 56
-?rand_f@@YANNN@Z PROC					; rand_f
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 19
-	movsd	QWORD PTR [rsp+16], xmm1
-	movsd	QWORD PTR [rsp+8], xmm0
-	sub	rsp, 40					; 00000028H
-	call	QWORD PTR __imp_rand
-	cvtsi2sd xmm0, eax
-	divsd	xmm0, QWORD PTR __real@40dfffc000000000
-	movsd	xmm1, QWORD PTR max$[rsp]
-	subsd	xmm1, QWORD PTR min$[rsp]
-	mulsd	xmm0, xmm1
-	movsd	xmm1, QWORD PTR min$[rsp]
-	addsd	xmm1, xmm0
-	movaps	xmm0, xmm1
-; Line 20
-	add	rsp, 40					; 00000028H
-	ret	0
-?rand_f@@YANNN@Z ENDP					; rand_f
-_TEXT	ENDS
-; Function compile flags: /Odtp
-_TEXT	SEGMENT
 i$ = 8
 ?int_flip@@YAII@Z PROC					; int_flip
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 11
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 252
 	mov	DWORD PTR [rsp+8], ecx
-; Line 12
 	mov	eax, DWORD PTR i$[rsp]
 	and	eax, -16777216				; ff000000H
 	shr	eax, 24
@@ -7731,9 +7716,168 @@ i$ = 8
 	and	ecx, 65280				; 0000ff00H
 	shl	ecx, 8
 	or	eax, ecx
-; Line 16
+; Line 256
 	ret	0
 ?int_flip@@YAII@Z ENDP					; int_flip
+_TEXT	ENDS
+; Function compile flags: /Odtp
+_TEXT	SEGMENT
+$T1 = 32
+$T2 = 48
+m$ = 64
+__$ReturnAddress$ = 192
+col_len$ = 200
+row_len$ = 208
+?mat_new@@YA?AUai_mat@@HH@Z PROC			; mat_new
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 145
+	mov	DWORD PTR [rsp+24], r8d
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rsi
+	push	rdi
+	sub	rsp, 168				; 000000a8H
+; Line 146
+	mov	eax, DWORD PTR col_len$[rsp]
+	mov	DWORD PTR m$[rsp], eax
+; Line 147
+	mov	eax, DWORD PTR row_len$[rsp]
+	mov	DWORD PTR m$[rsp+4], eax
+; Line 148
+	mov	eax, DWORD PTR row_len$[rsp]
+	mov	DWORD PTR m$[rsp+24], eax
+; Line 149
+	mov	eax, DWORD PTR row_len$[rsp]
+	mov	DWORD PTR m$[rsp+40], eax
+; Line 150
+	mov	eax, DWORD PTR row_len$[rsp]
+	mov	DWORD PTR m$[rsp+56], eax
+; Line 151
+	mov	eax, DWORD PTR row_len$[rsp]
+	imul	eax, DWORD PTR col_len$[rsp]
+	mov	DWORD PTR m$[rsp+72], eax
+; Line 152
+	mov	eax, DWORD PTR m$[rsp+40]
+	mov	ecx, DWORD PTR m$[rsp+24]
+	add	ecx, eax
+	mov	eax, ecx
+	add	eax, DWORD PTR m$[rsp+56]
+	add	eax, DWORD PTR m$[rsp+72]
+	mov	edx, eax
+	lea	rcx, QWORD PTR $T2[rsp]
+	call	?vec_new@@YA?AUai_vec@@H@Z		; vec_new
+	lea	rcx, QWORD PTR $T1[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	lea	rax, QWORD PTR m$[rsp+8]
+	lea	rcx, QWORD PTR $T1[rsp]
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	ecx, 16
+	rep movsb
+; Line 153
+	imul	eax, DWORD PTR row_len$[rsp], 0
+	cdqe
+	mov	rcx, QWORD PTR m$[rsp+16]
+	lea	rax, QWORD PTR [rcx+rax*4]
+	mov	QWORD PTR m$[rsp+32], rax
+; Line 154
+	movsxd	rax, DWORD PTR row_len$[rsp]
+	mov	rcx, QWORD PTR m$[rsp+16]
+	lea	rax, QWORD PTR [rcx+rax*4]
+	mov	QWORD PTR m$[rsp+48], rax
+; Line 155
+	mov	eax, DWORD PTR row_len$[rsp]
+	shl	eax, 1
+	cdqe
+	mov	rcx, QWORD PTR m$[rsp+16]
+	lea	rax, QWORD PTR [rcx+rax*4]
+	mov	QWORD PTR m$[rsp+64], rax
+; Line 156
+	imul	eax, DWORD PTR row_len$[rsp], 3
+	cdqe
+	mov	rcx, QWORD PTR m$[rsp+16]
+	lea	rax, QWORD PTR [rcx+rax*4]
+	mov	QWORD PTR m$[rsp+80], rax
+; Line 157
+	lea	rax, QWORD PTR m$[rsp]
+	mov	rdi, QWORD PTR __$ReturnAddress$[rsp]
+	mov	rsi, rax
+	mov	ecx, 88					; 00000058H
+	rep movsb
+	mov	rax, QWORD PTR __$ReturnAddress$[rsp]
+; Line 158
+	add	rsp, 168				; 000000a8H
+	pop	rdi
+	pop	rsi
+	ret	0
+?mat_new@@YA?AUai_mat@@HH@Z ENDP			; mat_new
+_TEXT	ENDS
+; Function compile flags: /Odtp
+_TEXT	SEGMENT
+v$ = 32
+__$ReturnAddress$ = 80
+len$ = 88
+?vec_new@@YA?AUai_vec@@H@Z PROC				; vec_new
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 130
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rsi
+	push	rdi
+	sub	rsp, 56					; 00000038H
+; Line 131
+	mov	eax, DWORD PTR len$[rsp]
+	mov	DWORD PTR v$[rsp], eax
+; Line 132
+	mov	ecx, DWORD PTR len$[rsp]
+	call	?vec_sze_for@@YAHH@Z			; vec_sze_for
+	cdqe
+	shl	rax, 2
+	mov	edx, 32					; 00000020H
+	mov	rcx, rax
+	call	QWORD PTR __imp__aligned_malloc
+	mov	QWORD PTR v$[rsp+8], rax
+; Line 133
+	movsxd	rax, DWORD PTR len$[rsp]
+	shl	rax, 2
+	mov	r8, rax
+	xor	edx, edx
+	mov	rcx, QWORD PTR v$[rsp+8]
+	call	memset
+; Line 134
+	lea	rax, QWORD PTR v$[rsp]
+	mov	rdi, QWORD PTR __$ReturnAddress$[rsp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR __$ReturnAddress$[rsp]
+; Line 135
+	add	rsp, 56					; 00000038H
+	pop	rdi
+	pop	rsi
+	ret	0
+?vec_new@@YA?AUai_vec@@H@Z ENDP				; vec_new
+_TEXT	ENDS
+; Function compile flags: /Odtp
+_TEXT	SEGMENT
+len$ = 8
+?vec_sze_for@@YAHH@Z PROC				; vec_sze_for
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 126
+	mov	DWORD PTR [rsp+8], ecx
+	mov	eax, DWORD PTR len$[rsp]
+	add	eax, 15
+	cdq
+	and	edx, 15
+	add	eax, edx
+	sar	eax, 4
+	imul	eax, eax, 16
+; Line 127
+	ret	0
+?vec_sze_for@@YAHH@Z ENDP				; vec_sze_for
 _TEXT	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
@@ -10058,7 +10202,7 @@ $LN20@stbi_write:
 ; Line 1188
 	mov	eax, 1
 	imul	rax, rax, 0
-	lea	rcx, OFFSET FLAT:$SG88699
+	lea	rcx, OFFSET FLAT:$SG88700
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10067,7 +10211,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 1
-	lea	rcx, OFFSET FLAT:$SG88700
+	lea	rcx, OFFSET FLAT:$SG88701
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10076,7 +10220,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 2
-	lea	rcx, OFFSET FLAT:$SG88701
+	lea	rcx, OFFSET FLAT:$SG88702
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10085,7 +10229,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 3
-	lea	rcx, OFFSET FLAT:$SG88702
+	lea	rcx, OFFSET FLAT:$SG88703
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10228,7 +10372,7 @@ $LN20@stbi_write:
 ; Line 1199
 	mov	eax, 1
 	imul	rax, rax, 0
-	lea	rcx, OFFSET FLAT:$SG88703
+	lea	rcx, OFFSET FLAT:$SG88704
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10237,7 +10381,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 1
-	lea	rcx, OFFSET FLAT:$SG88704
+	lea	rcx, OFFSET FLAT:$SG88705
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10246,7 +10390,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 2
-	lea	rcx, OFFSET FLAT:$SG88705
+	lea	rcx, OFFSET FLAT:$SG88706
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10255,7 +10399,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 3
-	lea	rcx, OFFSET FLAT:$SG88706
+	lea	rcx, OFFSET FLAT:$SG88707
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10307,7 +10451,7 @@ $LN20@stbi_write:
 ; Line 1206
 	mov	eax, 1
 	imul	rax, rax, 0
-	lea	rcx, OFFSET FLAT:$SG88707
+	lea	rcx, OFFSET FLAT:$SG88708
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10316,7 +10460,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 1
-	lea	rcx, OFFSET FLAT:$SG88708
+	lea	rcx, OFFSET FLAT:$SG88709
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10325,7 +10469,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 2
-	lea	rcx, OFFSET FLAT:$SG88709
+	lea	rcx, OFFSET FLAT:$SG88710
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10334,7 +10478,7 @@ $LN20@stbi_write:
 	mov	BYTE PTR [rdx+rcx], al
 	mov	eax, 1
 	imul	rax, rax, 3
-	lea	rcx, OFFSET FLAT:$SG88710
+	lea	rcx, OFFSET FLAT:$SG88711
 	movsx	eax, BYTE PTR [rcx+rax]
 	and	eax, 255				; 000000ffH
 	mov	ecx, 1
@@ -10357,8 +10501,8 @@ $LN20@stbi_write:
 	cmp	QWORD PTR o$[rsp], rax
 	je	SHORT $LN22@stbi_write
 	mov	r8d, 1209				; 000004b9H
-	lea	rdx, OFFSET FLAT:$SG88711
-	lea	rcx, OFFSET FLAT:$SG88712
+	lea	rdx, OFFSET FLAT:$SG88712
+	lea	rcx, OFFSET FLAT:$SG88713
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN22@stbi_write:
@@ -11586,8 +11730,8 @@ $LN40@stbi_zlib_:
 	jle	SHORT $LN61@stbi_zlib_
 $LN60@stbi_zlib_:
 	mov	r8d, 959				; 000003bfH
-	lea	rdx, OFFSET FLAT:$SG88516
-	lea	rcx, OFFSET FLAT:$SG88517
+	lea	rdx, OFFSET FLAT:$SG88517
+	lea	rcx, OFFSET FLAT:$SG88518
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN61@stbi_zlib_:
@@ -13075,8 +13219,8 @@ $LN8@stbiw__sbg:
 	cmp	QWORD PTR p$[rsp], 0
 	jne	SHORT $LN9@stbiw__sbg
 	mov	r8d, 830				; 0000033eH
-	lea	rdx, OFFSET FLAT:$SG88271
-	lea	rcx, OFFSET FLAT:$SG88272
+	lea	rdx, OFFSET FLAT:$SG88272
+	lea	rcx, OFFSET FLAT:$SG88273
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN9@stbiw__sbg:
@@ -13164,7 +13308,7 @@ $LN5@stbi_write:
 	mov	QWORD PTR scratch$3[rsp], rax
 ; Line 770
 	lea	rax, QWORD PTR header$4[rsp]
-	lea	rcx, OFFSET FLAT:$SG88228
+	lea	rcx, OFFSET FLAT:$SG88229
 	mov	rdi, rax
 	mov	rsi, rcx
 	mov	ecx, 66					; 00000042H
@@ -13181,7 +13325,7 @@ $LN5@stbi_write:
 ; Line 776
 	mov	r9d, DWORD PTR x$[rsp]
 	mov	r8d, DWORD PTR y$[rsp]
-	lea	rdx, OFFSET FLAT:$SG88229
+	lea	rdx, OFFSET FLAT:$SG88230
 	lea	rcx, QWORD PTR buffer$5[rsp]
 	call	sprintf
 	mov	DWORD PTR len$2[rsp], eax
@@ -13735,8 +13879,8 @@ data$ = 96
 	cmp	DWORD PTR length$[rsp], 128		; 00000080H
 	jle	SHORT $LN3@stbiw__wri
 	mov	r8d, 667				; 0000029bH
-	lea	rdx, OFFSET FLAT:$SG88154
-	lea	rcx, OFFSET FLAT:$SG88155
+	lea	rdx, OFFSET FLAT:$SG88155
+	lea	rcx, OFFSET FLAT:$SG88156
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN3@stbiw__wri:
@@ -13789,8 +13933,8 @@ databyte$ = 96
 	cmp	eax, 255				; 000000ffH
 	jle	SHORT $LN3@stbiw__wri
 	mov	r8d, 659				; 00000293H
-	lea	rdx, OFFSET FLAT:$SG88143
-	lea	rcx, OFFSET FLAT:$SG88144
+	lea	rdx, OFFSET FLAT:$SG88144
+	lea	rcx, OFFSET FLAT:$SG88145
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN3@stbiw__wri:
@@ -14078,7 +14222,7 @@ $LN17@stbi_write:
 	mov	DWORD PTR [rsp+104], eax
 	mov	QWORD PTR [rsp+96], 0
 	mov	QWORD PTR [rsp+88], 0
-	lea	rax, OFFSET FLAT:$SG88084
+	lea	rax, OFFSET FLAT:$SG88085
 	mov	QWORD PTR [rsp+80], rax
 	mov	QWORD PTR [rsp+72], 0
 	mov	eax, DWORD PTR has_alpha$[rsp]
@@ -14123,7 +14267,7 @@ $LN19@stbi_write:
 	mov	DWORD PTR [rsp+32], edx
 	xor	r9d, r9d
 	xor	r8d, r8d
-	lea	rdx, OFFSET FLAT:$SG88085
+	lea	rdx, OFFSET FLAT:$SG88086
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbiw__writef@@YAXPEAUstbi__write_context@@PEBDZZ ; stbiw__writef
 ; Line 550
@@ -14451,7 +14595,7 @@ data$ = 432
 	mov	DWORD PTR [rsp+104], eax
 	mov	DWORD PTR [rsp+96], 77			; 0000004dH
 	mov	DWORD PTR [rsp+88], 66			; 00000042H
-	lea	rax, OFFSET FLAT:$SG88017
+	lea	rax, OFFSET FLAT:$SG88018
 	mov	QWORD PTR [rsp+80], rax
 	mov	eax, DWORD PTR pad$1[rsp]
 	mov	DWORD PTR [rsp+72], eax
@@ -14512,7 +14656,7 @@ $LN2@stbi_write:
 	mov	DWORD PTR [rsp+104], eax
 	mov	DWORD PTR [rsp+96], 77			; 0000004dH
 	mov	DWORD PTR [rsp+88], 66			; 00000042H
-	lea	rax, OFFSET FLAT:$SG88018
+	lea	rax, OFFSET FLAT:$SG88019
 	mov	QWORD PTR [rsp+80], rax
 	mov	QWORD PTR [rsp+72], 0
 	mov	DWORD PTR [rsp+64], 1
@@ -15287,8 +15431,8 @@ $LN10@stbiw__wri:
 	test	eax, eax
 	jne	SHORT $LN18@stbiw__wri
 	mov	r8d, 372				; 00000174H
-	lea	rdx, OFFSET FLAT:$SG87895
-	lea	rcx, OFFSET FLAT:$SG87896
+	lea	rdx, OFFSET FLAT:$SG87896
+	lea	rcx, OFFSET FLAT:$SG87897
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN18@stbiw__wri:
@@ -15334,7 +15478,7 @@ filename$ = 72
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 334
-	lea	rdx, OFFSET FLAT:$SG87830
+	lea	rdx, OFFSET FLAT:$SG87831
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbiw__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbiw__fopen
 	mov	QWORD PTR f$[rsp], rax
@@ -16014,7 +16158,7 @@ $LN5:
 	jmp	SHORT $LN1@stbi_write
 $LN2@stbi_write:
 ; Line 1222
-	lea	rdx, OFFSET FLAT:$SG88726
+	lea	rdx, OFFSET FLAT:$SG88727
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbiw__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbiw__fopen
 	mov	QWORD PTR f$[rsp], rax
@@ -16202,7 +16346,7 @@ $LN9@stbi__info:
 	jmp	SHORT $LN1@stbi__info
 $LN10@stbi__info:
 ; Line 7580
-	lea	rcx, OFFSET FLAT:$SG87635
+	lea	rcx, OFFSET FLAT:$SG87636
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 $LN1@stbi__info:
 ; Line 7581
@@ -16732,7 +16876,7 @@ $LN2@stbi__load:
 	call	QWORD PTR __imp_free
 $LN3@stbi__load:
 ; Line 6882
-	lea	rcx, OFFSET FLAT:$SG87161
+	lea	rcx, OFFSET FLAT:$SG87162
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN5@stbi__load
@@ -16810,7 +16954,7 @@ $LN20@stbi__gif_:
 	test	eax, eax
 	jne	SHORT $LN21@stbi__gif_
 ; Line 6713
-	lea	rcx, OFFSET FLAT:$SG87115
+	lea	rcx, OFFSET FLAT:$SG87116
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN55@stbi__gif_
@@ -16862,7 +17006,7 @@ $LN21@stbi__gif_:
 	jne	SHORT $LN22@stbi__gif_
 $LN23@stbi__gif_:
 ; Line 6719
-	lea	rcx, OFFSET FLAT:$SG87118
+	lea	rcx, OFFSET FLAT:$SG87119
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN57@stbi__gif_
@@ -17088,7 +17232,7 @@ $LN31@stbi__gif_:
 	jle	SHORT $LN32@stbi__gif_
 $LN33@stbi__gif_:
 ; Line 6777
-	lea	rcx, OFFSET FLAT:$SG87129
+	lea	rcx, OFFSET FLAT:$SG87130
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN59@stbi__gif_
@@ -17242,7 +17386,7 @@ $LN37@stbi__gif_:
 	jmp	SHORT $LN40@stbi__gif_
 $LN39@stbi__gif_:
 ; Line 6810
-	lea	rcx, OFFSET FLAT:$SG87137
+	lea	rcx, OFFSET FLAT:$SG87138
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN63@stbi__gif_
@@ -17439,7 +17583,7 @@ $LN52@stbi__gif_:
 	jmp	SHORT $LN1@stbi__gif_
 $LN53@stbi__gif_:
 ; Line 6869
-	lea	rcx, OFFSET FLAT:$SG87151
+	lea	rcx, OFFSET FLAT:$SG87152
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN65@stbi__gif_
@@ -17692,7 +17836,7 @@ $LN17@stbi__proc:
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN21@stbi__proc
 ; Line 6668
-	lea	rcx, OFFSET FLAT:$SG87050
+	lea	rcx, OFFSET FLAT:$SG87051
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN28@stbi__proc
@@ -17721,7 +17865,7 @@ $LN21@stbi__proc:
 	cmp	DWORD PTR avail$[rsp], 8192		; 00002000H
 	jle	SHORT $LN24@stbi__proc
 ; Line 6674
-	lea	rcx, OFFSET FLAT:$SG87054
+	lea	rcx, OFFSET FLAT:$SG87055
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN30@stbi__proc
@@ -17767,7 +17911,7 @@ $LN22@stbi__proc:
 	cmp	DWORD PTR code$1[rsp], eax
 	jne	SHORT $LN25@stbi__proc
 ; Line 6681
-	lea	rcx, OFFSET FLAT:$SG87056
+	lea	rcx, OFFSET FLAT:$SG87057
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN34@stbi__proc
@@ -17814,7 +17958,7 @@ $LN26@stbi__proc:
 	jmp	SHORT $LN20@stbi__proc
 $LN19@stbi__proc:
 ; Line 6692
-	lea	rcx, OFFSET FLAT:$SG87058
+	lea	rcx, OFFSET FLAT:$SG87059
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN36@stbi__proc
@@ -18042,7 +18186,7 @@ comp$ = 88
 ; Line 6564
 	cmp	QWORD PTR g$[rsp], 0
 	jne	SHORT $LN2@stbi__gif_
-	lea	rcx, OFFSET FLAT:$SG86983
+	lea	rcx, OFFSET FLAT:$SG86984
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__gif_
 $LN2@stbi__gif_:
@@ -18130,7 +18274,7 @@ is_info$ = 88
 	je	SHORT $LN2@stbi__gif_
 $LN3@stbi__gif_:
 ; Line 6534
-	lea	rcx, OFFSET FLAT:$SG86960
+	lea	rcx, OFFSET FLAT:$SG86961
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__gif_
 $LN2@stbi__gif_:
@@ -18145,7 +18289,7 @@ $LN2@stbi__gif_:
 	movzx	eax, BYTE PTR version$[rsp]
 	cmp	eax, 57					; 00000039H
 	je	SHORT $LN4@stbi__gif_
-	lea	rcx, OFFSET FLAT:$SG86962
+	lea	rcx, OFFSET FLAT:$SG86963
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__gif_
 $LN4@stbi__gif_:
@@ -18155,7 +18299,7 @@ $LN4@stbi__gif_:
 	movzx	eax, al
 	cmp	eax, 97					; 00000061H
 	je	SHORT $LN5@stbi__gif_
-	lea	rcx, OFFSET FLAT:$SG86964
+	lea	rcx, OFFSET FLAT:$SG86965
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__gif_
 $LN5@stbi__gif_:
@@ -18165,7 +18309,7 @@ $LN5@stbi__gif_:
 	mov	ecx, DWORD PTR _tls_index
 	mov	rdx, QWORD PTR gs:88
 	mov	rcx, QWORD PTR [rdx+rcx*8]
-	lea	rdx, OFFSET FLAT:$SG86965
+	lea	rdx, OFFSET FLAT:$SG86966
 	mov	QWORD PTR [rax+rcx], rdx
 ; Line 6541
 	mov	rcx, QWORD PTR s$[rsp]
@@ -18202,7 +18346,7 @@ $LN5@stbi__gif_:
 	mov	rax, QWORD PTR g$[rsp]
 	cmp	DWORD PTR [rax], 16777216		; 01000000H
 	jle	SHORT $LN6@stbi__gif_
-	lea	rcx, OFFSET FLAT:$SG86967
+	lea	rcx, OFFSET FLAT:$SG86968
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__gif_
 $LN6@stbi__gif_:
@@ -18210,7 +18354,7 @@ $LN6@stbi__gif_:
 	mov	rax, QWORD PTR g$[rsp]
 	cmp	DWORD PTR [rax+4], 16777216		; 01000000H
 	jle	SHORT $LN7@stbi__gif_
-	lea	rcx, OFFSET FLAT:$SG86969
+	lea	rcx, OFFSET FLAT:$SG86970
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__gif_
 $LN7@stbi__gif_:
@@ -18456,7 +18600,7 @@ $LN4@stbi__pic_:
 	cmp	rax, 10
 	jne	SHORT $LN29@stbi__pic_
 ; Line 6323
-	lea	rcx, OFFSET FLAT:$SG86805
+	lea	rcx, OFFSET FLAT:$SG86806
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN50@stbi__pic_
@@ -18510,7 +18654,7 @@ $LN29@stbi__pic_:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN30@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86807
+	lea	rcx, OFFSET FLAT:$SG86808
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN52@stbi__pic_
@@ -18527,7 +18671,7 @@ $LN30@stbi__pic_:
 	movzx	eax, BYTE PTR [rax]
 	cmp	eax, 8
 	je	SHORT $LN31@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86809
+	lea	rcx, OFFSET FLAT:$SG86810
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN54@stbi__pic_
@@ -18602,7 +18746,7 @@ $LN10@stbi__pic_:
 	cmp	BYTE PTR tv157[rsp], 2
 	je	$LN39@stbi__pic_
 ; Line 6349
-	lea	rcx, OFFSET FLAT:$SG86811
+	lea	rcx, OFFSET FLAT:$SG86812
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN58@stbi__pic_
@@ -18662,7 +18806,7 @@ $LN16@stbi__pic_:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN36@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86816
+	lea	rcx, OFFSET FLAT:$SG86817
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN60@stbi__pic_
@@ -18746,7 +18890,7 @@ $LN21@stbi__pic_:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN40@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86821
+	lea	rcx, OFFSET FLAT:$SG86822
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN62@stbi__pic_
@@ -18780,7 +18924,7 @@ $LN44@stbi__pic_:
 	cmp	DWORD PTR count$2[rsp], eax
 	jle	SHORT $LN45@stbi__pic_
 ; Line 6396
-	lea	rcx, OFFSET FLAT:$SG86827
+	lea	rcx, OFFSET FLAT:$SG86828
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN64@stbi__pic_
@@ -18839,7 +18983,7 @@ $LN41@stbi__pic_:
 	mov	eax, DWORD PTR left$6[rsp]
 	cmp	DWORD PTR count$2[rsp], eax
 	jle	SHORT $LN47@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86830
+	lea	rcx, OFFSET FLAT:$SG86831
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN66@stbi__pic_
@@ -19001,7 +19145,7 @@ $LN4@stbi__read:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN6@stbi__read
-	lea	rcx, OFFSET FLAT:$SG86723
+	lea	rcx, OFFSET FLAT:$SG86724
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN8@stbi__read
@@ -19041,7 +19185,7 @@ s$ = 64
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 6272
-	lea	rdx, OFFSET FLAT:$SG86691
+	lea	rdx, OFFSET FLAT:$SG86692
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbi__pic_is4@@YAHPEAUstbi__context@@PEBD@Z ; stbi__pic_is4
 	test	eax, eax
@@ -19066,7 +19210,7 @@ $LN4@stbi__pic_:
 	jmp	SHORT $LN2@stbi__pic_
 $LN3@stbi__pic_:
 ; Line 6278
-	lea	rdx, OFFSET FLAT:$SG86693
+	lea	rdx, OFFSET FLAT:$SG86694
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbi__pic_is4@@YAHPEAUstbi__context@@PEBD@Z ; stbi__pic_is4
 	test	eax, eax
@@ -19441,7 +19585,7 @@ info$ = 120
 	cmp	eax, 77					; 0000004dH
 	je	SHORT $LN5@stbi__bmp_
 $LN6@stbi__bmp_:
-	lea	rcx, OFFSET FLAT:$SG86061
+	lea	rcx, OFFSET FLAT:$SG86062
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN32@stbi__bmp_
@@ -19490,7 +19634,7 @@ $LN5@stbi__bmp_:
 	mov	rax, QWORD PTR info$[rsp]
 	cmp	DWORD PTR [rax+4], 0
 	jge	SHORT $LN7@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86063
+	lea	rcx, OFFSET FLAT:$SG86064
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN34@stbi__bmp_
@@ -19513,7 +19657,7 @@ $LN7@stbi__bmp_:
 	je	SHORT $LN8@stbi__bmp_
 	cmp	DWORD PTR hsz$[rsp], 124		; 0000007cH
 	je	SHORT $LN8@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86065
+	lea	rcx, OFFSET FLAT:$SG86066
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN36@stbi__bmp_
@@ -19557,7 +19701,7 @@ $LN10@stbi__bmp_:
 	call	?stbi__get16le@@YAHPEAUstbi__context@@@Z ; stbi__get16le
 	cmp	eax, 1
 	je	SHORT $LN11@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86069
+	lea	rcx, OFFSET FLAT:$SG86070
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN38@stbi__bmp_
@@ -19587,7 +19731,7 @@ $LN11@stbi__bmp_:
 	cmp	DWORD PTR compress$1[rsp], 2
 	jne	SHORT $LN13@stbi__bmp_
 $LN14@stbi__bmp_:
-	lea	rcx, OFFSET FLAT:$SG86073
+	lea	rcx, OFFSET FLAT:$SG86074
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN40@stbi__bmp_
@@ -19602,7 +19746,7 @@ $LN13@stbi__bmp_:
 ; Line 5411
 	cmp	DWORD PTR compress$1[rsp], 4
 	jl	SHORT $LN15@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86075
+	lea	rcx, OFFSET FLAT:$SG86076
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN42@stbi__bmp_
@@ -19623,7 +19767,7 @@ $LN15@stbi__bmp_:
 	mov	rax, QWORD PTR info$[rsp]
 	cmp	DWORD PTR [rax], 32			; 00000020H
 	je	SHORT $LN16@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86077
+	lea	rcx, OFFSET FLAT:$SG86078
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN44@stbi__bmp_
@@ -19725,7 +19869,7 @@ $LN23@stbi__bmp_:
 	cmp	DWORD PTR [rax+16], ecx
 	jne	SHORT $LN27@stbi__bmp_
 ; Line 5436
-	lea	rcx, OFFSET FLAT:$SG86089
+	lea	rcx, OFFSET FLAT:$SG86090
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN46@stbi__bmp_
@@ -19741,7 +19885,7 @@ $LN27@stbi__bmp_:
 	jmp	SHORT $LN26@stbi__bmp_
 $LN25@stbi__bmp_:
 ; Line 5439
-	lea	rcx, OFFSET FLAT:$SG86090
+	lea	rcx, OFFSET FLAT:$SG86091
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN48@stbi__bmp_
@@ -19764,7 +19908,7 @@ $LN17@stbi__bmp_:
 	cmp	DWORD PTR hsz$[rsp], 124		; 0000007cH
 	je	SHORT $LN28@stbi__bmp_
 ; Line 5445
-	lea	rcx, OFFSET FLAT:$SG86092
+	lea	rcx, OFFSET FLAT:$SG86093
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN50@stbi__bmp_
@@ -19961,8 +20105,8 @@ $LN3@stbi__shif:
 	cmp	DWORD PTR v$[rsp], 256			; 00000100H
 	jb	SHORT $LN5@stbi__shif
 	mov	r8d, 5345				; 000014e1H
-	lea	rdx, OFFSET FLAT:$SG85993
-	lea	rcx, OFFSET FLAT:$SG85994
+	lea	rdx, OFFSET FLAT:$SG85994
+	lea	rcx, OFFSET FLAT:$SG85995
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN5@stbi__shif:
@@ -19980,8 +20124,8 @@ $LN5@stbi__shif:
 	jle	SHORT $LN7@stbi__shif
 $LN6@stbi__shif:
 	mov	r8d, 5347				; 000014e3H
-	lea	rdx, OFFSET FLAT:$SG85995
-	lea	rcx, OFFSET FLAT:$SG85996
+	lea	rdx, OFFSET FLAT:$SG85996
+	lea	rcx, OFFSET FLAT:$SG85997
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN7@stbi__shif:
@@ -20286,7 +20430,7 @@ ri$ = 120
 	cmp	DWORD PTR req_comp$[rsp], 4
 	jle	SHORT $LN2@stbi__do_p
 $LN3@stbi__do_p:
-	lea	rcx, OFFSET FLAT:$SG85904
+	lea	rcx, OFFSET FLAT:$SG85905
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN15@stbi__do_p
@@ -20324,7 +20468,7 @@ $LN5@stbi__do_p:
 	jmp	SHORT $LN8@stbi__do_p
 $LN7@stbi__do_p:
 ; Line 5209
-	lea	rcx, OFFSET FLAT:$SG85910
+	lea	rcx, OFFSET FLAT:$SG85911
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN17@stbi__do_p
@@ -20577,7 +20721,7 @@ $LN24@stbi__pars:
 ; Line 5049
 	cmp	DWORD PTR first$[rsp], 0
 	jne	SHORT $LN25@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85789
+	lea	rcx, OFFSET FLAT:$SG85790
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN25@stbi__pars:
@@ -20586,7 +20730,7 @@ $LN25@stbi__pars:
 ; Line 5051
 	cmp	DWORD PTR c$1[rsp], 13
 	je	SHORT $LN26@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85791
+	lea	rcx, OFFSET FLAT:$SG85792
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN26@stbi__pars:
@@ -20604,7 +20748,7 @@ $LN26@stbi__pars:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax+4], 16777216		; 01000000H
 	jbe	SHORT $LN27@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85793
+	lea	rcx, OFFSET FLAT:$SG85794
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN27@stbi__pars:
@@ -20612,7 +20756,7 @@ $LN27@stbi__pars:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax], 16777216		; 01000000H
 	jbe	SHORT $LN28@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85795
+	lea	rcx, OFFSET FLAT:$SG85796
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN28@stbi__pars:
@@ -20637,7 +20781,7 @@ $LN28@stbi__pars:
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rax+32], 16
 	je	SHORT $LN29@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85797
+	lea	rcx, OFFSET FLAT:$SG85798
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN29@stbi__pars:
@@ -20648,7 +20792,7 @@ $LN29@stbi__pars:
 	mov	DWORD PTR color$[rsp], eax
 	cmp	DWORD PTR color$[rsp], 6
 	jle	SHORT $LN30@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85799
+	lea	rcx, OFFSET FLAT:$SG85800
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN30@stbi__pars:
@@ -20658,7 +20802,7 @@ $LN30@stbi__pars:
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rax+32], 16
 	jne	SHORT $LN31@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85801
+	lea	rcx, OFFSET FLAT:$SG85802
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN31@stbi__pars:
@@ -20672,7 +20816,7 @@ $LN32@stbi__pars:
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN34@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85805
+	lea	rcx, OFFSET FLAT:$SG85806
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN34@stbi__pars:
@@ -20684,7 +20828,7 @@ $LN33@stbi__pars:
 	mov	DWORD PTR comp$3[rsp], eax
 	cmp	DWORD PTR comp$3[rsp], 0
 	je	SHORT $LN35@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85807
+	lea	rcx, OFFSET FLAT:$SG85808
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN35@stbi__pars:
@@ -20695,7 +20839,7 @@ $LN35@stbi__pars:
 	mov	DWORD PTR filter$4[rsp], eax
 	cmp	DWORD PTR filter$4[rsp], 0
 	je	SHORT $LN36@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85809
+	lea	rcx, OFFSET FLAT:$SG85810
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN36@stbi__pars:
@@ -20706,7 +20850,7 @@ $LN36@stbi__pars:
 	mov	DWORD PTR interlace$[rsp], eax
 	cmp	DWORD PTR interlace$[rsp], 1
 	jle	SHORT $LN37@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85811
+	lea	rcx, OFFSET FLAT:$SG85812
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN37@stbi__pars:
@@ -20718,7 +20862,7 @@ $LN37@stbi__pars:
 	cmp	DWORD PTR [rax+4], 0
 	jne	SHORT $LN38@stbi__pars
 $LN39@stbi__pars:
-	lea	rcx, OFFSET FLAT:$SG85814
+	lea	rcx, OFFSET FLAT:$SG85815
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN38@stbi__pars:
@@ -20762,7 +20906,7 @@ $LN98@stbi__pars:
 	mov	rcx, QWORD PTR s$[rsp]
 	cmp	eax, DWORD PTR [rcx+4]
 	jae	SHORT $LN42@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85818
+	lea	rcx, OFFSET FLAT:$SG85819
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN42@stbi__pars:
@@ -20789,7 +20933,7 @@ $LN40@stbi__pars:
 	mov	rcx, QWORD PTR s$[rsp]
 	cmp	eax, DWORD PTR [rcx+4]
 	jae	SHORT $LN44@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85821
+	lea	rcx, OFFSET FLAT:$SG85822
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN44@stbi__pars:
@@ -20800,14 +20944,14 @@ $LN45@stbi__pars:
 ; Line 5079
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN46@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85824
+	lea	rcx, OFFSET FLAT:$SG85825
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN46@stbi__pars:
 ; Line 5080
 	cmp	DWORD PTR c$1[rsp], 768			; 00000300H
 	jbe	SHORT $LN47@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85826
+	lea	rcx, OFFSET FLAT:$SG85827
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN47@stbi__pars:
@@ -20821,7 +20965,7 @@ $LN47@stbi__pars:
 	imul	eax, DWORD PTR pal_len$[rsp], 3
 	cmp	eax, DWORD PTR c$1[rsp]
 	je	SHORT $LN48@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85828
+	lea	rcx, OFFSET FLAT:$SG85829
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN48@stbi__pars:
@@ -20871,7 +21015,7 @@ $LN49@stbi__pars:
 ; Line 5093
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN50@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85831
+	lea	rcx, OFFSET FLAT:$SG85832
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN50@stbi__pars:
@@ -20879,7 +21023,7 @@ $LN50@stbi__pars:
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	QWORD PTR [rax+8], 0
 	je	SHORT $LN51@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85833
+	lea	rcx, OFFSET FLAT:$SG85834
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN51@stbi__pars:
@@ -20898,7 +21042,7 @@ $LN54@stbi__pars:
 ; Line 5097
 	cmp	DWORD PTR pal_len$[rsp], 0
 	jne	SHORT $LN55@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85838
+	lea	rcx, OFFSET FLAT:$SG85839
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN55@stbi__pars:
@@ -20906,7 +21050,7 @@ $LN55@stbi__pars:
 	mov	eax, DWORD PTR pal_len$[rsp]
 	cmp	DWORD PTR c$1[rsp], eax
 	jbe	SHORT $LN56@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85840
+	lea	rcx, OFFSET FLAT:$SG85841
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN56@stbi__pars:
@@ -20941,7 +21085,7 @@ $LN52@stbi__pars:
 	and	eax, 1
 	test	eax, eax
 	jne	SHORT $LN57@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85842
+	lea	rcx, OFFSET FLAT:$SG85843
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN57@stbi__pars:
@@ -20951,7 +21095,7 @@ $LN57@stbi__pars:
 	shl	eax, 1
 	cmp	DWORD PTR c$1[rsp], eax
 	je	SHORT $LN58@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85844
+	lea	rcx, OFFSET FLAT:$SG85845
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN58@stbi__pars:
@@ -21015,7 +21159,7 @@ $LN61@stbi__pars:
 ; Line 5116
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN62@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85849
+	lea	rcx, OFFSET FLAT:$SG85850
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN62@stbi__pars:
@@ -21025,7 +21169,7 @@ $LN62@stbi__pars:
 	je	SHORT $LN63@stbi__pars
 	cmp	DWORD PTR pal_len$[rsp], 0
 	jne	SHORT $LN63@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85851
+	lea	rcx, OFFSET FLAT:$SG85852
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN63@stbi__pars:
@@ -21095,7 +21239,7 @@ $LN20@stbi__pars:
 	mov	QWORD PTR p$6[rsp], rax
 	cmp	QWORD PTR p$6[rsp], 0
 	jne	SHORT $LN68@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85857
+	lea	rcx, OFFSET FLAT:$SG85858
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN68@stbi__pars:
@@ -21114,7 +21258,7 @@ $LN66@stbi__pars:
 	call	?stbi__getn@@YAHPEAUstbi__context@@PEAEH@Z ; stbi__getn
 	test	eax, eax
 	jne	SHORT $LN69@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85859
+	lea	rcx, OFFSET FLAT:$SG85860
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN69@stbi__pars:
@@ -21130,7 +21274,7 @@ $LN70@stbi__pars:
 ; Line 5137
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN71@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85862
+	lea	rcx, OFFSET FLAT:$SG85863
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN71@stbi__pars:
@@ -21144,7 +21288,7 @@ $LN72@stbi__pars:
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	QWORD PTR [rax+8], 0
 	jne	SHORT $LN73@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85865
+	lea	rcx, OFFSET FLAT:$SG85866
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN73@stbi__pars:
@@ -21377,7 +21521,7 @@ $LN91@stbi__pars:
 ; Line 5179
 	cmp	DWORD PTR first$[rsp], 0
 	je	SHORT $LN92@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85885
+	lea	rcx, OFFSET FLAT:$SG85886
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN92@stbi__pars:
@@ -21525,8 +21669,8 @@ $LN11@stbi__de_i:
 	cmp	DWORD PTR [rax+12], 4
 	je	SHORT $LN18@stbi__de_i
 	mov	r8d, 4992				; 00001380H
-	lea	rdx, OFFSET FLAT:$SG85691
-	lea	rcx, OFFSET FLAT:$SG85692
+	lea	rdx, OFFSET FLAT:$SG85692
+	lea	rcx, OFFSET FLAT:$SG85693
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN18@stbi__de_i:
@@ -21770,7 +21914,7 @@ pal_img_n$ = 120
 ; Line 4907
 	cmp	QWORD PTR p$[rsp], 0
 	jne	SHORT $LN8@stbi__expa
-	lea	rcx, OFFSET FLAT:$SG85645
+	lea	rcx, OFFSET FLAT:$SG85646
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__expa
 $LN8@stbi__expa:
@@ -21951,8 +22095,8 @@ out_n$ = 96
 	cmp	DWORD PTR out_n$[rsp], 4
 	je	SHORT $LN12@stbi__comp
 	mov	r8d, 4884				; 00001314H
-	lea	rdx, OFFSET FLAT:$SG85618
-	lea	rcx, OFFSET FLAT:$SG85619
+	lea	rdx, OFFSET FLAT:$SG85619
+	lea	rcx, OFFSET FLAT:$SG85620
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN12@stbi__comp:
@@ -22102,8 +22246,8 @@ out_n$ = 96
 	cmp	DWORD PTR out_n$[rsp], 4
 	je	SHORT $LN12@stbi__comp
 	mov	r8d, 4859				; 000012fbH
-	lea	rdx, OFFSET FLAT:$SG85595
-	lea	rcx, OFFSET FLAT:$SG85596
+	lea	rdx, OFFSET FLAT:$SG85596
+	lea	rcx, OFFSET FLAT:$SG85597
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN12@stbi__comp:
@@ -22304,7 +22448,7 @@ $LN11@stbi__crea:
 ; Line 4817
 	cmp	QWORD PTR final$[rsp], 0
 	jne	SHORT $LN12@stbi__crea
-	lea	rcx, OFFSET FLAT:$SG85575
+	lea	rcx, OFFSET FLAT:$SG85576
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN12@stbi__crea:
@@ -22623,8 +22767,8 @@ $LN160@stbi__crea:
 	cmp	DWORD PTR out_n$[rsp], eax
 	je	SHORT $LN161@stbi__crea
 	mov	r8d, 4607				; 000011ffH
-	lea	rdx, OFFSET FLAT:$SG85468
-	lea	rcx, OFFSET FLAT:$SG85469
+	lea	rdx, OFFSET FLAT:$SG85469
+	lea	rcx, OFFSET FLAT:$SG85470
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN161@stbi__crea:
@@ -22640,7 +22784,7 @@ $LN161@stbi__crea:
 	mov	rax, QWORD PTR a$[rsp]
 	cmp	QWORD PTR [rax+24], 0
 	jne	SHORT $LN98@stbi__crea
-	lea	rcx, OFFSET FLAT:$SG85471
+	lea	rcx, OFFSET FLAT:$SG85472
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN98@stbi__crea:
@@ -22652,7 +22796,7 @@ $LN98@stbi__crea:
 	call	?stbi__mad3sizes_valid@@YAHHHHH@Z	; stbi__mad3sizes_valid
 	test	eax, eax
 	jne	SHORT $LN99@stbi__crea
-	lea	rcx, OFFSET FLAT:$SG85473
+	lea	rcx, OFFSET FLAT:$SG85474
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN99@stbi__crea:
@@ -22672,7 +22816,7 @@ $LN99@stbi__crea:
 	mov	eax, DWORD PTR img_len$[rsp]
 	cmp	DWORD PTR raw_len$[rsp], eax
 	jae	SHORT $LN100@stbi__crea
-	lea	rcx, OFFSET FLAT:$SG85475
+	lea	rcx, OFFSET FLAT:$SG85476
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN100@stbi__crea:
@@ -22707,7 +22851,7 @@ $LN4@stbi__crea:
 	cmp	DWORD PTR filter$8[rsp], 4
 	jle	SHORT $LN101@stbi__crea
 ; Line 4626
-	lea	rcx, OFFSET FLAT:$SG85477
+	lea	rcx, OFFSET FLAT:$SG85478
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN101@stbi__crea:
@@ -22718,7 +22862,7 @@ $LN101@stbi__crea:
 	mov	eax, DWORD PTR x$[rsp]
 	cmp	DWORD PTR img_width_bytes$[rsp], eax
 	jbe	SHORT $LN103@stbi__crea
-	lea	rcx, OFFSET FLAT:$SG85480
+	lea	rcx, OFFSET FLAT:$SG85481
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__crea
 $LN103@stbi__crea:
@@ -23196,8 +23340,8 @@ $LN118@stbi__crea:
 	cmp	eax, DWORD PTR out_n$[rsp]
 	je	SHORT $LN162@stbi__crea
 	mov	r8d, 4691				; 00001253H
-	lea	rdx, OFFSET FLAT:$SG85505
-	lea	rcx, OFFSET FLAT:$SG85506
+	lea	rdx, OFFSET FLAT:$SG85506
+	lea	rcx, OFFSET FLAT:$SG85507
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN162@stbi__crea:
@@ -24188,8 +24332,8 @@ $LN155@stbi__crea:
 	cmp	DWORD PTR img_n$[rsp], 3
 	je	SHORT $LN165@stbi__crea
 	mov	r8d, 4780				; 000012acH
-	lea	rdx, OFFSET FLAT:$SG85536
-	lea	rcx, OFFSET FLAT:$SG85537
+	lea	rdx, OFFSET FLAT:$SG85537
+	lea	rcx, OFFSET FLAT:$SG85538
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN165@stbi__crea:
@@ -24433,7 +24577,7 @@ $LN4@stbi__chec:
 	movzx	ecx, BYTE PTR [rdx+rcx]
 	cmp	eax, ecx
 	je	SHORT $LN5@stbi__chec
-	lea	rcx, OFFSET FLAT:$SG85278
+	lea	rcx, OFFSET FLAT:$SG85279
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__chec
 $LN5@stbi__chec:
@@ -24667,7 +24811,7 @@ a$ = 64
 	call	?stbi__zeof@@YAHPEAUstbi__zbuf@@@Z	; stbi__zeof
 	test	eax, eax
 	je	SHORT $LN2@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85135
+	lea	rcx, OFFSET FLAT:$SG85136
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__pars
 $LN2@stbi__pars:
@@ -24680,7 +24824,7 @@ $LN2@stbi__pars:
 	mov	eax, edx
 	test	eax, eax
 	je	SHORT $LN3@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85137
+	lea	rcx, OFFSET FLAT:$SG85138
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__pars
 $LN3@stbi__pars:
@@ -24689,14 +24833,14 @@ $LN3@stbi__pars:
 	and	eax, 32					; 00000020H
 	test	eax, eax
 	je	SHORT $LN4@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85139
+	lea	rcx, OFFSET FLAT:$SG85140
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__pars
 $LN4@stbi__pars:
 ; Line 4370
 	cmp	DWORD PTR cm$[rsp], 8
 	je	SHORT $LN5@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85141
+	lea	rcx, OFFSET FLAT:$SG85142
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__pars
 $LN5@stbi__pars:
@@ -24769,7 +24913,7 @@ $LN3@stbi__pars:
 	mov	rax, QWORD PTR a$[rsp]
 	cmp	DWORD PTR [rax+16], 0
 	jge	SHORT $LN7@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85121
+	lea	rcx, OFFSET FLAT:$SG85122
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN7@stbi__pars:
@@ -24812,7 +24956,7 @@ $LN5@stbi__pars:
 	xor	eax, 65535				; 0000ffffH
 	cmp	DWORD PTR nlen$[rsp], eax
 	je	SHORT $LN8@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85123
+	lea	rcx, OFFSET FLAT:$SG85124
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN8@stbi__pars:
@@ -24823,7 +24967,7 @@ $LN8@stbi__pars:
 	mov	rcx, QWORD PTR a$[rsp]
 	cmp	rax, QWORD PTR [rcx+8]
 	jbe	SHORT $LN9@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85125
+	lea	rcx, OFFSET FLAT:$SG85126
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN9@stbi__pars:
@@ -24981,7 +25125,7 @@ $LN5@stbi__comp:
 	cmp	DWORD PTR c$1[rsp], 19
 	jl	SHORT $LN8@stbi__comp
 $LN9@stbi__comp:
-	lea	rcx, OFFSET FLAT:$SG85089
+	lea	rcx, OFFSET FLAT:$SG85090
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__comp
 $LN8@stbi__comp:
@@ -25011,7 +25155,7 @@ $LN10@stbi__comp:
 ; Line 4312
 	cmp	DWORD PTR n$[rsp], 0
 	jne	SHORT $LN14@stbi__comp
-	lea	rcx, OFFSET FLAT:$SG85095
+	lea	rcx, OFFSET FLAT:$SG85096
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__comp
 $LN14@stbi__comp:
@@ -25047,7 +25191,7 @@ $LN15@stbi__comp:
 	jmp	SHORT $LN18@stbi__comp
 $LN17@stbi__comp:
 ; Line 4319
-	lea	rcx, OFFSET FLAT:$SG85100
+	lea	rcx, OFFSET FLAT:$SG85101
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__comp
 $LN18@stbi__comp:
@@ -25060,7 +25204,7 @@ $LN13@stbi__comp:
 	mov	eax, ecx
 	cmp	eax, DWORD PTR c$1[rsp]
 	jge	SHORT $LN19@stbi__comp
-	lea	rcx, OFFSET FLAT:$SG85102
+	lea	rcx, OFFSET FLAT:$SG85103
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__comp
 $LN19@stbi__comp:
@@ -25089,7 +25233,7 @@ $LN6@stbi__comp:
 	mov	eax, DWORD PTR ntot$[rsp]
 	cmp	DWORD PTR n$[rsp], eax
 	je	SHORT $LN20@stbi__comp
-	lea	rcx, OFFSET FLAT:$SG85104
+	lea	rcx, OFFSET FLAT:$SG85105
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__comp
 $LN20@stbi__comp:
@@ -25162,7 +25306,7 @@ $LN2@stbi__pars:
 ; Line 4246
 	cmp	DWORD PTR z$2[rsp], 0
 	jge	SHORT $LN13@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85046
+	lea	rcx, OFFSET FLAT:$SG85047
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN13@stbi__pars:
@@ -25241,7 +25385,7 @@ $LN17@stbi__pars:
 ; Line 4263
 	cmp	DWORD PTR z$2[rsp], 0
 	jge	SHORT $LN18@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85052
+	lea	rcx, OFFSET FLAT:$SG85053
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN18@stbi__pars:
@@ -25274,7 +25418,7 @@ $LN19@stbi__pars:
 	movsxd	rcx, DWORD PTR dist$4[rsp]
 	cmp	rax, rcx
 	jge	SHORT $LN20@stbi__pars
-	lea	rcx, OFFSET FLAT:$SG85055
+	lea	rcx, OFFSET FLAT:$SG85056
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__pars
 $LN20@stbi__pars:
@@ -25389,7 +25533,7 @@ n$ = 96
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rax+48], 0
 	jne	SHORT $LN4@stbi__zexp
-	lea	rcx, OFFSET FLAT:$SG85012
+	lea	rcx, OFFSET FLAT:$SG85013
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__zexp
 $LN4@stbi__zexp:
@@ -25414,7 +25558,7 @@ $LN4@stbi__zexp:
 	sub	eax, DWORD PTR cur$[rsp]
 	cmp	eax, DWORD PTR n$[rsp]
 	jae	SHORT $LN5@stbi__zexp
-	lea	rcx, OFFSET FLAT:$SG85014
+	lea	rcx, OFFSET FLAT:$SG85015
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__zexp
 $LN5@stbi__zexp:
@@ -25429,7 +25573,7 @@ $LN2@stbi__zexp:
 ; Line 4214
 	cmp	DWORD PTR limit$[rsp], 2147483647	; 7fffffffH
 	jbe	SHORT $LN6@stbi__zexp
-	lea	rcx, OFFSET FLAT:$SG85016
+	lea	rcx, OFFSET FLAT:$SG85017
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__zexp
 $LN6@stbi__zexp:
@@ -25450,7 +25594,7 @@ $LN3@stbi__zexp:
 ; Line 4219
 	cmp	QWORD PTR q$[rsp], 0
 	jne	SHORT $LN7@stbi__zexp
-	lea	rcx, OFFSET FLAT:$SG85018
+	lea	rcx, OFFSET FLAT:$SG85019
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__zexp
 $LN7@stbi__zexp:
@@ -25932,7 +26076,7 @@ $LN7@stbi__zbui:
 	cmp	DWORD PTR sizes$[rsp+rax*4], ecx
 	jle	SHORT $LN16@stbi__zbui
 ; Line 4080
-	lea	rcx, OFFSET FLAT:$SG84924
+	lea	rcx, OFFSET FLAT:$SG84925
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__zbui
 $LN16@stbi__zbui:
@@ -25984,7 +26128,7 @@ $LN10@stbi__zbui:
 	mov	ecx, edx
 	cmp	eax, ecx
 	jl	SHORT $LN18@stbi__zbui
-	lea	rcx, OFFSET FLAT:$SG84927
+	lea	rcx, OFFSET FLAT:$SG84928
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__zbui
 $LN18@stbi__zbui:
@@ -26131,8 +26275,8 @@ bits$ = 56
 	cmp	DWORD PTR bits$[rsp], 16
 	jle	SHORT $LN3@stbi__bit_
 	mov	r8d, 4061				; 00000fddH
-	lea	rdx, OFFSET FLAT:$SG84888
-	lea	rcx, OFFSET FLAT:$SG84889
+	lea	rdx, OFFSET FLAT:$SG84889
+	lea	rcx, OFFSET FLAT:$SG84890
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN3@stbi__bit_:
@@ -26341,7 +26485,7 @@ req_comp$ = 560
 	cmp	DWORD PTR req_comp$[rsp], 4
 	jle	SHORT $LN41@load_jpeg_
 $LN42@load_jpeg_:
-	lea	rcx, OFFSET FLAT:$SG84771
+	lea	rcx, OFFSET FLAT:$SG84772
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN83@load_jpeg_
@@ -26475,7 +26619,7 @@ $LN4@load_jpeg_:
 	jne	SHORT $LN47@load_jpeg_
 	mov	rcx, QWORD PTR z$[rsp]
 	call	?stbi__cleanup_jpeg@@YAXPEAUstbi__jpeg@@@Z ; stbi__cleanup_jpeg
-	lea	rcx, OFFSET FLAT:$SG84777
+	lea	rcx, OFFSET FLAT:$SG84778
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN93@load_jpeg_
@@ -26619,7 +26763,7 @@ $LN3@load_jpeg_:
 	jne	SHORT $LN56@load_jpeg_
 	mov	rcx, QWORD PTR z$[rsp]
 	call	?stbi__cleanup_jpeg@@YAXPEAUstbi__jpeg@@@Z ; stbi__cleanup_jpeg
-	lea	rcx, OFFSET FLAT:$SG84787
+	lea	rcx, OFFSET FLAT:$SG84788
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN95@load_jpeg_
@@ -29149,7 +29293,7 @@ $LN10@stbi__deco:
 ; Line 3383
 	cmp	DWORD PTR Ld$2[rsp], 4
 	je	SHORT $LN18@stbi__deco
-	lea	rcx, OFFSET FLAT:$SG84264
+	lea	rcx, OFFSET FLAT:$SG84265
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__deco
 $LN18@stbi__deco:
@@ -29159,7 +29303,7 @@ $LN18@stbi__deco:
 	mov	eax, DWORD PTR [rax+4]
 	cmp	DWORD PTR NL$3[rsp], eax
 	je	SHORT $LN19@stbi__deco
-	lea	rcx, OFFSET FLAT:$SG84266
+	lea	rcx, OFFSET FLAT:$SG84267
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__deco
 $LN19@stbi__deco:
@@ -29230,7 +29374,7 @@ scan$ = 72
 ; Line 3337
 	cmp	DWORD PTR m$[rsp], 216			; 000000d8H
 	je	SHORT $LN6@stbi__deco
-	lea	rcx, OFFSET FLAT:$SG84234
+	lea	rcx, OFFSET FLAT:$SG84235
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__deco
 $LN6@stbi__deco:
@@ -29277,7 +29421,7 @@ $LN4@stbi__deco:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN9@stbi__deco
-	lea	rcx, OFFSET FLAT:$SG84238
+	lea	rcx, OFFSET FLAT:$SG84239
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__deco
 $LN9@stbi__deco:
@@ -29353,7 +29497,7 @@ scan$ = 120
 	mov	DWORD PTR Lf$[rsp], eax
 	cmp	DWORD PTR Lf$[rsp], 11
 	jge	SHORT $LN17@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84186
+	lea	rcx, OFFSET FLAT:$SG84187
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN17@stbi__proc:
@@ -29364,7 +29508,7 @@ $LN17@stbi__proc:
 	mov	DWORD PTR p$[rsp], eax
 	cmp	DWORD PTR p$[rsp], 8
 	je	SHORT $LN18@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84188
+	lea	rcx, OFFSET FLAT:$SG84189
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN18@stbi__proc:
@@ -29376,7 +29520,7 @@ $LN18@stbi__proc:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax+4], 0
 	jne	SHORT $LN19@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84190
+	lea	rcx, OFFSET FLAT:$SG84191
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN19@stbi__proc:
@@ -29388,7 +29532,7 @@ $LN19@stbi__proc:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax], 0
 	jne	SHORT $LN20@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84192
+	lea	rcx, OFFSET FLAT:$SG84193
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN20@stbi__proc:
@@ -29396,7 +29540,7 @@ $LN20@stbi__proc:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax+4], 16777216		; 01000000H
 	jbe	SHORT $LN21@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84194
+	lea	rcx, OFFSET FLAT:$SG84195
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN21@stbi__proc:
@@ -29404,7 +29548,7 @@ $LN21@stbi__proc:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax], 16777216		; 01000000H
 	jbe	SHORT $LN22@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84196
+	lea	rcx, OFFSET FLAT:$SG84197
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN22@stbi__proc:
@@ -29420,7 +29564,7 @@ $LN22@stbi__proc:
 	je	SHORT $LN23@stbi__proc
 	cmp	DWORD PTR c$[rsp], 4
 	je	SHORT $LN23@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84198
+	lea	rcx, OFFSET FLAT:$SG84199
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN23@stbi__proc:
@@ -29458,7 +29602,7 @@ $LN3@stbi__proc:
 	add	eax, 8
 	cmp	DWORD PTR Lf$[rsp], eax
 	je	SHORT $LN24@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84200
+	lea	rcx, OFFSET FLAT:$SG84201
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN24@stbi__proc:
@@ -29527,7 +29671,7 @@ $LN25@stbi__proc:
 	cmp	DWORD PTR [rcx+rax+18084], 4
 	jle	SHORT $LN26@stbi__proc
 $LN27@stbi__proc:
-	lea	rcx, OFFSET FLAT:$SG84204
+	lea	rcx, OFFSET FLAT:$SG84205
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN26@stbi__proc:
@@ -29549,7 +29693,7 @@ $LN26@stbi__proc:
 	cmp	DWORD PTR [rcx+rax+18088], 4
 	jle	SHORT $LN28@stbi__proc
 $LN29@stbi__proc:
-	lea	rcx, OFFSET FLAT:$SG84207
+	lea	rcx, OFFSET FLAT:$SG84208
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN28@stbi__proc:
@@ -29566,7 +29710,7 @@ $LN28@stbi__proc:
 	mov	rcx, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rcx+rax+18092], 3
 	jle	SHORT $LN30@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84209
+	lea	rcx, OFFSET FLAT:$SG84210
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN30@stbi__proc:
@@ -29590,7 +29734,7 @@ $LN31@stbi__proc:
 	call	?stbi__mad3sizes_valid@@YAHHHHH@Z	; stbi__mad3sizes_valid
 	test	eax, eax
 	jne	SHORT $LN32@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84212
+	lea	rcx, OFFSET FLAT:$SG84213
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN32@stbi__proc:
@@ -29659,7 +29803,7 @@ $LN13@stbi__proc:
 	mov	eax, edx
 	test	eax, eax
 	je	SHORT $LN35@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84216
+	lea	rcx, OFFSET FLAT:$SG84217
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN35@stbi__proc:
@@ -29675,7 +29819,7 @@ $LN35@stbi__proc:
 	mov	eax, edx
 	test	eax, eax
 	je	SHORT $LN36@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84218
+	lea	rcx, OFFSET FLAT:$SG84219
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN36@stbi__proc:
@@ -29829,7 +29973,7 @@ $LN16@stbi__proc:
 	cmp	QWORD PTR [rcx+rax+18136], 0
 	jne	SHORT $LN37@stbi__proc
 ; Line 3304
-	lea	rcx, OFFSET FLAT:$SG84220
+	lea	rcx, OFFSET FLAT:$SG84221
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	mov	ecx, DWORD PTR i$[rsp]
 	inc	ecx
@@ -29903,7 +30047,7 @@ $LN37@stbi__proc:
 	cmp	QWORD PTR [rcx+rax+18144], 0
 	jne	SHORT $LN39@stbi__proc
 ; Line 3313
-	lea	rcx, OFFSET FLAT:$SG84223
+	lea	rcx, OFFSET FLAT:$SG84224
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	mov	ecx, DWORD PTR i$[rsp]
 	inc	ecx
@@ -30074,7 +30218,7 @@ z$ = 80
 	cmp	DWORD PTR [rcx+18516], eax
 	jle	SHORT $LN8@stbi__proc
 $LN9@stbi__proc:
-	lea	rcx, OFFSET FLAT:$SG84120
+	lea	rcx, OFFSET FLAT:$SG84121
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN8@stbi__proc:
@@ -30084,7 +30228,7 @@ $LN8@stbi__proc:
 	lea	eax, DWORD PTR [rax+rax+6]
 	cmp	DWORD PTR Ls$[rsp], eax
 	je	SHORT $LN10@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84122
+	lea	rcx, OFFSET FLAT:$SG84123
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN10@stbi__proc:
@@ -30158,7 +30302,7 @@ $LN12@stbi__proc:
 	mov	rcx, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rcx+rax+18096], 3
 	jle	SHORT $LN13@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84126
+	lea	rcx, OFFSET FLAT:$SG84127
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN13@stbi__proc:
@@ -30174,7 +30318,7 @@ $LN13@stbi__proc:
 	mov	rcx, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rcx+rax+18100], 3
 	jle	SHORT $LN14@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84128
+	lea	rcx, OFFSET FLAT:$SG84129
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN14@stbi__proc:
@@ -30240,7 +30384,7 @@ $LN3@stbi__proc:
 	jle	SHORT $LN17@stbi__proc
 $LN18@stbi__proc:
 ; Line 3196
-	lea	rcx, OFFSET FLAT:$SG84133
+	lea	rcx, OFFSET FLAT:$SG84134
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__proc
 $LN17@stbi__proc:
@@ -30251,7 +30395,7 @@ $LN15@stbi__proc:
 	mov	rax, QWORD PTR z$[rsp]
 	cmp	DWORD PTR [rax+18484], 0
 	je	SHORT $LN19@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84135
+	lea	rcx, OFFSET FLAT:$SG84136
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__proc
 $LN19@stbi__proc:
@@ -30263,7 +30407,7 @@ $LN19@stbi__proc:
 	cmp	DWORD PTR [rax+18496], 0
 	je	SHORT $LN20@stbi__proc
 $LN21@stbi__proc:
-	lea	rcx, OFFSET FLAT:$SG84138
+	lea	rcx, OFFSET FLAT:$SG84139
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__proc
 $LN20@stbi__proc:
@@ -30330,7 +30474,7 @@ m$ = 232
 	jmp	$LN2@stbi__proc
 $LN23@stbi__proc:
 ; Line 3070
-	lea	rcx, OFFSET FLAT:$SG84068
+	lea	rcx, OFFSET FLAT:$SG84069
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN24@stbi__proc:
@@ -30340,7 +30484,7 @@ $LN24@stbi__proc:
 	call	?stbi__get16be@@YAHPEAUstbi__context@@@Z ; stbi__get16be
 	cmp	eax, 4
 	je	SHORT $LN25@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84071
+	lea	rcx, OFFSET FLAT:$SG84072
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN25@stbi__proc:
@@ -30392,14 +30536,14 @@ $LN52@stbi__proc:
 	je	SHORT $LN27@stbi__proc
 	cmp	DWORD PTR p$7[rsp], 1
 	je	SHORT $LN27@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84074
+	lea	rcx, OFFSET FLAT:$SG84075
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN27@stbi__proc:
 ; Line 3084
 	cmp	DWORD PTR t$10[rsp], 3
 	jle	SHORT $LN28@stbi__proc
-	lea	rcx, OFFSET FLAT:$SG84076
+	lea	rcx, OFFSET FLAT:$SG84077
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN28@stbi__proc:
@@ -30498,7 +30642,7 @@ $LN9@stbi__proc:
 	cmp	DWORD PTR th$2[rsp], 3
 	jle	SHORT $LN30@stbi__proc
 $LN31@stbi__proc:
-	lea	rcx, OFFSET FLAT:$SG84080
+	lea	rcx, OFFSET FLAT:$SG84081
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN30@stbi__proc:
@@ -30654,13 +30798,13 @@ $LN38@stbi__proc:
 	cmp	DWORD PTR m$[rsp], 254			; 000000feH
 	jne	SHORT $LN41@stbi__proc
 ; Line 3127
-	lea	rcx, OFFSET FLAT:$SG84092
+	lea	rcx, OFFSET FLAT:$SG84093
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 	jmp	SHORT $LN42@stbi__proc
 $LN41@stbi__proc:
 ; Line 3129
-	lea	rcx, OFFSET FLAT:$SG84093
+	lea	rcx, OFFSET FLAT:$SG84094
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__proc
 $LN42@stbi__proc:
@@ -30789,7 +30933,7 @@ $LN44@stbi__proc:
 	jmp	SHORT $LN1@stbi__proc
 $LN37@stbi__proc:
 ; Line 3164
-	lea	rcx, OFFSET FLAT:$SG84101
+	lea	rcx, OFFSET FLAT:$SG84102
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 $LN1@stbi__proc:
 ; Line 3165
@@ -34527,7 +34671,7 @@ fac$ = 200
 	mov	rax, QWORD PTR j$[rsp]
 	cmp	DWORD PTR [rax+18484], 0
 	jne	SHORT $LN13@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82806
+	lea	rcx, OFFSET FLAT:$SG82807
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN13@stbi__jpeg:
@@ -34640,7 +34784,7 @@ $LN18@stbi__jpeg:
 ; Line 2291
 	cmp	DWORD PTR rs$7[rsp], 0
 	jge	SHORT $LN20@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82814
+	lea	rcx, OFFSET FLAT:$SG82815
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN20@stbi__jpeg:
@@ -34843,7 +34987,7 @@ $LN10@stbi__jpeg:
 ; Line 2333
 	cmp	DWORD PTR rs$9[rsp], 0
 	jge	SHORT $LN32@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82827
+	lea	rcx, OFFSET FLAT:$SG82828
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN32@stbi__jpeg:
@@ -34898,7 +35042,7 @@ $LN33@stbi__jpeg:
 ; Line 2348
 	cmp	DWORD PTR s$5[rsp], 1
 	je	SHORT $LN38@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82834
+	lea	rcx, OFFSET FLAT:$SG82835
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN38@stbi__jpeg:
@@ -35039,7 +35183,7 @@ b$ = 104
 	mov	rax, QWORD PTR j$[rsp]
 	cmp	DWORD PTR [rax+18488], 0
 	je	SHORT $LN2@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82763
+	lea	rcx, OFFSET FLAT:$SG82764
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN2@stbi__jpeg:
@@ -35070,7 +35214,7 @@ $LN3@stbi__jpeg:
 	cmp	DWORD PTR t$[rsp], 15
 	jle	SHORT $LN6@stbi__jpeg
 $LN7@stbi__jpeg:
-	lea	rcx, OFFSET FLAT:$SG82769
+	lea	rcx, OFFSET FLAT:$SG82770
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN6@stbi__jpeg:
@@ -35200,7 +35344,7 @@ $LN5@stbi__jpeg:
 	cmp	DWORD PTR t$[rsp], 15
 	jle	SHORT $LN6@stbi__jpeg
 $LN7@stbi__jpeg:
-	lea	rcx, OFFSET FLAT:$SG82742
+	lea	rcx, OFFSET FLAT:$SG82743
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN6@stbi__jpeg:
@@ -35331,7 +35475,7 @@ $LN9@stbi__jpeg:
 ; Line 2217
 	cmp	DWORD PTR rs$4[rsp], 0
 	jge	SHORT $LN11@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG82747
+	lea	rcx, OFFSET FLAT:$SG82748
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__jpeg
 $LN11@stbi__jpeg:
@@ -35729,8 +35873,8 @@ $LN10@stbi__jpeg:
 	cmp	eax, ecx
 	je	SHORT $LN12@stbi__jpeg
 	mov	r8d, 2115				; 00000843H
-	lea	rdx, OFFSET FLAT:$SG82693
-	lea	rcx, OFFSET FLAT:$SG82694
+	lea	rdx, OFFSET FLAT:$SG82694
+	lea	rcx, OFFSET FLAT:$SG82695
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN12@stbi__jpeg:
@@ -36105,7 +36249,7 @@ $LN12@stbi__buil:
 	mov	ecx, edx
 	cmp	eax, ecx
 	jb	SHORT $LN20@stbi__buil
-	lea	rcx, OFFSET FLAT:$SG82638
+	lea	rcx, OFFSET FLAT:$SG82639
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	$LN1@stbi__buil
 $LN20@stbi__buil:
@@ -36248,8 +36392,8 @@ $LN43@stbi__conv:
 	jle	SHORT $LN60@stbi__conv
 $LN59@stbi__conv:
 	mov	r8d, 1798				; 00000706H
-	lea	rdx, OFFSET FLAT:$SG82414
-	lea	rcx, OFFSET FLAT:$SG82415
+	lea	rdx, OFFSET FLAT:$SG82415
+	lea	rcx, OFFSET FLAT:$SG82416
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN60@stbi__conv:
@@ -36269,7 +36413,7 @@ $LN60@stbi__conv:
 	mov	rcx, QWORD PTR data$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 1803
-	lea	rcx, OFFSET FLAT:$SG82417
+	lea	rcx, OFFSET FLAT:$SG82418
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN61@stbi__conv
@@ -36877,8 +37021,8 @@ $LN57@stbi__conv:
 	test	eax, eax
 	jne	SHORT $LN63@stbi__conv
 	mov	r8d, 1827				; 00000723H
-	lea	rdx, OFFSET FLAT:$SG82431
-	lea	rcx, OFFSET FLAT:$SG82432
+	lea	rdx, OFFSET FLAT:$SG82432
+	lea	rcx, OFFSET FLAT:$SG82433
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN63@stbi__conv:
@@ -36886,7 +37030,7 @@ $LN63@stbi__conv:
 	call	QWORD PTR __imp_free
 	mov	rcx, QWORD PTR good$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG82433
+	lea	rcx, OFFSET FLAT:$SG82434
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN64@stbi__conv
@@ -37003,8 +37147,8 @@ $LN43@stbi__conv:
 	jle	SHORT $LN60@stbi__conv
 $LN59@stbi__conv:
 	mov	r8d, 1741				; 000006cdH
-	lea	rdx, OFFSET FLAT:$SG82322
-	lea	rcx, OFFSET FLAT:$SG82323
+	lea	rdx, OFFSET FLAT:$SG82323
+	lea	rcx, OFFSET FLAT:$SG82324
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN60@stbi__conv:
@@ -37022,7 +37166,7 @@ $LN60@stbi__conv:
 	mov	rcx, QWORD PTR data$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 1746
-	lea	rcx, OFFSET FLAT:$SG82325
+	lea	rcx, OFFSET FLAT:$SG82326
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN61@stbi__conv
@@ -37628,8 +37772,8 @@ $LN57@stbi__conv:
 	test	eax, eax
 	jne	SHORT $LN63@stbi__conv
 	mov	r8d, 1770				; 000006eaH
-	lea	rdx, OFFSET FLAT:$SG82339
-	lea	rcx, OFFSET FLAT:$SG82340
+	lea	rdx, OFFSET FLAT:$SG82340
+	lea	rcx, OFFSET FLAT:$SG82341
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN63@stbi__conv:
@@ -37637,7 +37781,7 @@ $LN63@stbi__conv:
 	call	QWORD PTR __imp_free
 	mov	rcx, QWORD PTR good$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG82341
+	lea	rcx, OFFSET FLAT:$SG82342
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN64@stbi__conv
@@ -38216,7 +38360,7 @@ $LN7@stbi__load:
 	jmp	SHORT $LN1@stbi__load
 $LN4@stbi__load:
 ; Line 1455
-	lea	rcx, OFFSET FLAT:$SG82106
+	lea	rcx, OFFSET FLAT:$SG82107
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN8@stbi__load
@@ -38384,8 +38528,8 @@ $LN2@stbi__load:
 	cmp	DWORD PTR ri$[rsp], 16
 	je	SHORT $LN6@stbi__load
 	mov	r8d, 1275				; 000004fbH
-	lea	rdx, OFFSET FLAT:$SG81968
-	lea	rcx, OFFSET FLAT:$SG81969
+	lea	rdx, OFFSET FLAT:$SG81969
+	lea	rcx, OFFSET FLAT:$SG81970
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN6@stbi__load:
@@ -38521,8 +38665,8 @@ $LN2@stbi__load:
 	cmp	DWORD PTR ri$[rsp], 16
 	je	SHORT $LN6@stbi__load
 	mov	r8d, 1249				; 000004e1H
-	lea	rdx, OFFSET FLAT:$SG81948
-	lea	rcx, OFFSET FLAT:$SG81949
+	lea	rdx, OFFSET FLAT:$SG81949
+	lea	rcx, OFFSET FLAT:$SG81950
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN6@stbi__load:
@@ -38827,7 +38971,7 @@ channels$ = 104
 ; Line 1193
 	cmp	QWORD PTR enlarged$[rsp], 0
 	jne	SHORT $LN5@stbi__conv
-	lea	rcx, OFFSET FLAT:$SG81896
+	lea	rcx, OFFSET FLAT:$SG81897
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN7@stbi__conv
@@ -38906,7 +39050,7 @@ channels$ = 104
 ; Line 1177
 	cmp	QWORD PTR reduced$[rsp], 0
 	jne	SHORT $LN5@stbi__conv
-	lea	rcx, OFFSET FLAT:$SG81877
+	lea	rcx, OFFSET FLAT:$SG81878
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN7@stbi__conv
@@ -39153,7 +39297,7 @@ $LN9@stbi__load:
 	jmp	SHORT $LN1@stbi__load
 $LN10@stbi__load:
 ; Line 1167
-	lea	rcx, OFFSET FLAT:$SG81859
+	lea	rcx, OFFSET FLAT:$SG81860
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN14@stbi__load
@@ -39209,7 +39353,7 @@ $LN8@stbi__hdr_:
 	jne	SHORT $LN9@stbi__hdr_
 	mov	rcx, QWORD PTR data$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG82492
+	lea	rcx, OFFSET FLAT:$SG82493
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN18@stbi__hdr_
@@ -39390,7 +39534,7 @@ $LN11@stbi__ldr_:
 	jne	SHORT $LN12@stbi__ldr_
 	mov	rcx, QWORD PTR data$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG82460
+	lea	rcx, OFFSET FLAT:$SG82461
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN17@stbi__ldr_
@@ -40031,7 +40175,7 @@ $LN13@stbi__pnm_:
 	cmp	DWORD PTR maxv$[rsp], 65535		; 0000ffffH
 	jle	SHORT $LN7@stbi__pnm_
 ; Line 7526
-	lea	rcx, OFFSET FLAT:$SG87613
+	lea	rcx, OFFSET FLAT:$SG87614
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__pnm_
 	jmp	SHORT $LN8@stbi__pnm_
@@ -40100,7 +40244,7 @@ $LN2@stbi__pnm_:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax+4], 16777216		; 01000000H
 	jbe	SHORT $LN3@stbi__pnm_
-	lea	rcx, OFFSET FLAT:$SG87553
+	lea	rcx, OFFSET FLAT:$SG87554
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN11@stbi__pnm_
@@ -40116,7 +40260,7 @@ $LN3@stbi__pnm_:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax], 16777216		; 01000000H
 	jbe	SHORT $LN4@stbi__pnm_
-	lea	rcx, OFFSET FLAT:$SG87555
+	lea	rcx, OFFSET FLAT:$SG87556
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN13@stbi__pnm_
@@ -40165,7 +40309,7 @@ $LN5@stbi__pnm_:
 	test	eax, eax
 	jne	SHORT $LN6@stbi__pnm_
 ; Line 7445
-	lea	rcx, OFFSET FLAT:$SG87558
+	lea	rcx, OFFSET FLAT:$SG87559
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN15@stbi__pnm_
@@ -40197,7 +40341,7 @@ $LN6@stbi__pnm_:
 ; Line 7448
 	cmp	QWORD PTR out$[rsp], 0
 	jne	SHORT $LN7@stbi__pnm_
-	lea	rcx, OFFSET FLAT:$SG87560
+	lea	rcx, OFFSET FLAT:$SG87561
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN17@stbi__pnm_
@@ -40620,7 +40764,7 @@ $LN21@stbi__load:
 	jmp	SHORT $LN6@stbi__load
 $LN5@stbi__load:
 ; Line 6966
-	lea	rcx, OFFSET FLAT:$SG87215
+	lea	rcx, OFFSET FLAT:$SG87216
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN23@stbi__load
@@ -40808,7 +40952,7 @@ $LN6@stbi__pic_:
 	mov	QWORD PTR comp$[rsp], rax
 $LN7@stbi__pic_:
 ; Line 7354
-	lea	rdx, OFFSET FLAT:$SG87514
+	lea	rdx, OFFSET FLAT:$SG87515
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbi__pic_is4@@YAHPEAUstbi__context@@PEBD@Z ; stbi__pic_is4
 	test	eax, eax
@@ -41023,7 +41167,7 @@ $LN3@stbi__pic_:
 ; Line 6436
 	cmp	DWORD PTR y$[rsp], 16777216		; 01000000H
 	jle	SHORT $LN6@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86862
+	lea	rcx, OFFSET FLAT:$SG86863
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN14@stbi__pic_
@@ -41038,7 +41182,7 @@ $LN6@stbi__pic_:
 ; Line 6437
 	cmp	DWORD PTR x$[rsp], 16777216		; 01000000H
 	jle	SHORT $LN7@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86864
+	lea	rcx, OFFSET FLAT:$SG86865
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN16@stbi__pic_
@@ -41055,7 +41199,7 @@ $LN7@stbi__pic_:
 	call	?stbi__at_eof@@YAHPEAUstbi__context@@@Z	; stbi__at_eof
 	test	eax, eax
 	je	SHORT $LN8@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86866
+	lea	rcx, OFFSET FLAT:$SG86867
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN18@stbi__pic_
@@ -41075,7 +41219,7 @@ $LN8@stbi__pic_:
 	call	?stbi__mad3sizes_valid@@YAHHHHH@Z	; stbi__mad3sizes_valid
 	test	eax, eax
 	jne	SHORT $LN9@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86868
+	lea	rcx, OFFSET FLAT:$SG86869
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN20@stbi__pic_
@@ -41106,7 +41250,7 @@ $LN9@stbi__pic_:
 ; Line 6448
 	cmp	QWORD PTR result$[rsp], 0
 	jne	SHORT $LN10@stbi__pic_
-	lea	rcx, OFFSET FLAT:$SG86870
+	lea	rcx, OFFSET FLAT:$SG86871
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN22@stbi__pic_
@@ -41268,7 +41412,7 @@ $LN2@stbi__hdr_:
 	jmp	SHORT $LN3@stbi__hdr_
 $LN11@stbi__hdr_:
 ; Line 7230
-	lea	rdx, OFFSET FLAT:$SG87445
+	lea	rdx, OFFSET FLAT:$SG87446
 	mov	rcx, QWORD PTR token$[rsp]
 	call	strcmp
 	test	eax, eax
@@ -41295,7 +41439,7 @@ $LN13@stbi__hdr_:
 	mov	QWORD PTR token$[rsp], rax
 ; Line 7238
 	mov	r8d, 3
-	lea	rdx, OFFSET FLAT:$SG87448
+	lea	rdx, OFFSET FLAT:$SG87449
 	mov	rcx, QWORD PTR token$[rsp]
 	call	QWORD PTR __imp_strncmp
 	test	eax, eax
@@ -41331,7 +41475,7 @@ $LN5@stbi__hdr_:
 $LN6@stbi__hdr_:
 ; Line 7245
 	mov	r8d, 3
-	lea	rdx, OFFSET FLAT:$SG87450
+	lea	rdx, OFFSET FLAT:$SG87451
 	mov	rcx, QWORD PTR token$[rsp]
 	call	QWORD PTR __imp_strncmp
 	test	eax, eax
@@ -41428,18 +41572,18 @@ ri$ = 1304
 	call	?stbi__hdr_gettoken@@YAPEADPEAUstbi__context@@PEAD@Z ; stbi__hdr_gettoken
 	mov	QWORD PTR headerToken$[rsp], rax
 ; Line 7096
-	lea	rdx, OFFSET FLAT:$SG87381
-	mov	rcx, QWORD PTR headerToken$[rsp]
-	call	strcmp
-	test	eax, eax
-	je	SHORT $LN30@stbi__hdr_
 	lea	rdx, OFFSET FLAT:$SG87382
 	mov	rcx, QWORD PTR headerToken$[rsp]
 	call	strcmp
 	test	eax, eax
 	je	SHORT $LN30@stbi__hdr_
+	lea	rdx, OFFSET FLAT:$SG87383
+	mov	rcx, QWORD PTR headerToken$[rsp]
+	call	strcmp
+	test	eax, eax
+	je	SHORT $LN30@stbi__hdr_
 ; Line 7097
-	lea	rcx, OFFSET FLAT:$SG87383
+	lea	rcx, OFFSET FLAT:$SG87384
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN56@stbi__hdr_
@@ -41467,7 +41611,7 @@ $LN2@stbi__hdr_:
 	jmp	SHORT $LN3@stbi__hdr_
 $LN31@stbi__hdr_:
 ; Line 7103
-	lea	rdx, OFFSET FLAT:$SG87386
+	lea	rdx, OFFSET FLAT:$SG87387
 	mov	rcx, QWORD PTR token$[rsp]
 	call	strcmp
 	test	eax, eax
@@ -41480,7 +41624,7 @@ $LN3@stbi__hdr_:
 ; Line 7106
 	cmp	DWORD PTR valid$[rsp], 0
 	jne	SHORT $LN33@stbi__hdr_
-	lea	rcx, OFFSET FLAT:$SG87388
+	lea	rcx, OFFSET FLAT:$SG87389
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN58@stbi__hdr_
@@ -41499,12 +41643,12 @@ $LN33@stbi__hdr_:
 	mov	QWORD PTR token$[rsp], rax
 ; Line 7111
 	mov	r8d, 3
-	lea	rdx, OFFSET FLAT:$SG87390
+	lea	rdx, OFFSET FLAT:$SG87391
 	mov	rcx, QWORD PTR token$[rsp]
 	call	QWORD PTR __imp_strncmp
 	test	eax, eax
 	je	SHORT $LN34@stbi__hdr_
-	lea	rcx, OFFSET FLAT:$SG87391
+	lea	rcx, OFFSET FLAT:$SG87392
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN60@stbi__hdr_
@@ -41539,12 +41683,12 @@ $LN5@stbi__hdr_:
 $LN6@stbi__hdr_:
 ; Line 7115
 	mov	r8d, 3
-	lea	rdx, OFFSET FLAT:$SG87393
+	lea	rdx, OFFSET FLAT:$SG87394
 	mov	rcx, QWORD PTR token$[rsp]
 	call	QWORD PTR __imp_strncmp
 	test	eax, eax
 	je	SHORT $LN35@stbi__hdr_
-	lea	rcx, OFFSET FLAT:$SG87394
+	lea	rcx, OFFSET FLAT:$SG87395
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN62@stbi__hdr_
@@ -41569,7 +41713,7 @@ $LN35@stbi__hdr_:
 ; Line 7119
 	cmp	DWORD PTR height$[rsp], 16777216	; 01000000H
 	jle	SHORT $LN36@stbi__hdr_
-	lea	rcx, OFFSET FLAT:$SG87396
+	lea	rcx, OFFSET FLAT:$SG87397
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN64@stbi__hdr_
@@ -41584,7 +41728,7 @@ $LN36@stbi__hdr_:
 ; Line 7120
 	cmp	DWORD PTR width$[rsp], 16777216		; 01000000H
 	jle	SHORT $LN37@stbi__hdr_
-	lea	rcx, OFFSET FLAT:$SG87398
+	lea	rcx, OFFSET FLAT:$SG87399
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN66@stbi__hdr_
@@ -41625,7 +41769,7 @@ $LN39@stbi__hdr_:
 	test	eax, eax
 	jne	SHORT $LN40@stbi__hdr_
 ; Line 7129
-	lea	rcx, OFFSET FLAT:$SG87402
+	lea	rcx, OFFSET FLAT:$SG87403
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN68@stbi__hdr_
@@ -41649,7 +41793,7 @@ $LN40@stbi__hdr_:
 	cmp	QWORD PTR hdr_data$[rsp], 0
 	jne	SHORT $LN41@stbi__hdr_
 ; Line 7134
-	lea	rcx, OFFSET FLAT:$SG87404
+	lea	rcx, OFFSET FLAT:$SG87405
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN70@stbi__hdr_
@@ -41813,7 +41957,7 @@ $LN45@stbi__hdr_:
 	call	QWORD PTR __imp_free
 	mov	rcx, QWORD PTR scanline$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG87411
+	lea	rcx, OFFSET FLAT:$SG87412
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN72@stbi__hdr_
@@ -41841,7 +41985,7 @@ $LN47@stbi__hdr_:
 	mov	rcx, QWORD PTR hdr_data$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 7177
-	lea	rcx, OFFSET FLAT:$SG87414
+	lea	rcx, OFFSET FLAT:$SG87415
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN74@stbi__hdr_
@@ -41899,7 +42043,7 @@ $LN19@stbi__hdr_:
 	call	QWORD PTR __imp_free
 	mov	rcx, QWORD PTR scanline$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG87418
+	lea	rcx, OFFSET FLAT:$SG87419
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN76@stbi__hdr_
@@ -41946,7 +42090,7 @@ $LN50@stbi__hdr_:
 	call	QWORD PTR __imp_free
 	mov	rcx, QWORD PTR scanline$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG87420
+	lea	rcx, OFFSET FLAT:$SG87421
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN78@stbi__hdr_
@@ -42052,7 +42196,7 @@ s$ = 64
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 7021
-	lea	rdx, OFFSET FLAT:$SG87252
+	lea	rdx, OFFSET FLAT:$SG87253
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbi__hdr_test_core@@YAHPEAUstbi__context@@PEBD@Z ; stbi__hdr_test_core
 	mov	DWORD PTR r$[rsp], eax
@@ -42063,7 +42207,7 @@ s$ = 64
 	cmp	DWORD PTR r$[rsp], 0
 	jne	SHORT $LN2@stbi__hdr_
 ; Line 7024
-	lea	rdx, OFFSET FLAT:$SG87254
+	lea	rdx, OFFSET FLAT:$SG87255
 	mov	rcx, QWORD PTR s$[rsp]
 	call	?stbi__hdr_test_core@@YAHPEAUstbi__context@@PEBD@Z ; stbi__hdr_test_core
 	mov	DWORD PTR r$[rsp], eax
@@ -42351,7 +42495,7 @@ bpc$ = 304
 	cmp	eax, 943870035				; 38425053H
 	je	SHORT $LN32@stbi__psd_
 ; Line 6060
-	lea	rcx, OFFSET FLAT:$SG86627
+	lea	rcx, OFFSET FLAT:$SG86628
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN69@stbi__psd_
@@ -42369,7 +42513,7 @@ $LN32@stbi__psd_:
 	cmp	eax, 1
 	je	SHORT $LN33@stbi__psd_
 ; Line 6064
-	lea	rcx, OFFSET FLAT:$SG86629
+	lea	rcx, OFFSET FLAT:$SG86630
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN71@stbi__psd_
@@ -42396,7 +42540,7 @@ $LN33@stbi__psd_:
 	jle	SHORT $LN34@stbi__psd_
 $LN35@stbi__psd_:
 ; Line 6072
-	lea	rcx, OFFSET FLAT:$SG86632
+	lea	rcx, OFFSET FLAT:$SG86633
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN73@stbi__psd_
@@ -42419,7 +42563,7 @@ $LN34@stbi__psd_:
 ; Line 6078
 	cmp	DWORD PTR h$[rsp], 16777216		; 01000000H
 	jle	SHORT $LN36@stbi__psd_
-	lea	rcx, OFFSET FLAT:$SG86634
+	lea	rcx, OFFSET FLAT:$SG86635
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN75@stbi__psd_
@@ -42434,7 +42578,7 @@ $LN36@stbi__psd_:
 ; Line 6079
 	cmp	DWORD PTR w$[rsp], 16777216		; 01000000H
 	jle	SHORT $LN37@stbi__psd_
-	lea	rcx, OFFSET FLAT:$SG86636
+	lea	rcx, OFFSET FLAT:$SG86637
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN77@stbi__psd_
@@ -42456,7 +42600,7 @@ $LN37@stbi__psd_:
 	cmp	DWORD PTR bitdepth$[rsp], 16
 	je	SHORT $LN38@stbi__psd_
 ; Line 6084
-	lea	rcx, OFFSET FLAT:$SG86638
+	lea	rcx, OFFSET FLAT:$SG86639
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN79@stbi__psd_
@@ -42474,7 +42618,7 @@ $LN38@stbi__psd_:
 	cmp	eax, 3
 	je	SHORT $LN39@stbi__psd_
 ; Line 6097
-	lea	rcx, OFFSET FLAT:$SG86640
+	lea	rcx, OFFSET FLAT:$SG86641
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN81@stbi__psd_
@@ -42512,7 +42656,7 @@ $LN39@stbi__psd_:
 	cmp	DWORD PTR compression$[rsp], 1
 	jle	SHORT $LN40@stbi__psd_
 ; Line 6114
-	lea	rcx, OFFSET FLAT:$SG86642
+	lea	rcx, OFFSET FLAT:$SG86643
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN83@stbi__psd_
@@ -42533,7 +42677,7 @@ $LN40@stbi__psd_:
 	test	eax, eax
 	jne	SHORT $LN41@stbi__psd_
 ; Line 6118
-	lea	rcx, OFFSET FLAT:$SG86644
+	lea	rcx, OFFSET FLAT:$SG86645
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN85@stbi__psd_
@@ -42577,7 +42721,7 @@ $LN43@stbi__psd_:
 ; Line 6128
 	cmp	QWORD PTR out$[rsp], 0
 	jne	SHORT $LN44@stbi__psd_
-	lea	rcx, OFFSET FLAT:$SG86648
+	lea	rcx, OFFSET FLAT:$SG86649
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN87@stbi__psd_
@@ -42664,7 +42808,7 @@ $LN47@stbi__psd_:
 	mov	rcx, QWORD PTR out$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 6161
-	lea	rcx, OFFSET FLAT:$SG86654
+	lea	rcx, OFFSET FLAT:$SG86655
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN91@stbi__psd_
@@ -43539,7 +43683,7 @@ ri$ = 312
 ; Line 5823
 	cmp	DWORD PTR tga_height$[rsp], 16777216	; 01000000H
 	jle	SHORT $LN29@stbi__tga_
-	lea	rcx, OFFSET FLAT:$SG86456
+	lea	rcx, OFFSET FLAT:$SG86457
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN62@stbi__tga_
@@ -43554,7 +43698,7 @@ $LN29@stbi__tga_:
 ; Line 5824
 	cmp	DWORD PTR tga_width$[rsp], 16777216	; 01000000H
 	jle	SHORT $LN30@stbi__tga_
-	lea	rcx, OFFSET FLAT:$SG86458
+	lea	rcx, OFFSET FLAT:$SG86459
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN64@stbi__tga_
@@ -43612,7 +43756,7 @@ $LN33@stbi__tga_:
 	cmp	DWORD PTR tga_comp$[rsp], 0
 	jne	SHORT $LN34@stbi__tga_
 ; Line 5839
-	lea	rcx, OFFSET FLAT:$SG86463
+	lea	rcx, OFFSET FLAT:$SG86464
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN68@stbi__tga_
@@ -43648,7 +43792,7 @@ $LN35@stbi__tga_:
 	test	eax, eax
 	jne	SHORT $LN36@stbi__tga_
 ; Line 5847
-	lea	rcx, OFFSET FLAT:$SG86466
+	lea	rcx, OFFSET FLAT:$SG86467
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN70@stbi__tga_
@@ -43670,7 +43814,7 @@ $LN36@stbi__tga_:
 ; Line 5850
 	cmp	QWORD PTR tga_data$[rsp], 0
 	jne	SHORT $LN37@stbi__tga_
-	lea	rcx, OFFSET FLAT:$SG86468
+	lea	rcx, OFFSET FLAT:$SG86469
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN72@stbi__tga_
@@ -43752,7 +43896,7 @@ $LN38@stbi__tga_:
 	mov	rcx, QWORD PTR tga_data$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 5867
-	lea	rcx, OFFSET FLAT:$SG86473
+	lea	rcx, OFFSET FLAT:$SG86474
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN76@stbi__tga_
@@ -43781,7 +43925,7 @@ $LN41@stbi__tga_:
 	mov	rcx, QWORD PTR tga_data$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 5876
-	lea	rcx, OFFSET FLAT:$SG86475
+	lea	rcx, OFFSET FLAT:$SG86476
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN78@stbi__tga_
@@ -43803,8 +43947,8 @@ $LN42@stbi__tga_:
 	cmp	DWORD PTR tga_comp$[rsp], 3
 	je	SHORT $LN80@stbi__tga_
 	mov	r8d, 5880				; 000016f8H
-	lea	rdx, OFFSET FLAT:$SG86478
-	lea	rcx, OFFSET FLAT:$SG86479
+	lea	rdx, OFFSET FLAT:$SG86479
+	lea	rcx, OFFSET FLAT:$SG86480
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN80@stbi__tga_:
@@ -43850,7 +43994,7 @@ $LN43@stbi__tga_:
 	mov	rcx, QWORD PTR tga_palette$[rsp]
 	call	QWORD PTR __imp_free
 ; Line 5888
-	lea	rcx, OFFSET FLAT:$SG86481
+	lea	rcx, OFFSET FLAT:$SG86482
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN81@stbi__tga_
@@ -43978,8 +44122,8 @@ $LN52@stbi__tga_:
 	cmp	DWORD PTR tga_comp$[rsp], 3
 	je	SHORT $LN85@stbi__tga_
 	mov	r8d, 5929				; 00001729H
-	lea	rdx, OFFSET FLAT:$SG86493
-	lea	rcx, OFFSET FLAT:$SG86494
+	lea	rdx, OFFSET FLAT:$SG86494
+	lea	rcx, OFFSET FLAT:$SG86495
 	call	QWORD PTR __imp__wassert
 	xor	eax, eax
 $LN85@stbi__tga_:
@@ -44569,7 +44713,7 @@ $LN94@stbi__bmp_:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax+4], 16777216		; 01000000H
 	jbe	SHORT $LN36@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86214
+	lea	rcx, OFFSET FLAT:$SG86215
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN95@stbi__bmp_
@@ -44585,7 +44729,7 @@ $LN36@stbi__bmp_:
 	mov	rax, QWORD PTR s$[rsp]
 	cmp	DWORD PTR [rax], 16777216		; 01000000H
 	jbe	SHORT $LN37@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86216
+	lea	rcx, OFFSET FLAT:$SG86217
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN97@stbi__bmp_
@@ -44661,7 +44805,7 @@ $LN39@stbi__bmp_:
 	cmp	rax, rcx
 	je	SHORT $LN43@stbi__bmp_
 ; Line 5502
-	lea	rcx, OFFSET FLAT:$SG86223
+	lea	rcx, OFFSET FLAT:$SG86224
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN99@stbi__bmp_
@@ -44722,7 +44866,7 @@ $LN47@stbi__bmp_:
 	test	eax, eax
 	jne	SHORT $LN48@stbi__bmp_
 ; Line 5517
-	lea	rcx, OFFSET FLAT:$SG86229
+	lea	rcx, OFFSET FLAT:$SG86230
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN103@stbi__bmp_
@@ -44746,7 +44890,7 @@ $LN48@stbi__bmp_:
 ; Line 5520
 	cmp	QWORD PTR out$[rsp], 0
 	jne	SHORT $LN49@stbi__bmp_
-	lea	rcx, OFFSET FLAT:$SG86231
+	lea	rcx, OFFSET FLAT:$SG86232
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN105@stbi__bmp_
@@ -44771,7 +44915,7 @@ $LN49@stbi__bmp_:
 $LN53@stbi__bmp_:
 	mov	rcx, QWORD PTR out$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG86236
+	lea	rcx, OFFSET FLAT:$SG86237
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN107@stbi__bmp_
@@ -44883,7 +45027,7 @@ $LN59@stbi__bmp_:
 ; Line 5535
 	mov	rcx, QWORD PTR out$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG86244
+	lea	rcx, OFFSET FLAT:$SG86245
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN111@stbi__bmp_
@@ -45278,7 +45422,7 @@ $LN75@stbi__bmp_:
 $LN80@stbi__bmp_:
 	mov	rcx, QWORD PTR out$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG86265
+	lea	rcx, OFFSET FLAT:$SG86266
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN115@stbi__bmp_
@@ -45334,7 +45478,7 @@ $LN79@stbi__bmp_:
 $LN82@stbi__bmp_:
 	mov	rcx, QWORD PTR out$[rsp]
 	call	QWORD PTR __imp_free
-	lea	rcx, OFFSET FLAT:$SG86268
+	lea	rcx, OFFSET FLAT:$SG86269
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN117@stbi__bmp_
@@ -45893,7 +46037,7 @@ comp$ = 88
 ; Line 4016
 	cmp	QWORD PTR j$[rsp], 0
 	jne	SHORT $LN2@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG84860
+	lea	rcx, OFFSET FLAT:$SG84861
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__jpeg
 $LN2@stbi__jpeg:
@@ -45945,7 +46089,7 @@ ri$ = 136
 ; Line 3978
 	cmp	QWORD PTR j$[rsp], 0
 	jne	SHORT $LN2@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG84829
+	lea	rcx, OFFSET FLAT:$SG84830
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN4@stbi__jpeg
@@ -46001,7 +46145,7 @@ s$ = 64
 ; Line 3991
 	cmp	QWORD PTR j$[rsp], 0
 	jne	SHORT $LN2@stbi__jpeg
-	lea	rcx, OFFSET FLAT:$SG84838
+	lea	rcx, OFFSET FLAT:$SG84839
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi__jpeg
 $LN2@stbi__jpeg:
@@ -46938,14 +47082,14 @@ $LN4:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 7623
-	lea	rdx, OFFSET FLAT:$SG87667
+	lea	rdx, OFFSET FLAT:$SG87668
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
 ; Line 7625
 	cmp	QWORD PTR f$[rsp], 0
 	jne	SHORT $LN2@stbi_is_16
-	lea	rcx, OFFSET FLAT:$SG87669
+	lea	rcx, OFFSET FLAT:$SG87670
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi_is_16
 $LN2@stbi_is_16:
@@ -47034,14 +47178,14 @@ $LN4:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 7602
-	lea	rdx, OFFSET FLAT:$SG87650
+	lea	rdx, OFFSET FLAT:$SG87651
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
 ; Line 7604
 	cmp	QWORD PTR f$[rsp], 0
 	jne	SHORT $LN2@stbi_info
-	lea	rcx, OFFSET FLAT:$SG87652
+	lea	rcx, OFFSET FLAT:$SG87653
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	jmp	SHORT $LN1@stbi_info
 $LN2@stbi_info:
@@ -47294,7 +47438,7 @@ $LN4:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
 ; Line 1513
-	lea	rdx, OFFSET FLAT:$SG82158
+	lea	rdx, OFFSET FLAT:$SG82159
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
@@ -47493,14 +47637,14 @@ $LN6:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 88					; 00000058H
 ; Line 1476
-	lea	rdx, OFFSET FLAT:$SG82137
+	lea	rdx, OFFSET FLAT:$SG82138
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
 ; Line 1477
 	cmp	QWORD PTR f$[rsp], 0
 	jne	SHORT $LN2@stbi_loadf
-	lea	rcx, OFFSET FLAT:$SG82139
+	lea	rcx, OFFSET FLAT:$SG82140
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN4@stbi_loadf
@@ -47697,14 +47841,14 @@ $LN6:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 88					; 00000058H
 ; Line 1384
-	lea	rdx, OFFSET FLAT:$SG82036
+	lea	rdx, OFFSET FLAT:$SG82037
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
 ; Line 1386
 	cmp	QWORD PTR f$[rsp], 0
 	jne	SHORT $LN2@stbi_load_
-	lea	rcx, OFFSET FLAT:$SG82038
+	lea	rcx, OFFSET FLAT:$SG82039
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN4@stbi_load_
@@ -47990,14 +48134,14 @@ $LN6:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 88					; 00000058H
 ; Line 1348
-	lea	rdx, OFFSET FLAT:$SG81999
+	lea	rdx, OFFSET FLAT:$SG82000
 	mov	rcx, QWORD PTR filename$[rsp]
 	call	?stbi__fopen@@YAPEAU_iobuf@@PEBD0@Z	; stbi__fopen
 	mov	QWORD PTR f$[rsp], rax
 ; Line 1350
 	cmp	QWORD PTR f$[rsp], 0
 	jne	SHORT $LN2@stbi_load
-	lea	rcx, OFFSET FLAT:$SG82001
+	lea	rcx, OFFSET FLAT:$SG82002
 	call	?stbi__err@@YAHPEBD@Z			; stbi__err
 	test	eax, eax
 	je	SHORT $LN4@stbi_load
@@ -48135,39 +48279,39 @@ Kind$ = 32
 	jmp	rax
 $LN4@TraceMessa:
 ; Line 7
-	lea	rax, OFFSET FLAT:$SG81232
+	lea	rax, OFFSET FLAT:$SG81233
 	jmp	SHORT $LN1@TraceMessa
 $LN5@TraceMessa:
 ; Line 8
-	lea	rax, OFFSET FLAT:$SG81234
+	lea	rax, OFFSET FLAT:$SG81235
 	jmp	SHORT $LN1@TraceMessa
 $LN6@TraceMessa:
 ; Line 9
-	lea	rax, OFFSET FLAT:$SG81236
+	lea	rax, OFFSET FLAT:$SG81237
 	jmp	SHORT $LN1@TraceMessa
 $LN7@TraceMessa:
 ; Line 10
-	lea	rax, OFFSET FLAT:$SG81238
+	lea	rax, OFFSET FLAT:$SG81239
 	jmp	SHORT $LN1@TraceMessa
 $LN8@TraceMessa:
 ; Line 11
-	lea	rax, OFFSET FLAT:$SG81240
+	lea	rax, OFFSET FLAT:$SG81241
 	jmp	SHORT $LN1@TraceMessa
 $LN9@TraceMessa:
 ; Line 12
-	lea	rax, OFFSET FLAT:$SG81242
+	lea	rax, OFFSET FLAT:$SG81243
 	jmp	SHORT $LN1@TraceMessa
 $LN10@TraceMessa:
 ; Line 13
-	lea	rax, OFFSET FLAT:$SG81244
+	lea	rax, OFFSET FLAT:$SG81245
 	jmp	SHORT $LN1@TraceMessa
 $LN11@TraceMessa:
 ; Line 14
-	lea	rax, OFFSET FLAT:$SG81246
+	lea	rax, OFFSET FLAT:$SG81247
 	jmp	SHORT $LN1@TraceMessa
 $LN2@TraceMessa:
 ; Line 16
-	lea	rax, OFFSET FLAT:$SG81247
+	lea	rax, OFFSET FLAT:$SG81248
 $LN1@TraceMessa:
 ; Line 17
 	add	rsp, 24
@@ -48299,16 +48443,16 @@ $LN3@PlatformIn:
 	test	eax, eax
 	je	SHORT $LN4@PlatformIn
 ; Line 405
-	lea	rcx, OFFSET FLAT:$SG79951
+	lea	rcx, OFFSET FLAT:$SG79952
 	call	QWORD PTR __imp_LoadLibraryA
 	mov	QWORD PTR User32$1[rsp], rax
 ; Line 407
-	lea	rdx, OFFSET FLAT:$SG79952
+	lea	rdx, OFFSET FLAT:$SG79953
 	mov	rcx, QWORD PTR User32$1[rsp]
 	call	QWORD PTR __imp_GetProcAddress
 	mov	QWORD PTR XXX$2[rsp], rax
 ; Line 409
-	lea	rdx, OFFSET FLAT:$SG79953
+	lea	rdx, OFFSET FLAT:$SG79954
 	mov	rcx, QWORD PTR User32$1[rsp]
 	call	QWORD PTR __imp_GetProcAddress
 	mov	QWORD PTR YYY$3[rsp], rax
@@ -48565,7 +48709,7 @@ Message$ = 216
 	mov	ecx, 24
 	rep movsb
 	mov	r9, QWORD PTR tv86[rsp]
-	lea	r8, OFFSET FLAT:$SG81295
+	lea	r8, OFFSET FLAT:$SG81296
 	mov	edx, 7
 	lea	rcx, QWORD PTR $T3[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48668,8 +48812,8 @@ Name$ = 360
 ; Line 548
 	mov	DWORD PTR [rsp+32], 16
 	mov	r9d, 548				; 00000224H
-	lea	r8, OFFSET FLAT:$SG79991
-	lea	rdx, OFFSET FLAT:$SG79992
+	lea	r8, OFFSET FLAT:$SG79992
+	lea	rdx, OFFSET FLAT:$SG79993
 	lea	rcx, QWORD PTR $T10[rsp]
 	call	?TraceLocation@@YA?AUTRACE_LOCATION@@PEBD0HH@Z ; TraceLocation
 	lea	rcx, QWORD PTR $T4[rsp]
@@ -48693,7 +48837,7 @@ Name$ = 360
 	mov	ecx, 24
 	rep movsb
 	mov	r9, QWORD PTR tv137[rsp]
-	lea	r8, OFFSET FLAT:$SG79990
+	lea	r8, OFFSET FLAT:$SG79991
 	mov	edx, 6
 	lea	rcx, QWORD PTR $T6[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48715,8 +48859,8 @@ $LN2@LoadFileDa:
 ; Line 557
 	mov	DWORD PTR [rsp+32], 17
 	mov	r9d, 557				; 0000022dH
-	lea	r8, OFFSET FLAT:$SG79995
-	lea	rdx, OFFSET FLAT:$SG79996
+	lea	r8, OFFSET FLAT:$SG79996
+	lea	rdx, OFFSET FLAT:$SG79997
 	lea	rcx, QWORD PTR $T11[rsp]
 	call	?TraceLocation@@YA?AUTRACE_LOCATION@@PEBD0HH@Z ; TraceLocation
 	lea	rcx, QWORD PTR $T7[rsp]
@@ -48740,7 +48884,7 @@ $LN2@LoadFileDa:
 	mov	ecx, 24
 	rep movsb
 	mov	r9, QWORD PTR tv155[rsp]
-	lea	r8, OFFSET FLAT:$SG79994
+	lea	r8, OFFSET FLAT:$SG79995
 	mov	edx, 6
 	lea	rcx, QWORD PTR $T9[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48805,12 +48949,12 @@ Expression$ = 280
 	mov	r8d, DWORD PTR [rax+16]
 	mov	rax, QWORD PTR Location$[rsp]
 	mov	rdx, QWORD PTR [rax]
-	lea	rcx, OFFSET FLAT:$SG79737
+	lea	rcx, OFFSET FLAT:$SG79738
 	call	?FormatA@@YAPEADPEBDZZ			; FormatA
 	mov	QWORD PTR ErrorMessage$[rsp], rax
 ; Line 92
 	mov	r9d, 16
-	lea	r8, OFFSET FLAT:$SG79738
+	lea	r8, OFFSET FLAT:$SG79739
 	mov	rdx, QWORD PTR ErrorMessage$[rsp]
 	xor	ecx, ecx
 	call	QWORD PTR __imp_MessageBoxA
@@ -48820,7 +48964,7 @@ Expression$ = 280
 	mov	rsi, QWORD PTR Location$[rsp]
 	mov	ecx, 24
 	rep movsb
-	lea	r8, OFFSET FLAT:$SG79739
+	lea	r8, OFFSET FLAT:$SG79740
 	mov	edx, 1
 	lea	rcx, QWORD PTR $T1[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48830,7 +48974,7 @@ Expression$ = 280
 	mov	rsi, QWORD PTR Location$[rsp]
 	mov	ecx, 24
 	rep movsb
-	lea	r8, OFFSET FLAT:$SG79740
+	lea	r8, OFFSET FLAT:$SG79741
 	mov	edx, 1
 	lea	rcx, QWORD PTR $T2[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48851,7 +48995,7 @@ Expression$ = 280
 	mov	ecx, 24
 	rep movsb
 	mov	r9, QWORD PTR tv94[rsp]
-	lea	r8, OFFSET FLAT:$SG79741
+	lea	r8, OFFSET FLAT:$SG79742
 	mov	edx, 1
 	lea	rcx, QWORD PTR $T4[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -48861,14 +49005,14 @@ Expression$ = 280
 	mov	rsi, QWORD PTR Location$[rsp]
 	mov	ecx, 24
 	rep movsb
-	lea	r8, OFFSET FLAT:$SG79742
+	lea	r8, OFFSET FLAT:$SG79743
 	mov	edx, 1
 	lea	rcx, QWORD PTR $T5[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
 ; Line 99
 	mov	r9d, 18
-	lea	r8, OFFSET FLAT:$SG79743
-	lea	rdx, OFFSET FLAT:$SG79744
+	lea	r8, OFFSET FLAT:$SG79744
+	lea	rdx, OFFSET FLAT:$SG79745
 	xor	ecx, ecx
 	call	QWORD PTR __imp_MessageBoxA
 	mov	DWORD PTR ButtonPressed$[rsp], eax
@@ -48935,7 +49079,7 @@ Text$ = 80
 	test	eax, eax
 	jne	SHORT $LN2@OutputW
 ; Line 48
-	lea	rcx, OFFSET FLAT:$SG79706
+	lea	rcx, OFFSET FLAT:$SG79707
 	call	printf
 $LN2@OutputW:
 ; Line 50
@@ -49087,385 +49231,568 @@ _TEXT	SEGMENT
 _TEXT	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
-i$1 = 32
-i$2 = 36
-i$3 = 40
-i$4 = 44
-i$5 = 48
-i$6 = 56
-acc$7 = 64
-i$8 = 72
-images_file_data$ = 80
-j$9 = 88
-j$10 = 96
-j$11 = 104
-image_num$ = 112
-image_col_len$ = 116
-image_row_len$ = 120
-labels_file_data$ = 128
-tv202 = 136
-labels_file_size$ = 144
-label_count$ = 148
-images_file_size$ = 152
-image_mem$ = 160
-pixel_data$12 = 168
-label_array$ = 176
-activation_layer1_biases$ = 192
-activation_layer3_biases$ = 256
-activation_layer1$ = 304
-activation_layer3_weights$ = 368
-input_layer$ = 1008
-activation_layer1_weights$ = 4144
-__$ArrayPad$ = 54320
+img_index$1 = 48
+i$2 = 56
+images_file_data$ = 64
+img_num$ = 72
+img_col_len$ = 76
+img_row_len$ = 80
+nor$ = 84
+labels_file_data$ = 88
+labels_file_size$ = 96
+label_count$ = 100
+images_file_size$ = 104
+label$3 = 108
+label_array$ = 112
+img_mem$ = 120
+img_dat$4 = 128
+inp$ = 136
+$T5 = 152
+$T6 = 168
+$T7 = 192
+$T8 = 224
+$T9 = 240
+__traceblock__41$10 = 256
+$T11 = 296
+net$ = 320
+$T12 = 528
+$T13 = 616
+$T14 = 704
+$T15 = 792
+valid_result_data$ = 880
+valid_output_vectors$ = 1520
+__$ArrayPad$ = 1680
 ?MAIN@@YAXXZ PROC					; MAIN
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 24
-	mov	eax, 54344				; 0000d448H
-	call	__chkstk
-	sub	rsp, rax
+; Line 36
+	push	rsi
+	push	rdi
+	sub	rsp, 1704				; 000006a8H
 	mov	rax, QWORD PTR __security_cookie
 	xor	rax, rsp
 	mov	QWORD PTR __$ArrayPad$[rsp], rax
-; Line 26
-	lea	rdx, OFFSET FLAT:$SG89123
+; Line 40
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+4], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+8], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+12], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+16], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+20], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+24], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+28], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+32], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+36], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+40]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 41
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+64], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+68], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+72], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+76], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+80], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+84], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+88], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+92], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+96], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+100], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+104]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 42
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+128], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+132], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+136], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+140], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+144], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+148], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+152], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+156], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+160], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+164], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+168]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 43
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+192], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+196], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+200], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+204], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+208], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+212], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+216], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+220], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+224], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+228], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+232]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 44
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+256], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+260], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+264], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+268], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+272], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+276], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+280], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+284], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+288], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+292], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+296]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 45
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+320], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+324], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+328], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+332], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+336], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+340], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+344], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+348], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+352], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+356], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+360]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 46
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+384], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+388], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+392], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+396], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+400], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+404], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+408], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+412], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+416], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+420], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+424]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 47
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+448], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+452], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+456], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+460], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+464], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+468], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+472], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+476], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+480], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+484], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+488]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 48
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+512], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+516], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+520], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+524], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+528], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+532], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+536], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+540], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+544], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+548], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+552]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 49
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+576], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+580], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+584], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+588], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+592], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+596], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+600], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+604], xmm0
+	xorps	xmm0, xmm0
+	movss	DWORD PTR valid_result_data$[rsp+608], xmm0
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR valid_result_data$[rsp+612], xmm0
+	lea	rax, QWORD PTR valid_result_data$[rsp+616]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 24
+	rep stosb
+; Line 52
+	mov	DWORD PTR valid_output_vectors$[rsp], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 0
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+8], rax
+	mov	DWORD PTR valid_output_vectors$[rsp+16], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 1
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+24], rax
+; Line 53
+	mov	DWORD PTR valid_output_vectors$[rsp+32], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 2
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+40], rax
+	mov	DWORD PTR valid_output_vectors$[rsp+48], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 3
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+56], rax
+; Line 54
+	mov	DWORD PTR valid_output_vectors$[rsp+64], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 4
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+72], rax
+	mov	DWORD PTR valid_output_vectors$[rsp+80], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 5
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+88], rax
+; Line 55
+	mov	DWORD PTR valid_output_vectors$[rsp+96], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 6
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+104], rax
+	mov	DWORD PTR valid_output_vectors$[rsp+112], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 7
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+120], rax
+; Line 56
+	mov	DWORD PTR valid_output_vectors$[rsp+128], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 8
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+136], rax
+	mov	DWORD PTR valid_output_vectors$[rsp+144], 10
+	mov	eax, 64					; 00000040H
+	imul	rax, rax, 9
+	lea	rax, QWORD PTR valid_result_data$[rsp+rax]
+	mov	QWORD PTR valid_output_vectors$[rsp+152], rax
+; Line 60
+	lea	rdx, OFFSET FLAT:$SG89313
 	lea	rcx, QWORD PTR labels_file_size$[rsp]
 	call	?LoadFileData@@YAPEAXPEAIPEBD@Z		; LoadFileData
 	mov	QWORD PTR labels_file_data$[rsp], rax
-; Line 27
+; Line 61
 	mov	eax, 4
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR labels_file_data$[rsp]
 	mov	ecx, DWORD PTR [rcx+rax]
 	call	?int_flip@@YAII@Z			; int_flip
 	mov	DWORD PTR label_count$[rsp], eax
-; Line 28
+; Line 62
 	mov	rax, QWORD PTR labels_file_data$[rsp]
 	add	rax, 8
 	mov	QWORD PTR label_array$[rsp], rax
-; Line 31
-	lea	rdx, OFFSET FLAT:$SG89124
+; Line 64
+	lea	rdx, OFFSET FLAT:$SG89314
 	lea	rcx, QWORD PTR images_file_size$[rsp]
 	call	?LoadFileData@@YAPEAXPEAIPEBD@Z		; LoadFileData
 	mov	QWORD PTR images_file_data$[rsp], rax
-; Line 32
+; Line 65
 	mov	eax, 4
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR images_file_data$[rsp]
 	mov	ecx, DWORD PTR [rcx+rax]
 	call	?int_flip@@YAII@Z			; int_flip
-	mov	DWORD PTR image_num$[rsp], eax
-; Line 33
+	mov	DWORD PTR img_num$[rsp], eax
+; Line 66
 	mov	eax, 4
 	imul	rax, rax, 2
 	mov	rcx, QWORD PTR images_file_data$[rsp]
 	mov	ecx, DWORD PTR [rcx+rax]
 	call	?int_flip@@YAII@Z			; int_flip
-	mov	DWORD PTR image_row_len$[rsp], eax
-; Line 34
+	mov	DWORD PTR img_row_len$[rsp], eax
+; Line 67
 	mov	eax, 4
 	imul	rax, rax, 3
 	mov	rcx, QWORD PTR images_file_data$[rsp]
 	mov	ecx, DWORD PTR [rcx+rax]
 	call	?int_flip@@YAII@Z			; int_flip
-	mov	DWORD PTR image_col_len$[rsp], eax
-; Line 35
+	mov	DWORD PTR img_col_len$[rsp], eax
+; Line 68
 	mov	rax, QWORD PTR images_file_data$[rsp]
 	add	rax, 12
-	mov	QWORD PTR image_mem$[rsp], rax
-; Line 53
-	mov	DWORD PTR i$2[rsp], 0
+	mov	QWORD PTR img_mem$[rsp], rax
+; Line 71
+	mov	r8d, 16
+	mov	edx, 784				; 00000310H
+	lea	rcx, QWORD PTR $T14[rsp]
+	call	?mat_new@@YA?AUai_mat@@HH@Z		; mat_new
+	lea	rcx, QWORD PTR $T12[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 88					; 00000058H
+	rep movsb
+	lea	rax, QWORD PTR net$[rsp]
+	lea	rcx, QWORD PTR $T12[rsp]
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	ecx, 88					; 00000058H
+	rep movsb
+; Line 72
+	mov	r8d, 10
+	mov	edx, 16
+	lea	rcx, QWORD PTR $T15[rsp]
+	call	?mat_new@@YA?AUai_mat@@HH@Z		; mat_new
+	lea	rcx, QWORD PTR $T13[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 88					; 00000058H
+	rep movsb
+	lea	rax, QWORD PTR net$[rsp+88]
+	lea	rcx, QWORD PTR $T13[rsp]
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	ecx, 88					; 00000058H
+	rep movsb
+; Line 73
+	mov	eax, DWORD PTR img_num$[rsp]
+	mov	DWORD PTR net$[rsp+176], eax
+; Line 74
+	movss	xmm0, DWORD PTR __real@3dcccccd
+	movss	DWORD PTR net$[rsp+184], xmm0
+; Line 75
+	mov	DWORD PTR net$[rsp+180], 500		; 000001f4H
+; Line 76
+	mov	edx, 848				; 00000350H
+	lea	rcx, QWORD PTR $T8[rsp]
+	call	?vec_new@@YA?AUai_vec@@H@Z		; vec_new
+	lea	rcx, QWORD PTR $T5[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	lea	rax, QWORD PTR net$[rsp+192]
+	lea	rcx, QWORD PTR $T5[rsp]
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	ecx, 16
+	rep movsb
+; Line 78
+	mov	edx, 784				; 00000310H
+	lea	rcx, QWORD PTR $T9[rsp]
+	call	?vec_new@@YA?AUai_vec@@H@Z		; vec_new
+	lea	rcx, QWORD PTR inp$[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+; Line 79
+	movss	xmm0, DWORD PTR __real@3b808081
+	movss	DWORD PTR nor$[rsp], xmm0
+; Line 81
+	mov	DWORD PTR [rsp+32], 42			; 0000002aH
+	mov	r9d, 81					; 00000051H
+	lea	r8, OFFSET FLAT:$SG89316
+	lea	rdx, OFFSET FLAT:$SG89317
+	lea	rcx, QWORD PTR $T11[rsp]
+	call	?TraceLocation@@YA?AUTRACE_LOCATION@@PEBD0HH@Z ; TraceLocation
+	lea	rcx, QWORD PTR $T6[rsp]
+	mov	rdi, rcx
+	mov	rsi, rax
+	mov	ecx, 24
+	rep movsb
+	lea	rax, QWORD PTR $T7[rsp]
+	lea	rcx, QWORD PTR $T6[rsp]
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	ecx, 24
+	rep movsb
+	lea	r8, OFFSET FLAT:$SG89315
+	lea	rdx, QWORD PTR $T7[rsp]
+	lea	rcx, QWORD PTR __traceblock__41$10[rsp]
+	call	??0_TRACE_BLOCK@@QEAA@UTRACE_LOCATION@@PEB_W@Z ; _TRACE_BLOCK::_TRACE_BLOCK
+; Line 83
+	mov	DWORD PTR img_index$1[rsp], 0
 	jmp	SHORT $LN4@MAIN
 $LN2@MAIN:
-	mov	eax, DWORD PTR i$2[rsp]
+	mov	eax, DWORD PTR img_index$1[rsp]
 	inc	eax
-	mov	DWORD PTR i$2[rsp], eax
+	mov	DWORD PTR img_index$1[rsp], eax
 $LN4@MAIN:
-	cmp	DWORD PTR i$2[rsp], 16
-	jge	SHORT $LN3@MAIN
-; Line 54
-	movsd	xmm1, QWORD PTR __real@3fe0000000000000
-	movsd	xmm0, QWORD PTR __real@bfe0000000000000
-	call	?rand_f@@YANNN@Z			; rand_f
-	cvtsd2ss xmm0, xmm0
-	movsxd	rax, DWORD PTR i$2[rsp]
-	movss	DWORD PTR activation_layer1_biases$[rsp+rax*4], xmm0
-; Line 55
-	jmp	SHORT $LN2@MAIN
-$LN3@MAIN:
-; Line 56
-	mov	DWORD PTR i$3[rsp], 0
-	jmp	SHORT $LN7@MAIN
-$LN5@MAIN:
-	mov	eax, DWORD PTR i$3[rsp]
-	inc	eax
-	mov	DWORD PTR i$3[rsp], eax
-$LN7@MAIN:
-	cmp	DWORD PTR i$3[rsp], 16
-	jge	SHORT $LN6@MAIN
-; Line 57
-	mov	QWORD PTR j$9[rsp], 0
-	jmp	SHORT $LN10@MAIN
-$LN8@MAIN:
-	mov	rax, QWORD PTR j$9[rsp]
-	inc	rax
-	mov	QWORD PTR j$9[rsp], rax
-$LN10@MAIN:
-	cmp	QWORD PTR j$9[rsp], 784			; 00000310H
-	jae	SHORT $LN9@MAIN
-; Line 58
-	movsd	xmm1, QWORD PTR __real@3fe0000000000000
-	movsd	xmm0, QWORD PTR __real@bfe0000000000000
-	call	?rand_f@@YANNN@Z			; rand_f
-	cvtsd2ss xmm0, xmm0
-	movsxd	rax, DWORD PTR i$3[rsp]
-	imul	rax, rax, 3136				; 00000c40H
-	lea	rax, QWORD PTR activation_layer1_weights$[rsp+rax]
-	mov	rcx, QWORD PTR j$9[rsp]
-	movss	DWORD PTR [rax+rcx*4], xmm0
-; Line 59
-	jmp	SHORT $LN8@MAIN
-$LN9@MAIN:
-; Line 60
-	jmp	SHORT $LN5@MAIN
-$LN6@MAIN:
-; Line 62
-	mov	DWORD PTR i$4[rsp], 0
-	jmp	SHORT $LN13@MAIN
-$LN11@MAIN:
-	mov	eax, DWORD PTR i$4[rsp]
-	inc	eax
-	mov	DWORD PTR i$4[rsp], eax
-$LN13@MAIN:
-	cmp	DWORD PTR i$4[rsp], 10
-	jge	SHORT $LN12@MAIN
-; Line 63
-	movsd	xmm1, QWORD PTR __real@3fe0000000000000
-	movsd	xmm0, QWORD PTR __real@bfe0000000000000
-	call	?rand_f@@YANNN@Z			; rand_f
-	cvtsd2ss xmm0, xmm0
-	movsxd	rax, DWORD PTR i$4[rsp]
-	movss	DWORD PTR activation_layer3_biases$[rsp+rax*4], xmm0
-; Line 64
-	jmp	SHORT $LN11@MAIN
-$LN12@MAIN:
-; Line 65
-	mov	DWORD PTR i$5[rsp], 0
-	jmp	SHORT $LN16@MAIN
-$LN14@MAIN:
-	mov	eax, DWORD PTR i$5[rsp]
-	inc	eax
-	mov	DWORD PTR i$5[rsp], eax
-$LN16@MAIN:
-	cmp	DWORD PTR i$5[rsp], 10
-	jge	SHORT $LN15@MAIN
-; Line 66
-	mov	QWORD PTR j$10[rsp], 0
-	jmp	SHORT $LN19@MAIN
-$LN17@MAIN:
-	mov	rax, QWORD PTR j$10[rsp]
-	inc	rax
-	mov	QWORD PTR j$10[rsp], rax
-$LN19@MAIN:
-	cmp	QWORD PTR j$10[rsp], 16
-	jae	SHORT $LN18@MAIN
-; Line 67
-	movsd	xmm1, QWORD PTR __real@3fe0000000000000
-	movsd	xmm0, QWORD PTR __real@bfe0000000000000
-	call	?rand_f@@YANNN@Z			; rand_f
-	cvtsd2ss xmm0, xmm0
-	movsxd	rax, DWORD PTR i$5[rsp]
-	imul	rax, rax, 64				; 00000040H
-	lea	rax, QWORD PTR activation_layer3_weights$[rsp+rax]
-	mov	rcx, QWORD PTR j$10[rsp]
-	movss	DWORD PTR [rax+rcx*4], xmm0
-; Line 68
-	jmp	SHORT $LN17@MAIN
-$LN18@MAIN:
-; Line 69
-	jmp	SHORT $LN14@MAIN
-$LN15@MAIN:
-; Line 71
-	mov	DWORD PTR i$1[rsp], 0
-	jmp	SHORT $LN22@MAIN
-$LN20@MAIN:
-	mov	eax, DWORD PTR i$1[rsp]
-	inc	eax
-	mov	DWORD PTR i$1[rsp], eax
-$LN22@MAIN:
-	mov	eax, DWORD PTR image_num$[rsp]
-	cmp	DWORD PTR i$1[rsp], eax
-	jae	$LN21@MAIN
-	cmp	DWORD PTR i$1[rsp], 16
-	jge	$LN21@MAIN
-; Line 72
-	mov	eax, DWORD PTR image_col_len$[rsp]
-	imul	eax, DWORD PTR image_row_len$[rsp]
-	mov	ecx, DWORD PTR i$1[rsp]
-	imul	ecx, eax
-	mov	eax, ecx
+	cmp	DWORD PTR img_index$1[rsp], 15
+	jge	$LN3@MAIN
+; Line 84
+	movsxd	rax, DWORD PTR img_index$1[rsp]
+	mov	rcx, QWORD PTR label_array$[rsp]
+	movzx	eax, BYTE PTR [rcx+rax]
+	mov	DWORD PTR label$3[rsp], eax
+; Line 86
+	mov	eax, DWORD PTR img_col_len$[rsp]
+	imul	eax, DWORD PTR img_row_len$[rsp]
+	imul	eax, DWORD PTR img_index$1[rsp]
 	mov	eax, eax
-	mov	rcx, QWORD PTR image_mem$[rsp]
+	mov	rcx, QWORD PTR img_mem$[rsp]
 	add	rcx, rax
 	mov	rax, rcx
-	mov	QWORD PTR pixel_data$12[rsp], rax
-; Line 74
-	mov	QWORD PTR i$8[rsp], 0
-	jmp	SHORT $LN25@MAIN
-$LN23@MAIN:
-	mov	rax, QWORD PTR i$8[rsp]
+	mov	QWORD PTR img_dat$4[rsp], rax
+; Line 87
+	mov	QWORD PTR i$2[rsp], 0
+	jmp	SHORT $LN7@MAIN
+$LN5@MAIN:
+	mov	rax, QWORD PTR i$2[rsp]
 	inc	rax
-	mov	QWORD PTR i$8[rsp], rax
-$LN25@MAIN:
-	cmp	QWORD PTR i$8[rsp], 784			; 00000310H
-	jae	SHORT $LN24@MAIN
-; Line 75
-	mov	rax, QWORD PTR i$8[rsp]
-	mov	rcx, QWORD PTR pixel_data$12[rsp]
+	mov	QWORD PTR i$2[rsp], rax
+$LN7@MAIN:
+	movsxd	rax, DWORD PTR inp$[rsp]
+	cmp	QWORD PTR i$2[rsp], rax
+	jae	SHORT $LN6@MAIN
+; Line 88
+	mov	rax, QWORD PTR i$2[rsp]
+	mov	rcx, QWORD PTR img_dat$4[rsp]
 	add	rcx, rax
 	mov	rax, rcx
 	movzx	eax, BYTE PTR [rax]
 	cvtsi2ss xmm0, eax
-	divss	xmm0, DWORD PTR __real@437f0000
-	mov	rax, QWORD PTR i$8[rsp]
-	movss	DWORD PTR input_layer$[rsp+rax*4], xmm0
-; Line 76
-	jmp	SHORT $LN23@MAIN
-$LN24@MAIN:
-; Line 78
-	mov	QWORD PTR i$6[rsp], 0
-	jmp	SHORT $LN28@MAIN
-$LN26@MAIN:
-	mov	rax, QWORD PTR i$6[rsp]
-	inc	rax
-	mov	QWORD PTR i$6[rsp], rax
-$LN28@MAIN:
-	cmp	QWORD PTR i$6[rsp], 16
-	jae	$LN27@MAIN
-; Line 79
-	mov	QWORD PTR acc$7[rsp], 0
-; Line 80
-	mov	QWORD PTR j$11[rsp], 0
-	jmp	SHORT $LN31@MAIN
-$LN29@MAIN:
-	mov	rax, QWORD PTR j$11[rsp]
-	inc	rax
-	mov	QWORD PTR j$11[rsp], rax
-$LN31@MAIN:
-	cmp	QWORD PTR j$11[rsp], 784		; 00000310H
-	jae	$LN30@MAIN
-; Line 81
-	imul	rax, QWORD PTR i$6[rsp], 3136		; 00000c40H
-	lea	rax, QWORD PTR activation_layer1_weights$[rsp+rax]
-	mov	rcx, QWORD PTR i$6[rsp]
-	mov	rdx, QWORD PTR j$11[rsp]
-	movss	xmm0, DWORD PTR input_layer$[rsp+rcx*4]
-	mulss	xmm0, DWORD PTR [rax+rdx*4]
-	mov	rax, QWORD PTR acc$7[rsp]
-	test	rax, rax
-	jl	SHORT $LN41@MAIN
-	cvtsi2ss xmm1, rax
-	jmp	SHORT $LN42@MAIN
-$LN41@MAIN:
-	mov	rcx, rax
-	shr	rcx, 1
-	and	rax, 1
-	or	rcx, rax
-	cvtsi2ss xmm2, rcx
-	addss	xmm2, xmm2
-	movaps	xmm1, xmm2
-$LN42@MAIN:
-	addss	xmm1, xmm0
+	movss	xmm1, DWORD PTR nor$[rsp]
+	mulss	xmm1, xmm0
 	movaps	xmm0, xmm1
-	xor	eax, eax
-	comiss	xmm0, DWORD PTR __real@5f000000
-	jb	SHORT $LN40@MAIN
-	subss	xmm0, DWORD PTR __real@5f000000
-	comiss	xmm0, DWORD PTR __real@5f000000
-	jae	SHORT $LN40@MAIN
-	mov	rcx, -9223372036854775808		; 8000000000000000H
-	add	rax, rcx
-$LN40@MAIN:
-	cvttss2si rcx, xmm0
-	add	rcx, rax
-	mov	rax, rcx
-	mov	QWORD PTR acc$7[rsp], rax
-; Line 82
-	jmp	$LN29@MAIN
-$LN30@MAIN:
-; Line 83
-	mov	rax, QWORD PTR acc$7[rsp]
-	test	rax, rax
-	jl	SHORT $LN38@MAIN
-	cvtsi2ss xmm0, rax
-	jmp	SHORT $LN39@MAIN
-$LN38@MAIN:
-	mov	rcx, rax
-	shr	rcx, 1
-	and	rax, 1
-	or	rcx, rax
-	cvtsi2ss xmm1, rcx
-	addss	xmm1, xmm1
-	movaps	xmm0, xmm1
-$LN39@MAIN:
-	mov	rax, QWORD PTR i$6[rsp]
-	subss	xmm0, DWORD PTR activation_layer1_biases$[rsp+rax*4]
-	xor	eax, eax
-	comiss	xmm0, DWORD PTR __real@5f000000
-	jb	SHORT $LN37@MAIN
-	subss	xmm0, DWORD PTR __real@5f000000
-	comiss	xmm0, DWORD PTR __real@5f000000
-	jae	SHORT $LN37@MAIN
-	mov	rcx, -9223372036854775808		; 8000000000000000H
-	add	rax, rcx
-$LN37@MAIN:
-	cvttss2si rcx, xmm0
-	add	rcx, rax
-	mov	rax, rcx
-	mov	QWORD PTR acc$7[rsp], rax
-; Line 84
-	cmp	QWORD PTR acc$7[rsp], 0
-	jae	SHORT $LN33@MAIN
-	mov	QWORD PTR tv202[rsp], 0
-	jmp	SHORT $LN34@MAIN
-$LN33@MAIN:
-	mov	rax, QWORD PTR acc$7[rsp]
-	mov	QWORD PTR tv202[rsp], rax
-$LN34@MAIN:
-	mov	rax, QWORD PTR tv202[rsp]
-	test	rax, rax
-	jl	SHORT $LN35@MAIN
-	cvtsi2ss xmm0, rax
-	jmp	SHORT $LN36@MAIN
-$LN35@MAIN:
-	mov	rcx, rax
-	shr	rcx, 1
-	and	rax, 1
-	or	rcx, rax
-	cvtsi2ss xmm1, rcx
-	addss	xmm1, xmm1
-	movaps	xmm0, xmm1
-$LN36@MAIN:
-	mov	rax, QWORD PTR i$6[rsp]
-	movss	DWORD PTR activation_layer1$[rsp+rax*4], xmm0
-; Line 85
-	jmp	$LN26@MAIN
-$LN27@MAIN:
-; Line 104
-	jmp	$LN20@MAIN
-$LN21@MAIN:
-; Line 106
+	mov	rax, QWORD PTR inp$[rsp+8]
+	mov	rcx, QWORD PTR i$2[rsp]
+	movss	DWORD PTR [rax+rcx*4], xmm0
+; Line 89
+	jmp	SHORT $LN5@MAIN
+$LN6@MAIN:
+; Line 97
+	jmp	$LN2@MAIN
+$LN3@MAIN:
+; Line 98
+	lea	rcx, QWORD PTR __traceblock__41$10[rsp]
+	call	??1_TRACE_BLOCK@@QEAA@XZ		; _TRACE_BLOCK::~_TRACE_BLOCK
+; Line 101
 	mov	rcx, QWORD PTR labels_file_data$[rsp]
 	call	?UnloadFileData@@YAXPEAX@Z		; UnloadFileData
-; Line 107
+; Line 102
 	mov	rcx, QWORD PTR images_file_data$[rsp]
 	call	?UnloadFileData@@YAXPEAX@Z		; UnloadFileData
-; Line 110
+; Line 103
 	int	3
-; Line 112
+; Line 104
 	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
 	xor	rcx, rsp
 	call	__security_check_cookie
-	add	rsp, 54344				; 0000d448H
+	add	rsp, 1704				; 000006a8H
+	pop	rdi
+	pop	rsi
 	ret	0
 ?MAIN@@YAXXZ ENDP					; MAIN
 _TEXT	ENDS
@@ -49727,7 +50054,7 @@ NewSize$ = 120
 ; Line 70
 	movsxd	rax, DWORD PTR Alignment$[rsp]
 	mov	DWORD PTR [rsp+32], 70			; 00000046H
-	lea	r9, OFFSET FLAT:$SG81209
+	lea	r9, OFFSET FLAT:$SG81210
 	mov	r8, rax
 	mov	rdx, QWORD PTR NewSize$[rsp]
 	mov	rcx, QWORD PTR OldMemr$[rsp]
@@ -49866,8 +50193,8 @@ $LN2@STATIC_ALL:
 ; Line 40
 	mov	DWORD PTR [rsp+32], 38			; 00000026H
 	mov	r9d, 40					; 00000028H
-	lea	r8, OFFSET FLAT:$SG81184
-	lea	rdx, OFFSET FLAT:$SG81185
+	lea	r8, OFFSET FLAT:$SG81185
+	lea	rdx, OFFSET FLAT:$SG81186
 	lea	rcx, QWORD PTR $T5[rsp]
 	call	?TraceLocation@@YA?AUTRACE_LOCATION@@PEBD0HH@Z ; TraceLocation
 	lea	rcx, QWORD PTR $T1[rsp]
@@ -49881,7 +50208,7 @@ $LN2@STATIC_ALL:
 	mov	rsi, rcx
 	mov	ecx, 24
 	rep movsb
-	lea	r8, OFFSET FLAT:$SG81183
+	lea	r8, OFFSET FLAT:$SG81184
 	mov	edx, 6
 	lea	rcx, QWORD PTR $T2[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
@@ -49942,8 +50269,8 @@ $LN3@STATIC_ALL:
 ; Line 52
 	mov	DWORD PTR [rsp+32], 39			; 00000027H
 	mov	r9d, 52					; 00000034H
-	lea	r8, OFFSET FLAT:$SG81192
-	lea	rdx, OFFSET FLAT:$SG81193
+	lea	r8, OFFSET FLAT:$SG81193
+	lea	rdx, OFFSET FLAT:$SG81194
 	lea	rcx, QWORD PTR $T6[rsp]
 	call	?TraceLocation@@YA?AUTRACE_LOCATION@@PEBD0HH@Z ; TraceLocation
 	lea	rcx, QWORD PTR $T3[rsp]
@@ -49951,7 +50278,7 @@ $LN3@STATIC_ALL:
 	mov	rsi, rax
 	mov	ecx, 24
 	rep movsb
-	lea	rax, OFFSET FLAT:$SG81190
+	lea	rax, OFFSET FLAT:$SG81191
 	test	rax, rax
 	jne	SHORT $LN10@STATIC_ALL
 	mov	DWORD PTR tv191[rsp], 1
@@ -49965,9 +50292,9 @@ $LN11@STATIC_ALL:
 	mov	rsi, rcx
 	mov	ecx, 24
 	rep movsb
-	lea	r9, OFFSET FLAT:$SG81189
+	lea	r9, OFFSET FLAT:$SG81190
 	mov	r8d, DWORD PTR tv191[rsp]
-	lea	rdx, OFFSET FLAT:$SG81191
+	lea	rdx, OFFSET FLAT:$SG81192
 	lea	rcx, QWORD PTR $T4[rsp]
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 $LN7@STATIC_ALL:
@@ -50165,7 +50492,7 @@ $LN2@OutputTrac:
 	mov	r9, QWORD PTR tv152[rsp]
 	mov	r8, QWORD PTR tv150[rsp]
 	mov	rdx, QWORD PTR tv148[rsp]
-	lea	rcx, OFFSET FLAT:$SG81264
+	lea	rcx, OFFSET FLAT:$SG81265
 	call	?FormatW@@YAPEA_WPEB_WZZ		; FormatW
 	mov	rcx, rax
 	call	?OutputW@@YAXPEB_W@Z			; OutputW
@@ -50288,7 +50615,7 @@ $LN4@TRACE_BLOC:
 	movsd	QWORD PTR [rsp+32], xmm0
 	mov	rax, QWORD PTR this$[rsp]
 	mov	r9, QWORD PTR [rax]
-	lea	r8, OFFSET FLAT:$SG81278
+	lea	r8, OFFSET FLAT:$SG81279
 	mov	edx, 2
 	lea	rcx, QWORD PTR $T1[rsp]
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
