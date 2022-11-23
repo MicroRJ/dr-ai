@@ -284,22 +284,18 @@ static ai_vec __forceinline __vectorcall vec_sig_(ai_vec dst, ai_vec lhs)
   return dst;
 }
 
-static ai_vec __forceinline __vectorcall vec_dsg_(ai_vec dst, ai_vec lhs, ai_vec rhs)
+static ai_vec __forceinline __vectorcall vec_dsg_(ai_vec dst, ai_vec lhs)
 {
 #if defined(ai_lane)
   for(ai_int idx = 0; idx < dst.len; idx += sizeof(ai_lane)/sizeof(ai_float))
   { const ai_lane
       lhs_l = ai_lane_load(lhs.mem + idx),
-      rhs_l = ai_lane_load(rhs.mem + idx),
-      dsg_l = lan_dsg(rhs_l),
-      mul_l = ai_lane_mul(lhs_l, dsg_l);
-
-    ai_lane_store(dst.mem + idx, mul_l);
+      dsg_l = lan_dsg(lhs_l);
+    ai_lane_store(dst.mem + idx, dsg_l);
   }
 #else
-  const ai_float ai_float_one = 1.f;
   for(int i = 0; i < dst.len; ++ i)
-  { dst.mem[i] = lhs.mem[i] * ((1-exp(rhs.mem[i])) * (ai_float_one / (ai_float_one + exp(- rhs.mem[i]))));
+  { dst.mem[i] = (1.f - exp(+ lhs.mem[i]) * (1.f / (1.f + exp(- lhs.mem[i]))));
   }
 #endif
   return dst;
@@ -369,17 +365,14 @@ static void mat_rnd(ai_mat mat)
   }
 }
 
-static __forceinline void __vectorcall mat_mul_(ai_vec dst, ai_mat mat, ai_vec src)
-{ // SPEED(RJ):
+static __forceinline void __vectorcall mat_dot_(ai_vec dst, ai_mat mat, ai_vec src)
+{
+#ifndef mat_dot
+# define mat_dot(mat,src) mat_dot_(vec_rpl(src),mat,src)
+#endif
   for(ai_int idx = 0; idx < mat.min; ++ idx)
   { dst.mem[idx] = vec_dot(mat_vec(mat,idx),src);
   }
 }
 
-static ai_vec mat_mul(ai_mat mat, ai_vec src)
-{
-  ai_vec dst = new_vec(src.len);
-  mat_mul_(dst,mat,src);
-  return dst;
-}
 #endif

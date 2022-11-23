@@ -50,9 +50,15 @@ ai_vec_func(ai_float) cube(ai_float val) { return val*val*val; }
 typedef struct ai_lay
 { ai_mat wei;
   ai_vec bia;
-  ai_vec err;
+
+  union
+  { ai_vec new_bia;
+    ai_vec err;
+  };
+
+  ai_vec tmp;
+
   ai_mat new_wei;
-  ai_vec new_bia;
   ai_vec out;
   ai_vec act;
 } ai_lay;
@@ -67,16 +73,13 @@ typedef struct ai_net
 
 static ai_lay new_lay(ai_int col_len, ai_int row_len)
 { ai_lay n;
-  n.wei = new_row_mat(col_len,row_len);
-  n.act = new_vec(row_len);
-  n.out = new_vec(row_len);
-  n.bia = new_vec(row_len);
-  n.err = new_vec(row_len);
-
+  n.wei     = new_row_mat(col_len,row_len);
+  n.act     = new_vec(row_len);
+  n.out     = new_vec(row_len);
+  n.bia     = new_vec(row_len);
+  n.err     = new_vec(row_len);
+  n.tmp     = new_vec(row_len);
   n.new_wei = rpl_mat(n.wei);
-  n.new_bia = rpl_vec(n.bia);
-
-
   mat_rnd(n.wei);
   vec_rnd(n.bia);
   return n;
