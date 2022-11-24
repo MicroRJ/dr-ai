@@ -28,12 +28,7 @@
 #ifndef sigmoid_approx
 # define sigmoid_approx(o) (1.0/1.0+pow(PI_APPROX,o))
 #endif
-#ifndef sigmoid
-# define sigmoid(o) (1.0/(1.0+exp(-o)))
-#endif
-#ifndef sigmoid_prime
-# define sigmoid_prime(o) (sigmoid(o)*(1.0-exp(o)))
-#endif
+
 #ifndef activation_function
 # define activation_function sigmoid
 #endif

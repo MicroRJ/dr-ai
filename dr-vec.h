@@ -1,10 +1,21 @@
 #ifndef DR_VEC
 #define DR_VEC
 
+#define FLOAT_ERROR_MAX (+ 0x1000)
+#define FLOAT_ERROR_MIN (- 0x1000)
 
 typedef float ai_float;
 typedef int   ai_int;
 
+
+// https://www.desmos.com/calculator/btdhngc1oq
+#ifndef sigmoid
+# define sigmoid(o) (1.0/(1.0+exp(-o)))
+#endif
+// Don't actually use this dude, this is just for illustration purposes.
+#ifndef sigmoid_prime
+# define sigmoid_prime(o) (sigmoid(o) * (1 - sigmoid(o)))
+#endif
 
 #if defined(__AVX2__)
 # define ai_lane                      __m512
@@ -50,10 +61,16 @@ typedef int   ai_int;
 // Welp...
 #endif
 
-
 typedef struct ai_vec
 { ai_int     len, max;
   ai_float * mem;
+
+#if defined(__cplusplus)
+  ai_float *operator [](ai_int idx)
+  { Assert( idx < len );
+    return mem + idx;
+  }
+#endif
 } ai_vec;
 
 typedef struct ai_mat
@@ -61,7 +78,36 @@ typedef struct ai_mat
   ai_int     vec_min, vec_max;
   ai_int     min, max;
   ai_float * mem;
+
+
+#if defined(__cplusplus)
+  ai_float *operator [](ai_int idx)
+  { Assert( idx < min );
+    return mem + vec_max * idx;
+  }
+#endif
 } ai_mat;
+
+
+static void mem_chk_vec(ai_vec vec)
+{
+#ifdef _DEBUG
+  ai_int i = 0;
+  for(; i < vec.len; ++ i)
+  { ai_float *mem = vec.mem + i;
+    if((*mem >= FLOAT_ERROR_MAX)  ||
+       (*mem <= FLOAT_ERROR_MIN))
+    { AssertW(false, L"invalid memory vector, vec[%i] 0x%p ::= %f",i,mem,*mem);
+    }
+  }
+  for(; i < vec.max; ++ i)
+  { ai_float *mem = vec.mem + i;
+    if(* mem != 0)
+    { AssertW(false, L"invalid memory vector, vec[%i] 0x%p ::= %f",i,mem,*mem);
+    }
+  }
+#endif
+}
 
 // TODO(RJ): make this a wide instruction too!
 /* Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs" */
@@ -73,8 +119,9 @@ unsigned int xorshift32(unsigned int x)
 }
 
 ai_float rand_f(ai_float min, ai_float max)
-{ static unsigned int state = xorshift32(7); // TODO(RJ)!
-  return min + (ai_float)state/~0u * (max - min);
+{ static unsigned int state = 97; // TODO(RJ)!
+  state = xorshift32(state);
+  return (min + (ai_float)state/~0u * (max - min));
 }
 
 static ai_int __forceinline vec_max(ai_int len)
@@ -257,7 +304,7 @@ static const ai_lane lan_zro = {0,0,0,0,0,0,0,0}; // TODO(RJ)!
 #endif
 
 #ifndef lan_dsg
-# define lan_dsg(lan) ai_lane_mul(lan_sig(lan), ai_lane_sub(lan_one, ai_lane_exp(lan)))
+# define lan_dsg(lan) ai_lane_mul(ai_lane_sub(lan_one, lan_sig(lan)), lan_sig(lan))
 #endif
 
 #endif
@@ -276,9 +323,8 @@ static ai_vec __forceinline __vectorcall vec_sig_(ai_vec dst, ai_vec lhs)
     ai_lane_store(mem_d + idx, sig_l);
   }
 #else
-  const ai_float ai_float_one = 1.f;
-  for(int i = 0; i < dst.len; ++ i)
-  { dst.mem[i] = ai_float_one / (ai_float_one + exp(- lhs.mem[i]));
+  for(ai_int i = 0; i < dst.len; ++ i)
+  { dst.mem[i] = sigmoid(lhs.mem[i]);
   }
 #endif
   return dst;
@@ -294,8 +340,8 @@ static ai_vec __forceinline __vectorcall vec_dsg_(ai_vec dst, ai_vec lhs)
     ai_lane_store(dst.mem + idx, dsg_l);
   }
 #else
-  for(int i = 0; i < dst.len; ++ i)
-  { dst.mem[i] = (1.f - exp(+ lhs.mem[i]) * (1.f / (1.f + exp(- lhs.mem[i]))));
+  for(ai_int i = 0; i < dst.len; ++ i)
+  { dst.mem[i] = sigmoid_prime(lhs.mem[i]);
   }
 #endif
   return dst;
@@ -323,9 +369,13 @@ static ai_float __forceinline __vectorcall vec_dot(ai_vec lhs, ai_vec rhs)
 #endif
 }
 
+// For a col matrix, the number of vectors has to the be the number of columns
+// and the vector size has to be the number of rows.
 #ifndef new_col_mat
 # define new_col_mat(col,row) new_mat_(col,row,col,row)
 #endif
+// For a row matrix, the number of vectors has to the be the number of rows
+// and the vector size has to be the number of columns.
 #ifndef new_row_mat
 # define new_row_mat(col,row) new_mat_(col,row,row,col)
 #endif
@@ -333,29 +383,38 @@ static ai_float __forceinline __vectorcall vec_dot(ai_vec lhs, ai_vec rhs)
 # define rpl_mat(mat) new_mat_(mat.col,mat.row,mat.min,mat.vec_min)
 #endif
 
-static ai_mat new_mat_(ai_int col, ai_int row, ai_int min, ai_int vec)
-{ ai_mat m;
-  m.col = col;
-  m.row = row;
-  m.min = min;
-  m.max = min;
-  m.vec_min = vec;
-  m.vec_max = vec_max(vec);
-
-  if(m.vec_max != m.vec_min)
-  { TRACE_W("matrix will be padded, natural vec size will be %i, this is for optimization purposes", m.vec_max);
-  }
-
-  m.mem = (ai_float *) _aligned_malloc((sizeof(ai_float)*m.vec_max) * min, 0x20);
-  memset(m.mem,0,sizeof(ai_float) * m.vec_max);
-  return m;
-}
-
 static ai_vec mat_vec(ai_mat mat, ai_int index)
 { ai_vec v;
   v.mem = mat.mem + mat.vec_max * index;
   v.len = mat.vec_min;
+  v.max = mat.vec_max;
+  mem_chk_vec(v);
   return v;
+}
+
+static ai_mat new_mat_(ai_int col, ai_int row, ai_int min, ai_int vec)
+{ ai_mat m;
+  m.col = col;
+  m.row = row;
+
+  m.min     = min;
+  m.max     = min;
+  m.vec_min = vec;
+  m.vec_max = vec_max(vec);
+
+  if(m.vec_max != m.vec_min)
+  { TRACE_W("mem vec sze %i/%i, padding necessary", m.vec_min, m.vec_max);
+  }
+
+  m.mem = (ai_float *) _aligned_malloc(sizeof(ai_float) * m.vec_max * min, 0x20);
+  memset(m.mem, 0, sizeof(ai_float) * m.vec_max * m.min);
+
+
+  for(ai_int i = 0; i < min; ++ i)
+  { mem_chk_vec(mat_vec(m,i));
+  }
+
+  return m;
 }
 
 static void mat_rnd(ai_mat mat)
@@ -365,14 +424,15 @@ static void mat_rnd(ai_mat mat)
   }
 }
 
-static __forceinline void __vectorcall mat_dot_(ai_vec dst, ai_mat mat, ai_vec src)
+static __forceinline ai_vec __vectorcall mat_dot_(ai_vec dst, ai_mat mat, ai_vec src)
 {
 #ifndef mat_dot
-# define mat_dot(mat,src) mat_dot_(vec_rpl(src),mat,src)
+# define mat_dot(mat,src) mat_dot_(rpl_vec(src),mat,src)
 #endif
   for(ai_int idx = 0; idx < mat.min; ++ idx)
   { dst.mem[idx] = vec_dot(mat_vec(mat,idx),src);
   }
+  return dst;
 }
 
 #endif

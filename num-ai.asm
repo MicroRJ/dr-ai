@@ -41,6 +41,7 @@ PUBLIC	??Bstr32@@QEAAIXZ				; str32::operator unsigned int
 PUBLIC	??Bstr32@@QEAAHXZ				; str32::operator int
 PUBLIC	??7str32@@QEAAHXZ				; str32::operator!
 PUBLIC	main
+PUBLIC	??Aai_mat@@QEAAPEAMH@Z				; ai_mat::operator[]
 PUBLIC	?xorshift32@@YAII@Z				; xorshift32
 PUBLIC	?rand_f@@YAMMM@Z				; rand_f
 PUBLIC	?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA ; `__local_stdio_printf_options'::`2'::_OptionsStorage
@@ -75,13 +76,15 @@ PUBLIC	??_C@_1BG@GOBPDGAO@?$AAP?$AAE?$AAD?$AAA?$AAN?$AAT?$AAI?$AAC?$AA?3?$AA?5@ 
 PUBLIC	??_C@_1CM@MFEPLLDG@?$AAI?$AAN?$AAV?$AAA?$AAL?$AAI?$AAD?$AA_?$AAT?$AAR?$AAA?$AAC?$AAE?$AA_?$AAM@ ; `string'
 PUBLIC	??_C@_1DO@DEICCEEP@?$AAK?$AAL?$AAA?$AAR?$AAK?$AA_?$AAA?$AAP?$AAP?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$CF?$AAs@ ; `string'
 PUBLIC	??_C@_1DA@LCFOHEAK@?$AAT?$AAR?$AAA?$AAC?$AAE?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AA?5?$AA?$FL?$AA?$CF?$AAs@ ; `string'
+PUBLIC	??_C@_0M@HIENKLDG@operator?5?$FL?$FN@		; `string'
+PUBLIC	??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@ ; `string'
+PUBLIC	??_C@_09EHENKKKI@idx?5?$DM?5min@		; `string'
 PUBLIC	??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@ ; `string'
 PUBLIC	??_C@_08NBCBIHOP@vec_sub_@			; `string'
-PUBLIC	??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@ ; `string'
 PUBLIC	??_C@_08CHCJAPEF@vec_add_@			; `string'
 PUBLIC	??_C@_08EGPIDAG@vec_mul_@			; `string'
 PUBLIC	??_C@_07KBNDKOJG@vec_dot@			; `string'
-PUBLIC	??_C@_1KM@HMEAFDGA@?$AAm?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?5?$AAw?$AAi?$AAl?$AAl?$AA?5?$AAb?$AAe?$AA?5@ ; `string'
+PUBLIC	??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@ ; `string'
 PUBLIC	??_C@_08ENKIOJLC@new_mat_@			; `string'
 PUBLIC	??_C@_0BN@EEIDJDDN@data?2train?9labels?4idx1?9ubyte@ ; `string'
 PUBLIC	??_C@_0BN@FIFMGHNF@data?2train?9images?4idx3?9ubyte@ ; `string'
@@ -89,6 +92,7 @@ PUBLIC	??_C@_0CL@HGLGICOI@?$CB?$CB?5vec_eql?$CInew_vec2?$CI1?0?51?$CJ?0?5new_@ ;
 PUBLIC	??_C@_04KLKHHPIG@MAIN@				; `string'
 PUBLIC	??_C@_08KGMLKAKE@num?9ai?4c@			; `string'
 PUBLIC	??_C@_0CK@MHGHDOLC@?$CB?5vec_eql?$CInew_vec2?$CI1?0?50?$CJ?0?5new_v@ ; `string'
+PUBLIC	??_C@_0FM@JNEJAHIP@vec_eql?$CI?5new_vec2?$CI3?4f?07?4f?$CJ?0?5mat@ ; `string'
 PUBLIC	??_C@_0GO@MNIPECM@vec_eql?$CI?5new_vec2?$CI0?4f?0?50?4f?$CJ?0?5ve@ ; `string'
 PUBLIC	??_C@_0HF@IAGKILKP@vec_eql?$CI?5new_vec2?$CI0?4f?0?50?4f?$CJ?0?5ve@ ; `string'
 PUBLIC	??_C@_0DG@HJFNMGEH@0?5?$DN?$DN?5vec_dot?$CI?5new_vec2?$CI0?4f?0?51?4f@ ; `string'
@@ -96,17 +100,16 @@ PUBLIC	??_C@_0EA@IIDOMOOK@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI1?4f?0?50?4f@ ; 
 PUBLIC	??_C@_0EA@ICOMMCIP@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI1?4f?0?50?4f@ ; `string'
 PUBLIC	??_C@_0EA@PPILIGLL@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI0?4f?0?51?4f@ ; `string'
 PUBLIC	??_C@_1M@CAIDPHAA@?$AAT?$AAI?$AAM?$AAE?$AAD@	; `string'
-PUBLIC	??_C@_1EC@MDDEHDKJ@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AAi?$AA?$FN?$AA?5@ ; `string'
+PUBLIC	??_C@_1BA@FBNCKCPD@?$AAS?$AAU?$AAC?$AAC?$AAE?$AAS?$AAS@ ; `string'
+PUBLIC	??_C@_1O@GLIHGOJN@?$AAF?$AAA?$AAI?$AAL?$AAE?$AAD@ ; `string'
+PUBLIC	??_C@_1EM@LPOHNLCH@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AA?9?$AA4?$AAi@ ; `string'
 PUBLIC	__real@2f800000
 PUBLIC	__real@3b808081
-PUBLIC	__real@3c23d70a
 PUBLIC	__real@3dcccccd
 PUBLIC	__real@408f400000000000
 PUBLIC	__real@bf800000
-PUBLIC	__xmm@000000ff000000ff000000ff000000ff
-PUBLIC	__xmm@2f8000002f8000002f8000002f800000
 PUBLIC	__xmm@3b8080813b8080813b8080813b808081
-PUBLIC	__xmm@43800000438000004380000043800000
+PUBLIC	__xmm@80000000800000008000000080000000
 EXTRN	__acrt_iob_func:PROC
 EXTRN	__stdio_common_vswprintf:PROC
 EXTRN	__stdio_common_vfprintf:PROC
@@ -125,7 +128,6 @@ EXTRN	__imp_OutputDebugStringW:PROC
 EXTRN	__imp_CloseHandle:PROC
 EXTRN	__imp_QueryPerformanceCounter:PROC
 EXTRN	__imp_QueryPerformanceFrequency:PROC
-EXTRN	__imp_Sleep:PROC
 EXTRN	__imp_ExitProcess:PROC
 EXTRN	__imp_GetCurrentThreadId:PROC
 EXTRN	__imp_VirtualAlloc:PROC
@@ -360,32 +362,32 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ
-	DD	imagerel ?MAIN@@YAXXZ+30
+	DD	imagerel ?MAIN@@YAXXZ+28
 	DD	imagerel $unwind$?MAIN@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$7$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+30
-	DD	imagerel ?MAIN@@YAXXZ+3923
-	DD	imagerel $chain$7$?MAIN@@YAXXZ
+$pdata$9$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+28
+	DD	imagerel ?MAIN@@YAXXZ+4846
+	DD	imagerel $chain$9$?MAIN@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$10$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+3923
-	DD	imagerel ?MAIN@@YAXXZ+4781
-	DD	imagerel $chain$10$?MAIN@@YAXXZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$11$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+4781
-	DD	imagerel ?MAIN@@YAXXZ+4933
+$pdata$11$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+4846
+	DD	imagerel ?MAIN@@YAXXZ+5690
 	DD	imagerel $chain$11$?MAIN@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$12$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+4933
-	DD	imagerel ?MAIN@@YAXXZ+5122
+$pdata$12$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+5690
+	DD	imagerel ?MAIN@@YAXXZ+5859
 	DD	imagerel $chain$12$?MAIN@@YAXXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$13$?MAIN@@YAXXZ DD imagerel ?MAIN@@YAXXZ+5859
+	DD	imagerel ?MAIN@@YAXXZ+6048
+	DD	imagerel $chain$13$?MAIN@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -527,6 +529,12 @@ $pdata$2$main DD imagerel $LN18+268
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??Aai_mat@@QEAAPEAMH@Z DD imagerel $LN6
+	DD	imagerel $LN6+115
+	DD	imagerel $unwind$??Aai_mat@@QEAAPEAMH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?new_vec@@YA?AUai_vec@@H@Z DD imagerel ?new_vec@@YA?AUai_vec@@H@Z
 	DD	imagerel ?new_vec@@YA?AUai_vec@@H@Z+121
 	DD	imagerel $unwind$?new_vec@@YA?AUai_vec@@H@Z
@@ -576,8 +584,20 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
-	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+204
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+30
 	DD	imagerel $unwind$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$1$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+30
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+132
+	DD	imagerel $chain$1$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$2$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+132
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+164
+	DD	imagerel $chain$2$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -588,62 +608,38 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?new_mat_@@YA?AUai_mat@@HHHH@Z DD imagerel ?new_mat_@@YA?AUai_mat@@HHHH@Z
-	DD	imagerel ?new_mat_@@YA?AUai_mat@@HHHH@Z+181
+	DD	imagerel ?new_mat_@@YA?AUai_mat@@HHHH@Z+193
 	DD	imagerel $unwind$?new_mat_@@YA?AUai_mat@@HHHH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?mat_rnd@@YAXUai_mat@@@Z DD imagerel ?mat_rnd@@YAXUai_mat@@@Z
-	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+32
+	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+38
 	DD	imagerel $unwind$?mat_rnd@@YAXUai_mat@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$4$?mat_rnd@@YAXUai_mat@@@Z DD imagerel ?mat_rnd@@YAXUai_mat@@@Z+32
-	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+326
-	DD	imagerel $chain$4$?mat_rnd@@YAXUai_mat@@@Z
+$pdata$1$?mat_rnd@@YAXUai_mat@@@Z DD imagerel ?mat_rnd@@YAXUai_mat@@@Z+38
+	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+190
+	DD	imagerel $chain$1$?mat_rnd@@YAXUai_mat@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$5$?mat_rnd@@YAXUai_mat@@@Z DD imagerel ?mat_rnd@@YAXUai_mat@@@Z+326
-	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+334
-	DD	imagerel $chain$5$?mat_rnd@@YAXUai_mat@@@Z
+$pdata$2$?mat_rnd@@YAXUai_mat@@@Z DD imagerel ?mat_rnd@@YAXUai_mat@@@Z+190
+	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+199
+	DD	imagerel $chain$2$?mat_rnd@@YAXUai_mat@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z DD imagerel ?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z
-	DD	imagerel ?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z+359
-	DD	imagerel $unwind$?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z
+$pdata$?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z DD imagerel ?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z
+	DD	imagerel ?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z+382
+	DD	imagerel $unwind$?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?new_lay@@YA?AUai_lay@@HH@Z DD imagerel ?new_lay@@YA?AUai_lay@@HH@Z
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
+	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+769
 	DD	imagerel $unwind$?new_lay@@YA?AUai_lay@@HH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$1$?new_lay@@YA?AUai_lay@@HH@Z DD imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+530
-	DD	imagerel $chain$1$?new_lay@@YA?AUai_lay@@HH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$2$?new_lay@@YA?AUai_lay@@HH@Z DD imagerel ?new_lay@@YA?AUai_lay@@HH@Z+530
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+772
-	DD	imagerel $chain$2$?new_lay@@YA?AUai_lay@@HH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$3$?new_lay@@YA?AUai_lay@@HH@Z DD imagerel ?new_lay@@YA?AUai_lay@@HH@Z+772
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+817
-	DD	imagerel $chain$3$?new_lay@@YA?AUai_lay@@HH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$4$?new_lay@@YA?AUai_lay@@HH@Z DD imagerel ?new_lay@@YA?AUai_lay@@HH@Z+817
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+1020
-	DD	imagerel $chain$4$?new_lay@@YA?AUai_lay@@HH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -654,43 +650,43 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
 	DD	imagerel $unwind$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$0$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
+$pdata$0$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
 	DD	imagerel $chain$0$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$1$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+120
+$pdata$1$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+124
 	DD	imagerel $chain$1$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$2$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+120
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+275
+$pdata$2$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+124
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+246
 	DD	imagerel $chain$2$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$3$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+275
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+280
+$pdata$3$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+246
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+251
 	DD	imagerel $chain$3$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$4$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+280
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+594
+$pdata$4$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+251
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+546
 	DD	imagerel $chain$4$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$5$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+594
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+802
+$pdata$5$?lay_upd@@YAXPEAUai_lay@@M@Z DD imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+546
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+715
 	DD	imagerel $chain$5$?lay_upd@@YAXPEAUai_lay@@M@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -702,8 +698,44 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
-	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+1128
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
 	DD	imagerel $unwind$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel $chain$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$3$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+378
+	DD	imagerel $chain$3$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$4$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+378
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+617
+	DD	imagerel $chain$4$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$5$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+617
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+831
+	DD	imagerel $chain$5$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$6$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+831
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+952
+	DD	imagerel $chain$6$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$7$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+952
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+1062
+	DD	imagerel $chain$7$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -715,25 +747,15 @@ pdata	ENDS
 _TLS	SEGMENT
 ?Min@?1??STATIC_ALLOCATOR@@YAPEAXPEAXHH_K01@Z@4HA DD 00H ; `STATIC_ALLOCATOR'::`2'::Min
 _TLS	ENDS
-;	COMDAT __xmm@43800000438000004380000043800000
+;	COMDAT __xmm@80000000800000008000000080000000
 CONST	SEGMENT
-__xmm@43800000438000004380000043800000 DB 00H, 00H, 080H, 'C', 00H, 00H, 080H
-	DB	'C', 00H, 00H, 080H, 'C', 00H, 00H, 080H, 'C'
+__xmm@80000000800000008000000080000000 DB 00H, 00H, 00H, 080H, 00H, 00H, 00H
+	DB	080H, 00H, 00H, 00H, 080H, 00H, 00H, 00H, 080H
 CONST	ENDS
 ;	COMDAT __xmm@3b8080813b8080813b8080813b808081
 CONST	SEGMENT
 __xmm@3b8080813b8080813b8080813b808081 DB 081H, 080H, 080H, ';', 081H, 080H
 	DB	080H, ';', 081H, 080H, 080H, ';', 081H, 080H, 080H, ';'
-CONST	ENDS
-;	COMDAT __xmm@2f8000002f8000002f8000002f800000
-CONST	SEGMENT
-__xmm@2f8000002f8000002f8000002f800000 DB 00H, 00H, 080H, '/', 00H, 00H, 080H
-	DB	'/', 00H, 00H, 080H, '/', 00H, 00H, 080H, '/'
-CONST	ENDS
-;	COMDAT __xmm@000000ff000000ff000000ff000000ff
-CONST	SEGMENT
-__xmm@000000ff000000ff000000ff000000ff DB 0ffH, 00H, 00H, 00H, 0ffH, 00H, 00H
-	DB	00H, 0ffH, 00H, 00H, 00H, 0ffH, 00H, 00H, 00H
 CONST	ENDS
 ;	COMDAT __real@bf800000
 CONST	SEGMENT
@@ -747,10 +769,6 @@ CONST	ENDS
 CONST	SEGMENT
 __real@3dcccccd DD 03dcccccdr			; 0.1
 CONST	ENDS
-;	COMDAT __real@3c23d70a
-CONST	SEGMENT
-__real@3c23d70a DD 03c23d70ar			; 0.01
-CONST	ENDS
 ;	COMDAT __real@3b808081
 CONST	SEGMENT
 __real@3b808081 DD 03b808081r			; 0.00392157
@@ -759,14 +777,25 @@ CONST	ENDS
 CONST	SEGMENT
 __real@2f800000 DD 02f800000r			; 2.32831e-10
 CONST	ENDS
-;	COMDAT ??_C@_1EC@MDDEHDKJ@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AAi?$AA?$FN?$AA?5@
+;	COMDAT ??_C@_1EM@LPOHNLCH@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AA?9?$AA4?$AAi@
 CONST	SEGMENT
-??_C@_1EC@MDDEHDKJ@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AAi?$AA?$FN?$AA?5@ DB 's'
+??_C@_1EM@LPOHNLCH@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AA?9?$AA4?$AAi@ DB 's'
 	DB	00H, 'a', 00H, 'm', 00H, 'p', 00H, 'l', 00H, 'e', 00H, ' ', 00H
-	DB	'[', 00H, '%', 00H, 'i', 00H, ':', 00H, '%', 00H, 'i', 00H, ']'
-	DB	00H, ' ', 00H, 'l', 00H, 'b', 00H, 'l', 00H, ' ', 00H, '%', 00H
-	DB	'i', 00H, ' ', 00H, '-', 00H, '>', 00H, '>', 00H, ' ', 00H, 'p'
-	DB	00H, 'r', 00H, 'd', 00H, ' ', 00H, '%', 00H, 'i', 00H, 00H, 00H ; `string'
+	DB	'[', 00H, '%', 00H, 'i', 00H, ':', 00H, '%', 00H, '-', 00H, '4'
+	DB	00H, 'i', 00H, ']', 00H, ' ', 00H, 'l', 00H, 'b', 00H, 'l', 00H
+	DB	' ', 00H, '%', 00H, 'i', 00H, ' ', 00H, '-', 00H, '>', 00H, '>'
+	DB	00H, ' ', 00H, 'p', 00H, 'r', 00H, 'd', 00H, ' ', 00H, '%', 00H
+	DB	'i', 00H, ' ', 00H, '%', 00H, 's', 00H, 00H, 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1O@GLIHGOJN@?$AAF?$AAA?$AAI?$AAL?$AAE?$AAD@
+CONST	SEGMENT
+??_C@_1O@GLIHGOJN@?$AAF?$AAA?$AAI?$AAL?$AAE?$AAD@ DB 'F', 00H, 'A', 00H, 'I'
+	DB	00H, 'L', 00H, 'E', 00H, 'D', 00H, 00H, 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1BA@FBNCKCPD@?$AAS?$AAU?$AAC?$AAC?$AAE?$AAS?$AAS@
+CONST	SEGMENT
+??_C@_1BA@FBNCKCPD@?$AAS?$AAU?$AAC?$AAC?$AAE?$AAS?$AAS@ DB 'S', 00H, 'U', 00H
+	DB	'C', 00H, 'C', 00H, 'E', 00H, 'S', 00H, 'S', 00H, 00H, 00H ; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_1M@CAIDPHAA@?$AAT?$AAI?$AAM?$AAE?$AAD@
 CONST	SEGMENT
@@ -808,6 +837,12 @@ CONST	SEGMENT
 	DB	'c_eql( new_vec2(0.f, 0.f), vec_mul_(new_vec(new_vec2(0.f, 1.f'
 	DB	').len),new_vec2(0.f, 1.f),new_vec2(1.f, 0.f)))', 00H ; `string'
 CONST	ENDS
+;	COMDAT ??_C@_0FM@JNEJAHIP@vec_eql?$CI?5new_vec2?$CI3?4f?07?4f?$CJ?0?5mat@
+CONST	SEGMENT
+??_C@_0FM@JNEJAHIP@vec_eql?$CI?5new_vec2?$CI3?4f?07?4f?$CJ?0?5mat@ DB 've'
+	DB	'c_eql( new_vec2(3.f,7.f), mat_dot_(new_vec(new_vec2(1.f,1.f).'
+	DB	'len),mat,new_vec2(1.f,1.f)))', 00H		; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_0CK@MHGHDOLC@?$CB?5vec_eql?$CInew_vec2?$CI1?0?50?$CJ?0?5new_v@
 CONST	SEGMENT
 ??_C@_0CK@MHGHDOLC@?$CB?5vec_eql?$CInew_vec2?$CI1?0?50?$CJ?0?5new_v@ DB '!'
@@ -840,23 +875,15 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_08ENKIOJLC@new_mat_@ DB 'new_mat_', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_1KM@HMEAFDGA@?$AAm?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?5?$AAw?$AAi?$AAl?$AAl?$AA?5?$AAb?$AAe?$AA?5@
+;	COMDAT ??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@
 CONST	SEGMENT
-??_C@_1KM@HMEAFDGA@?$AAm?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?5?$AAw?$AAi?$AAl?$AAl?$AA?5?$AAb?$AAe?$AA?5@ DB 'm'
-	DB	00H, 'a', 00H, 't', 00H, 'r', 00H, 'i', 00H, 'x', 00H, ' ', 00H
-	DB	'w', 00H, 'i', 00H, 'l', 00H, 'l', 00H, ' ', 00H, 'b', 00H, 'e'
-	DB	00H, ' ', 00H, 'p', 00H, 'a', 00H, 'd', 00H, 'd', 00H, 'e', 00H
-	DB	'd', 00H, ',', 00H, ' ', 00H, 'n', 00H, 'a', 00H, 't', 00H, 'u'
-	DB	00H, 'r', 00H, 'a', 00H, 'l', 00H, ' ', 00H, 'v', 00H, 'e', 00H
-	DB	'c', 00H, ' ', 00H, 's', 00H, 'i', 00H, 'z', 00H, 'e', 00H, ' '
-	DB	00H, 'w', 00H, 'i', 00H, 'l', 00H, 'l', 00H, ' ', 00H, 'b', 00H
-	DB	'e', 00H, ' ', 00H, '%', 00H, 'i', 00H, ',', 00H, ' ', 00H, 't'
-	DB	00H, 'h', 00H, 'i', 00H, 's', 00H, ' ', 00H, 'i', 00H, 's', 00H
-	DB	' ', 00H, 'f', 00H, 'o', 00H, 'r', 00H, ' ', 00H, 'o', 00H, 'p'
-	DB	00H, 't', 00H, 'i', 00H, 'm', 00H, 'i', 00H, 'z', 00H, 'a', 00H
-	DB	't', 00H, 'i', 00H, 'o', 00H, 'n', 00H, ' ', 00H, 'p', 00H, 'u'
-	DB	00H, 'r', 00H, 'p', 00H, 'o', 00H, 's', 00H, 'e', 00H, 's', 00H
-	DB	00H, 00H					; `string'
+??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@ DB 'm'
+	DB	00H, 'e', 00H, 'm', 00H, ' ', 00H, 'v', 00H, 'e', 00H, 'c', 00H
+	DB	' ', 00H, 's', 00H, 'z', 00H, 'e', 00H, ' ', 00H, '%', 00H, 'i'
+	DB	00H, '/', 00H, '%', 00H, 'i', 00H, ',', 00H, ' ', 00H, 'p', 00H
+	DB	'a', 00H, 'd', 00H, 'd', 00H, 'i', 00H, 'n', 00H, 'g', 00H, ' '
+	DB	00H, 'n', 00H, 'e', 00H, 'c', 00H, 'e', 00H, 's', 00H, 's', 00H
+	DB	'a', 00H, 'r', 00H, 'y', 00H, 00H, 00H	; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_07KBNDKOJG@vec_dot@
 CONST	SEGMENT
@@ -870,11 +897,6 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_08CHCJAPEF@vec_add_@ DB 'vec_add_', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-CONST	SEGMENT
-??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@ DB 'W:\cpp\void\dr'
-	DB	'-ai\dr-vec.h', 00H				; `string'
-CONST	ENDS
 ;	COMDAT ??_C@_08NBCBIHOP@vec_sub_@
 CONST	SEGMENT
 ??_C@_08NBCBIHOP@vec_sub_@ DB 'vec_sub_', 00H		; `string'
@@ -885,8 +907,21 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?state@?1??rand_f@@YAMMM@Z@4IA
 _DATA	SEGMENT
-?state@?1??rand_f@@YAMMM@Z@4IA DD 01ce0e7H		; `rand_f'::`2'::state
+?state@?1??rand_f@@YAMMM@Z@4IA DD 061H			; `rand_f'::`2'::state
 _DATA	ENDS
+;	COMDAT ??_C@_09EHENKKKI@idx?5?$DM?5min@
+CONST	SEGMENT
+??_C@_09EHENKKKI@idx?5?$DM?5min@ DB 'idx < min', 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+CONST	SEGMENT
+??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@ DB 'W:\cpp\void\dr'
+	DB	'-ai\dr-vec.h', 00H				; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0M@HIENKLDG@operator?5?$FL?$FN@
+CONST	SEGMENT
+??_C@_0M@HIENKLDG@operator?5?$FL?$FN@ DB 'operator []', 00H ; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_1DA@LCFOHEAK@?$AAT?$AAR?$AAA?$AAC?$AAE?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AA?5?$AA?$FL?$AA?$CF?$AAs@
 CONST	SEGMENT
 ??_C@_1DA@LCFOHEAK@?$AAT?$AAR?$AAA?$AAC?$AAE?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AA?5?$AA?$FL?$AA?$CF?$AAs@ DB 'T'
@@ -1081,14 +1116,61 @@ $unwind$?net_grd_dsc@@YAXPEAUai_net@@Uai_vec@@1@Z DD 0d3301H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 0d2d01H
-	DD	03f7424H
-	DD	03e6424H
-	DD	03c3424H
-	DD	0360124H
-	DD	0e01bf01dH
-	DD	0c017d019H
-	DD	05015H
+$chain$7$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 021H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel $unwind$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$6$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 040021H
+	DD	033e400H
+	DD	0386400H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel $chain$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$5$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 060021H
+	DD	032f400H
+	DD	033e400H
+	DD	0386400H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel $chain$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$4$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 020821H
+	DD	0386408H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+378
+	DD	imagerel $chain$3$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$3$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 061321H
+	DD	032f413H
+	DD	033e40fH
+	DD	034d404H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+49
+	DD	imagerel $chain$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$0$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 020421H
+	DD	03ac404H
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+	DD	imagerel ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z+38
+	DD	imagerel $unwind$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z DD 041001H
+	DD	0350110H
+	DD	030087009H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1106,37 +1188,37 @@ xdata	ENDS
 xdata	SEGMENT
 $chain$5$?lay_upd@@YAXPEAUai_lay@@M@Z DD 021H
 	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
 	DD	imagerel $unwind$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $chain$4$?lay_upd@@YAXPEAUai_lay@@M@Z DD 021H
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
 	DD	imagerel $chain$0$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $chain$3$?lay_upd@@YAXPEAUai_lay@@M@Z DD 021H
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+120
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+124
 	DD	imagerel $chain$1$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $chain$2$?lay_upd@@YAXPEAUai_lay@@M@Z DD 020521H
 	DD	0b6405H
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+120
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+124
 	DD	imagerel $chain$1$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $chain$1$?lay_upd@@YAXPEAUai_lay@@M@Z DD 020521H
 	DD	087405H
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+90
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+98
 	DD	imagerel $chain$0$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
@@ -1144,7 +1226,7 @@ xdata	SEGMENT
 $chain$0$?lay_upd@@YAXPEAUai_lay@@M@Z DD 020521H
 	DD	0a3405H
 	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z
-	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+17
+	DD	imagerel ?lay_upd@@YAXPEAUai_lay@@M@Z+25
 	DD	imagerel $unwind$?lay_upd@@YAXPEAUai_lay@@M@Z
 xdata	ENDS
 ;	COMDAT xdata
@@ -1165,82 +1247,49 @@ $unwind$?lay_prp_fwd@@YQ?AUai_vec@@PEAUai_lay@@U1@@Z DD 0d2f01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$chain$4$?new_lay@@YA?AUai_lay@@HH@Z DD 021H
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
-	DD	imagerel $unwind$?new_lay@@YA?AUai_lay@@HH@Z
+$unwind$?new_lay@@YA?AUai_lay@@HH@Z DD 0a1a01H
+	DD	013741aH
+	DD	012641aH
+	DD	011541aH
+	DD	010341aH
+	DD	0e016d21aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$chain$3$?new_lay@@YA?AUai_lay@@HH@Z DD 021H
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+530
-	DD	imagerel $chain$1$?new_lay@@YA?AUai_lay@@HH@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$chain$2$?new_lay@@YA?AUai_lay@@HH@Z DD 020821H
-	DD	015c408H
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+530
-	DD	imagerel $chain$1$?new_lay@@YA?AUai_lay@@HH@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$chain$1$?new_lay@@YA?AUai_lay@@HH@Z DD 040c21H
-	DD	016e40cH
-	DD	0146404H
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z
-	DD	imagerel ?new_lay@@YA?AUai_lay@@HH@Z+22
-	DD	imagerel $unwind$?new_lay@@YA?AUai_lay@@HH@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?new_lay@@YA?AUai_lay@@HH@Z DD 061301H
-	DD	076813H
-	DD	0f007f20eH
-	DD	030047005H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z DD 0d2801H
-	DD	020741fH
-	DD	01f641fH
-	DD	01e341fH
-	DD	018011fH
-	DD	0e016f018H
-	DD	0c012d014H
+$unwind$?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z DD 0b2a01H
+	DD	0223421H
+	DD	0180121H
+	DD	0e018f01aH
+	DD	0c014d016H
+	DD	060117012H
 	DD	05010H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$chain$5$?mat_rnd@@YAXUai_mat@@@Z DD 021H
+$chain$2$?mat_rnd@@YAXUai_mat@@@Z DD 021H
 	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z
-	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+32
+	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+38
 	DD	imagerel $unwind$?mat_rnd@@YAXUai_mat@@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$chain$4$?mat_rnd@@YAXUai_mat@@@Z DD 0a2921H
-	DD	026829H
-	DD	06e41aH
-	DD	0a7415H
-	DD	096410H
-	DD	083405H
+$chain$1$?mat_rnd@@YAXUai_mat@@@Z DD 040a21H
+	DD	07740aH
+	DD	066405H
 	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z
-	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+32
+	DD	imagerel ?mat_rnd@@YAXUai_mat@@@Z+38
 	DD	imagerel $unwind$?mat_rnd@@YAXUai_mat@@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?mat_rnd@@YAXUai_mat@@@Z DD 010401H
-	DD	06204H
+$unwind$?mat_rnd@@YAXUai_mat@@@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $unwind$?new_mat_@@YA?AUai_mat@@HHHH@Z DD 040a01H
-	DD	0a340aH
-	DD	07006720aH
+	DD	0c340aH
+	DD	07006920aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1252,12 +1301,26 @@ $unwind$?vec_dot@@YQMUai_vec@@0@Z DD 081d01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD 0a2101H
-	DD	0127418H
-	DD	0116418H
-	DD	0103418H
-	DD	0f014b218H
-	DD	05010e012H
+$chain$2$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD 021H
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+30
+	DD	imagerel $unwind$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$1$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD 040e21H
+	DD	07e40eH
+	DD	063405H
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+	DD	imagerel ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z+30
+	DD	imagerel $unwind$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?vec_dsg_@@YQ?AUai_vec@@U1@0@Z DD 061001H
+	DD	097410H
+	DD	086410H
+	DD	0f00c3210H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1323,6 +1386,12 @@ $unwind$?new_vec@@YA?AUai_vec@@H@Z DD 0a1a01H
 	DD	07541aH
 	DD	06341aH
 	DD	0e016321aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??Aai_mat@@QEAAPEAMH@Z DD 040a01H
+	DD	0a340aH
+	DD	07006720aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1496,50 +1565,50 @@ $unwind$?GetPerformanceFrequency@@YA_KXZ DD 010401H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$chain$13$?MAIN@@YAXXZ DD 021H
+	DD	imagerel ?MAIN@@YAXXZ
+	DD	imagerel ?MAIN@@YAXXZ+28
+	DD	imagerel $unwind$?MAIN@@YAXXZ
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $chain$12$?MAIN@@YAXXZ DD 021H
+	DD	imagerel ?MAIN@@YAXXZ+28
+	DD	imagerel ?MAIN@@YAXXZ+4846
+	DD	imagerel $chain$9$?MAIN@@YAXXZ
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$11$?MAIN@@YAXXZ DD 042221H
+	DD	06da822H
+	DD	06e9809H
+	DD	imagerel ?MAIN@@YAXXZ+28
+	DD	imagerel ?MAIN@@YAXXZ+4846
+	DD	imagerel $chain$9$?MAIN@@YAXXZ
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$chain$9$?MAIN@@YAXXZ DD 0143c21H
+	DD	06f883cH
+	DD	0707836H
+	DD	0716830H
+	DD	0e4f42aH
+	DD	0e5e426H
+	DD	0e6d422H
+	DD	0ebc41eH
+	DD	0ea741aH
+	DD	0e9640fH
+	DD	0e83404H
 	DD	imagerel ?MAIN@@YAXXZ
-	DD	imagerel ?MAIN@@YAXXZ+30
+	DD	imagerel ?MAIN@@YAXXZ+28
 	DD	imagerel $unwind$?MAIN@@YAXXZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$chain$11$?MAIN@@YAXXZ DD 021H
-	DD	imagerel ?MAIN@@YAXXZ+30
-	DD	imagerel ?MAIN@@YAXXZ+3923
-	DD	imagerel $chain$7$?MAIN@@YAXXZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$chain$10$?MAIN@@YAXXZ DD 063521H
-	DD	05da835H
-	DD	05e9821H
-	DD	05f8809H
-	DD	imagerel ?MAIN@@YAXXZ+30
-	DD	imagerel ?MAIN@@YAXXZ+3923
-	DD	imagerel $chain$7$?MAIN@@YAXXZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$chain$7$?MAIN@@YAXXZ DD 0103021H
-	DD	0607830H
-	DD	061682aH
-	DD	0c4f424H
-	DD	0c5e420H
-	DD	0cbc41cH
-	DD	0ca7418H
-	DD	0c9640fH
-	DD	0c83404H
-	DD	imagerel ?MAIN@@YAXXZ
-	DD	imagerel ?MAIN@@YAXXZ+30
-	DD	imagerel $unwind$?MAIN@@YAXXZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?MAIN@@YAXXZ DD 031e19H
-	DD	0c6010cH
-	DD	0d005H
+$unwind$?MAIN@@YAXXZ DD 021c19H
+	DD	0e7010aH
 	DD	imagerel __GSHandlerCheck
-	DD	05c0H
+	DD	06c0H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1790,7 +1859,7 @@ inp_v$ = 280
 tar_v$ = 288
 ?net_grd_dsc@@YAXPEAUai_net@@Uai_vec@@1@Z PROC		; net_grd_dsc, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 178
+; Line 329
 	mov	rax, rsp
 	mov	QWORD PTR [rax+32], rbx
 	mov	QWORD PTR [rax+24], r8
@@ -1807,89 +1876,89 @@ tar_v$ = 288
 	vmovaps	XMMWORD PTR [rax-72], xmm6
 	lea	rbp, QWORD PTR [rsp+64]
 	and	rbp, -32				; ffffffffffffffe0H
-; Line 46
+; Line 253
 	vmovups	xmm0, XMMWORD PTR [rcx+112]
 	vmovups	ymm1, YMMWORD PTR [rcx]
-; Line 67
+; Line 276
 	xor	ebx, ebx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	lea	r8, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	vmovups	XMMWORD PTR $T16[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vextractf128 xmm0, ymm1, 1
 	vmovd	r12d, xmm0
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 178
+; Line 329
 	mov	rax, rdx
 	mov	r14, rcx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	lea	rdx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 67
+; Line 276
 	mov	edi, ebx
-; Line 46
+; Line 253
 	vmovups	YMMWORD PTR $T22[rbp], ymm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	test	r12d, r12d
 	jle	$LN9@net_grd_ds
-; Line 374
+; Line 433
 	mov	r14, QWORD PTR $T22[rbp+8]
 	mov	r13d, ebx
 	vmovups	xmm0, XMMWORD PTR [rax]
 	mov	rsi, QWORD PTR $T16[rbp+8]
 	mov	r15, r14
 	shr	r15, 32					; 00000020H
-; Line 306
+; Line 352
 	vmovd	eax, xmm0
 	cmp	r14d, eax
-; Line 374
+; Line 433
 	vmovups	XMMWORD PTR $T18[rbp], xmm0
 	sete	r13b
 	npad	8
 $LL10@net_grd_ds:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T22[rbp+24]
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 356
+; Line 388
 	mov	eax, r15d
-; Line 306
+; Line 352
 	mov	QWORD PTR $T5[rbp], rdx
-; Line 356
+; Line 388
 	imul	eax, edi
-; Line 306
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	mov	QWORD PTR $T5[rbp+8], r8
 	mov	r8d, r13d
-	mov	DWORD PTR $T5[rbp+16], 306		; 00000132H
-	mov	DWORD PTR $T5[rbp+20], 43		; 0000002bH
-; Line 356
+	mov	DWORD PTR $T5[rbp+16], 352		; 00000160H
+	mov	DWORD PTR $T5[rbp+20], 45		; 0000002dH
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rcx, QWORD PTR $T5[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$12[rbp], ymm1
-; Line 310
+; Line 356
 	test	r14d, r14d
 	jle	SHORT $LN16@net_grd_ds
-; Line 356
+; Line 388
 	mov	rdx, QWORD PTR $T18[rbp+8]
 	lea	ecx, DWORD PTR [r14-1]
 	sub	rdx, rbx
 	shr	ecx, 3
 	inc	ecx
 $LL17@net_grd_ds:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
@@ -1897,7 +1966,7 @@ $LL17@net_grd_ds:
 	jne	SHORT $LL17@net_grd_ds
 	vmovups	YMMWORD PTR lane_acc$12[rbp], ymm1
 $LN16@net_grd_ds:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$12[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$12[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$12[rbp+8]
@@ -1906,7 +1975,7 @@ $LN16@net_grd_ds:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$12[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$12[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$12[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [rsi], xmm3
 	add	rsi, 4
 	lea	rdx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
@@ -1919,44 +1988,44 @@ $LN16@net_grd_ds:
 	xor	ebx, ebx
 $LN9@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm0, XMMWORD PTR [r14+112]
 	vmovups	xmm1, XMMWORD PTR [r14+32]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vmovd	ecx, xmm0
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
+	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
 	mov	QWORD PTR $T11[rbp], rdx
 	mov	QWORD PTR $T11[rbp+8], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	vmovd	eax, xmm1
 	cmp	ecx, eax
-	mov	DWORD PTR $T11[rbp+16], 198		; 000000c6H
+	mov	DWORD PTR $T11[rbp+16], 264		; 00000108H
 	mov	r8d, ebx
-	mov	DWORD PTR $T11[rbp+20], 40		; 00000028H
+	mov	DWORD PTR $T11[rbp+20], 43		; 0000002bH
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm6, xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	sete	r8b
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	XMMWORD PTR $T19[rbp], xmm1
 	vmovups	XMMWORD PTR $T15[rbp], xmm0
 	vmovups	XMMWORD PTR $T7[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	lea	rcx, QWORD PTR $T11[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 267
 	vmovd	eax, xmm6
 	test	eax, eax
 	jle	SHORT $LN23@net_grd_ds
 	mov	rcx, QWORD PTR $T19[rbp+8]
-; Line 201
+; Line 268
 	lea	edx, DWORD PTR [rax-1]
 	mov	r8, QWORD PTR $T15[rbp+8]
 	mov	r9, QWORD PTR $T7[rbp+8]
@@ -1967,26 +2036,26 @@ $LN9@net_grd_ds:
 	npad	3
 $LL24@net_grd_ds:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
-	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
+	vaddps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [r9+rcx], ymm1
 	lea	rcx, QWORD PTR [rcx+32]
 	sub	rdx, 1
 	jne	SHORT $LL24@net_grd_ds
 $LN23@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 269
+; Line 316
 	mov	rsi, QWORD PTR [r14+120]
-; Line 272
+; Line 319
 	vmovd	eax, xmm0
 	movsxd	rdi, eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	XMMWORD PTR $T6[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 272
+; Line 319
 	test	eax, eax
 	jle	SHORT $LN30@net_grd_ds
 	mov	rbx, QWORD PTR $T6[rbp+8]
@@ -1996,7 +2065,7 @@ $LN23@net_grd_ds:
 	inc	rdi
 	npad	8
 $LL31@net_grd_ds:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -2004,33 +2073,33 @@ $LL31@net_grd_ds:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL31@net_grd_ds
 	xor	ebx, ebx
 $LN30@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	vmovups	ymm1, YMMWORD PTR [r14+144]
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 	vmovups	YMMWORD PTR $T21[rbp], ymm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vextractf128 xmm1, ymm1, 1
 	vmovd	r13d, xmm1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 49
+; Line 256
 	mov	edi, ebx
-; Line 46
+; Line 253
 	vmovups	XMMWORD PTR $T14[rbp], xmm0
 	vmovups	xmm0, XMMWORD PTR [r14+256]
 	vmovups	XMMWORD PTR $T4[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	test	r13d, r13d
 	jle	$LN37@net_grd_ds
-; Line 306
+; Line 352
 	mov	rsi, QWORD PTR $T21[rbp+8]
 	mov	r12d, ebx
 	mov	r14, QWORD PTR $T4[rbp+8]
@@ -2040,24 +2109,24 @@ $LN30@net_grd_ds:
 	sete	r12b
 	npad	4
 $LL38@net_grd_ds:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T21[rbp+24]
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 356
+; Line 388
 	mov	eax, r15d
-; Line 306
-	mov	DWORD PTR $T10[rbp+16], 306		; 00000132H
-; Line 356
+; Line 352
+	mov	DWORD PTR $T10[rbp+16], 352		; 00000160H
+; Line 388
 	imul	eax, edi
-; Line 306
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	mov	DWORD PTR $T10[rbp+20], 43		; 0000002bH
+	mov	DWORD PTR $T10[rbp+20], 45		; 0000002dH
 	mov	r8d, r12d
-; Line 356
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 	mov	QWORD PTR $T10[rbp], rax
 	lea	rcx, QWORD PTR $T10[rbp]
@@ -2066,12 +2135,12 @@ $LL38@net_grd_ds:
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$1[rbp], ymm1
-; Line 310
+; Line 356
 	test	esi, esi
 	jle	SHORT $LN44@net_grd_ds
-; Line 356
+; Line 388
 	mov	rdx, QWORD PTR $T14[rbp+8]
 	lea	ecx, DWORD PTR [rsi-1]
 	sub	rdx, rbx
@@ -2079,7 +2148,7 @@ $LL38@net_grd_ds:
 	inc	ecx
 	npad	3
 $LL45@net_grd_ds:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
@@ -2087,7 +2156,7 @@ $LL45@net_grd_ds:
 	jne	SHORT $LL45@net_grd_ds
 	vmovups	YMMWORD PTR lane_acc$1[rbp], ymm1
 $LN44@net_grd_ds:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$1[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$1[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$1[rbp+8]
@@ -2096,7 +2165,7 @@ $LN44@net_grd_ds:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$1[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$1[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$1[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [r14], xmm3
 	add	r14, 4
 	inc	edi
@@ -2105,45 +2174,45 @@ $LN44@net_grd_ds:
 	mov	r14, QWORD PTR net$[rsp]
 $LN37@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm0, XMMWORD PTR [r14+256]
 	vmovups	xmm1, XMMWORD PTR [r14+176]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vmovd	ecx, xmm0
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T9[rbp+16], 198		; 000000c6H
+	mov	DWORD PTR $T9[rbp+16], 264		; 00000108H
 	mov	QWORD PTR $T9[rbp], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
-	mov	DWORD PTR $T9[rbp+20], 40		; 00000028H
+	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
+	mov	DWORD PTR $T9[rbp+20], 43		; 0000002bH
 	mov	QWORD PTR $T9[rbp+8], rax
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	vmovd	eax, xmm1
 	cmp	ecx, eax
 	mov	r8d, 0
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm6, xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	sete	r8b
 	lea	rcx, QWORD PTR $T9[rbp]
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	XMMWORD PTR $T3[rbp], xmm1
 	vmovups	XMMWORD PTR $T17[rbp], xmm0
 	vmovups	XMMWORD PTR $T13[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 267
 	vmovd	eax, xmm6
 	test	eax, eax
 	jle	SHORT $LN51@net_grd_ds
 	mov	rcx, QWORD PTR $T3[rbp+8]
-; Line 201
+; Line 268
 	lea	edx, DWORD PTR [rax-1]
 	mov	r8, QWORD PTR $T17[rbp+8]
 	mov	r9, QWORD PTR $T13[rbp+8]
@@ -2154,26 +2223,26 @@ $LN37@net_grd_ds:
 	npad	10
 $LL52@net_grd_ds:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
-	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
+	vaddps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [r9+rcx], ymm1
 	lea	rcx, QWORD PTR [rcx+32]
 	sub	rdx, 1
 	jne	SHORT $LL52@net_grd_ds
 $LN51@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [r14+272]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 269
+; Line 316
 	mov	rsi, QWORD PTR [r14+264]
-; Line 272
+; Line 319
 	vmovd	eax, xmm0
 	movsxd	rdi, eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	XMMWORD PTR $T2[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 272
+; Line 319
 	test	eax, eax
 	jle	SHORT $LN58@net_grd_ds
 	mov	rbx, QWORD PTR $T2[rbp+8]
@@ -2183,7 +2252,7 @@ $LN51@net_grd_ds:
 	inc	rdi
 	npad	5
 $LL59@net_grd_ds:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -2191,13 +2260,13 @@ $LL59@net_grd_ds:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL59@net_grd_ds
 $LN58@net_grd_ds:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 180
+; Line 331
 	mov	rax, QWORD PTR tar_v$[rsp]
 	lea	r8, QWORD PTR $T8[rbp]
 	lea	rdx, QWORD PTR $T20[rbp]
@@ -2209,7 +2278,7 @@ $LN58@net_grd_ds:
 	vmovups	XMMWORD PTR $T20[rbp], xmm1
 	vzeroupper
 	call	?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z ; net_prp_bwd
-; Line 181
+; Line 332
 	mov	rbx, QWORD PTR [rsp+296]
 	vmovaps	xmm6, XMMWORD PTR [rsp+192]
 	add	rsp, 208				; 000000d0H
@@ -2226,110 +2295,101 @@ _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z
 _TEXT	SEGMENT
-$T1 = 0
-$T2 = 0
-lay_o$9$ = 32
-tv1843 = 32
-tv1800 = 32
+$T1 = 32
+$T2 = 32
 $T3 = 64
 lay_o$ = 80
 lay_i$ = 224
-net$ = 480
-inp_v$ = 488
-tar_v$ = 496
+lay_o$9$ = 368
+net$ = 448
+inp_v$ = 456
+tar_v$ = 464
 ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z PROC		; net_prp_bwd, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 72
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+24], rsi
-	mov	QWORD PTR [rsp+32], rdi
-	mov	QWORD PTR [rsp+16], rdx
-	push	rbp
-	push	r12
-	push	r13
-	push	r14
-	push	r15
-	sub	rsp, 432				; 000001b0H
-	lea	rbp, QWORD PTR [rsp+64]
-	and	rbp, -32				; ffffffffffffffe0H
-; Line 73
+; Line 281
+	mov	rax, rsp
+	mov	QWORD PTR [rax+16], rdx
+	push	rbx
+	push	rdi
+	sub	rsp, 424				; 000001a8H
+; Line 282
 	vmovups	ymm0, YMMWORD PTR [rcx+144]
-	vmovups	ymm1, YMMWORD PTR [rcx+240]
-	vmovups	xmm2, XMMWORD PTR [rcx+272]
-	vmovups	YMMWORD PTR lay_o$[rbp], ymm0
+	vmovups	YMMWORD PTR lay_o$[rsp], ymm0
 	vmovups	ymm0, YMMWORD PTR [rcx+176]
-	vmovups	YMMWORD PTR lay_o$9$[rbp], ymm0
-	vmovups	YMMWORD PTR lay_o$[rbp+32], ymm0
-	vmovups	ymm0, YMMWORD PTR [rcx+208]
-	vmovups	YMMWORD PTR lay_o$[rbp+96], ymm1
-; Line 74
-	vmovups	ymm1, YMMWORD PTR [rcx+32]
-	vmovups	YMMWORD PTR lay_o$[rbp+64], ymm0
-	vmovups	ymm0, YMMWORD PTR [rcx]
-	vmovups	YMMWORD PTR lay_i$[rbp+32], ymm1
-	vmovups	ymm1, YMMWORD PTR [rcx+96]
-	vmovups	YMMWORD PTR lay_i$[rbp], ymm0
-	vmovups	ymm0, YMMWORD PTR [rcx+64]
+	mov	QWORD PTR [rax+24], r12
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
-	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T2[rbp+16], 198		; 000000c6H
-	mov	QWORD PTR $T2[rbp], rax
+; Line 245
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 74
-	vmovups	YMMWORD PTR lay_i$[rbp+96], ymm1
-; Line 132
-	vmovups	xmm1, XMMWORD PTR [r8]
+; Line 281
+	mov	QWORD PTR [rax-24], r13
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
-	mov	DWORD PTR $T2[rbp+20], 40		; 00000028H
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 74
-	vmovups	YMMWORD PTR lay_i$[rbp+64], ymm0
-	vmovups	xmm0, XMMWORD PTR [rcx+128]
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
-	vmovd	ecx, xmm2
-	xor	r8d, r8d
-	mov	QWORD PTR $T2[rbp+8], rax
-	vmovd	eax, xmm1
-	cmp	ecx, eax
+; Line 245
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 73
-	vmovups	XMMWORD PTR lay_o$[rbp+128], xmm2
+; Line 281
+	mov	QWORD PTR [rax-32], r14
+	mov	QWORD PTR [rax-40], r15
+; Line 282
+	vmovups	YMMWORD PTR [rax-72], ymm0
+	vmovups	ymm1, YMMWORD PTR [rcx+240]
+	vmovups	xmm2, XMMWORD PTR [rcx+272]
+	vmovups	YMMWORD PTR lay_o$[rsp+32], ymm0
+	vmovups	ymm0, YMMWORD PTR [rcx+208]
+	vmovups	YMMWORD PTR [rax-296], ymm0
+; Line 283
+	vmovups	ymm0, YMMWORD PTR [rcx]
+	vmovups	YMMWORD PTR [rax-264], ymm1
+	vmovups	ymm1, YMMWORD PTR [rcx+32]
+	vmovups	YMMWORD PTR [rax-216], ymm0
+	vmovups	ymm0, YMMWORD PTR [rcx+64]
+	vmovups	YMMWORD PTR [rax-184], ymm1
+	vmovups	ymm1, YMMWORD PTR [rcx+96]
+	vmovups	YMMWORD PTR [rax-152], ymm0
+	vmovups	xmm0, XMMWORD PTR [rcx+128]
+	vmovups	YMMWORD PTR [rax-120], ymm1
+; Line 300
+	vmovups	xmm1, XMMWORD PTR [r8]
+	vmovups	XMMWORD PTR [rax-88], xmm0
+	vmovups	XMMWORD PTR [rax-232], xmm2
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
-	sete	r8b
-	lea	rcx, QWORD PTR $T2[rbp]
+; Line 245
+	vmovd	ecx, xmm2
+	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	DWORD PTR $T2[rsp+16], 245		; 000000f5H
+	mov	QWORD PTR $T2[rsp], rax
+	xor	r8d, r8d
+	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
+	mov	DWORD PTR $T2[rsp+20], 42		; 0000002aH
+	mov	QWORD PTR $T2[rsp+8], rax
+	vmovd	eax, xmm1
+	cmp	ecx, eax
+	lea	rcx, QWORD PTR $T2[rsp]
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 74
-	vmovups	XMMWORD PTR lay_i$[rbp+128], xmm0
-; Line 132
-	vmovups	XMMWORD PTR $T3[rbp], xmm1
+; Line 300
+	vmovups	XMMWORD PTR $T3[rsp], xmm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 245
+	sete	r8b
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
-	vmovups	ymm0, YMMWORD PTR lay_o$9$[rbp]
-	mov	r12, QWORD PTR lay_o$[rbp+56]
+; Line 247
+	vmovups	ymm0, YMMWORD PTR lay_o$9$[rsp]
+	mov	r12, QWORD PTR lay_o$[rsp+56]
 	vextractf128 xmm0, ymm0, 1
 	vmovd	r13d, xmm0
 	test	r13d, r13d
 	jle	SHORT $LN28@net_prp_bw
-	mov	rcx, QWORD PTR $T3[rbp+8]
-; Line 201
+	mov	rcx, QWORD PTR $T3[rsp+8]
+; Line 248
 	lea	edx, DWORD PTR [r13-1]
-	mov	r8, QWORD PTR lay_o$[rbp+136]
+	mov	r8, QWORD PTR lay_o$[rsp+136]
 	mov	r9, r12
 	sub	r8, rcx
 	shr	edx, 3
 	sub	r9, rcx
 	inc	edx
-	npad	15
+	npad	3
 $LL29@net_prp_bw:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
 	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
@@ -2338,54 +2398,51 @@ $LL29@net_prp_bw:
 	sub	rdx, 1
 	jne	SHORT $LL29@net_prp_bw
 $LN28@net_prp_bw:
-; Line 290
-	mov	r15d, DWORD PTR lay_o$[rbp+64]
-	mov	rdi, QWORD PTR lay_o$[rbp+72]
+; Line 336
+	mov	r15d, DWORD PTR lay_o$[rsp+64]
+	mov	rdi, QWORD PTR lay_o$[rsp+72]
+	mov	QWORD PTR [rsp+448], rsi
 	test	r15d, r15d
 	jle	SHORT $LN35@net_prp_bw
-	mov	r14, QWORD PTR lay_o$[rbp+120]
+	mov	r14, QWORD PTR lay_o$[rsp+120]
 	lea	esi, DWORD PTR [r15-1]
 	sub	r14, rdi
 	shr	esi, 3
 	inc	esi
 	mov	rbx, rdi
-	npad	13
+	npad	2
 $LL36@net_prp_bw:
-; Line 293
-	vmovups	ymm1, YMMWORD PTR ?lan_zro@@3T__m256@@B
-	vsubps	ymm0, ymm1, YMMWORD PTR [r14+rbx]
-	call	__vdecl_expf8
-	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vaddps	ymm1, ymm0, ymm2
-	vdivps	ymm0, ymm2, ymm1
-	vmovups	YMMWORD PTR tv1843[rbp], ymm0
-	vmovups	ymm0, YMMWORD PTR [r14+rbx]
+; Line 339
+	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
+	vsubps	ymm0, ymm0, YMMWORD PTR [r14+rbx]
 	call	__vdecl_expf8
 	lea	rbx, QWORD PTR [rbx+32]
-	vmovups	ymm1, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vsubps	ymm1, ymm1, ymm0
-	vmulps	ymm2, ymm1, YMMWORD PTR tv1843[rbp]
-; Line 294
-	vmovups	YMMWORD PTR [rbx-32], ymm2
+	vmovups	ymm3, YMMWORD PTR ?lan_one@@3T__m256@@B
+	vaddps	ymm1, ymm0, ymm3
+	vdivps	ymm2, ymm3, ymm1
+	vsubps	ymm0, ymm3, ymm2
+	vmulps	ymm1, ymm0, ymm2
+; Line 340
+	vmovups	YMMWORD PTR [rbx-32], ymm1
 	sub	rsi, 1
 	jne	SHORT $LL36@net_prp_bw
 $LN35@net_prp_bw:
-; Line 237
+; Line 284
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T1[rbp+16], 237		; 000000edH
-	mov	QWORD PTR $T1[rbp], rax
+	mov	DWORD PTR $T1[rsp+16], 284		; 0000011cH
+	mov	QWORD PTR $T1[rsp], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	cmp	r13d, r15d
-	mov	DWORD PTR $T1[rbp+20], 42		; 0000002aH
+	mov	DWORD PTR $T1[rsp+20], 44		; 0000002cH
 	lea	rax, OFFSET FLAT:??_C@_08EGPIDAG@vec_mul_@
 	mov	r8d, 0
-	mov	QWORD PTR $T1[rbp+8], rax
+	mov	QWORD PTR $T1[rsp+8], rax
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	sete	r8b
-	lea	rcx, QWORD PTR $T1[rbp]
+	lea	rcx, QWORD PTR $T1[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 239
+; Line 286
 	test	r13d, r13d
 	jle	SHORT $LN40@net_prp_bw
 	lea	edx, DWORD PTR [r13-1]
@@ -2393,8 +2450,9 @@ $LN35@net_prp_bw:
 	shr	edx, 3
 	mov	rcx, r12
 	inc	edx
+	npad	2
 $LL41@net_prp_bw:
-; Line 240
+; Line 287
 	vmovups	ymm0, YMMWORD PTR [rdi+rcx]
 	vmulps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [rcx], ymm1
@@ -2403,27 +2461,29 @@ $LL41@net_prp_bw:
 	jne	SHORT $LL41@net_prp_bw
 $LN40@net_prp_bw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 135
-	mov	esi, DWORD PTR lay_o$[rbp+4]
-	test	esi, esi
+; Line 303
+	mov	r14d, DWORD PTR lay_o$[rsp+4]
+	mov	r13, QWORD PTR [rsp+416]
+	test	r14d, r14d
 	jle	SHORT $LN3@net_prp_bw
-	movsxd	rbx, DWORD PTR lay_o$[rbp+92]
+	movsxd	rbx, DWORD PTR lay_o$[rsp+92]
 	mov	r8, r12
-	mov	r9, QWORD PTR lay_o$[rbp+104]
-	mov	r10d, esi
-	mov	r11d, DWORD PTR lay_o$[rbp]
-	mov	rdi, QWORD PTR lay_i$[rbp+136]
+	mov	r9, QWORD PTR lay_o$[rsp+104]
+	mov	r10d, r14d
+	mov	r11d, DWORD PTR lay_o$[rsp]
+	mov	rdi, QWORD PTR lay_i$[rsp+136]
 	shl	rbx, 2
 $LL4@net_prp_bw:
-; Line 136
+; Line 304
 	test	r11d, r11d
 	jle	SHORT $LN2@net_prp_bw
 	mov	rax, rdi
 	mov	rcx, r9
 	mov	rdx, r11
+	npad	2
 $LL7@net_prp_bw:
 	lea	rcx, QWORD PTR [rcx+4]
-; Line 137
+; Line 305
 	vmovss	xmm0, DWORD PTR [rax]
 	lea	rax, QWORD PTR [rax+4]
 	vmulss	xmm1, xmm0, DWORD PTR [r8]
@@ -2431,136 +2491,125 @@ $LL7@net_prp_bw:
 	sub	rdx, 1
 	jne	SHORT $LL7@net_prp_bw
 $LN2@net_prp_bw:
-; Line 135
+; Line 303
 	add	r9, rbx
 	add	r8, 4
 	sub	r10, 1
 	jne	SHORT $LL4@net_prp_bw
 $LN3@net_prp_bw:
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 290
-	mov	eax, DWORD PTR lay_i$[rbp+48]
-	mov	rbx, QWORD PTR lay_i$[rbp+56]
+; Line 336
+	mov	eax, DWORD PTR lay_i$[rsp+48]
+	mov	rbx, QWORD PTR lay_i$[rsp+56]
 	test	eax, eax
 	jle	SHORT $LN23@net_prp_bw
-	mov	r15, QWORD PTR lay_i$[rbp+120]
-	lea	r14d, DWORD PTR [rax-1]
+	mov	r15, QWORD PTR lay_i$[rsp+120]
+	lea	esi, DWORD PTR [rax-1]
 	sub	r15, rbx
-	shr	r14d, 3
-	inc	r14d
+	shr	esi, 3
+	inc	esi
 	mov	rdi, rbx
-	npad	13
 $LL24@net_prp_bw:
-; Line 293
-	vmovups	ymm1, YMMWORD PTR ?lan_zro@@3T__m256@@B
-	vsubps	ymm0, ymm1, YMMWORD PTR [r15+rdi]
-	call	__vdecl_expf8
-	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vaddps	ymm1, ymm0, ymm2
-	vdivps	ymm0, ymm2, ymm1
-	vmovups	YMMWORD PTR tv1800[rbp], ymm0
-	vmovups	ymm0, YMMWORD PTR [r15+rdi]
+; Line 339
+	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
+	vsubps	ymm0, ymm0, YMMWORD PTR [r15+rdi]
 	call	__vdecl_expf8
 	lea	rdi, QWORD PTR [rdi+32]
-	vmovups	ymm1, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vsubps	ymm1, ymm1, ymm0
-	vmulps	ymm2, ymm1, YMMWORD PTR tv1800[rbp]
-; Line 294
-	vmovups	YMMWORD PTR [rdi-32], ymm2
-	sub	r14, 1
+	vmovups	ymm3, YMMWORD PTR ?lan_one@@3T__m256@@B
+	vaddps	ymm1, ymm0, ymm3
+	vdivps	ymm2, ymm3, ymm1
+	vsubps	ymm0, ymm3, ymm2
+	vmulps	ymm1, ymm0, ymm2
+; Line 340
+	vmovups	YMMWORD PTR [rdi-32], ymm1
+	sub	rsi, 1
 	jne	SHORT $LL24@net_prp_bw
 $LN23@net_prp_bw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 150
-	mov	edi, DWORD PTR lay_i$[rbp+4]
+; Line 310
+	mov	edi, DWORD PTR lay_i$[rsp+4]
+	mov	r15, QWORD PTR [rsp+400]
 	test	edi, edi
-	jle	$LN15@net_prp_bw
-	mov	r10, QWORD PTR lay_o$[rbp+24]
+	jle	SHORT $LN9@net_prp_bw
+	mov	r10, QWORD PTR lay_o$[rsp+24]
 	mov	r9, rbx
-	movsxd	r14, DWORD PTR lay_o$[rbp+12]
+	movsxd	rsi, DWORD PTR lay_o$[rsp+12]
 	mov	r11d, edi
 	npad	1
 $LL10@net_prp_bw:
 	vxorps	xmm2, xmm2, xmm2
-; Line 152
-	test	esi, esi
+; Line 312
+	test	r14d, r14d
 	jle	SHORT $LN12@net_prp_bw
-; Line 151
-	mov	r8, r14
+; Line 311
+	mov	r8, rsi
 	mov	rax, r12
 	shl	r8, 2
 	mov	rcx, r10
-	mov	rdx, rsi
-	npad	8
+	mov	rdx, r14
+	npad	7
 $LL13@net_prp_bw:
-; Line 153
-	vmovss	xmm0, DWORD PTR [rcx]
-	vmulss	xmm1, xmm0, DWORD PTR [rax]
+; Line 313
+	vmovss	xmm0, DWORD PTR [rax]
+	vmulss	xmm1, xmm0, DWORD PTR [rcx]
 	add	rcx, r8
 	lea	rax, QWORD PTR [rax+4]
 	vaddss	xmm2, xmm2, xmm1
 	sub	rdx, 1
 	jne	SHORT $LL13@net_prp_bw
 $LN12@net_prp_bw:
-; Line 155
-	vmulss	xmm0, xmm2, DWORD PTR [r9]
-	vmovss	DWORD PTR [r9], xmm0
+; Line 315
+	vmovss	DWORD PTR [r9], xmm2
 	add	r9, 4
 	add	r10, 4
 	sub	r11, 1
 	jne	SHORT $LL10@net_prp_bw
-; Line 164
+$LN9@net_prp_bw:
+	mov	r14, QWORD PTR [rsp+408]
+; Line 317
+	mov	r12, QWORD PTR [rsp+464]
+	mov	rsi, QWORD PTR [rsp+448]
 	test	edi, edi
 	jle	SHORT $LN15@net_prp_bw
-; Line 166
-	movsxd	r11, DWORD PTR lay_i$[rbp+92]
+; Line 319
+	movsxd	r11, DWORD PTR lay_i$[rsp+92]
 	mov	r9, rdi
-	mov	r8, QWORD PTR lay_i$[rbp+104]
-	mov	r10d, DWORD PTR lay_i$[rbp]
+	mov	r8, QWORD PTR lay_i$[rsp+104]
+	mov	r10d, DWORD PTR lay_i$[rsp]
 	mov	rdi, QWORD PTR inp_v$[rsp]
 	shl	r11, 2
-	npad	7
+	npad	1
 $LL16@net_prp_bw:
-; Line 165
+; Line 318
 	test	r10d, r10d
 	jle	SHORT $LN14@net_prp_bw
-; Line 166
+; Line 319
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, r8
 	mov	rdx, r10
 	npad	1
 $LL19@net_prp_bw:
-; Line 165
+; Line 318
 	lea	rcx, QWORD PTR [rcx+4]
 	lea	rax, QWORD PTR [rax+4]
-; Line 166
+; Line 319
 	vmovss	xmm0, DWORD PTR [rbx]
 	vmulss	xmm1, xmm0, DWORD PTR [rax-4]
 	vmovss	DWORD PTR [rcx-4], xmm1
 	sub	rdx, 1
 	jne	SHORT $LL19@net_prp_bw
 $LN14@net_prp_bw:
-; Line 164
+; Line 317
 	add	r8, r11
 	add	rbx, 4
 	sub	r9, 1
 	jne	SHORT $LL16@net_prp_bw
 $LN15@net_prp_bw:
-; Line 171
-	mov	ecx, 256				; 00000100H
+; Line 323
 	vzeroupper
-	call	QWORD PTR __imp_Sleep
-; Line 172
-	lea	r11, QWORD PTR [rsp+432]
-	mov	rbx, QWORD PTR [r11+48]
-	mov	rsi, QWORD PTR [r11+64]
-	mov	rdi, QWORD PTR [r11+72]
-	mov	rsp, r11
-	pop	r15
-	pop	r14
-	pop	r13
-	pop	r12
-	pop	rbp
+	add	rsp, 424				; 000001a8H
+	pop	rdi
+	pop	rbx
 	ret	0
 ?net_prp_bwd@@YQXPEAUai_net@@Uai_vec@@1@Z ENDP		; net_prp_bwd
 _TEXT	ENDS
@@ -2591,7 +2640,7 @@ net$ = 256
 inp$ = 264
 ?net_prp_fwd@@YAXPEAUai_net@@Uai_vec@@@Z PROC		; net_prp_fwd, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 67
+; Line 276
 	mov	rax, rsp
 	mov	QWORD PTR [rax+16], rbx
 	mov	QWORD PTR [rax+24], rsi
@@ -2606,84 +2655,84 @@ inp$ = 264
 	vmovaps	XMMWORD PTR [rax-56], xmm6
 	lea	rbp, QWORD PTR [rsp+64]
 	and	rbp, -32				; ffffffffffffffe0H
-; Line 46
+; Line 253
 	vmovups	xmm0, XMMWORD PTR [rcx+112]
 	vmovups	ymm1, YMMWORD PTR [rcx]
-; Line 67
+; Line 276
 	xor	ebx, ebx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	lea	r8, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	vmovups	XMMWORD PTR $T15[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vextractf128 xmm0, ymm1, 1
 	vmovd	r12d, xmm0
 	lea	r9, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 67
+; Line 276
 	mov	r14, rcx
 	mov	edi, ebx
-; Line 46
+; Line 253
 	vmovups	YMMWORD PTR $T20[rbp], ymm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	test	r12d, r12d
 	jle	$LN7@net_prp_fw
-; Line 374
+; Line 433
 	mov	r14, QWORD PTR $T20[rbp+8]
 	mov	r13d, ebx
 	vmovups	xmm0, XMMWORD PTR [rdx]
 	mov	rsi, QWORD PTR $T15[rbp+8]
 	mov	r15, r14
 	shr	r15, 32					; 00000020H
-; Line 306
+; Line 352
 	vmovd	eax, xmm0
 	cmp	r14d, eax
-; Line 374
+; Line 433
 	vmovups	XMMWORD PTR $T17[rbp], xmm0
 	sete	r13b
 	npad	13
 $LL8@net_prp_fw:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T20[rbp+24]
-; Line 306
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-; Line 356
+; Line 388
 	mov	eax, r15d
-; Line 306
+; Line 352
 	mov	QWORD PTR $T5[rbp], r8
-; Line 356
+; Line 388
 	imul	eax, edi
-; Line 306
+; Line 352
 	mov	r8d, r13d
 	mov	QWORD PTR $T5[rbp+8], r9
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	DWORD PTR $T5[rbp+16], 306		; 00000132H
-	mov	DWORD PTR $T5[rbp+20], 43		; 0000002bH
-; Line 356
+	mov	DWORD PTR $T5[rbp+16], 352		; 00000160H
+	mov	DWORD PTR $T5[rbp+20], 45		; 0000002dH
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rcx, QWORD PTR $T5[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$11[rbp], ymm1
-; Line 310
+; Line 356
 	test	r14d, r14d
 	jle	SHORT $LN14@net_prp_fw
-; Line 356
+; Line 388
 	mov	rdx, QWORD PTR $T17[rbp+8]
 	lea	ecx, DWORD PTR [r14-1]
 	sub	rdx, rbx
 	shr	ecx, 3
 	inc	ecx
 $LL15@net_prp_fw:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
@@ -2691,7 +2740,7 @@ $LL15@net_prp_fw:
 	jne	SHORT $LL15@net_prp_fw
 	vmovups	YMMWORD PTR lane_acc$11[rbp], ymm1
 $LN14@net_prp_fw:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$11[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$11[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$11[rbp+8]
@@ -2700,7 +2749,7 @@ $LN14@net_prp_fw:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$11[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$11[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$11[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [rsi], xmm3
 	add	rsi, 4
 	lea	r8, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
@@ -2713,44 +2762,44 @@ $LN14@net_prp_fw:
 	xor	ebx, ebx
 $LN7@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm0, XMMWORD PTR [r14+112]
 	vmovups	xmm1, XMMWORD PTR [r14+32]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vmovd	ecx, xmm0
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
+	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
 	mov	QWORD PTR $T10[rbp], r8
 	mov	QWORD PTR $T10[rbp+8], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	vmovd	eax, xmm1
 	cmp	ecx, eax
-	mov	DWORD PTR $T10[rbp+16], 198		; 000000c6H
+	mov	DWORD PTR $T10[rbp+16], 264		; 00000108H
 	mov	r8d, ebx
-	mov	DWORD PTR $T10[rbp+20], 40		; 00000028H
+	mov	DWORD PTR $T10[rbp+20], 43		; 0000002bH
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm6, xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	sete	r8b
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	XMMWORD PTR $T18[rbp], xmm1
 	vmovups	XMMWORD PTR $T14[rbp], xmm0
 	vmovups	XMMWORD PTR $T7[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	lea	rcx, QWORD PTR $T10[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 267
 	vmovd	eax, xmm6
 	test	eax, eax
 	jle	SHORT $LN21@net_prp_fw
 	mov	rcx, QWORD PTR $T18[rbp+8]
-; Line 201
+; Line 268
 	lea	edx, DWORD PTR [rax-1]
 	mov	r8, QWORD PTR $T14[rbp+8]
 	mov	r9, QWORD PTR $T7[rbp+8]
@@ -2761,26 +2810,26 @@ $LN7@net_prp_fw:
 	npad	3
 $LL22@net_prp_fw:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
-	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
+	vaddps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [r9+rcx], ymm1
 	lea	rcx, QWORD PTR [rcx+32]
 	sub	rdx, 1
 	jne	SHORT $LL22@net_prp_fw
 $LN21@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 269
+; Line 316
 	mov	rsi, QWORD PTR [r14+120]
-; Line 272
+; Line 319
 	vmovd	eax, xmm0
 	movsxd	rdi, eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	XMMWORD PTR $T6[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 272
+; Line 319
 	test	eax, eax
 	jle	SHORT $LN28@net_prp_fw
 	mov	rbx, QWORD PTR $T6[rbp+8]
@@ -2790,7 +2839,7 @@ $LN21@net_prp_fw:
 	inc	rdi
 	npad	8
 $LL29@net_prp_fw:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -2798,33 +2847,33 @@ $LL29@net_prp_fw:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL29@net_prp_fw
 	xor	ebx, ebx
 $LN28@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	vmovups	ymm1, YMMWORD PTR [r14+144]
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 	vmovups	YMMWORD PTR $T19[rbp], ymm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vextractf128 xmm1, ymm1, 1
 	vmovd	r13d, xmm1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 49
+; Line 256
 	mov	edi, ebx
-; Line 46
+; Line 253
 	vmovups	XMMWORD PTR $T13[rbp], xmm0
 	vmovups	xmm0, XMMWORD PTR [r14+256]
 	vmovups	XMMWORD PTR $T4[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	test	r13d, r13d
 	jle	$LN35@net_prp_fw
-; Line 306
+; Line 352
 	mov	rsi, QWORD PTR $T19[rbp+8]
 	mov	r12d, ebx
 	mov	r14, QWORD PTR $T4[rbp+8]
@@ -2834,24 +2883,24 @@ $LN28@net_prp_fw:
 	sete	r12b
 	npad	4
 $LL36@net_prp_fw:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T19[rbp+24]
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 356
+; Line 388
 	mov	eax, r15d
-; Line 306
-	mov	DWORD PTR $T9[rbp+16], 306		; 00000132H
-; Line 356
+; Line 352
+	mov	DWORD PTR $T9[rbp+16], 352		; 00000160H
+; Line 388
 	imul	eax, edi
-; Line 306
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	mov	DWORD PTR $T9[rbp+20], 43		; 0000002bH
+	mov	DWORD PTR $T9[rbp+20], 45		; 0000002dH
 	mov	r8d, r12d
-; Line 356
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 	mov	QWORD PTR $T9[rbp], rax
 	lea	rcx, QWORD PTR $T9[rbp]
@@ -2860,12 +2909,12 @@ $LL36@net_prp_fw:
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$1[rbp], ymm1
-; Line 310
+; Line 356
 	test	esi, esi
 	jle	SHORT $LN42@net_prp_fw
-; Line 356
+; Line 388
 	mov	rdx, QWORD PTR $T13[rbp+8]
 	lea	ecx, DWORD PTR [rsi-1]
 	sub	rdx, rbx
@@ -2873,7 +2922,7 @@ $LL36@net_prp_fw:
 	inc	ecx
 	npad	3
 $LL43@net_prp_fw:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
@@ -2881,7 +2930,7 @@ $LL43@net_prp_fw:
 	jne	SHORT $LL43@net_prp_fw
 	vmovups	YMMWORD PTR lane_acc$1[rbp], ymm1
 $LN42@net_prp_fw:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$1[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$1[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$1[rbp+8]
@@ -2890,7 +2939,7 @@ $LN42@net_prp_fw:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$1[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$1[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$1[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [r14], xmm3
 	add	r14, 4
 	inc	edi
@@ -2899,45 +2948,45 @@ $LN42@net_prp_fw:
 	mov	r14, QWORD PTR net$[rsp]
 $LN35@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm0, XMMWORD PTR [r14+256]
 	vmovups	xmm1, XMMWORD PTR [r14+176]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vmovd	ecx, xmm0
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T8[rbp+16], 198		; 000000c6H
+	mov	DWORD PTR $T8[rbp+16], 264		; 00000108H
 	mov	QWORD PTR $T8[rbp], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
-	mov	DWORD PTR $T8[rbp+20], 40		; 00000028H
+	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
+	mov	DWORD PTR $T8[rbp+20], 43		; 0000002bH
 	mov	QWORD PTR $T8[rbp+8], rax
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	vmovd	eax, xmm1
 	cmp	ecx, eax
 	mov	r8d, 0
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm6, xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	sete	r8b
 	lea	rcx, QWORD PTR $T8[rbp]
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	XMMWORD PTR $T3[rbp], xmm1
 	vmovups	XMMWORD PTR $T16[rbp], xmm0
 	vmovups	XMMWORD PTR $T12[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 267
 	vmovd	eax, xmm6
 	test	eax, eax
 	jle	SHORT $LN49@net_prp_fw
 	mov	rcx, QWORD PTR $T3[rbp+8]
-; Line 201
+; Line 268
 	lea	edx, DWORD PTR [rax-1]
 	mov	r8, QWORD PTR $T16[rbp+8]
 	mov	r9, QWORD PTR $T12[rbp+8]
@@ -2948,26 +2997,26 @@ $LN35@net_prp_fw:
 	npad	10
 $LL50@net_prp_fw:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
-	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
+	vaddps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [r9+rcx], ymm1
 	lea	rcx, QWORD PTR [rcx+32]
 	sub	rdx, 1
 	jne	SHORT $LL50@net_prp_fw
 $LN49@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [r14+272]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 269
+; Line 316
 	mov	rsi, QWORD PTR [r14+264]
-; Line 272
+; Line 319
 	vmovd	eax, xmm0
 	movsxd	rdi, eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	XMMWORD PTR $T2[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 272
+; Line 319
 	test	eax, eax
 	jle	SHORT $LN56@net_prp_fw
 	mov	rbx, QWORD PTR $T2[rbp+8]
@@ -2977,7 +3026,7 @@ $LN49@net_prp_fw:
 	inc	rdi
 	npad	5
 $LL57@net_prp_fw:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -2985,13 +3034,13 @@ $LL57@net_prp_fw:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL57@net_prp_fw
 $LN56@net_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 69
+; Line 278
 	vzeroupper
 	lea	r11, QWORD PTR [rsp+208]
 	mov	rbx, QWORD PTR [r11+56]
@@ -3018,31 +3067,32 @@ lay$ = 80
 alpha$ = 88
 ?lay_upd@@YAXPEAUai_lay@@M@Z PROC			; lay_upd, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 53
+; Line 260
 	sub	rsp, 72					; 00000048H
-; Line 54
+; Line 261
 	vmovups	xmm2, XMMWORD PTR [rcx+32]
-; Line 55
+; Line 262
 	vmovups	xmm0, XMMWORD PTR [rcx+48]
+	vmovups	xmm4, XMMWORD PTR __xmm@80000000800000008000000080000000
 	xor	r10d, r10d
 	mov	QWORD PTR [rsp+80], rbx
 	vmovd	r8d, xmm2
 	mov	rbx, rcx
 	mov	r11d, r10d
-; Line 59
-	vmovaps	xmm4, xmm1
+; Line 267
 	vmovaps	xmm3, xmm1
-	vshufps	xmm4, xmm1, xmm1, 0
+	vmovaps	xmm5, xmm1
+	vshufps	xmm3, xmm1, xmm1, 0
 	vmovups	XMMWORD PTR bia_old$[rsp], xmm2
 	vmovups	XMMWORD PTR bia_new$[rsp], xmm0
 	test	r8d, r8d
-	jle	$LN3@lay_upd
-; Line 56
+	jle	$LN32@lay_upd
+; Line 263
 	mov	r9, QWORD PTR bia_old$[rsp+8]
 	mov	rdx, QWORD PTR bia_new$[rsp+8]
 	cmp	r8d, 16
 	jb	$LN14@lay_upd
-; Line 54
+; Line 261
 	lea	eax, DWORD PTR [r8-1]
 	mov	QWORD PTR [rsp+64], rdi
 	movsxd	rcx, eax
@@ -3051,78 +3101,75 @@ alpha$ = 88
 	cmp	r9, rax
 	ja	SHORT $LN15@lay_upd
 	cmp	rdi, rdx
-	jae	$LN40@lay_upd
+	jae	SHORT $LN41@lay_upd
 $LN15@lay_upd:
 	mov	QWORD PTR [rsp+88], rsi
 	mov	ecx, r8d
 	and	ecx, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN39@lay_upd
+	jge	SHORT $LN40@lay_upd
 	dec	ecx
 	or	ecx, -16
 	inc	ecx
-$LN39@lay_upd:
+$LN40@lay_upd:
 	mov	eax, r8d
-; Line 56
+; Line 263
 	mov	rdi, r10
 	sub	eax, ecx
 	mov	rcx, rdx
+	vxorps	xmm2, xmm3, xmm4
 	movsxd	rsi, eax
 	sub	rcx, r9
 	lea	rax, QWORD PTR [r9+16]
-	npad	12
+	vinsertf128 ymm2, ymm2, xmm2, 1
+	npad	14
 $LL4@lay_upd:
-; Line 57
-	vmovups	xmm0, XMMWORD PTR [rax-16]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax-16]
-	vsubps	xmm1, xmm0, xmm1
-	vmovups	XMMWORD PTR [rax-16], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rax+rcx]
-	vsubps	xmm1, xmm0, xmm1
-	vmovups	XMMWORD PTR [rax], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax+16]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax+16]
-	vsubps	xmm1, xmm0, xmm1
-	vmovups	XMMWORD PTR [rax+16], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax+32]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax+32]
-	vsubps	xmm1, xmm0, xmm1
+; Line 264
+	vmulps	ymm1, ymm2, YMMWORD PTR [rcx+rax-16]
+; Line 265
+	vaddps	ymm1, ymm1, YMMWORD PTR [rax-16]
+	vmovups	YMMWORD PTR [rax-16], ymm1
+	vmulps	ymm1, ymm2, YMMWORD PTR [rcx+rax+16]
+	vaddps	ymm1, ymm1, YMMWORD PTR [rax+16]
 	add	r11d, 16
 	add	rdi, 16
-	vmovups	XMMWORD PTR [rax+32], xmm1
+	vmovups	YMMWORD PTR [rax+16], ymm1
 	lea	rax, QWORD PTR [rax+64]
 	cmp	rdi, rsi
 	jl	SHORT $LL4@lay_upd
-; Line 54
+; Line 261
 	mov	rsi, QWORD PTR [rsp+88]
-$LN40@lay_upd:
+$LN41@lay_upd:
 	mov	rdi, QWORD PTR [rsp+64]
 $LN14@lay_upd:
-; Line 56
+; Line 263
 	cmp	r11d, r8d
-	jge	SHORT $LN3@lay_upd
+	jge	SHORT $LN32@lay_upd
 	movsxd	rax, r11d
 	sub	rdx, r9
 	sub	r8d, r11d
+	vxorps	xmm2, xmm5, xmm4
 	lea	rcx, QWORD PTR [r9+rax*4]
 	mov	eax, r8d
-	npad	3
+	npad	12
 $LL13@lay_upd:
-; Line 57
-	vmulss	xmm1, xmm3, DWORD PTR [rcx+rdx]
-	vmovss	xmm0, DWORD PTR [rcx]
+; Line 264
+	vmulss	xmm0, xmm2, DWORD PTR [rcx+rdx]
+; Line 265
+	vaddss	xmm1, xmm0, DWORD PTR [rcx]
+	vmovss	DWORD PTR [rcx], xmm1
 	lea	rcx, QWORD PTR [rcx+4]
-	vsubss	xmm1, xmm0, xmm1
-	vmovss	DWORD PTR [rcx-4], xmm1
 	sub	rax, 1
 	jne	SHORT $LL13@lay_upd
+	jmp	SHORT $LN3@lay_upd
+$LN32@lay_upd:
+	vxorps	xmm2, xmm5, xmm4
 $LN3@lay_upd:
-; Line 59
+; Line 267
 	vmovups	ymm1, YMMWORD PTR [rbx]
-; Line 60
+; Line 268
 	vmovups	ymm0, YMMWORD PTR [rbx+80]
 	vmovups	YMMWORD PTR wei_new$[rsp], ymm0
-; Line 61
+; Line 269
 	mov	r9, QWORD PTR wei_new$[rsp+24]
 	mov	r8d, r10d
 	vextractf128 xmm0, ymm1, 1
@@ -3136,7 +3183,7 @@ $LN3@lay_upd:
 	jle	$LN17@lay_upd
 	cmp	edx, 16
 	jb	$LN17@lay_upd
-; Line 59
+; Line 267
 	lea	eax, DWORD PTR [rdx-1]
 	movsxd	rcx, eax
 	lea	rax, QWORD PTR [r9+rcx*4]
@@ -3144,48 +3191,44 @@ $LN3@lay_upd:
 	cmp	r11, rax
 	ja	SHORT $LN18@lay_upd
 	cmp	rbx, r9
-	jae	$LN17@lay_upd
+	jae	SHORT $LN17@lay_upd
 $LN18@lay_upd:
 	mov	ecx, edx
 	and	ecx, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN38@lay_upd
+	jge	SHORT $LN39@lay_upd
 	dec	ecx
 	or	ecx, -16
 	inc	ecx
-$LN38@lay_upd:
+$LN39@lay_upd:
 	mov	eax, edx
 	sub	eax, ecx
 	mov	rcx, r9
-; Line 61
+	vxorps	xmm3, xmm3, xmm4
+; Line 269
 	movsxd	rbx, eax
 	sub	rcx, r11
 	lea	rax, QWORD PTR [r11+16]
-	npad	13
+	vinsertf128 ymm3, ymm3, xmm3, 1
+	npad	6
 $LL7@lay_upd:
-; Line 62
-	vmovups	xmm0, XMMWORD PTR [rax-16]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax-16]
-	vsubps	xmm1, xmm0, xmm1
+; Line 270
+	vmulps	xmm1, xmm3, XMMWORD PTR [rcx+rax-16]
+; Line 271
+	vaddps	xmm1, xmm1, XMMWORD PTR [rax-16]
 	vmovups	XMMWORD PTR [rax-16], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rax+rcx]
-	vsubps	xmm1, xmm0, xmm1
+	vmulps	xmm1, xmm3, XMMWORD PTR [rax+rcx]
+	vaddps	xmm1, xmm1, XMMWORD PTR [rax]
 	vmovups	XMMWORD PTR [rax], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax+16]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax+16]
-	vsubps	xmm1, xmm0, xmm1
-	vmovups	XMMWORD PTR [rax+16], xmm1
-	vmovups	xmm0, XMMWORD PTR [rax+32]
-	vmulps	xmm1, xmm4, XMMWORD PTR [rcx+rax+32]
-	vsubps	xmm1, xmm0, xmm1
+	vmulps	ymm1, ymm3, YMMWORD PTR [rcx+rax+16]
+	vaddps	ymm1, ymm1, YMMWORD PTR [rax+16]
 	add	r8d, 16
 	add	r10, 16
-	vmovups	XMMWORD PTR [rax+32], xmm1
+	vmovups	YMMWORD PTR [rax+16], ymm1
 	lea	rax, QWORD PTR [rax+64]
 	cmp	r10, rbx
 	jl	SHORT $LL7@lay_upd
 $LN17@lay_upd:
-; Line 61
+; Line 269
 	mov	rbx, QWORD PTR [rsp+80]
 	movsxd	r10, r8d
 	movsxd	rcx, edx
@@ -3194,7 +3237,7 @@ $LN17@lay_upd:
 	mov	rax, rcx
 	sub	rax, r10
 	cmp	rax, 4
-	jl	$LN37@lay_upd
+	jl	SHORT $LN38@lay_upd
 	mov	rdx, rcx
 	lea	rax, QWORD PTR [r11+4]
 	sub	rdx, r10
@@ -3205,46 +3248,42 @@ $LN17@lay_upd:
 	sub	r8, r11
 	inc	rdx
 	lea	r10, QWORD PTR [r10+rdx*4]
-	npad	11
 $LL31@lay_upd:
-; Line 62
-	vmulss	xmm1, xmm3, DWORD PTR [rax+r8-4]
-	vmovss	xmm0, DWORD PTR [rax-4]
+; Line 270
+	vmulss	xmm0, xmm2, DWORD PTR [r8+rax-4]
+; Line 271
+	vaddss	xmm1, xmm0, DWORD PTR [rax-4]
+	vmovss	DWORD PTR [rax-4], xmm1
+	vmulss	xmm0, xmm2, DWORD PTR [r8+rax]
+	vaddss	xmm1, xmm0, DWORD PTR [rax]
+	vmovss	DWORD PTR [rax], xmm1
+	vmulss	xmm0, xmm2, DWORD PTR [r8+rax+4]
+	vaddss	xmm1, xmm0, DWORD PTR [rax+4]
+	vmovss	DWORD PTR [rax+4], xmm1
+	vmulss	xmm0, xmm2, DWORD PTR [r8+rax+8]
+	vaddss	xmm1, xmm0, DWORD PTR [rax+8]
+	vmovss	DWORD PTR [rax+8], xmm1
 	lea	rax, QWORD PTR [rax+16]
-	vsubss	xmm1, xmm0, xmm1
-	vmovss	xmm0, DWORD PTR [rax-16]
-	vmovss	DWORD PTR [rax-20], xmm1
-	vmulss	xmm2, xmm3, DWORD PTR [rax+r8-16]
-	vsubss	xmm1, xmm0, xmm2
-	vmovss	xmm0, DWORD PTR [rax-12]
-	vmovss	DWORD PTR [rax-16], xmm1
-	vmulss	xmm1, xmm3, DWORD PTR [rax+r8-12]
-	vsubss	xmm1, xmm0, xmm1
-	vmovss	xmm0, DWORD PTR [rax-8]
-	vmovss	DWORD PTR [rax-12], xmm1
-	vmulss	xmm1, xmm3, DWORD PTR [rax+r8-8]
-	vsubss	xmm1, xmm0, xmm1
-	vmovss	DWORD PTR [rax-8], xmm1
 	sub	rdx, 1
 	jne	SHORT $LL31@lay_upd
-; Line 61
+; Line 269
 	cmp	r10, rcx
 	jge	SHORT $LN29@lay_upd
-$LN37@lay_upd:
+$LN38@lay_upd:
 	sub	r9, r11
 	lea	rax, QWORD PTR [r11+r10*4]
 	sub	rcx, r10
 $LC16@lay_upd:
-; Line 62
-	vmulss	xmm1, xmm3, DWORD PTR [r9+rax]
-	vmovss	xmm0, DWORD PTR [rax]
+; Line 270
+	vmulss	xmm0, xmm2, DWORD PTR [r9+rax]
+; Line 271
+	vaddss	xmm1, xmm0, DWORD PTR [rax]
+	vmovss	DWORD PTR [rax], xmm1
 	lea	rax, QWORD PTR [rax+4]
-	vsubss	xmm1, xmm0, xmm1
-	vmovss	DWORD PTR [rax-4], xmm1
 	sub	rcx, 1
 	jne	SHORT $LC16@lay_upd
 $LN29@lay_upd:
-; Line 64
+; Line 273
 	vzeroupper
 	add	rsp, 72					; 00000048H
 	ret	0
@@ -3268,7 +3307,7 @@ lay$ = 280
 inp$ = 288
 ?lay_prp_fwd@@YQ?AUai_vec@@PEAUai_lay@@U1@@Z PROC	; lay_prp_fwd, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	mov	rax, rsp
 	mov	QWORD PTR [rax+24], rbx
 	mov	QWORD PTR [rax+16], rdx
@@ -3288,30 +3327,30 @@ inp$ = 288
 	vmovups	ymm1, YMMWORD PTR [rdx]
 	vmovups	XMMWORD PTR $T7[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vextractf128 xmm0, ymm1, 1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	mov	r14, rdx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	lea	r9, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	xor	edx, edx
 	mov	r15, rcx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	vmovd	r12d, xmm0
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 46
+; Line 253
 	mov	edi, edx
 	vmovups	YMMWORD PTR $T10[rbp], ymm1
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 373
+; Line 432
 	test	r12d, r12d
 	jle	$LN5@lay_prp_fw
-; Line 374
+; Line 433
 	mov	r15, QWORD PTR $T10[rbp+8]
 	mov	r14d, edx
 	vmovups	xmm0, XMMWORD PTR [r8]
@@ -3319,47 +3358,47 @@ inp$ = 288
 	lea	rdx, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
 	mov	r13, r15
 	shr	r13, 32					; 00000020H
-; Line 306
+; Line 352
 	vmovd	eax, xmm0
 	cmp	r15d, eax
-; Line 374
+; Line 433
 	vmovups	XMMWORD PTR $T8[rbp], xmm0
 	sete	r14b
 	npad	11
 $LL6@lay_prp_fw:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T10[rbp+24]
 	mov	eax, r13d
 	imul	eax, edi
-; Line 306
+; Line 352
 	mov	r8d, r14d
 	mov	QWORD PTR $T3[rbp], r9
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	mov	QWORD PTR $T3[rbp+8], rdx
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	mov	DWORD PTR $T3[rbp+16], 306		; 00000132H
-	mov	DWORD PTR $T3[rbp+20], 43		; 0000002bH
-; Line 356
+	mov	DWORD PTR $T3[rbp+16], 352		; 00000160H
+	mov	DWORD PTR $T3[rbp+20], 45		; 0000002dH
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rcx, QWORD PTR $T3[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$2[rbp], ymm1
-; Line 310
+; Line 356
 	test	r15d, r15d
 	jle	SHORT $LN12@lay_prp_fw
-; Line 356
+; Line 388
 	mov	rdx, QWORD PTR $T8[rbp+8]
 	lea	ecx, DWORD PTR [r15-1]
 	sub	rdx, rbx
 	shr	ecx, 3
 	inc	ecx
 $LL13@lay_prp_fw:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
@@ -3367,7 +3406,7 @@ $LL13@lay_prp_fw:
 	jne	SHORT $LL13@lay_prp_fw
 	vmovups	YMMWORD PTR lane_acc$2[rbp], ymm1
 $LN12@lay_prp_fw:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$2[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$2[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$2[rbp+8]
@@ -3376,7 +3415,7 @@ $LN12@lay_prp_fw:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$2[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$2[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$2[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [rsi], xmm3
 	add	rsi, 4
 	lea	r9, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
@@ -3389,44 +3428,44 @@ $LN12@lay_prp_fw:
 	mov	r15, QWORD PTR __$ReturnAddress$[rsp]
 $LN5@lay_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm0, XMMWORD PTR [r14+112]
 	vmovups	xmm1, XMMWORD PTR [r14+32]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	vmovd	ecx, xmm0
-	lea	rax, OFFSET FLAT:??_C@_08NBCBIHOP@vec_sub_@
+	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
 	mov	QWORD PTR $T1[rbp], r9
 	mov	QWORD PTR $T1[rbp+8], rax
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	vmovd	eax, xmm1
 	cmp	ecx, eax
-	mov	DWORD PTR $T1[rbp+16], 198		; 000000c6H
+	mov	DWORD PTR $T1[rbp+16], 264		; 00000108H
 	mov	r8d, 0
-	mov	DWORD PTR $T1[rbp+20], 40		; 00000028H
+	mov	DWORD PTR $T1[rbp+20], 43		; 0000002bH
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	xmm6, xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	sete	r8b
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 47
+; Line 254
 	vmovups	XMMWORD PTR $T9[rbp], xmm1
 	vmovups	XMMWORD PTR $T6[rbp], xmm0
 	vmovups	XMMWORD PTR $T5[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 198
+; Line 264
 	lea	rcx, QWORD PTR $T1[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 267
 	vmovd	eax, xmm6
 	test	eax, eax
 	jle	SHORT $LN19@lay_prp_fw
 	mov	rcx, QWORD PTR $T9[rbp+8]
-; Line 201
+; Line 268
 	lea	edx, DWORD PTR [rax-1]
 	mov	r8, QWORD PTR $T6[rbp+8]
 	mov	r9, QWORD PTR $T5[rbp+8]
@@ -3437,26 +3476,26 @@ $LN5@lay_prp_fw:
 	npad	10
 $LL20@lay_prp_fw:
 	vmovups	ymm0, YMMWORD PTR [r8+rcx]
-	vsubps	ymm1, ymm0, YMMWORD PTR [rcx]
+	vaddps	ymm1, ymm0, YMMWORD PTR [rcx]
 	vmovups	YMMWORD PTR [r9+rcx], ymm1
 	lea	rcx, QWORD PTR [rcx+32]
 	sub	rdx, 1
 	jne	SHORT $LL20@lay_prp_fw
 $LN19@lay_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 269
+; Line 316
 	mov	rsi, QWORD PTR [r14+120]
-; Line 272
+; Line 319
 	vmovd	eax, xmm0
 	movsxd	rdi, eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 48
+; Line 255
 	vmovups	XMMWORD PTR $T4[rbp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 272
+; Line 319
 	test	eax, eax
 	jle	SHORT $LN26@lay_prp_fw
 	mov	rbx, QWORD PTR $T4[rbp+8]
@@ -3466,7 +3505,7 @@ $LN19@lay_prp_fw:
 	inc	rdi
 	npad	8
 $LL27@lay_prp_fw:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -3474,18 +3513,18 @@ $LL27@lay_prp_fw:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL27@lay_prp_fw
 $LN26@lay_prp_fw:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 49
+; Line 256
 	vmovups	xmm0, XMMWORD PTR [r14+128]
 	vmovups	XMMWORD PTR [r15], xmm0
 	mov	rax, r15
 	vzeroupper
-; Line 50
+; Line 257
 	mov	rbx, QWORD PTR [rsp+288]
 	vmovaps	xmm6, XMMWORD PTR [rsp+192]
 	add	rsp, 208				; 000000d0H
@@ -3505,439 +3544,386 @@ _TEXT	SEGMENT
 i$ = 8
 ?int_flip@@YAII@Z PROC					; int_flip, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.h
-; Line 89
+; Line 84
 	bswap	ecx
 	mov	eax, ecx
-; Line 93
+; Line 88
 	ret	0
 ?int_flip@@YAII@Z ENDP					; int_flip
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?new_lay@@YA?AUai_lay@@HH@Z
 _TEXT	SEGMENT
-$T1 = 48
 $T2 = 48
-$T3 = 80
+$T3 = 48
 $T4 = 80
-__$ReturnAddress$ = 160
-col_len$ = 168
-row_len$ = 176
+$T5 = 80
+$T6 = 80
+__$ReturnAddress$ = 128
+col_len$ = 136
+row_len$ = 144
 ?new_lay@@YA?AUai_lay@@HH@Z PROC			; new_lay, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.h
-; Line 75
-	mov	rax, rsp
-	push	rbx
-	push	rdi
-	push	r15
-	sub	rsp, 128				; 00000080H
-	vmovaps	XMMWORD PTR [rax-40], xmm6
-	mov	r15, rcx
-	mov	QWORD PTR [rax+8], rsi
-; Line 76
-	lea	rcx, QWORD PTR [rax-72]
-	mov	QWORD PTR [rax+24], r14
+; Line 70
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rbp
+	mov	QWORD PTR [rsp+24], rsi
+	mov	QWORD PTR [rsp+32], rdi
+	push	r14
+	sub	rsp, 112				; 00000070H
+	mov	r14, rcx
+; Line 71
+	mov	DWORD PTR [rsp+32], edx
+	lea	rcx, QWORD PTR $T6[rsp]
 	mov	r9d, r8d
-	mov	r14d, r8d
-	mov	DWORD PTR [rax-120], edx
+	mov	ebp, r8d
 	call	?new_mat_@@YA?AUai_mat@@HHHH@Z		; new_mat_
 	vmovups	ymm0, YMMWORD PTR [rax]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 84
-	lea	eax, DWORD PTR [r14+7]
+; Line 131
+	lea	eax, DWORD PTR [rbp+7]
 	cdq
 	and	edx, 7
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 71
+	vmovups	YMMWORD PTR [r14], ymm0
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 131
+	lea	esi, DWORD PTR [rdx+rax]
+; Line 150
+	mov	edx, 32					; 00000020H
+; Line 131
+	and	esi, -8
+; Line 150
+	movsxd	rdi, esi
+	shl	rdi, 2
+	mov	rcx, rdi
+	vzeroupper
+	call	_aligned_malloc
+; Line 151
+	mov	r8, rdi
+	xor	edx, edx
+	mov	rcx, rax
+	mov	rbx, rax
+	call	memset
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 72
+	mov	DWORD PTR [r14+128], ebp
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	edx, 32					; 00000020H
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 72
+	mov	DWORD PTR [r14+132], esi
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	rcx, rdi
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 72
+	mov	QWORD PTR [r14+136], rbx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	call	_aligned_malloc
+; Line 151
+	mov	r8, rdi
+	xor	edx, edx
+	mov	rcx, rax
+	mov	rbx, rax
+	call	memset
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 73
+	mov	DWORD PTR [r14+112], ebp
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	edx, 32					; 00000020H
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 73
+	mov	DWORD PTR [r14+116], esi
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	rcx, rdi
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 73
+	mov	QWORD PTR [r14+120], rbx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	call	_aligned_malloc
+; Line 151
+	mov	r8, rdi
+	xor	edx, edx
+	mov	rcx, rax
+	mov	rbx, rax
+	call	memset
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 74
+	mov	DWORD PTR [r14+32], ebp
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	edx, 32					; 00000020H
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 74
+	mov	DWORD PTR [r14+36], esi
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	rcx, rdi
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 74
+	mov	QWORD PTR [r14+40], rbx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	call	_aligned_malloc
+; Line 151
+	mov	r8, rdi
+	xor	edx, edx
+	mov	rcx, rax
+	mov	rbx, rax
+	call	memset
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 75
+	mov	DWORD PTR [r14+48], ebp
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	edx, 32					; 00000020H
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 75
+	mov	DWORD PTR [r14+52], esi
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	rcx, rdi
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 75
+	mov	QWORD PTR [r14+56], rbx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	call	_aligned_malloc
+; Line 151
+	mov	r8, rdi
+	xor	edx, edx
+	mov	rcx, rax
+	mov	rbx, rax
+	call	memset
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 76
-	vmovups	YMMWORD PTR [r15], ymm0
+	mov	DWORD PTR [r14+64], ebp
+	mov	DWORD PTR [r14+68], esi
+	mov	QWORD PTR [r14+72], rbx
+; Line 77
+	mov	r9d, DWORD PTR [r14+8]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 84
-	lea	esi, DWORD PTR [rdx+rax]
-; Line 103
+; Line 397
+	mov	eax, DWORD PTR [r14]
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 77
+	movsxd	rdi, DWORD PTR [r14+16]
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 397
+	mov	DWORD PTR $T5[rsp], eax
+; Line 398
+	mov	eax, DWORD PTR [r14+4]
+	mov	DWORD PTR $T5[rsp+4], eax
+; Line 131
+	lea	eax, DWORD PTR [r9+7]
+; Line 400
+	mov	DWORD PTR $T5[rsp+16], edi
+; Line 401
+	mov	DWORD PTR $T5[rsp+20], edi
+; Line 402
+	mov	DWORD PTR $T5[rsp+8], r9d
+; Line 131
+	cdq
+	and	edx, 7
+	lea	ebx, DWORD PTR [rdx+rax]
+	and	ebx, -8
+; Line 403
+	mov	DWORD PTR $T5[rsp+12], ebx
+	cmp	ebx, r9d
+; Line 405
+	je	SHORT $LN27@new_lay
+; Line 406
+	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	DWORD PTR $T2[rsp+16], 406		; 00000196H
+	mov	QWORD PTR $T2[rsp], rax
+	lea	r8, OFFSET FLAT:??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@
+	lea	rax, OFFSET FLAT:??_C@_08ENKIOJLC@new_mat_@
+	mov	DWORD PTR $T2[rsp+20], 46		; 0000002eH
+	mov	edx, 4
+	mov	QWORD PTR $T2[rsp+8], rax
+	lea	rcx, QWORD PTR $T2[rsp]
+	mov	DWORD PTR [rsp+32], ebx
+	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
+$LN27@new_lay:
+; Line 409
+	movsxd	rbx, ebx
 	mov	edx, 32					; 00000020H
-; Line 84
-	and	esi, -8
-; Line 103
-	movsxd	rbx, esi
+	imul	rbx, rdi
 	shl	rbx, 2
 	mov	rcx, rbx
-	vzeroupper
 	call	_aligned_malloc
-; Line 104
+; Line 410
 	mov	r8, rbx
+	mov	QWORD PTR $T5[rsp+24], rax
 	xor	edx, edx
 	mov	rcx, rax
-	mov	rdi, rax
 	call	memset
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 77
-	mov	DWORD PTR [r15+128], r14d
+	vmovups	ymm0, YMMWORD PTR $T5[rsp]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	edx, 32					; 00000020H
+; Line 422
+	mov	edi, DWORD PTR [r14+16]
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 77
-	mov	DWORD PTR [r15+132], esi
+	xor	r10d, r10d
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	rcx, rbx
+; Line 422
+	mov	edx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 78
+	vmovups	ymm1, YMMWORD PTR [r14]
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 422
+	vmovss	xmm2, DWORD PTR __real@2f800000
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 77
-	mov	QWORD PTR [r15+136], rdi
+	vmovups	YMMWORD PTR [r14+80], ymm0
+	vxorps	xmm3, xmm3, xmm3
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	call	_aligned_malloc
-; Line 104
-	mov	r8, rbx
-	xor	edx, edx
-	mov	rcx, rax
-	mov	rdi, rax
-	call	memset
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 78
-	mov	DWORD PTR [r15+112], r14d
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	edx, 32					; 00000020H
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 78
-	mov	DWORD PTR [r15+116], esi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	rcx, rbx
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 78
-	mov	QWORD PTR [r15+120], rdi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	call	_aligned_malloc
-; Line 104
-	mov	r8, rbx
-	xor	edx, edx
-	mov	rcx, rax
-	mov	rdi, rax
-	call	memset
+; Line 422
+	test	edi, edi
+	jle	$LN37@new_lay
+; Line 423
+	vmovups	ymm0, ymm1
+	vpextrq	r11, xmm0, 1
+	mov	rbx, r11
+	vmovups	YMMWORD PTR $T4[rsp], ymm1
+	mov	rsi, QWORD PTR $T4[rsp+24]
+	shr	rbx, 32					; 00000020H
+	npad	4
+$LL38@new_lay:
+; Line 388
+	mov	eax, ebx
+	imul	eax, r10d
+	cdqe
+	lea	r8, QWORD PTR [rsi+rax*4]
+; Line 423
+	test	r11d, r11d
+; Line 217
+	jle	SHORT $LN36@new_lay
+; Line 423
+	mov	r9d, r11d
+	npad	12
+$LL68@new_lay:
+; Line 115
+	mov	ecx, edx
+; Line 217
+	lea	r8, QWORD PTR [r8+4]
+; Line 115
+	shl	ecx, 13
+	xor	ecx, edx
+; Line 116
+	mov	eax, ecx
+	shr	eax, 17
+	xor	ecx, eax
+; Line 117
+	mov	edx, ecx
+	shl	edx, 5
+	xor	edx, ecx
+; Line 123
+	mov	DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA, edx
+	vxorps	xmm0, xmm0, xmm0
+	vcvtsi2ss xmm0, xmm0, rdx
+; Line 124
+	vmulss	xmm1, xmm0, xmm2
+	vaddss	xmm1, xmm1, xmm3
+; Line 218
+	vmovss	DWORD PTR [r8-4], xmm1
+	sub	r9, 1
+	jne	SHORT $LL68@new_lay
+$LN36@new_lay:
+; Line 422
+	inc	r10d
+	cmp	r10d, edi
+	jl	SHORT $LL38@new_lay
+$LN37@new_lay:
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 79
-	mov	DWORD PTR [r15+32], r14d
+	vmovups	xmm0, XMMWORD PTR [r14+32]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	edx, 32					; 00000020H
+; Line 217
+	vmovd	eax, xmm0
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 79
-	mov	DWORD PTR [r15+36], esi
+	vmovups	XMMWORD PTR $T3[rsp], xmm0
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	rcx, rbx
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 79
-	mov	QWORD PTR [r15+40], rdi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	call	_aligned_malloc
-; Line 104
-	mov	r8, rbx
-	xor	edx, edx
-	mov	rcx, rax
-	mov	rdi, rax
-	call	memset
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 80
-	mov	DWORD PTR [r15+48], r14d
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	edx, 32					; 00000020H
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 80
-	mov	DWORD PTR [r15+52], esi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	rcx, rbx
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 80
-	mov	QWORD PTR [r15+56], rdi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	call	_aligned_malloc
-; Line 104
-	mov	r8, rbx
-	xor	edx, edx
-	mov	rcx, rax
-	mov	rdi, rax
-	call	memset
+; Line 217
+	test	eax, eax
+	jle	SHORT $LN80@new_lay
+	mov	r8, QWORD PTR $T3[rsp+8]
+	mov	r9d, eax
+$LL70@new_lay:
+; Line 115
+	mov	ecx, edx
+; Line 217
+	lea	r8, QWORD PTR [r8+4]
+; Line 115
+	shl	ecx, 13
+	xor	ecx, edx
+; Line 116
+	mov	eax, ecx
+	shr	eax, 17
+	xor	ecx, eax
+; Line 117
+	mov	eax, ecx
+	shl	eax, 5
+	xor	eax, ecx
+	mov	ecx, eax
+; Line 123
+	mov	edx, eax
+	mov	DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA, ecx
+	vxorps	xmm0, xmm0, xmm0
+	vcvtsi2ss xmm0, xmm0, rcx
+; Line 124
+	vmulss	xmm1, xmm0, xmm2
+	vaddss	xmm1, xmm1, xmm3
+; Line 218
+	vmovss	DWORD PTR [r8-4], xmm1
+	sub	r9, 1
+	jne	SHORT $LL70@new_lay
+$LN80@new_lay:
 ; File W:\cpp\void\dr-ai\num-ai.h
 ; Line 81
-	mov	DWORD PTR [r15+64], r14d
-	mov	DWORD PTR [r15+68], esi
-	mov	QWORD PTR [r15+72], rdi
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 338
-	mov	eax, DWORD PTR [r15]
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 82
-	movsxd	rbx, DWORD PTR [r15+16]
-	mov	ecx, DWORD PTR [r15+8]
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 338
-	mov	DWORD PTR $T4[rsp], eax
-; Line 339
-	mov	eax, DWORD PTR [r15+4]
-	mov	DWORD PTR $T4[rsp+4], eax
-; Line 340
-	mov	DWORD PTR $T4[rsp+16], ebx
-; Line 84
-	lea	eax, DWORD PTR [rcx+7]
-; Line 341
-	mov	DWORD PTR $T4[rsp+20], ebx
-; Line 84
-	cdq
-; Line 342
-	mov	DWORD PTR $T4[rsp+8], ecx
-; Line 84
-	and	edx, 7
-	lea	edi, DWORD PTR [rdx+rax]
-	and	edi, -8
-; Line 343
-	mov	DWORD PTR $T4[rsp+12], edi
-	cmp	edi, ecx
-; Line 345
-	je	SHORT $LN24@new_lay
-; Line 346
-	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T1[rsp+16], 346		; 0000015aH
-	mov	QWORD PTR $T1[rsp], rax
-	lea	r8, OFFSET FLAT:??_C@_1KM@HMEAFDGA@?$AAm?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?5?$AAw?$AAi?$AAl?$AAl?$AA?5?$AAb?$AAe?$AA?5@
-	lea	rax, OFFSET FLAT:??_C@_08ENKIOJLC@new_mat_@
-	mov	DWORD PTR $T1[rsp+20], 44		; 0000002cH
-	mov	r9d, edi
-	mov	QWORD PTR $T1[rsp+8], rax
-	mov	edx, 4
-	lea	rcx, QWORD PTR $T1[rsp]
-	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
-$LN24@new_lay:
-; Line 349
-	movsxd	rdi, edi
-	mov	rcx, rbx
-	imul	rcx, rdi
-	mov	edx, 32					; 00000020H
-	shl	rcx, 2
-	call	_aligned_malloc
-; Line 350
-	lea	r8, QWORD PTR [rdi*4]
-	mov	QWORD PTR $T4[rsp+24], rax
-	xor	edx, edx
-	mov	rcx, rax
-	call	memset
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 82
-	vmovups	ymm0, YMMWORD PTR $T4[rsp]
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 363
-	mov	r14d, DWORD PTR [r15+16]
-; Line 349
-	xor	r8d, r8d
-; Line 363
-	mov	ebx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
-; Line 349
-	mov	r10d, r8d
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 83
-	vmovups	ymm1, YMMWORD PTR [r15]
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 363
-	vmovss	xmm5, DWORD PTR __real@2f800000
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 82
-	vmovups	YMMWORD PTR [r15+80], ymm0
-	vxorps	xmm6, xmm6, xmm6
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 363
-	test	r14d, r14d
-	jle	$LN32@new_lay
-; Line 364
-	vmovups	ymm0, ymm1
-	vpextrq	r9, xmm0, 1
-	mov	rsi, r9
-	mov	QWORD PTR [rsp+168], r12
-	vmovups	YMMWORD PTR $T3[rsp], ymm1
-	mov	r12, QWORD PTR $T3[rsp+24]
-	shr	rsi, 32					; 00000020H
-	npad	7
-$LL33@new_lay:
-; Line 356
-	mov	eax, esi
-; Line 364
-	mov	edx, r8d
-; Line 356
-	imul	eax, r10d
-; Line 364
-	mov	rcx, r8
-; Line 356
-	cdqe
-	lea	r11, QWORD PTR [r12+rax*4]
-; Line 364
-	test	r9d, r9d
-; Line 170
-	jle	$LN60@new_lay
-	cmp	r9d, 16
-	jb	SHORT $LN60@new_lay
-; Line 364
-	mov	edi, r9d
-	vmovd	xmm4, ebx
-	vpshufd	xmm4, xmm4, 0
-	and	edi, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN80@new_lay
-	dec	edi
-	or	edi, -16
-	inc	edi
-$LN80@new_lay:
-	vpsrld	xmm0, xmm4, 8
-	vcvtdq2ps xmm2, xmm0
-	vmulps	xmm3, xmm2, XMMWORD PTR __xmm@43800000438000004380000043800000
-	vmovdqu	xmm0, XMMWORD PTR __xmm@000000ff000000ff000000ff000000ff
-	vpand	xmm2, xmm0, xmm4
-	vcvtdq2ps xmm1, xmm2
-	mov	eax, r9d
-	sub	eax, edi
-	vaddps	xmm3, xmm3, xmm1
-	vmulps	xmm2, xmm3, XMMWORD PTR __xmm@2f8000002f8000002f8000002f800000
-; Line 170
-	movsxd	rdi, eax
-; Line 77
-	lea	rax, QWORD PTR [r11+32]
-; Line 170
-	vinsertf128 ymm2, ymm2, xmm2, 1
-	npad	5
-$LL40@new_lay:
-; Line 171
-	vmovups	YMMWORD PTR [rax-32], ymm2
-	add	edx, 16
-	add	rcx, 16
-	vmovups	YMMWORD PTR [rax], ymm2
-	lea	rax, QWORD PTR [rax+64]
-	cmp	rcx, rdi
-	jl	SHORT $LL40@new_lay
-$LN60@new_lay:
-; Line 170
-	cmp	edx, r9d
-	jge	SHORT $LN31@new_lay
-	lea	rdi, QWORD PTR [r11+rcx*4]
-	mov	ecx, r9d
-	vxorps	xmm0, xmm0, xmm0
-	vcvtsi2ss xmm0, xmm0, rbx
-	vmulss	xmm1, xmm0, xmm5
-	vaddss	xmm2, xmm1, xmm6
-	vmovd	eax, xmm2
-	cdqe
-	sub	ecx, edx
-	rep stosd
-$LN31@new_lay:
-; Line 363
-	inc	r10d
-	cmp	r10d, r14d
-	jl	$LL33@new_lay
-	mov	r12, QWORD PTR [rsp+168]
-$LN32@new_lay:
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 84
-	vmovups	xmm0, XMMWORD PTR [r15+32]
-	mov	r14, QWORD PTR [rsp+176]
-	mov	edx, r8d
-	mov	rsi, QWORD PTR [rsp+160]
-	vmovd	r9d, xmm0
-	vmovups	XMMWORD PTR $T2[rsp], xmm0
-	test	r9d, r9d
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 170
-	jle	$LN82@new_lay
-	mov	rdi, QWORD PTR $T2[rsp+8]
-	cmp	r9d, 16
-	jb	SHORT $LN62@new_lay
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 84
-	mov	ecx, r9d
-	vmovd	xmm4, ebx
-	vpshufd	xmm4, xmm4, 0
-	and	ecx, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN79@new_lay
-	dec	ecx
-	or	ecx, -16
-	inc	ecx
-$LN79@new_lay:
-	vpsrld	xmm0, xmm4, 8
-	vcvtdq2ps xmm2, xmm0
-	vmulps	xmm3, xmm2, XMMWORD PTR __xmm@43800000438000004380000043800000
-	vmovdqu	xmm0, XMMWORD PTR __xmm@000000ff000000ff000000ff000000ff
-	vpand	xmm2, xmm0, xmm4
-	vcvtdq2ps xmm1, xmm2
-	mov	eax, r9d
-	sub	eax, ecx
-	vaddps	xmm3, xmm3, xmm1
-	vmulps	xmm2, xmm3, XMMWORD PTR __xmm@2f8000002f8000002f8000002f800000
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 170
-	movsxd	rcx, eax
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 84
-	lea	rax, QWORD PTR [rdi+32]
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 170
-	vinsertf128 ymm2, ymm2, xmm2, 1
-	npad	10
-$LL48@new_lay:
-; Line 171
-	vmovups	YMMWORD PTR [rax-32], ymm2
-	add	edx, 16
-	add	r8, 16
-	vmovups	YMMWORD PTR [rax], ymm2
-	lea	rax, QWORD PTR [rax+64]
-	cmp	r8, rcx
-	jl	SHORT $LL48@new_lay
-$LN62@new_lay:
-; Line 170
-	cmp	edx, r9d
-	jge	SHORT $LN82@new_lay
-; File W:\cpp\void\dr-ai\num-ai.h
-; Line 85
-	movsxd	rcx, edx
-	sub	r9d, edx
-	vxorps	xmm0, xmm0, xmm0
-	vcvtsi2ss xmm0, xmm0, rbx
-	vmulss	xmm1, xmm0, xmm5
-	lea	rdi, QWORD PTR [rdi+rcx*4]
-	mov	ecx, r9d
-	vaddss	xmm2, xmm1, xmm6
-	vmovd	eax, xmm2
-	cdqe
-	rep stosd
-$LN82@new_lay:
-; Line 86
-	mov	rax, r15
+	mov	rax, r14
 	vzeroupper
-	vmovaps	xmm6, XMMWORD PTR [rsp+112]
-	add	rsp, 128				; 00000080H
-	pop	r15
-	pop	rdi
-	pop	rbx
+	lea	r11, QWORD PTR [rsp+112]
+	mov	rbx, QWORD PTR [r11+16]
+	mov	rbp, QWORD PTR [r11+24]
+	mov	rsi, QWORD PTR [r11+32]
+	mov	rdi, QWORD PTR [r11+40]
+	mov	rsp, r11
+	pop	r14
 	ret	0
 ?new_lay@@YA?AUai_lay@@HH@Z ENDP			; new_lay
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-;	COMDAT ?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z
+;	COMDAT ?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z
 _TEXT	SEGMENT
 $T1 = 0
 $T2 = 16
 lane_acc$3 = 64
 $T4 = 96
-dst$ = 240
-mat$ = 248
-src$ = 256
-?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z PROC		; mat_dot_, COMDAT
+__$ReturnAddress$ = 256
+dst$ = 264
+mat$ = 272
+src$ = 280
+?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z PROC		; mat_dot_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 369
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rsi
-	mov	QWORD PTR [rsp+24], rdi
+; Line 428
+	mov	QWORD PTR [rsp+24], rbx
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
+	push	rsi
+	push	rdi
 	push	r12
 	push	r13
 	push	r14
@@ -3945,75 +3931,76 @@ src$ = 256
 	sub	rsp, 192				; 000000c0H
 	lea	rbp, QWORD PTR [rsp+64]
 	and	rbp, -32				; ffffffffffffffe0H
-; Line 373
-	mov	r15d, DWORD PTR [rdx+16]
+; Line 432
+	mov	r15d, DWORD PTR [r8+16]
 	xor	edi, edi
+	mov	r12, rcx
 	test	r15d, r15d
 	jle	$LN3@mat_dot_
-; Line 374
-	vmovups	ymm0, YMMWORD PTR [rdx]
-	mov	rsi, QWORD PTR [rcx+8]
-	lea	rdx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+; Line 433
+	vmovups	ymm0, YMMWORD PTR [r8]
+	mov	rsi, QWORD PTR [rdx+8]
+	lea	r8, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
 	vpextrq	r14, xmm0, 1
 	vmovups	YMMWORD PTR $T4[rbp], ymm0
-	vmovups	xmm0, XMMWORD PTR [r8]
-	mov	r12, r14
-	lea	r8, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
-	shr	r12, 32					; 00000020H
-	mov	r13d, edi
-; Line 306
+	vmovups	xmm0, XMMWORD PTR [r9]
+	mov	r13, r14
+	lea	rdx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	shr	r13, 32					; 00000020H
+	mov	r12d, edi
+; Line 352
 	vmovd	eax, xmm0
 	cmp	r14d, eax
-; Line 374
+; Line 433
 	vmovups	XMMWORD PTR $T1[rbp], xmm0
-	sete	r13b
-	npad	9
+	sete	r12b
+	npad	3
 $LL4@mat_dot_:
-; Line 356
+; Line 388
 	mov	rcx, QWORD PTR $T4[rbp+24]
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 356
-	mov	eax, r12d
-; Line 306
+; Line 388
+	mov	eax, r13d
+; Line 352
 	mov	QWORD PTR $T2[rbp], rdx
-; Line 356
+; Line 388
 	imul	eax, edi
-; Line 306
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	mov	QWORD PTR $T2[rbp+8], r8
-	mov	r8d, r13d
-	mov	DWORD PTR $T2[rbp+16], 306		; 00000132H
-	mov	DWORD PTR $T2[rbp+20], 43		; 0000002bH
-; Line 356
+	mov	r8d, r12d
+	mov	DWORD PTR $T2[rbp+16], 352		; 00000160H
+	mov	DWORD PTR $T2[rbp+20], 45		; 0000002dH
+; Line 388
 	cdqe
 	lea	rbx, QWORD PTR [rcx+rax*4]
-; Line 306
+; Line 352
 	lea	rcx, QWORD PTR $T2[rbp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 	vpxor	xmm1, xmm1, xmm1
-; Line 309
+; Line 355
 	vmovups	YMMWORD PTR lane_acc$3[rbp], ymm1
-; Line 310
+; Line 356
 	test	r14d, r14d
 	jle	SHORT $LN10@mat_dot_
-; Line 374
+; Line 433
 	mov	rdx, QWORD PTR $T1[rbp+8]
 	lea	ecx, DWORD PTR [r14-1]
 	sub	rdx, rbx
 	shr	ecx, 3
 	inc	ecx
 $LL11@mat_dot_:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
-	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rbx+rdx]
+	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rbx]
 	lea	rbx, QWORD PTR [rbx+32]
 	sub	rcx, 1
 	jne	SHORT $LL11@mat_dot_
 	vmovups	YMMWORD PTR lane_acc$3[rbp], ymm1
 $LN10@mat_dot_:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$3[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$3[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$3[rbp+8]
@@ -4022,7 +4009,7 @@ $LN10@mat_dot_:
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$3[rbp+20]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$3[rbp+24]
 	vaddss	xmm3, xmm2, DWORD PTR lane_acc$3[rbp+28]
-; Line 374
+; Line 433
 	vmovss	DWORD PTR [rsi], xmm3
 	add	rsi, 4
 	lea	rdx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
@@ -4030,136 +4017,185 @@ $LN10@mat_dot_:
 	lea	r8, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
 	cmp	edi, r15d
 	jl	$LL4@mat_dot_
+	mov	r12, QWORD PTR __$ReturnAddress$[rsp]
+	mov	rdx, QWORD PTR dst$[rsp]
 $LN3@mat_dot_:
-; Line 376
+; Line 435
+	vmovups	xmm0, XMMWORD PTR [rdx]
+	vmovups	XMMWORD PTR [r12], xmm0
+	mov	rax, r12
 	vzeroupper
-	lea	r11, QWORD PTR [rsp+192]
-	mov	rbx, QWORD PTR [r11+48]
-	mov	rsi, QWORD PTR [r11+56]
-	mov	rdi, QWORD PTR [r11+64]
-	mov	rsp, r11
+; Line 436
+	mov	rbx, QWORD PTR [rsp+272]
+	add	rsp, 192				; 000000c0H
 	pop	r15
 	pop	r14
 	pop	r13
 	pop	r12
+	pop	rdi
+	pop	rsi
 	pop	rbp
 	ret	0
-?mat_dot_@@YQXUai_vec@@Uai_mat@@0@Z ENDP		; mat_dot_
+?mat_dot_@@YQ?AUai_vec@@U1@Uai_mat@@0@Z ENDP		; mat_dot_
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?mat_rnd@@YAXUai_mat@@@Z
 _TEXT	SEGMENT
-$T1 = 0
-mat$ = 64
+$T2 = 0
+mat$ = 48
 ?mat_rnd@@YAXUai_mat@@@Z PROC				; mat_rnd, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 362
-	sub	rsp, 56					; 00000038H
-; Line 363
-	mov	r11d, DWORD PTR [rcx+16]
-	xor	r9d, r9d
-	test	r11d, r11d
+; Line 421
+	push	rbx
+	sub	rsp, 32					; 00000020H
+; Line 422
+	mov	ebx, DWORD PTR [rcx+16]
+	xor	r8d, r8d
+	test	ebx, ebx
 	jle	$LN3@mat_rnd
-; Line 364
+; Line 423
 	vmovups	ymm0, YMMWORD PTR [rcx]
-	vmovss	xmm5, DWORD PTR __real@2f800000
-	mov	QWORD PTR [rsp+64], rbx
-	mov	ebx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
-	mov	QWORD PTR [rsp+72], rsi
-	mov	QWORD PTR [rsp+80], rdi
-	mov	QWORD PTR [rsp+48], r14
-	vpextrq	r8, xmm0, 1
-	mov	rsi, r8
-	vmovaps	XMMWORD PTR [rsp+32], xmm6
-	vmovups	YMMWORD PTR $T1[rsp], ymm0
-	mov	r14, QWORD PTR $T1[rsp+24]
-	shr	rsi, 32					; 00000020H
-	vxorps	xmm6, xmm6, xmm6
+	vmovss	xmm2, DWORD PTR __real@2f800000
+	mov	edx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
+	mov	QWORD PTR [rsp+48], rsi
+	mov	QWORD PTR [rsp+56], rdi
+	vpextrq	r11, xmm0, 1
+	mov	rdi, r11
+	vmovups	YMMWORD PTR $T2[rsp], ymm0
+	mov	rsi, QWORD PTR $T2[rsp+24]
+	shr	rdi, 32					; 00000020H
+	vxorps	xmm3, xmm3, xmm3
 	npad	5
 $LL4@mat_rnd:
-; Line 356
-	mov	eax, esi
-; Line 364
-	xor	edx, edx
-; Line 356
-	imul	eax, r9d
-; Line 364
-	xor	ecx, ecx
-; Line 356
+; Line 388
+	mov	eax, edi
+	imul	eax, r8d
 	cdqe
-	lea	r10, QWORD PTR [r14+rax*4]
-; Line 364
-	test	r8d, r8d
-; Line 170
-	jle	$LN21@mat_rnd
-	cmp	r8d, 16
-	jb	SHORT $LN21@mat_rnd
-; Line 364
-	mov	edi, r8d
-	vmovd	xmm4, ebx
-	vpshufd	xmm4, xmm4, 0
-	and	edi, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN31@mat_rnd
-	dec	edi
-	or	edi, -16
-	inc	edi
-$LN31@mat_rnd:
-	vpsrld	xmm0, xmm4, 8
-	vcvtdq2ps xmm2, xmm0
-	vmulps	xmm3, xmm2, XMMWORD PTR __xmm@43800000438000004380000043800000
-	vmovdqu	xmm0, XMMWORD PTR __xmm@000000ff000000ff000000ff000000ff
-	vpand	xmm2, xmm0, xmm4
-	vcvtdq2ps xmm1, xmm2
-	mov	eax, r8d
-	sub	eax, edi
-	vaddps	xmm3, xmm3, xmm1
-	vmulps	xmm2, xmm3, XMMWORD PTR __xmm@2f8000002f8000002f8000002f800000
-; Line 170
-	movsxd	rdi, eax
-; Line 77
-	lea	rax, QWORD PTR [r10+32]
-; Line 170
-	vinsertf128 ymm2, ymm2, xmm2, 1
-	npad	7
-$LL11@mat_rnd:
-; Line 171
-	vmovups	YMMWORD PTR [rax-32], ymm2
-	add	edx, 16
-	add	rcx, 16
-	vmovups	YMMWORD PTR [rax], ymm2
-	lea	rax, QWORD PTR [rax+64]
-	cmp	rcx, rdi
-	jl	SHORT $LL11@mat_rnd
-$LN21@mat_rnd:
-; Line 170
-	cmp	edx, r8d
-	jge	SHORT $LN2@mat_rnd
-	lea	rdi, QWORD PTR [r10+rcx*4]
-	mov	ecx, r8d
+	lea	r9, QWORD PTR [rsi+rax*4]
+; Line 423
+	test	r11d, r11d
+; Line 217
+	jle	SHORT $LN2@mat_rnd
+; Line 423
+	mov	r10d, r11d
+	npad	12
+$LL21@mat_rnd:
+; Line 115
+	mov	ecx, edx
+; Line 217
+	lea	r9, QWORD PTR [r9+4]
+; Line 115
+	shl	ecx, 13
+	xor	ecx, edx
+; Line 116
+	mov	eax, ecx
+	shr	eax, 17
+	xor	ecx, eax
+; Line 117
+	mov	edx, ecx
+	shl	edx, 5
+	xor	edx, ecx
+; Line 123
+	mov	DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA, edx
 	vxorps	xmm0, xmm0, xmm0
-	vcvtsi2ss xmm0, xmm0, rbx
-	vmulss	xmm1, xmm0, xmm5
-	vaddss	xmm2, xmm1, xmm6
-	vmovd	eax, xmm2
-	cdqe
-	sub	ecx, edx
-	rep stosd
+	vcvtsi2ss xmm0, xmm0, rdx
+; Line 124
+	vmulss	xmm1, xmm0, xmm2
+	vaddss	xmm1, xmm1, xmm3
+; Line 218
+	vmovss	DWORD PTR [r9-4], xmm1
+	sub	r10, 1
+	jne	SHORT $LL21@mat_rnd
 $LN2@mat_rnd:
-; Line 363
-	inc	r9d
-	cmp	r9d, r11d
-	jl	$LL4@mat_rnd
-	vmovaps	xmm6, XMMWORD PTR [rsp+32]
-	mov	r14, QWORD PTR [rsp+48]
-	mov	rdi, QWORD PTR [rsp+80]
-	mov	rsi, QWORD PTR [rsp+72]
-	mov	rbx, QWORD PTR [rsp+64]
+; Line 422
+	inc	r8d
+	cmp	r8d, ebx
+	jl	SHORT $LL4@mat_rnd
+	mov	rdi, QWORD PTR [rsp+56]
+	mov	rsi, QWORD PTR [rsp+48]
 $LN3@mat_rnd:
-; Line 366
+; Line 425
 	vzeroupper
-	add	rsp, 56					; 00000038H
+	add	rsp, 32					; 00000020H
+	pop	rbx
 	ret	0
 ?mat_rnd@@YAXUai_mat@@@Z ENDP				; mat_rnd
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+;	COMDAT ?new_mat_@@YA?AUai_mat@@HHHH@Z
+_TEXT	SEGMENT
+$T1 = 48
+__$ReturnAddress$ = 96
+col$ = 104
+row$ = 112
+min$ = 120
+vec$ = 128
+?new_mat_@@YA?AUai_mat@@HHHH@Z PROC			; new_mat_, COMDAT
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 396
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 80					; 00000050H
+	movsxd	rdi, r9d
+	mov	rbx, rcx
+; Line 402
+	mov	r9d, DWORD PTR vec$[rsp]
+	mov	DWORD PTR [rcx], edx
+	mov	DWORD PTR [rcx+4], r8d
+	mov	DWORD PTR [rcx+16], edi
+; Line 131
+	lea	eax, DWORD PTR [r9+7]
+; Line 401
+	mov	DWORD PTR [rcx+20], edi
+; Line 131
+	cdq
+; Line 402
+	mov	DWORD PTR [rcx+8], r9d
+; Line 131
+	and	edx, 7
+	add	eax, edx
+	and	eax, -8
+; Line 403
+	mov	DWORD PTR [rcx+12], eax
+; Line 405
+	cmp	eax, r9d
+	je	SHORT $LN5@new_mat_
+; Line 406
+	lea	rcx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	DWORD PTR $T1[rsp+16], 406		; 00000196H
+	mov	QWORD PTR $T1[rsp], rcx
+	lea	r8, OFFSET FLAT:??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@
+	lea	rcx, OFFSET FLAT:??_C@_08ENKIOJLC@new_mat_@
+	mov	DWORD PTR $T1[rsp+20], 46		; 0000002eH
+	mov	QWORD PTR $T1[rsp+8], rcx
+	mov	edx, 4
+	lea	rcx, QWORD PTR $T1[rsp]
+	mov	DWORD PTR [rsp+32], eax
+	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
+$LN5@new_mat_:
+; Line 409
+	movsxd	rcx, DWORD PTR [rbx+12]
+	mov	edx, 32					; 00000020H
+	imul	rcx, rdi
+	shl	rcx, 2
+	call	_aligned_malloc
+; Line 410
+	movsxd	rcx, DWORD PTR [rbx+16]
+	xor	edx, edx
+	movsxd	r8, DWORD PTR [rbx+12]
+	imul	r8, rcx
+	mov	rcx, rax
+	mov	QWORD PTR [rbx+24], rax
+	shl	r8, 2
+	call	memset
+; Line 417
+	mov	rax, rbx
+; Line 418
+	mov	rbx, QWORD PTR [rsp+96]
+	add	rsp, 80					; 00000050H
+	pop	rdi
+	ret	0
+?new_mat_@@YA?AUai_mat@@HHHH@Z ENDP			; new_mat_
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?mat_vec@@YA?AUai_vec@@Uai_mat@@H@Z
@@ -4169,92 +4205,23 @@ mat$ = 16
 index$ = 24
 ?mat_vec@@YA?AUai_vec@@Uai_mat@@H@Z PROC		; mat_vec, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 356
+; Line 388
+	mov	r9d, DWORD PTR [rdx+12]
+	mov	eax, r9d
+	imul	eax, r8d
+; Line 390
+	mov	DWORD PTR [rcx+4], r9d
+	movsxd	r8, eax
 	mov	rax, QWORD PTR [rdx+24]
-	imul	r8d, DWORD PTR [rdx+12]
-	movsxd	r8, r8d
 	lea	r8, QWORD PTR [rax+r8*4]
-; Line 357
 	mov	eax, DWORD PTR [rdx+8]
 	mov	DWORD PTR [rcx], eax
-; Line 358
+; Line 392
 	mov	rax, rcx
 	mov	QWORD PTR [rcx+8], r8
-; Line 359
+; Line 393
 	ret	0
 ?mat_vec@@YA?AUai_vec@@Uai_mat@@H@Z ENDP		; mat_vec
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-;	COMDAT ?new_mat_@@YA?AUai_mat@@HHHH@Z
-_TEXT	SEGMENT
-$T1 = 32
-__$ReturnAddress$ = 80
-col$ = 88
-row$ = 96
-min$ = 104
-vec$ = 112
-?new_mat_@@YA?AUai_mat@@HHHH@Z PROC			; new_mat_, COMDAT
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 337
-	mov	QWORD PTR [rsp+8], rbx
-	push	rdi
-	sub	rsp, 64					; 00000040H
-; Line 338
-	mov	DWORD PTR [rcx], edx
-	mov	rbx, rcx
-	movsxd	rdi, r9d
-; Line 339
-	mov	DWORD PTR [rcx+4], r8d
-; Line 342
-	mov	r8d, DWORD PTR vec$[rsp]
-	mov	DWORD PTR [rcx+16], edi
-	mov	DWORD PTR [rcx+20], edi
-	mov	DWORD PTR [rcx+8], r8d
-; Line 84
-	lea	eax, DWORD PTR [r8+7]
-	cdq
-	and	edx, 7
-	add	eax, edx
-	and	eax, -8
-; Line 343
-	mov	DWORD PTR [rcx+12], eax
-; Line 345
-	cmp	eax, r8d
-	je	SHORT $LN2@new_mat_
-; Line 346
-	lea	rcx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	DWORD PTR $T1[rsp+16], 346		; 0000015aH
-	mov	QWORD PTR $T1[rsp], rcx
-	lea	r8, OFFSET FLAT:??_C@_1KM@HMEAFDGA@?$AAm?$AAa?$AAt?$AAr?$AAi?$AAx?$AA?5?$AAw?$AAi?$AAl?$AAl?$AA?5?$AAb?$AAe?$AA?5@
-	lea	rcx, OFFSET FLAT:??_C@_08ENKIOJLC@new_mat_@
-	mov	DWORD PTR $T1[rsp+20], 44		; 0000002cH
-	mov	QWORD PTR $T1[rsp+8], rcx
-	mov	r9d, eax
-	lea	rcx, QWORD PTR $T1[rsp]
-	mov	edx, 4
-	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
-$LN2@new_mat_:
-; Line 349
-	movsxd	rcx, DWORD PTR [rbx+12]
-	mov	edx, 32					; 00000020H
-	imul	rcx, rdi
-	shl	rcx, 2
-	call	_aligned_malloc
-; Line 350
-	movsxd	r8, DWORD PTR [rbx+12]
-	xor	edx, edx
-	shl	r8, 2
-	mov	rcx, rax
-	mov	QWORD PTR [rbx+24], rax
-	call	memset
-; Line 351
-	mov	rax, rbx
-; Line 352
-	mov	rbx, QWORD PTR [rsp+80]
-	add	rsp, 64					; 00000040H
-	pop	rdi
-	ret	0
-?new_mat_@@YA?AUai_mat@@HHHH@Z ENDP			; new_mat_
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?vec_dot@@YQMUai_vec@@0@Z
@@ -4265,7 +4232,7 @@ lhs$ = 112
 rhs$ = 120
 ?vec_dot@@YQMUai_vec@@0@Z PROC				; vec_dot, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 306
+; Line 352
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rsi
 	mov	QWORD PTR [rsp+24], rdi
@@ -4282,22 +4249,22 @@ rhs$ = 120
 	mov	rdi, rdx
 	mov	QWORD PTR $T1[rbp+8], rax
 	mov	rsi, rcx
-	mov	DWORD PTR $T1[rbp+16], 306		; 00000132H
+	mov	DWORD PTR $T1[rbp+16], 352		; 00000160H
 	sete	r8b
-	mov	DWORD PTR $T1[rbp+20], 43		; 0000002bH
+	mov	DWORD PTR $T1[rbp+20], 45		; 0000002dH
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
 	lea	rcx, QWORD PTR $T1[rbp]
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 310
+; Line 356
 	mov	rcx, rbx
 	vpxor	xmm1, xmm1, xmm1
 	vmovups	YMMWORD PTR lane_acc$[rbp], ymm1
 	test	ebx, ebx
 	jle	SHORT $LN3@vec_dot
-; Line 311
+; Line 357
 	mov	rax, QWORD PTR [rsi+8]
-; Line 312
+; Line 358
 	mov	rdx, QWORD PTR [rdi+8]
 	sub	rdx, rax
 	dec	rcx
@@ -4305,7 +4272,7 @@ rhs$ = 120
 	inc	rcx
 	npad	1
 $LL4@vec_dot:
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rax]
 	vfmadd231ps ymm1, ymm0, YMMWORD PTR [rdx+rax]
 	lea	rax, QWORD PTR [rax+32]
@@ -4313,7 +4280,7 @@ $LL4@vec_dot:
 	jne	SHORT $LL4@vec_dot
 	vmovups	YMMWORD PTR lane_acc$[rbp], ymm1
 $LN3@vec_dot:
-; Line 316
+; Line 362
 	vmovss	xmm0, DWORD PTR lane_acc$[rbp]
 	vaddss	xmm1, xmm0, DWORD PTR lane_acc$[rbp+4]
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$[rbp+8]
@@ -4323,7 +4290,7 @@ $LN3@vec_dot:
 	vaddss	xmm2, xmm1, DWORD PTR lane_acc$[rbp+24]
 	vaddss	xmm0, xmm2, DWORD PTR lane_acc$[rbp+28]
 	vzeroupper
-; Line 324
+; Line 370
 	mov	rbx, QWORD PTR [rsp+112]
 	mov	rsi, QWORD PTR [rsp+120]
 	mov	rdi, QWORD PTR [rsp+128]
@@ -4335,70 +4302,61 @@ _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z
 _TEXT	SEGMENT
-tv257 = 0
-__$ReturnAddress$ = 128
-dst$ = 136
-lhs$ = 144
+__$ReturnAddress$ = 48
+dst$ = 56
+lhs$ = 64
 ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z PROC			; vec_dsg_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 288
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rsi
-	mov	QWORD PTR [rsp+24], rdi
-	push	rbp
-	push	r14
+; Line 334
+	mov	QWORD PTR [rsp+24], rsi
+	mov	QWORD PTR [rsp+32], rdi
 	push	r15
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+64]
-	and	rbp, -32				; ffffffffffffffe0H
-; Line 290
+	sub	rsp, 32					; 00000020H
+; Line 336
 	movsxd	rdi, DWORD PTR [rdx]
 	mov	rsi, rdx
 	mov	r15, rcx
 	test	rdi, rdi
 	jle	SHORT $LN3@vec_dsg_
-; Line 294
+; Line 340
+	mov	QWORD PTR [rsp+48], rbx
 	mov	rbx, QWORD PTR [rdx+8]
+	mov	QWORD PTR [rsp+56], r14
 	mov	r14, QWORD PTR [r8+8]
 	sub	r14, rbx
 	dec	rdi
 	shr	rdi, 3
 	inc	rdi
-	npad	12
+	npad	3
 $LL4@vec_dsg_:
-; Line 293
-	vmovups	ymm1, YMMWORD PTR ?lan_zro@@3T__m256@@B
-	vsubps	ymm0, ymm1, YMMWORD PTR [r14+rbx]
-	call	__vdecl_expf8
-	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vaddps	ymm1, ymm0, ymm2
-	vdivps	ymm0, ymm2, ymm1
-	vmovups	YMMWORD PTR tv257[rbp], ymm0
-	vmovups	ymm0, YMMWORD PTR [r14+rbx]
+; Line 339
+	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
+	vsubps	ymm0, ymm0, YMMWORD PTR [r14+rbx]
 	call	__vdecl_expf8
 	lea	rbx, QWORD PTR [rbx+32]
-	vmovups	ymm1, YMMWORD PTR ?lan_one@@3T__m256@@B
-	vsubps	ymm1, ymm1, ymm0
-	vmulps	ymm2, ymm1, YMMWORD PTR tv257[rbp]
-; Line 294
-	vmovups	YMMWORD PTR [rbx-32], ymm2
+	vmovups	ymm3, YMMWORD PTR ?lan_one@@3T__m256@@B
+	vaddps	ymm1, ymm0, ymm3
+	vdivps	ymm2, ymm3, ymm1
+	vsubps	ymm0, ymm3, ymm2
+	vmulps	ymm1, ymm0, ymm2
+; Line 340
+	vmovups	YMMWORD PTR [rbx-32], ymm1
 	sub	rdi, 1
 	jne	SHORT $LL4@vec_dsg_
+; Line 336
+	mov	r14, QWORD PTR [rsp+56]
+	mov	rbx, QWORD PTR [rsp+48]
 $LN3@vec_dsg_:
-; Line 301
+; Line 347
 	vmovups	xmm0, XMMWORD PTR [rsi]
 	vmovups	XMMWORD PTR [r15], xmm0
 	mov	rax, r15
 	vzeroupper
-; Line 302
-	lea	r11, QWORD PTR [rsp+96]
-	mov	rbx, QWORD PTR [r11+32]
-	mov	rsi, QWORD PTR [r11+40]
-	mov	rdi, QWORD PTR [r11+48]
-	mov	rsp, r11
+; Line 348
+	mov	rsi, QWORD PTR [rsp+64]
+	mov	rdi, QWORD PTR [rsp+72]
+	add	rsp, 32					; 00000020H
 	pop	r15
-	pop	r14
-	pop	rbp
 	ret	0
 ?vec_dsg_@@YQ?AUai_vec@@U1@0@Z ENDP			; vec_dsg_
 _TEXT	ENDS
@@ -4410,14 +4368,14 @@ dst$ = 56
 lhs$ = 64
 ?vec_sig_@@YQ?AUai_vec@@U1@0@Z PROC			; vec_sig_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 266
+; Line 313
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rsi
 	mov	QWORD PTR [rsp+24], rdi
 	mov	QWORD PTR [rsp+32], r14
 	push	r15
 	sub	rsp, 32					; 00000020H
-; Line 272
+; Line 319
 	movsxd	rdi, DWORD PTR [rdx]
 	mov	r14, rdx
 	mov	rbx, QWORD PTR [rdx+8]
@@ -4431,7 +4389,7 @@ lhs$ = 64
 	inc	rdi
 	npad	3
 $LL4@vec_sig_:
-; Line 275
+; Line 322
 	vmovups	ymm0, YMMWORD PTR ?lan_zro@@3T__m256@@B
 	vsubps	ymm0, ymm0, YMMWORD PTR [rsi+rbx]
 	call	__vdecl_expf8
@@ -4439,17 +4397,17 @@ $LL4@vec_sig_:
 	vmovups	ymm2, YMMWORD PTR ?lan_one@@3T__m256@@B
 	vaddps	ymm1, ymm0, ymm2
 	vdivps	ymm2, ymm2, ymm1
-; Line 276
+; Line 323
 	vmovups	YMMWORD PTR [rbx-32], ymm2
 	sub	rdi, 1
 	jne	SHORT $LL4@vec_sig_
 $LN3@vec_sig_:
-; Line 284
+; Line 330
 	vmovups	xmm0, XMMWORD PTR [r14]
 	vmovups	XMMWORD PTR [r15], xmm0
 	mov	rax, r15
 	vzeroupper
-; Line 285
+; Line 331
 	mov	rbx, QWORD PTR [rsp+48]
 	mov	rsi, QWORD PTR [rsp+56]
 	mov	rdi, QWORD PTR [rsp+64]
@@ -4469,17 +4427,17 @@ lhs$ = 96
 rhs$ = 104
 ?vec_mul_@@YQ?AUai_vec@@U1@00@Z PROC			; vec_mul_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 232
+; Line 279
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rsi
 	mov	QWORD PTR [rsp+24], rdi
 	push	r14
 	sub	rsp, 64					; 00000040H
 	mov	r14, r8
-; Line 237
-	mov	DWORD PTR $T1[rsp+16], 237		; 000000edH
+; Line 284
+	mov	DWORD PTR $T1[rsp+16], 284		; 0000011cH
 	xor	r8d, r8d
-	mov	DWORD PTR $T1[rsp+20], 42		; 0000002aH
+	mov	DWORD PTR $T1[rsp+20], 44		; 0000002cH
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 	mov	rsi, r9
 	mov	QWORD PTR $T1[rsp], rax
@@ -4494,11 +4452,11 @@ rhs$ = 104
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	sete	r8b
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 239
+; Line 286
 	movsxd	rcx, DWORD PTR [rdi]
 	test	rcx, rcx
 	jle	SHORT $LN3@vec_mul_
-; Line 240
+; Line 287
 	mov	rax, QWORD PTR [r14+8]
 	mov	rdx, QWORD PTR [rsi+8]
 	mov	r8, QWORD PTR [rdi+8]
@@ -4516,12 +4474,12 @@ $LL4@vec_mul_:
 	sub	rcx, 1
 	jne	SHORT $LL4@vec_mul_
 $LN3@vec_mul_:
-; Line 247
+; Line 294
 	vmovups	xmm0, XMMWORD PTR [rdi]
 	vmovups	XMMWORD PTR [rbx], xmm0
 	mov	rax, rbx
 	vzeroupper
-; Line 248
+; Line 295
 	mov	rbx, QWORD PTR [rsp+80]
 	mov	rsi, QWORD PTR [rsp+88]
 	mov	rdi, QWORD PTR [rsp+96]
@@ -4540,17 +4498,17 @@ lhs$ = 96
 rhs$ = 104
 ?vec_add_@@YQ?AUai_vec@@U1@00@Z PROC			; vec_add_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 212
+; Line 259
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rsi
 	mov	QWORD PTR [rsp+24], rdi
 	push	r14
 	sub	rsp, 64					; 00000040H
 	mov	r14, r8
-; Line 217
-	mov	DWORD PTR $T1[rsp+16], 217		; 000000d9H
+; Line 264
+	mov	DWORD PTR $T1[rsp+16], 264		; 00000108H
 	xor	r8d, r8d
-	mov	DWORD PTR $T1[rsp+20], 41		; 00000029H
+	mov	DWORD PTR $T1[rsp+20], 43		; 0000002bH
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 	mov	rsi, r9
 	mov	QWORD PTR $T1[rsp], rax
@@ -4565,11 +4523,11 @@ rhs$ = 104
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	sete	r8b
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 220
+; Line 267
 	movsxd	rcx, DWORD PTR [rdi]
 	test	rcx, rcx
 	jle	SHORT $LN3@vec_add_
-; Line 221
+; Line 268
 	mov	rax, QWORD PTR [r14+8]
 	mov	rdx, QWORD PTR [rsi+8]
 	mov	r8, QWORD PTR [rdi+8]
@@ -4587,12 +4545,12 @@ $LL4@vec_add_:
 	sub	rcx, 1
 	jne	SHORT $LL4@vec_add_
 $LN3@vec_add_:
-; Line 228
+; Line 275
 	vmovups	xmm0, XMMWORD PTR [rdi]
 	vmovups	XMMWORD PTR [rbx], xmm0
 	mov	rax, rbx
 	vzeroupper
-; Line 229
+; Line 276
 	mov	rbx, QWORD PTR [rsp+80]
 	mov	rsi, QWORD PTR [rsp+88]
 	mov	rdi, QWORD PTR [rsp+96]
@@ -4611,17 +4569,17 @@ lhs$ = 96
 rhs$ = 104
 ?vec_sub_@@YQ?AUai_vec@@U1@00@Z PROC			; vec_sub_, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 194
+; Line 241
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rsi
 	mov	QWORD PTR [rsp+24], rdi
 	push	r14
 	sub	rsp, 64					; 00000040H
 	mov	r14, r8
-; Line 198
-	mov	DWORD PTR $T1[rsp+16], 198		; 000000c6H
+; Line 245
+	mov	DWORD PTR $T1[rsp+16], 245		; 000000f5H
 	xor	r8d, r8d
-	mov	DWORD PTR $T1[rsp+20], 40		; 00000028H
+	mov	DWORD PTR $T1[rsp+20], 42		; 0000002aH
 	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
 	mov	rsi, r9
 	mov	QWORD PTR $T1[rsp], rax
@@ -4636,11 +4594,11 @@ rhs$ = 104
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	sete	r8b
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 200
+; Line 247
 	movsxd	rcx, DWORD PTR [rdi]
 	test	rcx, rcx
 	jle	SHORT $LN3@vec_sub_
-; Line 201
+; Line 248
 	mov	rax, QWORD PTR [r14+8]
 	mov	rdx, QWORD PTR [rsi+8]
 	mov	r8, QWORD PTR [rdi+8]
@@ -4658,12 +4616,12 @@ $LL4@vec_sub_:
 	sub	rcx, 1
 	jne	SHORT $LL4@vec_sub_
 $LN3@vec_sub_:
-; Line 208
+; Line 255
 	vmovups	xmm0, XMMWORD PTR [rdi]
 	vmovups	XMMWORD PTR [rbx], xmm0
 	mov	rax, rbx
 	vzeroupper
-; Line 209
+; Line 256
 	mov	rbx, QWORD PTR [rsp+80]
 	mov	rsi, QWORD PTR [rsp+88]
 	mov	rdi, QWORD PTR [rsp+96]
@@ -4678,71 +4636,45 @@ _TEXT	SEGMENT
 v$ = 8
 ?vec_rnd@@YAXUai_vec@@@Z PROC				; vec_rnd, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 170
-	movsxd	r10, DWORD PTR [rcx]
-	xor	r8d, r8d
-	mov	r11, rcx
-	mov	r9d, r8d
-	test	r10d, r10d
-	jle	$LN12@vec_rnd
-	cmp	r10d, 16
-	jb	$LN12@vec_rnd
-; Line 171
-	mov	rdx, QWORD PTR [rcx+8]
-	mov	ecx, r10d
-	vmovd	xmm4, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
-	vpshufd	xmm4, xmm4, 0
-	and	ecx, -2147483633			; ffffffff8000000fH
-	jge	SHORT $LN20@vec_rnd
-; Line 170
-	dec	ecx
-	or	ecx, -16
-	inc	ecx
-$LN20@vec_rnd:
-	vpsrld	xmm0, xmm4, 8
-	vcvtdq2ps xmm2, xmm0
-	vmulps	xmm3, xmm2, XMMWORD PTR __xmm@43800000438000004380000043800000
-	vmovdqu	xmm0, XMMWORD PTR __xmm@000000ff000000ff000000ff000000ff
-	vpand	xmm2, xmm0, xmm4
-	vcvtdq2ps xmm1, xmm2
-	mov	eax, r10d
-	sub	eax, ecx
-	vaddps	xmm3, xmm3, xmm1
-	vmulps	xmm2, xmm3, XMMWORD PTR __xmm@2f8000002f8000002f8000002f800000
-	movsxd	rcx, eax
-; Line 171
-	mov	eax, 32					; 00000020H
-	vinsertf128 ymm2, ymm2, xmm2, 1
-$LL4@vec_rnd:
-	vmovups	YMMWORD PTR [rax+rdx-32], ymm2
-	add	r9d, 16
-	add	r8, 16
-	vmovups	YMMWORD PTR [rax+rdx], ymm2
-	lea	rax, QWORD PTR [rax+64]
-	cmp	r8, rcx
-	jl	SHORT $LL4@vec_rnd
-$LN12@vec_rnd:
-; Line 170
-	movsxd	rcx, r9d
-	cmp	rcx, r10
-	jge	SHORT $LN3@vec_rnd
-; Line 171
+; Line 217
+	movsxd	rdx, DWORD PTR [rcx]
+	test	rdx, rdx
+	jle	SHORT $LN3@vec_rnd
+; Line 218
+	mov	r8, QWORD PTR [rcx+8]
+	vmovss	xmm2, DWORD PTR __real@2f800000
 	mov	eax, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
-	mov	r8, QWORD PTR [r11+8]
+	vxorps	xmm3, xmm3, xmm3
+	npad	2
+$LL12@vec_rnd:
+; Line 115
+	mov	ecx, eax
+; Line 217
+	lea	r8, QWORD PTR [r8+4]
+; Line 115
+	shl	ecx, 13
+	xor	ecx, eax
+; Line 116
+	mov	eax, ecx
+	shr	eax, 17
+	xor	ecx, eax
+; Line 117
+	mov	eax, ecx
+	shl	eax, 5
+	xor	eax, ecx
+; Line 123
+	mov	DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA, eax
 	vxorps	xmm0, xmm0, xmm0
 	vcvtsi2ss xmm0, xmm0, rax
-	vmulss	xmm2, xmm0, DWORD PTR __real@2f800000
-	vxorps	xmm1, xmm1, xmm1
-	vaddss	xmm3, xmm2, xmm1
-	npad	7
-$LL11@vec_rnd:
-	vmovss	DWORD PTR [r8+rcx*4], xmm3
-	inc	rcx
-	cmp	rcx, r10
-	jl	SHORT $LL11@vec_rnd
+; Line 124
+	vmulss	xmm1, xmm0, xmm2
+	vaddss	xmm1, xmm1, xmm3
+; Line 218
+	vmovss	DWORD PTR [r8-4], xmm1
+	sub	rdx, 1
+	jne	SHORT $LL12@vec_rnd
 $LN3@vec_rnd:
-; Line 172
-	vzeroupper
+; Line 219
 	ret	0
 ?vec_rnd@@YAXUai_vec@@@Z ENDP				; vec_rnd
 _TEXT	ENDS
@@ -4753,14 +4685,14 @@ lhs$ = 8
 rhs$ = 16
 ?vec_eql@@YAHUai_vec@@0@Z PROC				; vec_eql, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 160
+; Line 207
 	movsxd	r8, DWORD PTR [rcx]
 	cmp	r8d, DWORD PTR [rdx]
 	jne	SHORT $LN9@vec_eql
-; Line 162
+; Line 209
 	test	r8d, r8d
 	jle	SHORT $LN3@vec_eql
-; Line 163
+; Line 210
 	mov	rax, QWORD PTR [rdx+8]
 	xor	edx, edx
 	mov	rcx, QWORD PTR [rcx+8]
@@ -4771,20 +4703,20 @@ $LL4@vec_eql:
 	vucomiss xmm0, DWORD PTR [rax]
 	jp	SHORT $LN9@vec_eql
 	jne	SHORT $LN9@vec_eql
-; Line 162
+; Line 209
 	inc	rdx
 	add	rax, 4
 	cmp	rdx, r8
 	jl	SHORT $LL4@vec_eql
 $LN3@vec_eql:
-; Line 165
+; Line 212
 	mov	eax, 1
-; Line 166
+; Line 213
 	ret	0
 $LN9@vec_eql:
-; Line 164
+; Line 211
 	xor	eax, eax
-; Line 166
+; Line 213
 	ret	0
 ?vec_eql@@YAHUai_vec@@0@Z ENDP				; vec_eql
 _TEXT	ENDS
@@ -4805,62 +4737,62 @@ s8$ = 184
 s9$ = 192
 ?new_vec10@@YA?AUai_vec@@MMMMMMMMMM@Z PROC		; new_vec10, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 147
+; Line 194
 	push	rbx
 	sub	rsp, 96					; 00000060H
 	vmovaps	XMMWORD PTR [rsp+80], xmm6
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	vmovaps	XMMWORD PTR [rsp+64], xmm7
-; Line 147
+; Line 194
 	mov	rbx, rcx
 	vmovaps	XMMWORD PTR [rsp+48], xmm8
 	vmovaps	xmm8, xmm3
-; Line 103
+; Line 150
 	lea	ecx, QWORD PTR [rdx+32]
-; Line 147
+; Line 194
 	vmovaps	xmm7, xmm2
 	vmovaps	xmm6, xmm1
-; Line 103
-	call	_aligned_malloc
 ; Line 150
+	call	_aligned_malloc
+; Line 197
 	vmovss	xmm1, DWORD PTR s4$[rsp]
 	vpxor	xmm0, xmm0, xmm0
-; Line 109
+; Line 156
 	mov	QWORD PTR $T1[rsp+8], rax
 	vmovups	YMMWORD PTR [rax], ymm0
 	vmovups	YMMWORD PTR [rax+32], ymm0
 	mov	DWORD PTR $T1[rsp], 10
 	mov	DWORD PTR $T1[rsp+4], 16
-; Line 147
+; Line 194
 	vmovups	xmm0, XMMWORD PTR $T1[rsp]
 	vmovups	XMMWORD PTR [rbx], xmm0
-; Line 148
+; Line 195
 	mov	rax, QWORD PTR [rbx+8]
-; Line 149
+; Line 196
 	vmovss	xmm0, DWORD PTR s3$[rsp]
 	vmovss	DWORD PTR [rax], xmm6
 	vmovss	DWORD PTR [rax+4], xmm7
 	vmovss	DWORD PTR [rax+8], xmm8
 	vmovss	DWORD PTR [rax+12], xmm0
-; Line 150
+; Line 197
 	vmovss	xmm0, DWORD PTR s5$[rsp]
 	vmovss	DWORD PTR [rax+16], xmm1
-; Line 151
+; Line 198
 	vmovss	xmm1, DWORD PTR s6$[rsp]
 	vmovss	DWORD PTR [rax+20], xmm0
 	vmovss	xmm0, DWORD PTR s7$[rsp]
 	vmovss	DWORD PTR [rax+24], xmm1
-; Line 152
+; Line 199
 	vmovss	xmm1, DWORD PTR s8$[rsp]
 	vmovss	DWORD PTR [rax+28], xmm0
 	vmovss	xmm0, DWORD PTR s9$[rsp]
 	vmovss	DWORD PTR [rax+32], xmm1
 	vmovss	DWORD PTR [rax+36], xmm0
-; Line 153
+; Line 200
 	mov	rax, rbx
 	vzeroupper
-; Line 154
+; Line 201
 	vmovaps	xmm6, XMMWORD PTR [rsp+80]
 	vmovaps	xmm7, XMMWORD PTR [rsp+64]
 	vmovaps	xmm8, XMMWORD PTR [rsp+48]
@@ -4879,44 +4811,44 @@ s1$ = 128
 s2$ = 136
 ?new_vec3@@YA?AUai_vec@@MMM@Z PROC			; new_vec3, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 124
+; Line 171
 	push	rbx
 	sub	rsp, 96					; 00000060H
 	vmovaps	XMMWORD PTR [rsp+80], xmm6
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	vmovaps	XMMWORD PTR [rsp+64], xmm7
-; Line 124
+; Line 171
 	mov	rbx, rcx
 	vmovaps	XMMWORD PTR [rsp+48], xmm8
-; Line 103
+; Line 150
 	mov	ecx, edx
-; Line 124
+; Line 171
 	vmovaps	xmm8, xmm3
 	vmovaps	xmm7, xmm2
 	vmovaps	xmm6, xmm1
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	vpxor	xmm0, xmm0, xmm0
-; Line 109
+; Line 156
 	mov	QWORD PTR $T1[rsp+8], rax
 	mov	DWORD PTR $T1[rsp], 3
 	vmovups	YMMWORD PTR [rax], ymm0
 	mov	DWORD PTR $T1[rsp+4], 8
-; Line 124
+; Line 171
 	vmovups	xmm0, XMMWORD PTR $T1[rsp]
 	vmovups	XMMWORD PTR [rbx], xmm0
-; Line 125
+; Line 172
 	mov	rax, QWORD PTR [rbx+8]
 	vmovss	DWORD PTR [rax], xmm6
-; Line 126
+; Line 173
 	vmovss	DWORD PTR [rax+4], xmm7
-; Line 127
+; Line 174
 	vmovss	DWORD PTR [rax+8], xmm8
-; Line 128
+; Line 175
 	mov	rax, rbx
 	vzeroupper
-; Line 129
+; Line 176
 	vmovaps	xmm6, XMMWORD PTR [rsp+80]
 	vmovaps	xmm7, XMMWORD PTR [rsp+64]
 	vmovaps	xmm8, XMMWORD PTR [rsp+48]
@@ -4934,39 +4866,39 @@ s0$ = 104
 s1$ = 112
 ?new_vec2@@YA?AUai_vec@@MM@Z PROC			; new_vec2, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 115
+; Line 162
 	push	rbx
 	sub	rsp, 80					; 00000050H
 	vmovaps	XMMWORD PTR [rsp+64], xmm6
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
-; Line 115
+; Line 162
 	mov	rbx, rcx
 	vmovaps	XMMWORD PTR [rsp+48], xmm7
-; Line 103
+; Line 150
 	mov	ecx, edx
-; Line 115
+; Line 162
 	vmovaps	xmm7, xmm2
 	vmovaps	xmm6, xmm1
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	vpxor	xmm0, xmm0, xmm0
-; Line 109
+; Line 156
 	mov	QWORD PTR $T1[rsp+8], rax
 	mov	DWORD PTR $T1[rsp], 2
 	vmovups	YMMWORD PTR [rax], ymm0
 	mov	DWORD PTR $T1[rsp+4], 8
-; Line 115
+; Line 162
 	vmovups	xmm0, XMMWORD PTR $T1[rsp]
 	vmovups	XMMWORD PTR [rbx], xmm0
-; Line 116
+; Line 163
 	mov	rax, QWORD PTR [rbx+8]
 	vmovss	DWORD PTR [rax], xmm6
 	vmovss	DWORD PTR [rax+4], xmm7
-; Line 117
+; Line 164
 	mov	rax, rbx
 	vzeroupper
-; Line 118
+; Line 165
 	vmovaps	xmm6, XMMWORD PTR [rsp+64]
 	vmovaps	xmm7, XMMWORD PTR [rsp+48]
 	add	rsp, 80					; 00000050H
@@ -4981,40 +4913,40 @@ __$ReturnAddress$ = 48
 len$ = 56
 ?new_vec@@YA?AUai_vec@@H@Z PROC				; new_vec, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 99
+; Line 146
 	mov	QWORD PTR [rsp+8], rbx
 	mov	QWORD PTR [rsp+16], rbp
 	mov	QWORD PTR [rsp+24], rsi
 	mov	QWORD PTR [rsp+32], rdi
 	push	r14
 	sub	rsp, 32					; 00000020H
-; Line 84
+; Line 131
 	lea	eax, DWORD PTR [rdx+7]
-; Line 99
+; Line 146
 	mov	ebp, edx
-; Line 84
+; Line 131
 	cdq
-; Line 99
+; Line 146
 	mov	r14, rcx
-; Line 84
+; Line 131
 	and	edx, 7
 	lea	esi, DWORD PTR [rdx+rax]
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
-; Line 84
+; Line 131
 	and	esi, -8
-; Line 103
+; Line 150
 	movsxd	rbx, esi
 	shl	rbx, 2
 	mov	rcx, rbx
 	call	_aligned_malloc
-; Line 104
+; Line 151
 	mov	r8, rbx
 	xor	edx, edx
 	mov	rcx, rax
 	mov	rdi, rax
 	call	memset
-; Line 111
+; Line 158
 	mov	rbx, QWORD PTR [rsp+48]
 	mov	rax, r14
 	mov	DWORD PTR [r14], ebp
@@ -5034,13 +4966,13 @@ _TEXT	SEGMENT
 len$ = 8
 ?vec_max@@YAHH@Z PROC					; vec_max, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 84
+; Line 131
 	lea	eax, DWORD PTR [rcx+7]
 	cdq
 	and	edx, 7
 	add	eax, edx
 	and	eax, -8
-; Line 88
+; Line 135
 	ret	0
 ?vec_max@@YAHH@Z ENDP					; vec_max
 _TEXT	ENDS
@@ -5051,15 +4983,31 @@ min$ = 8
 max$ = 16
 ?rand_f@@YAMMM@Z PROC					; rand_f, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 77
-	mov	eax, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
-	vsubss	xmm1, xmm1, xmm0
-	vxorps	xmm2, xmm2, xmm2
-	vcvtsi2ss xmm2, xmm2, rax
-	vmulss	xmm3, xmm2, DWORD PTR __real@2f800000
-	vmulss	xmm3, xmm3, xmm1
-	vaddss	xmm0, xmm3, xmm0
-; Line 78
+; Line 115
+	mov	ecx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
+; Line 122
+	vmovaps	xmm3, xmm0
+; Line 115
+	shl	ecx, 13
+	xor	ecx, DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA
+; Line 116
+	mov	eax, ecx
+	shr	eax, 17
+	xor	ecx, eax
+; Line 117
+	mov	eax, ecx
+	shl	eax, 5
+	xor	eax, ecx
+	vxorps	xmm0, xmm0, xmm0
+; Line 123
+	vcvtsi2ss xmm0, xmm0, rax
+; Line 124
+	vmulss	xmm2, xmm0, DWORD PTR __real@2f800000
+	vsubss	xmm1, xmm1, xmm3
+	vmulss	xmm2, xmm2, xmm1
+	vaddss	xmm0, xmm2, xmm3
+	mov	DWORD PTR ?state@?1??rand_f@@YAMMM@Z@4IA, eax
+; Line 125
 	ret	0
 ?rand_f@@YAMMM@Z ENDP					; rand_f
 _TEXT	ENDS
@@ -5069,21 +5017,71 @@ _TEXT	SEGMENT
 x$ = 8
 ?xorshift32@@YAII@Z PROC				; xorshift32, COMDAT
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 69
+; Line 115
 	mov	eax, ecx
 	shl	eax, 13
 	xor	ecx, eax
-; Line 70
+; Line 116
 	mov	eax, ecx
 	shr	eax, 17
 	xor	ecx, eax
-; Line 71
+; Line 117
 	mov	eax, ecx
 	shl	eax, 5
 	xor	eax, ecx
-; Line 73
+; Line 119
 	ret	0
 ?xorshift32@@YAII@Z ENDP				; xorshift32
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+;	COMDAT ?mem_chk_vec@@YAXUai_vec@@@Z
+_TEXT	SEGMENT
+vec$ = 8
+?mem_chk_vec@@YAXUai_vec@@@Z PROC			; mem_chk_vec, COMDAT
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 110
+	ret	0
+?mem_chk_vec@@YAXUai_vec@@@Z ENDP			; mem_chk_vec
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+;	COMDAT ??Aai_mat@@QEAAPEAMH@Z
+_TEXT	SEGMENT
+$T1 = 32
+this$ = 80
+idx$ = 88
+??Aai_mat@@QEAAPEAMH@Z PROC				; ai_mat::operator[], COMDAT
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 85
+$LN6:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 64					; 00000040H
+	xor	r8d, r8d
+	mov	DWORD PTR $T1[rsp+16], 85		; 00000055H
+	cmp	edx, DWORD PTR [rcx+16]
+	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	QWORD PTR $T1[rsp], rax
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	ebx, edx
+	mov	DWORD PTR $T1[rsp+20], 41		; 00000029H
+	mov	rdi, rcx
+	lea	rax, OFFSET FLAT:??_C@_0M@HIENKLDG@operator?5?$FL?$FN@
+	setl	r8b
+	mov	QWORD PTR $T1[rsp+8], rax
+	lea	rdx, OFFSET FLAT:??_C@_09EHENKKKI@idx?5?$DM?5min@
+	lea	rcx, QWORD PTR $T1[rsp]
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+; Line 86
+	imul	ebx, DWORD PTR [rdi+12]
+	mov	rax, QWORD PTR [rdi+24]
+	movsxd	rcx, ebx
+; Line 87
+	mov	rbx, QWORD PTR [rsp+80]
+	lea	rax, QWORD PTR [rax+rcx*4]
+	add	rsp, 64					; 00000040H
+	pop	rdi
+	ret	0
+??Aai_mat@@QEAAPEAMH@Z ENDP				; ai_mat::operator[]
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?TraceMessageKindToString@@YAPEB_WH@Z
@@ -6376,522 +6374,787 @@ _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT ?MAIN@@YAXXZ
 _TEXT	SEGMENT
-$T50 = 64
-$T51 = 64
-$T52 = 64
-$T53 = 64
-$T54 = 64
-prd_val$55 = 96
-labels_file_size$ = 96
+$T56 = 64
+$T57 = 64
+$T58 = 64
+$T59 = 64
+$T60 = 64
+$T61 = 64
+img_num$1$ = 96
+prd_val$62 = 96
 img_col_len$1$ = 100
 img_row_len$1$ = 104
-$T56 = 112
-images_file_size$ = 112
+$T63 = 112
+mem$1$ = 112
 labels_file_data$1$ = 120
 images_file_data$1$ = 128
-$T57 = 144
+$T64 = 144
 inp$ = 144
-Result$58 = 160
-Result$59 = 168
-Result$60 = 176
-$T61 = 192
-__traceblock__53$49 = 192
-$T62 = 240
-$T63 = 272
-$T64 = 304
-$T65 = 336
-$T66 = 368
-$T67 = 400
-$T68 = 432
-$T69 = 464
-$T70 = 496
-$T71 = 528
-$T72 = 560
-$T73 = 592
-$T74 = 624
-$T75 = 656
-$T76 = 688
-net$ = 720
-$T77 = 1024
-$T78 = 1168
-valid_output_vectors$ = 1312
-__$ArrayPad$ = 1472
+images_file_size$ = 164
+Result$65 = 168
+Result$66 = 176
+Result$67 = 184
+__traceblock__56$55 = 192
+$T68 = 192
+$T69 = 240
+$T70 = 272
+$T71 = 304
+$T72 = 336
+$T73 = 368
+$T74 = 400
+$T75 = 432
+$T76 = 464
+$T77 = 496
+$T78 = 528
+$T79 = 560
+$T80 = 592
+$T81 = 624
+$T82 = 656
+$T83 = 688
+$T84 = 720
+$T85 = 752
+$T86 = 784
+$T87 = 816
+$T88 = 848
+$T89 = 880
+$T90 = 912
+$T91 = 944
+net$ = 976
+$T92 = 1280
+$T93 = 1424
+valid_output_vectors$ = 1568
+__$ArrayPad$ = 1728
 ?MAIN@@YAXXZ PROC					; MAIN, COMDAT
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 185
+; Line 336
 	mov	r11, rsp
-	push	r13
-	sub	rsp, 1584				; 00000630H
+	sub	rsp, 1848				; 00000738H
 	mov	rax, QWORD PTR __security_cookie
 	xor	rax, rsp
 	mov	QWORD PTR __$ArrayPad$[rsp], rax
 	mov	QWORD PTR [r11+8], rbx
-; Line 186
+; Line 337
 	lea	rdx, OFFSET FLAT:??_C@_0BN@EEIDJDDN@data?2train?9labels?4idx1?9ubyte@
 	mov	QWORD PTR [r11+16], rsi
-	lea	rcx, QWORD PTR labels_file_size$[rsp]
+	lea	rcx, QWORD PTR [r11-1688]
 	mov	QWORD PTR [r11+24], rdi
 	mov	QWORD PTR [r11+32], r12
+	mov	QWORD PTR [r11-8], r13
 	mov	QWORD PTR [r11-16], r14
 	mov	QWORD PTR [r11-24], r15
 	vmovaps	XMMWORD PTR [r11-40], xmm6
 	vmovaps	XMMWORD PTR [r11-56], xmm7
+	vmovaps	XMMWORD PTR [r11-72], xmm8
 	call	?LoadFileData@@YAPEAXPEAIPEBD@Z		; LoadFileData
-; Line 190
+; Line 341
 	lea	rdx, OFFSET FLAT:??_C@_0BN@FIFMGHNF@data?2train?9images?4idx3?9ubyte@
 	mov	QWORD PTR labels_file_data$1$[rsp], rax
 	lea	rcx, QWORD PTR images_file_size$[rsp]
-	mov	r13, rax
 	call	?LoadFileData@@YAPEAXPEAIPEBD@Z		; LoadFileData
 	mov	rcx, rax
 	mov	QWORD PTR images_file_data$1$[rsp], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 191
-	mov	r15d, DWORD PTR [rax+4]
-; Line 192
-	mov	eax, DWORD PTR [rax+8]
+; Line 342
+	mov	eax, DWORD PTR [rax+4]
 ; File W:\cpp\void\dr-ai\num-ai.h
-; Line 89
+; Line 84
+	bswap	eax
+	mov	DWORD PTR img_num$1$[rsp], eax
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 343
+	mov	eax, DWORD PTR [rcx+8]
+; File W:\cpp\void\dr-ai\num-ai.h
+; Line 84
 	bswap	eax
 	mov	DWORD PTR img_row_len$1$[rsp], eax
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 193
+; Line 344
 	mov	eax, DWORD PTR [rcx+12]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	ecx, edx
 ; File W:\cpp\void\dr-ai\num-ai.h
-; Line 89
+; Line 84
 	bswap	eax
 	mov	DWORD PTR img_col_len$1$[rsp], eax
-	bswap	r15d
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
-; Line 104
-	xor	r12d, r12d
-; Line 103
+; Line 151
+	xor	edi, edi
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	mov	rbx, rax
-; Line 104
-	mov	QWORD PTR [rax+8], r12
-	mov	QWORD PTR [rax+16], r12
-	mov	QWORD PTR [rax+24], r12
-; Line 116
-	mov	DWORD PTR [rax], 1065353216		; 3f800000H
-	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
-	call	_aligned_malloc
-	mov	rcx, rax
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	lea	rdi, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	lea	rsi, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 186
-	sub	rcx, rbx
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 104
-	mov	QWORD PTR [rax+8], r12
-	mov	QWORD PTR [rax+16], r12
-	mov	QWORD PTR [rax+24], r12
-; Line 116
-	mov	DWORD PTR [rax], 1065353216		; 3f800000H
-	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 162
-	mov	eax, r12d
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	mov	QWORD PTR $T54[rsp], rdi
-	mov	QWORD PTR $T54[rsp+8], rsi
-	mov	DWORD PTR $T54[rsp+16], 196		; 000000c4H
-	mov	DWORD PTR $T54[rsp+20], 45		; 0000002dH
-$LL47@MAIN:
-; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
 ; Line 163
-	vmovss	xmm0, DWORD PTR [rcx+rbx]
-	vucomiss xmm0, DWORD PTR [rbx]
-	mov	r14d, 1
-	jp	SHORT $LN342@MAIN
-	jne	SHORT $LN342@MAIN
-; Line 162
-	inc	eax
-	add	rbx, 4
-	cmp	eax, 2
-	jl	SHORT $LL47@MAIN
-; Line 165
-	mov	r8d, r14d
-	jmp	SHORT $LN44@MAIN
-$LN342@MAIN:
-; Line 164
-	mov	r8d, r12d
-$LN44@MAIN:
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 196
-	vmovups	xmm0, XMMWORD PTR $T54[rsp]
-	vmovsd	xmm1, QWORD PTR $T54[rsp+16]
-	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	lea	rdx, OFFSET FLAT:??_C@_0CL@HGLGICOI@?$CB?$CB?5vec_eql?$CInew_vec2?$CI1?0?51?$CJ?0?5new_@
-	lea	rcx, QWORD PTR $T73[rsp]
-	vmovups	XMMWORD PTR $T73[rsp], xmm0
-	vmovsd	QWORD PTR $T73[rsp+16], xmm1
-	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	edx, 32					; 00000020H
-	mov	ecx, edx
-	call	_aligned_malloc
-	mov	edx, 32					; 00000020H
-	mov	rbx, rax
-	mov	ecx, edx
-; Line 104
-	mov	QWORD PTR [rax+8], r12
-	mov	QWORD PTR [rax+16], r12
-	mov	QWORD PTR [rax+24], r12
-; Line 116
 	mov	DWORD PTR [rax], 1065353216		; 3f800000H
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
-; Line 162
-	mov	ecx, r12d
-; Line 104
-	mov	QWORD PTR [rax+8], r12
-	mov	QWORD PTR [rax+16], r12
-	mov	QWORD PTR [rax+24], r12
-; Line 116
-	mov	QWORD PTR [rax], 1065353216		; 3f800000H
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	lea	r14, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 209
+	mov	ecx, edi
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	lea	r15, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
+; Line 163
+	mov	DWORD PTR [rax], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 196
+; Line 337
 	sub	rax, rbx
 ; File W:\cpp\void\dr\trace.h
 ; Line 43
-	mov	QWORD PTR $T53[rsp], rdi
-	mov	QWORD PTR $T53[rsp+8], rsi
-	mov	DWORD PTR $T53[rsp+16], 197		; 000000c5H
-	mov	DWORD PTR $T53[rsp+20], 46		; 0000002eH
-	npad	9
-$LL68@MAIN:
+	mov	QWORD PTR $T61[rsp], r14
+	mov	QWORD PTR $T61[rsp+8], r15
+	mov	DWORD PTR $T61[rsp+16], 347		; 0000015bH
+	mov	DWORD PTR $T61[rsp+20], 47		; 0000002fH
+	npad	8
+$LL47@MAIN:
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 163
+; Line 210
 	vmovss	xmm0, DWORD PTR [rax+rbx]
 	vucomiss xmm0, DWORD PTR [rbx]
-	jp	SHORT $LN343@MAIN
-	jne	SHORT $LN343@MAIN
-; Line 162
+	mov	esi, 1
+	jp	SHORT $LN419@MAIN
+	jne	SHORT $LN419@MAIN
+; Line 209
+	inc	ecx
+	add	rbx, 4
+	cmp	ecx, 2
+	jl	SHORT $LL47@MAIN
+; Line 212
+	mov	r8d, esi
+	jmp	SHORT $LN44@MAIN
+$LN419@MAIN:
+; Line 211
+	mov	r8d, edi
+$LN44@MAIN:
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 347
+	vmovups	xmm0, XMMWORD PTR $T61[rsp]
+	vmovsd	xmm1, QWORD PTR $T61[rsp+16]
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	lea	rdx, OFFSET FLAT:??_C@_0CL@HGLGICOI@?$CB?$CB?5vec_eql?$CInew_vec2?$CI1?0?51?$CJ?0?5new_@
+	lea	rcx, QWORD PTR $T91[rsp]
+	vmovups	XMMWORD PTR $T91[rsp], xmm0
+	vmovsd	QWORD PTR $T91[rsp+16], xmm1
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	edx, 32					; 00000020H
+	mov	ecx, edx
+	call	_aligned_malloc
+	mov	edx, 32					; 00000020H
+	mov	rbx, rax
+	mov	ecx, edx
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
+; Line 163
+	mov	DWORD PTR [rax], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
+; Line 150
+	call	_aligned_malloc
+; Line 209
+	mov	ecx, edi
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
+; Line 163
+	mov	QWORD PTR [rax], 1065353216		; 3f800000H
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 347
+	sub	rax, rbx
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T60[rsp], r14
+	mov	QWORD PTR $T60[rsp+8], r15
+	mov	DWORD PTR $T60[rsp+16], 348		; 0000015cH
+	mov	DWORD PTR $T60[rsp+20], 48		; 00000030H
+$LL68@MAIN:
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 210
+	vmovss	xmm0, DWORD PTR [rax+rbx]
+	vucomiss xmm0, DWORD PTR [rbx]
+	jp	SHORT $LN420@MAIN
+	jne	SHORT $LN420@MAIN
+; Line 209
 	inc	ecx
 	add	rbx, 4
 	cmp	ecx, 2
 	jl	SHORT $LL68@MAIN
-; Line 165
-	mov	r8d, r12d
+; Line 212
+	mov	r8d, edi
 	jmp	SHORT $LN65@MAIN
-$LN343@MAIN:
-; Line 164
-	mov	r8d, r14d
+$LN420@MAIN:
+; Line 211
+	mov	r8d, esi
 $LN65@MAIN:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 197
-	vmovups	xmm0, XMMWORD PTR $T53[rsp]
-	vmovsd	xmm1, QWORD PTR $T53[rsp+16]
+; Line 348
+	vmovups	xmm0, XMMWORD PTR $T60[rsp]
+	vmovsd	xmm1, QWORD PTR $T60[rsp+16]
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rdx, OFFSET FLAT:??_C@_0CK@MHGHDOLC@?$CB?5vec_eql?$CInew_vec2?$CI1?0?50?$CJ?0?5new_v@
-	lea	rcx, QWORD PTR $T74[rsp]
-	vmovups	XMMWORD PTR $T74[rsp], xmm0
-	vmovsd	QWORD PTR $T74[rsp+16], xmm1
+	lea	rcx, QWORD PTR $T86[rsp]
+	vmovups	XMMWORD PTR $T86[rsp], xmm0
+	vmovsd	QWORD PTR $T86[rsp+16], xmm1
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 406
+	mov	r9d, 2
+	mov	DWORD PTR $T68[rsp+8], 2
+	lea	rax, OFFSET FLAT:??_C@_08ENKIOJLC@new_mat_@
+	mov	DWORD PTR $T68[rsp+12], 8
+	lea	r14, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	QWORD PTR $T85[rsp+8], rax
+	lea	r8, OFFSET FLAT:??_C@_1EK@LHFKDKMH@?$AAm?$AAe?$AAm?$AA?5?$AAv?$AAe?$AAc?$AA?5?$AAs?$AAz?$AAe?$AA?5?$AA?$CF?$AAi?$AA?1@
+	mov	QWORD PTR $T85[rsp], r14
+	lea	edx, QWORD PTR [r9+2]
+	mov	DWORD PTR $T85[rsp+16], 406		; 00000196H
+	lea	rcx, QWORD PTR $T85[rsp]
+	mov	DWORD PTR $T85[rsp+20], 46		; 0000002eH
+	mov	DWORD PTR [rsp+32], 8
+	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
+; Line 409
+	mov	edx, 32					; 00000020H
+	lea	ecx, QWORD PTR [rdx+32]
+	call	_aligned_malloc
+	vpxor	xmm0, xmm0, xmm0
+; Line 85
+	lea	rbx, OFFSET FLAT:??_C@_0M@HIENKLDG@operator?5?$FL?$FN@
+	mov	QWORD PTR $T69[rsp], r14
+; Line 409
+	mov	r15, rax
+; Line 85
+	mov	QWORD PTR $T69[rsp+8], rbx
+; Line 410
+	vmovups	YMMWORD PTR [rax], ymm0
+	vmovups	YMMWORD PTR [rax+32], ymm0
+; Line 85
+	mov	DWORD PTR $T69[rsp+16], 85		; 00000055H
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	DWORD PTR $T69[rsp+20], 41		; 00000029H
+	lea	rdx, OFFSET FLAT:??_C@_09EHENKKKI@idx?5?$DM?5min@
+	mov	r8d, esi
+	lea	rcx, QWORD PTR $T69[rsp]
+	vzeroupper
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 352
+	mov	DWORD PTR [r15], 1065353216		; 3f800000H
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 85
+	mov	r8d, esi
+	mov	QWORD PTR $T70[rsp], r14
+	lea	rdx, OFFSET FLAT:??_C@_09EHENKKKI@idx?5?$DM?5min@
+	mov	QWORD PTR $T70[rsp+8], rbx
+	lea	rcx, QWORD PTR $T70[rsp]
+	mov	DWORD PTR $T70[rsp+16], 85		; 00000055H
+	mov	DWORD PTR $T70[rsp+20], 41		; 00000029H
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 352
+	mov	DWORD PTR [r15+4], 1073741824		; 40000000H
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 85
+	mov	r8d, esi
+	mov	QWORD PTR $T71[rsp], r14
+	lea	rdx, OFFSET FLAT:??_C@_09EHENKKKI@idx?5?$DM?5min@
+	mov	QWORD PTR $T71[rsp+8], rbx
+	lea	rcx, QWORD PTR $T71[rsp]
+	mov	DWORD PTR $T71[rsp+16], 85		; 00000055H
+	mov	DWORD PTR $T71[rsp+20], 41		; 00000029H
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 353
+	mov	DWORD PTR [r15+32], 1077936128		; 40400000H
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 85
+	mov	r8d, esi
+	mov	QWORD PTR $T72[rsp], r14
+	lea	rdx, OFFSET FLAT:??_C@_09EHENKKKI@idx?5?$DM?5min@
+	mov	QWORD PTR $T72[rsp+8], rbx
+	lea	rcx, QWORD PTR $T72[rsp]
+	mov	DWORD PTR $T72[rsp+16], 85		; 00000055H
+	mov	DWORD PTR $T72[rsp+20], 41		; 00000029H
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+; Line 150
+	mov	edx, 32					; 00000020H
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 353
+	mov	DWORD PTR [r15+36], 1082130432		; 40800000H
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	ecx, edx
+	call	_aligned_malloc
+	mov	r12, rax
+	mov	edx, 32					; 00000020H
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
+; Line 163
+	mov	DWORD PTR [rax], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
+; Line 150
+	mov	ecx, edx
+	call	_aligned_malloc
+	mov	edx, 32					; 00000020H
+	mov	ecx, edx
+; Line 151
+	mov	QWORD PTR [rax+8], rdi
+	mov	QWORD PTR [rax+16], rdi
+	mov	QWORD PTR [rax+24], rdi
+; Line 163
+	mov	DWORD PTR [rax], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
+; Line 150
+	call	_aligned_malloc
+	mov	r13, QWORD PTR $T68[rsp+8]
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 348
+	lea	rbx, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	vpxor	xmm0, xmm0, xmm0
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
+	mov	QWORD PTR mem$1$[rsp], rax
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 348
+	mov	r14, rax
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 151
+	vmovups	YMMWORD PTR [rax], ymm0
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 348
+	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
+	shr	r13, 32					; 00000020H
+	npad	10
+$LL119@MAIN:
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 352
+	mov	QWORD PTR $T73[rsp], rbx
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	QWORD PTR $T73[rsp+8], rax
+	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
+	mov	DWORD PTR $T73[rsp+16], 352		; 00000160H
+	lea	rcx, QWORD PTR $T73[rsp]
+	mov	DWORD PTR $T73[rsp+20], 45		; 0000002dH
+	mov	r8d, esi
+	vzeroupper
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+; Line 388
+	mov	eax, edi
+; Line 432
+	lea	r14, QWORD PTR [r14+4]
+; Line 388
+	imul	eax, r13d
+; Line 432
+	inc	edi
+	vpxor	xmm4, xmm4, xmm4
+; Line 388
+	movsxd	rcx, eax
+; Line 432
+	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
+; Line 359
+	vmovups	ymm0, YMMWORD PTR [r15+rcx*4]
+	vfmadd231ps ymm4, ymm0, YMMWORD PTR [r12]
+; Line 362
+	vshufps	xmm0, xmm4, xmm4, 85			; 00000055H
+	vaddss	xmm2, xmm4, xmm0
+	vshufps	xmm1, xmm4, xmm4, 170			; 000000aaH
+	vaddss	xmm3, xmm2, xmm1
+	vshufps	xmm0, xmm4, xmm4, 255			; 000000ffH
+	vaddss	xmm1, xmm3, xmm0
+	vextractf128 xmm0, ymm4, 1
+	vaddss	xmm3, xmm1, xmm0
+	vextractf128 xmm2, ymm4, 1
+	vshufps	xmm2, xmm2, xmm2, 85			; 00000055H
+	vaddss	xmm1, xmm3, xmm2
+	vextractf128 xmm0, ymm4, 1
+	vshufps	xmm0, xmm0, xmm0, 170			; 000000aaH
+	vaddss	xmm2, xmm1, xmm0
+	vextractf128 xmm1, ymm4, 1
+	vshufps	xmm1, xmm1, xmm1, 255			; 000000ffH
+	vaddss	xmm0, xmm2, xmm1
+; Line 433
+	vmovss	DWORD PTR [r14-4], xmm0
+	cmp	edi, 2
+	jl	$LL119@MAIN
+; Line 150
+	mov	edx, 32					; 00000020H
+	mov	ecx, edx
+	vzeroupper
+	call	_aligned_malloc
+; Line 209
+	mov	rbx, QWORD PTR mem$1$[rsp]
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	lea	rcx, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 151
+	xor	r12d, r12d
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	lea	r13, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 151
+	mov	QWORD PTR [rax+8], r12
+	mov	QWORD PTR [rax+16], r12
+	mov	QWORD PTR [rax+24], r12
+; Line 163
+	mov	DWORD PTR [rax], 1077936128		; 40400000H
+	mov	DWORD PTR [rax+4], 1088421888		; 40e00000H
+; Line 209
+	sub	rax, rbx
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T59[rsp+8], rcx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 209
+	mov	ecx, r12d
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T59[rsp], r13
+	mov	DWORD PTR $T59[rsp+16], 358		; 00000166H
+	mov	DWORD PTR $T59[rsp+20], 49		; 00000031H
+	npad	4
+$LL141@MAIN:
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 210
+	vmovss	xmm0, DWORD PTR [rax+rbx]
+	vucomiss xmm0, DWORD PTR [rbx]
+	jp	SHORT $LN421@MAIN
+	jne	SHORT $LN421@MAIN
+; Line 209
+	inc	ecx
+	add	rbx, 4
+	cmp	ecx, 2
+	jl	SHORT $LL141@MAIN
+; Line 212
+	mov	r8d, esi
+	jmp	SHORT $LN138@MAIN
+$LN421@MAIN:
+; Line 211
+	mov	r8d, r12d
+$LN138@MAIN:
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 355
+	vmovups	xmm0, XMMWORD PTR $T59[rsp]
+	vmovsd	xmm1, QWORD PTR $T59[rsp+16]
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	lea	rdx, OFFSET FLAT:??_C@_0FM@JNEJAHIP@vec_eql?$CI?5new_vec2?$CI3?4f?07?4f?$CJ?0?5mat@
+	lea	rcx, QWORD PTR $T87[rsp]
+	vmovups	XMMWORD PTR $T87[rsp], xmm0
+	vmovsd	QWORD PTR $T87[rsp+16], xmm1
+	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	QWORD PTR [rax], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rbx, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], r12d
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], r12d
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	vpxor	xmm0, xmm0, xmm0
-	mov	rsi, rax
-; Line 237
-	mov	DWORD PTR $T62[rsp+16], 237		; 000000edH
-	mov	DWORD PTR $T62[rsp+20], 42		; 0000002aH
-	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 104
+	mov	r14, rax
+; Line 284
+	mov	DWORD PTR $T74[rsp+16], 284		; 0000011cH
+	lea	r15, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+	mov	DWORD PTR $T74[rsp+20], 44		; 0000002cH
+; Line 151
 	vmovups	YMMWORD PTR [rax], ymm0
-; Line 237
-	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	r8d, r14d
-	mov	QWORD PTR $T62[rsp], rax
-	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
+; Line 284
 	lea	rax, OFFSET FLAT:??_C@_08EGPIDAG@vec_mul_@
-	mov	QWORD PTR $T62[rsp+8], rax
-	lea	rcx, QWORD PTR $T62[rsp]
+	mov	QWORD PTR $T74[rsp], r15
+	mov	QWORD PTR $T74[rsp+8], rax
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	r8d, esi
+	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
+	lea	rcx, QWORD PTR $T74[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 240
-	vmovups	ymm0, YMMWORD PTR [rbx]
-	vmulps	ymm1, ymm0, YMMWORD PTR [rdi]
-; Line 103
+; Line 287
+	vmovups	ymm0, YMMWORD PTR [rdi]
+	vmulps	ymm1, ymm0, YMMWORD PTR [rbx]
+; Line 150
 	mov	edx, 32					; 00000020H
-; Line 240
-	vmovups	YMMWORD PTR [rsi], ymm1
-; Line 103
+; Line 287
+	vmovups	YMMWORD PTR [r14], ymm1
+; Line 150
 	mov	ecx, edx
 	vzeroupper
 	call	_aligned_malloc
 ; File W:\cpp\void\dr\trace.h
 ; Line 43
-	lea	rcx, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
+	lea	rcx, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	mov	QWORD PTR $T52[rsp], rcx
-	lea	rcx, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	QWORD PTR $T52[rsp+8], rcx
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 162
-	mov	ecx, r12d
-; Line 116
-	mov	QWORD PTR [rax], r12
-; Line 162
-	sub	rax, rsi
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	mov	DWORD PTR $T52[rsp+16], 204		; 000000ccH
-	mov	DWORD PTR $T52[rsp+20], 47		; 0000002fH
-	npad	10
-$LL112@MAIN:
-; File W:\cpp\void\dr-ai\dr-vec.h
 ; Line 163
-	vmovss	xmm0, DWORD PTR [rax+rsi]
-	vucomiss xmm0, DWORD PTR [rsi]
-	jp	SHORT $LN344@MAIN
-	jne	SHORT $LN344@MAIN
-; Line 162
+	mov	QWORD PTR [rax], r12
+; Line 209
+	sub	rax, r14
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T58[rsp+8], rcx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 209
+	mov	ecx, r12d
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T58[rsp], r13
+	mov	DWORD PTR $T58[rsp+16], 365		; 0000016dH
+	mov	DWORD PTR $T58[rsp+20], 50		; 00000032H
+$LL185@MAIN:
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 210
+	vmovss	xmm0, DWORD PTR [rax+r14]
+	vucomiss xmm0, DWORD PTR [r14]
+	jp	SHORT $LN422@MAIN
+	jne	SHORT $LN422@MAIN
+; Line 209
 	inc	ecx
-	add	rsi, 4
+	add	r14, 4
 	cmp	ecx, 2
-	jl	SHORT $LL112@MAIN
-; Line 165
-	mov	r8d, r14d
-	jmp	SHORT $LN109@MAIN
-$LN344@MAIN:
-; Line 164
+	jl	SHORT $LL185@MAIN
+; Line 212
+	mov	r8d, esi
+	jmp	SHORT $LN182@MAIN
+$LN422@MAIN:
+; Line 211
 	mov	r8d, r12d
-$LN109@MAIN:
+$LN182@MAIN:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 199
-	vmovups	xmm0, XMMWORD PTR $T52[rsp]
-	vmovsd	xmm1, QWORD PTR $T52[rsp+16]
+; Line 360
+	vmovups	xmm0, XMMWORD PTR $T58[rsp]
+	vmovsd	xmm1, QWORD PTR $T58[rsp+16]
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rdx, OFFSET FLAT:??_C@_0GO@MNIPECM@vec_eql?$CI?5new_vec2?$CI0?4f?0?50?4f?$CJ?0?5ve@
-	lea	rcx, QWORD PTR $T75[rsp]
-	vmovups	XMMWORD PTR $T75[rsp], xmm0
-	vmovsd	QWORD PTR $T75[rsp+16], xmm1
+	lea	rcx, QWORD PTR $T88[rsp]
+	vmovups	XMMWORD PTR $T88[rsp], xmm0
+	vmovsd	QWORD PTR $T88[rsp+16], xmm1
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], 1065353216		; 3f800000H
 	mov	DWORD PTR [rax+4], -1082130432		; bf800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rbx, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], -1082130432		; bf800000H
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], -1082130432		; bf800000H
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	vpxor	xmm0, xmm0, xmm0
-	mov	rsi, rax
-; Line 217
-	mov	DWORD PTR $T63[rsp+16], 217		; 000000d9H
-	mov	DWORD PTR $T63[rsp+20], 41		; 00000029H
+	mov	r14, rax
+; Line 264
+	mov	QWORD PTR $T75[rsp], r15
+	mov	DWORD PTR $T75[rsp+16], 264		; 00000108H
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-; Line 104
+; Line 151
 	vmovups	YMMWORD PTR [rax], ymm0
-; Line 217
-	lea	rax, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
-	mov	r8d, r14d
-	mov	QWORD PTR $T63[rsp], rax
-	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
+; Line 264
 	lea	rax, OFFSET FLAT:??_C@_08CHCJAPEF@vec_add_@
-	mov	QWORD PTR $T63[rsp+8], rax
-	lea	rcx, QWORD PTR $T63[rsp]
+	mov	DWORD PTR $T75[rsp+20], 43		; 0000002bH
+	mov	QWORD PTR $T75[rsp+8], rax
+	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
+	mov	r8d, esi
+	lea	rcx, QWORD PTR $T75[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 221
+; Line 268
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vaddps	ymm1, ymm0, YMMWORD PTR [rdi]
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
-; Line 221
-	vmovups	YMMWORD PTR [rsi], ymm1
-; Line 103
+; Line 268
+	vmovups	YMMWORD PTR [r14], ymm1
+; Line 150
 	mov	ecx, edx
 	vzeroupper
 	call	_aligned_malloc
 ; File W:\cpp\void\dr\trace.h
 ; Line 43
-	lea	rcx, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
+	lea	rcx, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	mov	QWORD PTR $T51[rsp], rcx
-	lea	rcx, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	QWORD PTR $T51[rsp+8], rcx
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 162
-	mov	ecx, r12d
-; Line 116
-	mov	QWORD PTR [rax], r12
-; Line 162
-	sub	rax, rsi
-; File W:\cpp\void\dr\trace.h
-; Line 43
-	mov	DWORD PTR $T51[rsp+16], 210		; 000000d2H
-	mov	DWORD PTR $T51[rsp+20], 48		; 00000030H
-$LL156@MAIN:
-; File W:\cpp\void\dr-ai\dr-vec.h
 ; Line 163
-	vmovss	xmm0, DWORD PTR [rax+rsi]
-	vucomiss xmm0, DWORD PTR [rsi]
-	jp	SHORT $LN345@MAIN
-	jne	SHORT $LN345@MAIN
-; Line 162
+	mov	QWORD PTR [rax], r12
+; Line 209
+	sub	rax, r14
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T57[rsp+8], rcx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 209
+	mov	ecx, r12d
+; File W:\cpp\void\dr\trace.h
+; Line 43
+	mov	QWORD PTR $T57[rsp], r13
+	mov	DWORD PTR $T57[rsp+16], 371		; 00000173H
+	mov	DWORD PTR $T57[rsp+20], 51		; 00000033H
+	npad	9
+$LL229@MAIN:
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 210
+	vmovss	xmm0, DWORD PTR [rax+r14]
+	vucomiss xmm0, DWORD PTR [r14]
+	jp	SHORT $LN423@MAIN
+	jne	SHORT $LN423@MAIN
+; Line 209
 	inc	ecx
-	add	rsi, 4
+	add	r14, 4
 	cmp	ecx, 2
-	jl	SHORT $LL156@MAIN
-; Line 165
-	mov	r8d, r14d
-	jmp	SHORT $LN153@MAIN
-$LN345@MAIN:
-; Line 164
+	jl	SHORT $LL229@MAIN
+; Line 212
+	mov	r8d, esi
+	jmp	SHORT $LN226@MAIN
+$LN423@MAIN:
+; Line 211
 	mov	r8d, r12d
-$LN153@MAIN:
+$LN226@MAIN:
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 205
-	vmovups	xmm0, XMMWORD PTR $T51[rsp]
-	vmovsd	xmm1, QWORD PTR $T51[rsp+16]
+; Line 366
+	vmovups	xmm0, XMMWORD PTR $T57[rsp]
+	vmovsd	xmm1, QWORD PTR $T57[rsp+16]
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rdx, OFFSET FLAT:??_C@_0HF@IAGKILKP@vec_eql?$CI?5new_vec2?$CI0?4f?0?50?4f?$CJ?0?5ve@
-	lea	rcx, QWORD PTR $T61[rsp]
-	vmovups	XMMWORD PTR $T61[rsp], xmm0
-	vmovsd	QWORD PTR $T61[rsp+16], xmm1
+	lea	rcx, QWORD PTR $T89[rsp]
+	vmovups	XMMWORD PTR $T89[rsp], xmm0
+	vmovsd	QWORD PTR $T89[rsp+16], xmm1
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	QWORD PTR [rax], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
-	mov	rbx, rax
-; Line 306
-	lea	rsi, OFFSET FLAT:??_C@_0BL@BLCIKNLN@W?3?2cpp?2void?2dr?9ai?2dr?9vec?4h@
+; Line 352
+	lea	r14, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
+	mov	r8d, esi
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	r8d, r14d
+; Line 150
+	mov	rbx, rax
+; Line 352
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+8], r12
-; Line 306
-	lea	rcx, QWORD PTR $T64[rsp]
-; Line 104
+; Line 352
+	lea	rcx, QWORD PTR $T76[rsp]
+; Line 151
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
-; Line 116
+; Line 163
 	mov	DWORD PTR [rax], r12d
 	mov	DWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 306
-	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
-	mov	QWORD PTR $T64[rsp+8], rax
-	mov	QWORD PTR $T64[rsp], rsi
-	mov	DWORD PTR $T64[rsp+16], 306		; 00000132H
-	mov	DWORD PTR $T64[rsp+20], 43		; 0000002bH
+; Line 352
+	mov	QWORD PTR $T76[rsp], r15
+	mov	QWORD PTR $T76[rsp+8], r14
+	mov	DWORD PTR $T76[rsp+16], 352		; 00000160H
+	mov	DWORD PTR $T76[rsp+20], 45		; 0000002dH
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vpxor	xmm4, xmm4, xmm4
 	vfmadd231ps ymm4, ymm0, YMMWORD PTR [rdi]
-; Line 316
+; Line 362
 	vshufps	xmm0, xmm4, xmm4, 85			; 00000055H
 	vaddss	xmm2, xmm4, xmm0
 	vshufps	xmm1, xmm4, xmm4, 170			; 000000aaH
@@ -6911,69 +7174,69 @@ $LN153@MAIN:
 	vaddss	xmm0, xmm2, xmm1
 	vxorps	xmm6, xmm6, xmm6
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 211
+; Line 372
 	vucomiss xmm6, xmm0
 	jp	SHORT $LN16@MAIN
-	mov	r8d, r14d
+	mov	r8d, esi
 	je	SHORT $LN17@MAIN
 $LN16@MAIN:
 	mov	r8d, r12d
 $LN17@MAIN:
-	lea	rax, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	mov	DWORD PTR $T65[rsp+16], 213		; 000000d5H
-	mov	QWORD PTR $T65[rsp], rax
-	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rax, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	DWORD PTR $T65[rsp+20], 49		; 00000031H
-	mov	QWORD PTR $T65[rsp+8], rax
+	mov	QWORD PTR $T77[rsp], r13
+	mov	QWORD PTR $T77[rsp+8], rax
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	DWORD PTR $T77[rsp+16], 374		; 00000176H
 	lea	rdx, OFFSET FLAT:??_C@_0DG@HJFNMGEH@0?5?$DN?$DN?5vec_dot?$CI?5new_vec2?$CI0?4f?0?51?4f@
-	lea	rcx, QWORD PTR $T65[rsp]
+	mov	DWORD PTR $T77[rsp+20], 52		; 00000034H
+	lea	rcx, QWORD PTR $T77[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	DWORD PTR [rax], r12d
-; Line 126
+; Line 173
 	mov	QWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
-	mov	rbx, rax
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	r8d, r14d
+	mov	r8d, esi
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	lea	rcx, QWORD PTR $T66[rsp]
-; Line 104
+; Line 150
+	mov	rbx, rax
+; Line 352
+	lea	rcx, QWORD PTR $T78[rsp]
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	QWORD PTR [rax], 1065353216		; 3f800000H
-; Line 127
+; Line 174
 	mov	DWORD PTR [rax+8], r12d
-; Line 306
-	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
-	mov	QWORD PTR $T66[rsp+8], rax
-	mov	QWORD PTR $T66[rsp], rsi
-	mov	DWORD PTR $T66[rsp+16], 306		; 00000132H
-	mov	DWORD PTR $T66[rsp+20], 43		; 0000002bH
+; Line 352
+	mov	QWORD PTR $T78[rsp], r15
+	mov	QWORD PTR $T78[rsp+8], r14
+	mov	DWORD PTR $T78[rsp+16], 352		; 00000160H
+	mov	DWORD PTR $T78[rsp+20], 45		; 0000002dH
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vpxor	xmm4, xmm4, xmm4
 	vfmadd231ps ymm4, ymm0, YMMWORD PTR [rdi]
-; Line 316
+; Line 362
 	vshufps	xmm0, xmm4, xmm4, 85			; 00000055H
 	vaddss	xmm2, xmm4, xmm0
 	vshufps	xmm1, xmm4, xmm4, 170			; 000000aaH
@@ -6992,69 +7255,69 @@ $LN17@MAIN:
 	vshufps	xmm1, xmm1, xmm1, 255			; 000000ffH
 	vaddss	xmm0, xmm2, xmm1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 214
+; Line 375
 	vucomiss xmm6, xmm0
 	jp	SHORT $LN18@MAIN
-	mov	r8d, r14d
+	mov	r8d, esi
 	je	SHORT $LN19@MAIN
 $LN18@MAIN:
 	mov	r8d, r12d
 $LN19@MAIN:
-	lea	rax, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	mov	DWORD PTR $T67[rsp+16], 216		; 000000d8H
-	mov	QWORD PTR $T67[rsp], rax
-	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rax, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	DWORD PTR $T67[rsp+20], 50		; 00000032H
-	mov	QWORD PTR $T67[rsp+8], rax
+	mov	QWORD PTR $T79[rsp], r13
+	mov	QWORD PTR $T79[rsp+8], rax
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	DWORD PTR $T79[rsp+16], 377		; 00000179H
 	lea	rdx, OFFSET FLAT:??_C@_0EA@IIDOMOOK@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI1?4f?0?50?4f@
-	lea	rcx, QWORD PTR $T67[rsp]
+	mov	DWORD PTR $T79[rsp+20], 53		; 00000035H
+	lea	rcx, QWORD PTR $T79[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	QWORD PTR [rax], r12
-; Line 127
+; Line 174
 	mov	DWORD PTR [rax+8], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
-	mov	rbx, rax
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	r8d, r14d
+	mov	r8d, esi
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	lea	rcx, QWORD PTR $T68[rsp]
-; Line 104
+; Line 150
+	mov	rbx, rax
+; Line 352
+	lea	rcx, QWORD PTR $T80[rsp]
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	QWORD PTR [rax], 1065353216		; 3f800000H
-; Line 127
+; Line 174
 	mov	DWORD PTR [rax+8], r12d
-; Line 306
-	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
-	mov	QWORD PTR $T68[rsp+8], rax
-	mov	QWORD PTR $T68[rsp], rsi
-	mov	DWORD PTR $T68[rsp+16], 306		; 00000132H
-	mov	DWORD PTR $T68[rsp+20], 43		; 0000002bH
+; Line 352
+	mov	QWORD PTR $T80[rsp], r15
+	mov	QWORD PTR $T80[rsp+8], r14
+	mov	DWORD PTR $T80[rsp+16], 352		; 00000160H
+	mov	DWORD PTR $T80[rsp+20], 45		; 0000002dH
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vpxor	xmm4, xmm4, xmm4
 	vfmadd231ps ymm4, ymm0, YMMWORD PTR [rdi]
-; Line 316
+; Line 362
 	vshufps	xmm0, xmm4, xmm4, 85			; 00000055H
 	vaddss	xmm2, xmm4, xmm0
 	vshufps	xmm1, xmm4, xmm4, 170			; 000000aaH
@@ -7073,69 +7336,69 @@ $LN19@MAIN:
 	vshufps	xmm1, xmm1, xmm1, 255			; 000000ffH
 	vaddss	xmm0, xmm2, xmm1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 217
+; Line 378
 	vucomiss xmm6, xmm0
 	jp	SHORT $LN20@MAIN
-	mov	r8d, r14d
+	mov	r8d, esi
 	je	SHORT $LN21@MAIN
 $LN20@MAIN:
 	mov	r8d, r12d
 $LN21@MAIN:
-	lea	rax, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	mov	DWORD PTR $T69[rsp+16], 219		; 000000dbH
-	mov	QWORD PTR $T69[rsp], rax
-	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
 	lea	rax, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	DWORD PTR $T69[rsp+20], 51		; 00000033H
-	mov	QWORD PTR $T69[rsp+8], rax
+	mov	QWORD PTR $T81[rsp], r13
+	mov	QWORD PTR $T81[rsp+8], rax
+	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
+	mov	DWORD PTR $T81[rsp+16], 380		; 0000017cH
 	lea	rdx, OFFSET FLAT:??_C@_0EA@ICOMMCIP@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI1?4f?0?50?4f@
-	lea	rcx, QWORD PTR $T69[rsp]
+	mov	DWORD PTR $T81[rsp+20], 54		; 00000036H
+	lea	rcx, QWORD PTR $T81[rsp]
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	mov	ecx, edx
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
 	mov	rdi, rax
 	mov	ecx, edx
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	QWORD PTR [rax], r12
-; Line 127
+; Line 174
 	mov	DWORD PTR [rax+8], 1065353216		; 3f800000H
-; Line 103
+; Line 150
 	call	_aligned_malloc
-	mov	rbx, rax
-; Line 306
+; Line 352
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	r8d, r14d
+	mov	r8d, esi
 	lea	rdx, OFFSET FLAT:??_C@_0BD@CANBDCOP@lhs?4len?5?$DN?$DN?5rhs?4len@
-	lea	rcx, QWORD PTR $T70[rsp]
-; Line 104
+; Line 150
+	mov	rbx, rax
+; Line 352
+	lea	rcx, QWORD PTR $T82[rsp]
+; Line 151
 	mov	QWORD PTR [rax+12], r12
 	mov	QWORD PTR [rax+20], r12
 	mov	DWORD PTR [rax+28], r12d
-; Line 125
+; Line 172
 	mov	DWORD PTR [rax], r12d
-; Line 126
+; Line 173
 	mov	QWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 306
-	lea	rax, OFFSET FLAT:??_C@_07KBNDKOJG@vec_dot@
-	mov	QWORD PTR $T70[rsp+8], rax
-	mov	QWORD PTR $T70[rsp], rsi
-	mov	DWORD PTR $T70[rsp+16], 306		; 00000132H
-	mov	DWORD PTR $T70[rsp+20], 43		; 0000002bH
+; Line 352
+	mov	QWORD PTR $T82[rsp], r15
+	mov	QWORD PTR $T82[rsp+8], r14
+	mov	DWORD PTR $T82[rsp+16], 352		; 00000160H
+	mov	DWORD PTR $T82[rsp+20], 45		; 0000002dH
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
-; Line 313
+; Line 359
 	vmovups	ymm0, YMMWORD PTR [rbx]
 	vpxor	xmm4, xmm4, xmm4
 	vfmadd231ps ymm4, ymm0, YMMWORD PTR [rdi]
-; Line 316
+; Line 362
 	vshufps	xmm0, xmm4, xmm4, 85			; 00000055H
 	vaddss	xmm2, xmm4, xmm0
 	vshufps	xmm1, xmm4, xmm4, 170			; 000000aaH
@@ -7154,407 +7417,411 @@ $LN21@MAIN:
 	vshufps	xmm1, xmm1, xmm1, 255			; 000000ffH
 	vaddss	xmm0, xmm2, xmm1
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 220
+; Line 381
 	vucomiss xmm6, xmm0
 	jp	SHORT $LN22@MAIN
 	je	SHORT $LN23@MAIN
 $LN22@MAIN:
-	mov	r14d, r12d
+	mov	esi, r12d
 $LN23@MAIN:
-	lea	rbx, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	mov	DWORD PTR $T71[rsp+16], 222		; 000000deH
 	lea	rdi, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	QWORD PTR $T71[rsp], rbx
-	mov	QWORD PTR $T71[rsp+8], rdi
+	mov	QWORD PTR $T83[rsp], r13
+	mov	QWORD PTR $T83[rsp+8], rdi
 	lea	r9, OFFSET FLAT:??_C@_1BG@NNFEIBFP@?$AAN?$AAO?$AA_?$AAM?$AAE?$AAS?$AAS?$AAA?$AAG?$AAE@
-	mov	DWORD PTR $T71[rsp+20], 52		; 00000034H
+	mov	DWORD PTR $T83[rsp+16], 383		; 0000017fH
 	lea	rdx, OFFSET FLAT:??_C@_0EA@PPILIGLL@0?5?$DN?$DN?5vec_dot?$CI?5new_vec3?$CI0?4f?0?51?4f@
-	mov	r8d, r14d
-	lea	rcx, QWORD PTR $T71[rsp]
+	mov	DWORD PTR $T83[rsp+20], 55		; 00000037H
+	lea	rcx, QWORD PTR $T83[rsp]
+	mov	r8d, esi
 	vzeroupper
 	call	?AssertExtendedW@@YAHUTRACE_LOCATION@@PEBDHPEB_WZZ ; AssertExtendedW
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 	lea	ecx, QWORD PTR [rdx+32]
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
+; Line 150
 	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+56], r12
-; Line 148
+; Line 195
 	mov	QWORD PTR [rax], 1065353216		; 3f800000H
 	mov	QWORD PTR [rax+8], r12
 	mov	QWORD PTR [rax+16], r12
-; Line 151
+; Line 198
 	mov	QWORD PTR [rax+24], r12
-; Line 152
+; Line 199
 	mov	QWORD PTR [rax+32], r12
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 226
+; Line 387
 	mov	DWORD PTR valid_output_vectors$[rsp], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+4], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+8], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
+; Line 150
 	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+56], r12
-; Line 148
+; Line 195
 	mov	DWORD PTR [rax], r12d
 	mov	QWORD PTR [rax+4], 1065353216		; 3f800000H
-; Line 149
+; Line 196
 	mov	QWORD PTR [rax+12], r12
-; Line 150
+; Line 197
 	mov	QWORD PTR [rax+20], r12
-; Line 151
+; Line 198
 	mov	QWORD PTR [rax+28], r12
-; Line 152
+; Line 199
 	mov	DWORD PTR [rax+36], r12d
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 227
+; Line 388
 	mov	DWORD PTR valid_output_vectors$[rsp+16], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+20], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+24], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
-	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
-	mov	QWORD PTR [rax+56], r12
-; Line 148
-	mov	QWORD PTR [rax], r12
-; Line 149
-	mov	QWORD PTR [rax+8], 1065353216		; 3f800000H
 ; Line 150
-	mov	QWORD PTR [rax+16], r12
+	lea	ecx, QWORD PTR [rdx+32]
 ; Line 151
+	mov	QWORD PTR [rax+56], r12
+; Line 195
+	mov	QWORD PTR [rax], r12
+; Line 196
+	mov	QWORD PTR [rax+8], 1065353216		; 3f800000H
+; Line 197
+	mov	QWORD PTR [rax+16], r12
+; Line 198
 	mov	QWORD PTR [rax+24], r12
-; Line 152
+; Line 199
 	mov	QWORD PTR [rax+32], r12
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 228
+; Line 389
 	mov	DWORD PTR valid_output_vectors$[rsp+32], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+36], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+40], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
+; Line 150
 	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+56], r12
-; Line 148
+; Line 195
 	mov	QWORD PTR [rax], r12
-; Line 149
+; Line 196
 	mov	DWORD PTR [rax+8], r12d
 	mov	QWORD PTR [rax+12], 1065353216		; 3f800000H
-; Line 150
+; Line 197
 	mov	QWORD PTR [rax+20], r12
-; Line 151
+; Line 198
 	mov	QWORD PTR [rax+28], r12
-; Line 152
+; Line 199
 	mov	DWORD PTR [rax+36], r12d
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 229
+; Line 390
 	mov	DWORD PTR valid_output_vectors$[rsp+48], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+52], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+56], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
 	mov	QWORD PTR [rax+56], r12
-; Line 148
+; Line 195
 	mov	QWORD PTR [rax], r12
 	mov	QWORD PTR [rax+8], r12
-; Line 150
+; Line 197
 	mov	QWORD PTR [rax+16], 1065353216		; 3f800000H
-; Line 151
+; Line 198
 	mov	QWORD PTR [rax+24], r12
-; Line 152
+; Line 199
 	mov	QWORD PTR [rax+32], r12
-; Line 103
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 391
+	mov	DWORD PTR valid_output_vectors$[rsp+64], 10
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
 	mov	edx, 32					; 00000020H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 230
-	mov	DWORD PTR valid_output_vectors$[rsp+64], 10
+; Line 391
 	mov	DWORD PTR valid_output_vectors$[rsp+68], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+72], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	lea	ecx, QWORD PTR [rdx+32]
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
-	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
-	mov	QWORD PTR [rax+56], r12
-; Line 148
-	mov	QWORD PTR [rax], r12
-; Line 149
-	mov	QWORD PTR [rax+8], r12
 ; Line 150
+	lea	ecx, QWORD PTR [rdx+32]
+; Line 151
+	mov	QWORD PTR [rax+56], r12
+; Line 195
+	mov	QWORD PTR [rax], r12
+; Line 196
+	mov	QWORD PTR [rax+8], r12
+; Line 197
 	mov	DWORD PTR [rax+16], r12d
 	mov	QWORD PTR [rax+20], 1065353216		; 3f800000H
-; Line 151
+; Line 198
 	mov	QWORD PTR [rax+28], r12
 	mov	DWORD PTR [rax+36], r12d
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 231
+; Line 392
 	mov	DWORD PTR valid_output_vectors$[rsp+80], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+84], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+88], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
-	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
-	mov	QWORD PTR [rax+56], r12
-; Line 148
-	mov	QWORD PTR [rax], r12
-; Line 149
-	mov	QWORD PTR [rax+8], r12
 ; Line 150
-	mov	QWORD PTR [rax+16], r12
+	lea	ecx, QWORD PTR [rdx+32]
 ; Line 151
+	mov	QWORD PTR [rax+56], r12
+; Line 195
+	mov	QWORD PTR [rax], r12
+; Line 196
+	mov	QWORD PTR [rax+8], r12
+; Line 197
+	mov	QWORD PTR [rax+16], r12
+; Line 198
 	mov	QWORD PTR [rax+24], 1065353216		; 3f800000H
-; Line 152
+; Line 199
 	mov	QWORD PTR [rax+32], r12
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 232
+; Line 393
 	mov	DWORD PTR valid_output_vectors$[rsp+96], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+100], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+104], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
-	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
-	mov	QWORD PTR [rax+56], r12
-; Line 148
-	mov	QWORD PTR [rax], r12
-; Line 149
-	mov	QWORD PTR [rax+8], r12
 ; Line 150
-	mov	QWORD PTR [rax+16], r12
+	lea	ecx, QWORD PTR [rdx+32]
 ; Line 151
+	mov	QWORD PTR [rax+56], r12
+; Line 195
+	mov	QWORD PTR [rax], r12
+; Line 196
+	mov	QWORD PTR [rax+8], r12
+; Line 197
+	mov	QWORD PTR [rax+16], r12
+; Line 198
 	mov	DWORD PTR [rax+24], r12d
 	mov	QWORD PTR [rax+28], 1065353216		; 3f800000H
-; Line 152
+; Line 199
 	mov	DWORD PTR [rax+36], r12d
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 233
+; Line 394
 	mov	DWORD PTR valid_output_vectors$[rsp+112], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+116], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+120], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 	mov	edx, 32					; 00000020H
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
-; Line 103
-	lea	ecx, QWORD PTR [rdx+32]
-; Line 104
-	mov	QWORD PTR [rax+56], r12
-; Line 148
-	mov	QWORD PTR [rax], r12
-; Line 149
-	mov	QWORD PTR [rax+8], r12
 ; Line 150
-	mov	QWORD PTR [rax+16], r12
+	lea	ecx, QWORD PTR [rdx+32]
 ; Line 151
+	mov	QWORD PTR [rax+56], r12
+; Line 195
+	mov	QWORD PTR [rax], r12
+; Line 196
+	mov	QWORD PTR [rax+8], r12
+; Line 197
+	mov	QWORD PTR [rax+16], r12
+; Line 198
 	mov	QWORD PTR [rax+24], r12
-; Line 152
+; Line 199
 	mov	QWORD PTR [rax+32], 1065353216		; 3f800000H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 234
+; Line 395
 	mov	DWORD PTR valid_output_vectors$[rsp+128], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+132], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+136], rax
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	call	_aligned_malloc
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 239
+; Line 400
 	mov	edx, 784				; 00000310H
-	lea	rcx, QWORD PTR $T77[rsp]
+	lea	rcx, QWORD PTR $T92[rsp]
 	mov	r8d, 16
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 104
+; Line 151
 	mov	QWORD PTR [rax+40], r12
 	mov	QWORD PTR [rax+48], r12
 	mov	QWORD PTR [rax+56], r12
-; Line 148
+; Line 195
 	mov	QWORD PTR [rax], r12
-; Line 149
+; Line 196
 	mov	QWORD PTR [rax+8], r12
-; Line 150
+; Line 197
 	mov	QWORD PTR [rax+16], r12
 	mov	QWORD PTR [rax+24], r12
 	mov	DWORD PTR [rax+32], r12d
-; Line 152
+; Line 199
 	mov	DWORD PTR [rax+36], 1065353216		; 3f800000H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 235
+; Line 396
 	mov	DWORD PTR valid_output_vectors$[rsp+144], 10
 	mov	DWORD PTR valid_output_vectors$[rsp+148], 16
 	mov	QWORD PTR valid_output_vectors$[rsp+152], rax
-; Line 239
+; Line 400
 	call	?new_lay@@YA?AUai_lay@@HH@Z		; new_lay
 	vmovups	ymm0, YMMWORD PTR [rax]
-	vmovups	ymm1, YMMWORD PTR [rax+32]
 	vmovups	YMMWORD PTR net$[rsp], ymm0
+	vmovups	ymm1, YMMWORD PTR [rax+32]
 	vmovups	ymm0, YMMWORD PTR [rax+64]
-	vmovups	YMMWORD PTR net$[rsp+64], ymm0
-	vmovups	xmm0, XMMWORD PTR [rax+128]
 	vmovups	YMMWORD PTR net$[rsp+32], ymm1
 	vmovups	ymm1, YMMWORD PTR [rax+96]
-; Line 240
+	vmovups	YMMWORD PTR net$[rsp+64], ymm0
+	vmovups	xmm0, XMMWORD PTR [rax+128]
+; Line 401
 	mov	edx, 16
-	lea	rcx, QWORD PTR $T78[rsp]
-	vmovups	XMMWORD PTR net$[rsp+128], xmm0
+	lea	rcx, QWORD PTR $T93[rsp]
 	vmovups	YMMWORD PTR net$[rsp+96], ymm1
+	vmovups	XMMWORD PTR net$[rsp+128], xmm0
 	lea	r8d, QWORD PTR [rdx-6]
 	vzeroupper
 	call	?new_lay@@YA?AUai_lay@@HH@Z		; new_lay
-; Line 241
-	mov	DWORD PTR net$[rsp+288], r15d
+; Line 403
+	vmovss	xmm8, DWORD PTR __real@3dcccccd
+	movsxd	rbx, DWORD PTR img_num$1$[rsp]
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
 	mov	edx, 32					; 00000020H
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 243
-	mov	DWORD PTR net$[rsp+292], 500		; 000001f4H
-; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
-	mov	ecx, 3136				; 00000c40H
-; File W:\cpp\void\dr-ai\num-ai.c
-; Line 240
+; Line 403
+	vmovss	DWORD PTR net$[rsp+296], xmm8
 	vmovups	ymm0, YMMWORD PTR [rax]
 	vmovups	ymm1, YMMWORD PTR [rax+32]
 	vmovups	YMMWORD PTR net$[rsp+144], ymm0
 	vmovups	ymm0, YMMWORD PTR [rax+64]
-	vmovups	YMMWORD PTR net$[rsp+176], ymm1
-	vmovups	ymm1, YMMWORD PTR [rax+96]
 	vmovups	YMMWORD PTR net$[rsp+208], ymm0
 	vmovups	xmm0, XMMWORD PTR [rax+128]
-	vmovups	YMMWORD PTR net$[rsp+240], ymm1
-; Line 242
-	vmovss	xmm1, DWORD PTR __real@3dcccccd
-	vmovss	DWORD PTR net$[rsp+296], xmm1
+	vmovups	YMMWORD PTR net$[rsp+176], ymm1
+	vmovups	ymm1, YMMWORD PTR [rax+96]
 	vmovups	XMMWORD PTR net$[rsp+272], xmm0
+	vmovups	YMMWORD PTR net$[rsp+240], ymm1
+	mov	DWORD PTR net$[rsp+288], ebx
 ; File W:\cpp\void\dr-ai\dr-vec.h
-; Line 103
+; Line 150
+	mov	ecx, 3136				; 00000c40H
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 404
+	mov	DWORD PTR net$[rsp+292], 500		; 000001f4H
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 150
 	vzeroupper
 	call	_aligned_malloc
-; Line 104
+; Line 151
 	xor	edx, edx
 	mov	r8d, 3136				; 00000c40H
 	mov	rcx, rax
 	mov	r14, rax
 	call	memset
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 256
+; Line 417
 	vmovups	xmm7, XMMWORD PTR __xmm@3b8080813b8080813b8080813b808081
 ; File W:\cpp\void\dr\plat-win32.c
 ; Line 32
-	lea	rcx, QWORD PTR Result$59[rsp]
+	lea	rcx, QWORD PTR Result$66[rsp]
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 244
+; Line 405
 	mov	DWORD PTR inp$[rsp], 784		; 00000310H
 	mov	DWORD PTR inp$[rsp+4], 784		; 00000310H
 	mov	QWORD PTR inp$[rsp+8], r14
 ; File W:\cpp\void\dr\trace.c
 ; Line 48
-	mov	QWORD PTR __traceblock__53$49[rsp+8], rbx
-	mov	QWORD PTR __traceblock__53$49[rsp+16], rdi
-	mov	DWORD PTR __traceblock__53$49[rsp+24], 253 ; 000000fdH
-	mov	DWORD PTR __traceblock__53$49[rsp+28], 54 ; 00000036H
+	mov	QWORD PTR __traceblock__56$55[rsp+8], r13
+	mov	QWORD PTR __traceblock__56$55[rsp+16], rdi
+	mov	DWORD PTR __traceblock__56$55[rsp+24], 414 ; 0000019eH
+	mov	DWORD PTR __traceblock__56$55[rsp+28], 57 ; 00000039H
 ; File W:\cpp\void\dr\plat-win32.c
 ; Line 32
 	call	QWORD PTR __imp_QueryPerformanceCounter
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 254
-	movsxd	rax, r15d
-	mov	QWORD PTR $T56[rsp], rax
-	test	r15d, r15d
+; Line 415
+	mov	QWORD PTR $T63[rsp], rbx
+; File W:\cpp\void\dr-ai\dr-vec.h
+; Line 199
+	mov	r15d, r12d
+; File W:\cpp\void\dr-ai\num-ai.c
+; Line 415
+	test	ebx, ebx
 	jle	$LN3@MAIN
 	vmovss	xmm6, DWORD PTR __real@3b808081
-	vmovaps	XMMWORD PTR [rsp+1520], xmm8
-	lea	rdx, QWORD PTR [r14+3132]
-	vmovss	xmm8, DWORD PTR __real@3c23d70a
-	vmovaps	XMMWORD PTR [rsp+1504], xmm9
-	xor	r13d, r13d
-	vmovss	xmm9, DWORD PTR __real@bf800000
-	vmovaps	XMMWORD PTR [rsp+1488], xmm10
-	vmovups	xmm10, XMMWORD PTR inp$[rsp]
+	vmovaps	XMMWORD PTR [rsp+1760], xmm9
+	lea	r13, QWORD PTR [r14+3132]
+	vmovups	xmm9, XMMWORD PTR inp$[rsp]
+	vmovaps	XMMWORD PTR [rsp+1744], xmm10
+	vmovss	xmm10, DWORD PTR __real@bf800000
+	npad	8
 $LL4@MAIN:
-; Line 255
+; Line 416
+	xor	ebx, ebx
 	xor	edi, edi
-	xor	esi, esi
-	npad	11
+	npad	12
 $LL7@MAIN:
-; Line 258
+; Line 419
 	mov	rax, QWORD PTR labels_file_data$1$[rsp]
-; Line 259
-	lea	ecx, DWORD PTR [rdi+r12]
+; Line 425
+	lea	ecx, DWORD PTR [rbx+r15]
 	imul	ecx, DWORD PTR img_col_len$1$[rsp]
-	add	rax, rsi
-	movzx	r15d, BYTE PTR [rax+r13+8]
+	add	rax, rdi
+	movzx	esi, BYTE PTR [rax+r12+8]
 	imul	ecx, DWORD PTR img_row_len$1$[rsp]
 	mov	rax, QWORD PTR images_file_data$1$[rsp]
 	add	rax, 12
 	add	rcx, rax
 	lea	rax, QWORD PTR [rcx+783]
 	cmp	r14, rax
-	ja	SHORT $LN396@MAIN
-; Line 256
-	cmp	rdx, rcx
-	jb	SHORT $LN396@MAIN
-; Line 261
+	ja	SHORT $LN482@MAIN
+; Line 417
+	cmp	r13, rcx
+	jb	SHORT $LN482@MAIN
+; Line 427
 	add	rcx, 2
 	lea	rdx, QWORD PTR [r14+8]
 	mov	r8d, 196				; 000000c4H
 	npad	6
-$LL436@MAIN:
-; Line 262
+$LL529@MAIN:
+; Line 428
 	movzx	eax, BYTE PTR [rcx-2]
 	lea	rdx, QWORD PTR [rdx+16]
 	lea	rcx, QWORD PTR [rcx+4]
@@ -7578,17 +7845,17 @@ $LL436@MAIN:
 	vmulss	xmm1, xmm0, xmm6
 	vmovss	DWORD PTR [rdx-12], xmm1
 	sub	r8, 1
-	jne	SHORT $LL436@MAIN
-; Line 256
-	jmp	SHORT $LN434@MAIN
-$LN396@MAIN:
+	jne	SHORT $LL529@MAIN
+; Line 417
+	jmp	SHORT $LN527@MAIN
+$LN482@MAIN:
 	lea	rax, QWORD PTR [rcx+8]
 	mov	edx, 49					; 00000031H
 	lea	rcx, QWORD PTR [r14+32]
 $LL10@MAIN:
-; Line 261
+; Line 427
 	lea	rcx, QWORD PTR [rcx+64]
-; Line 262
+; Line 428
 	vpmovzxbd xmm1, DWORD PTR [rax-8]
 	lea	rax, QWORD PTR [rax+16]
 	vcvtdq2ps xmm2, xmm1
@@ -7608,14 +7875,14 @@ $LL10@MAIN:
 	vmovups	XMMWORD PTR [rcx-48], xmm3
 	sub	rdx, 1
 	jne	SHORT $LL10@MAIN
-$LN434@MAIN:
-; Line 265
+$LN527@MAIN:
+; Line 431
 	movsxd	r8, DWORD PTR net$[rsp+48]
 	xor	edx, edx
 	mov	rcx, QWORD PTR net$[rsp+56]
 	shl	r8, 2
 	call	memset
-; Line 267
+; Line 434
 	movsxd	rax, DWORD PTR net$[rsp+96]
 	xor	edx, edx
 	movsxd	r8, DWORD PTR net$[rsp+92]
@@ -7623,13 +7890,13 @@ $LN434@MAIN:
 	imul	r8, rax
 	shl	r8, 2
 	call	memset
-; Line 270
+; Line 437
 	movsxd	r8, DWORD PTR net$[rsp+192]
 	xor	edx, edx
 	mov	rcx, QWORD PTR net$[rsp+200]
 	shl	r8, 2
 	call	memset
-; Line 272
+; Line 440
 	movsxd	rax, DWORD PTR net$[rsp+240]
 	xor	edx, edx
 	movsxd	r8, DWORD PTR net$[rsp+236]
@@ -7637,161 +7904,163 @@ $LN434@MAIN:
 	imul	r8, rax
 	shl	r8, 2
 	call	memset
-; Line 275
-	mov	rax, r15
-	lea	r8, QWORD PTR $T57[rsp]
+; Line 443
+	mov	rax, rsi
+	lea	r8, QWORD PTR $T64[rsp]
 	add	rax, rax
-	lea	rdx, QWORD PTR $T50[rsp]
+	lea	rdx, QWORD PTR $T56[rsp]
 	lea	rcx, QWORD PTR net$[rsp]
-	vmovdqa	XMMWORD PTR $T50[rsp], xmm10
+	vmovdqa	XMMWORD PTR $T56[rsp], xmm9
 	vmovups	xmm0, XMMWORD PTR valid_output_vectors$[rsp+rax*8]
-	vmovups	XMMWORD PTR $T57[rsp], xmm0
+	vmovups	XMMWORD PTR $T64[rsp], xmm0
 	call	?net_grd_dsc@@YAXPEAUai_net@@Uai_vec@@1@Z ; net_grd_dsc
-; Line 279
-	mov	r8d, DWORD PTR net$[rsp+272]
+; Line 447
+	mov	r9d, DWORD PTR net$[rsp+272]
 	xor	ecx, ecx
-	mov	ebx, -1
-	vmovaps	xmm2, xmm9
-	test	r8d, r8d
-	jle	SHORT $LN466@MAIN
-; Line 265
-	mov	rdx, QWORD PTR net$[rsp+280]
+	mov	edx, -1
+	vmovaps	xmm2, xmm10
+	test	r9d, r9d
+	jle	SHORT $LN562@MAIN
+; Line 431
+	mov	r8, QWORD PTR net$[rsp+280]
 	npad	8
-$LL397@MAIN:
-; Line 280
-	vmovss	xmm1, DWORD PTR [rdx]
+$LL483@MAIN:
+; Line 448
+	vmovss	xmm1, DWORD PTR [r8]
 	vcomiss	xmm1, xmm2
 	mov	eax, ecx
-	lea	rdx, QWORD PTR [rdx+4]
-	cmovbe	eax, ebx
+	lea	r8, QWORD PTR [r8+4]
+	cmovbe	eax, edx
 	inc	ecx
-	mov	ebx, eax
+	mov	edx, eax
 	vcmpltss xmm0, xmm2, xmm1
 	vblendvps xmm0, xmm2, xmm1, xmm0
-	vmovss	DWORD PTR prd_val$55[rsp], xmm0
-	cmp	ecx, r8d
-	jge	SHORT $LN466@MAIN
-; Line 279
-	vmovss	xmm2, DWORD PTR prd_val$55[rsp]
-	jmp	SHORT $LL397@MAIN
-$LN466@MAIN:
-; Line 286
+	vmovss	DWORD PTR prd_val$62[rsp], xmm0
+	cmp	ecx, r9d
+	jge	SHORT $LN562@MAIN
+; Line 447
+	vmovss	xmm2, DWORD PTR prd_val$62[rsp]
+	jmp	SHORT $LL483@MAIN
+$LN562@MAIN:
+; Line 454
+	cmp	edx, esi
+	mov	DWORD PTR $T84[rsp+16], 455		; 000001c7H
+	lea	rax, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
+	mov	DWORD PTR $T84[rsp+20], 58		; 0000003aH
+	mov	QWORD PTR $T84[rsp], rax
+	lea	rcx, OFFSET FLAT:??_C@_1BA@FBNCKCPD@?$AAS?$AAU?$AAC?$AAC?$AAE?$AAS?$AAS@
+	lea	rax, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
+	mov	r9d, r15d
+	mov	QWORD PTR $T84[rsp+8], rax
+	lea	r8, OFFSET FLAT:??_C@_1EM@LPOHNLCH@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AA?9?$AA4?$AAi@
+	lea	rax, OFFSET FLAT:??_C@_1O@GLIHGOJN@?$AAF?$AAA?$AAI?$AAL?$AAE?$AAD@
+	cmove	rax, rcx
+	lea	rcx, QWORD PTR $T84[rsp]
+	mov	QWORD PTR [rsp+56], rax
+	mov	DWORD PTR [rsp+48], edx
+	mov	edx, 2
+	mov	DWORD PTR [rsp+40], esi
+	mov	DWORD PTR [rsp+32], ebx
+	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
+; Line 457
 	vmovaps	xmm1, xmm8
 	lea	rcx, QWORD PTR net$[rsp]
 	call	?lay_upd@@YAXPEAUai_lay@@M@Z		; lay_upd
-; Line 287
+; Line 458
 	vmovaps	xmm1, xmm8
 	lea	rcx, QWORD PTR net$[rsp+144]
 	call	?lay_upd@@YAXPEAUai_lay@@M@Z		; lay_upd
-; Line 289
-	lea	rax, OFFSET FLAT:??_C@_08KGMLKAKE@num?9ai?4c@
-	mov	DWORD PTR [rsp+48], ebx
-	mov	QWORD PTR $T72[rsp], rax
-	lea	r8, OFFSET FLAT:??_C@_1EC@MDDEHDKJ@?$AAs?$AAa?$AAm?$AAp?$AAl?$AAe?$AA?5?$AA?$FL?$AA?$CF?$AAi?$AA?3?$AA?$CF?$AAi?$AA?$FN?$AA?5@
-	lea	rax, OFFSET FLAT:??_C@_04KLKHHPIG@MAIN@
-	mov	DWORD PTR [rsp+40], r15d
-	mov	r9d, r12d
-	mov	QWORD PTR $T72[rsp+8], rax
-	mov	edx, 2
-	mov	DWORD PTR $T72[rsp+16], 289		; 00000121H
-	lea	rcx, QWORD PTR $T72[rsp]
-	mov	DWORD PTR $T72[rsp+20], 55		; 00000037H
-	mov	DWORD PTR [rsp+32], edi
-	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
-	inc	edi
-	lea	rdx, QWORD PTR [r14+3132]
-	inc	rsi
-	cmp	rsi, 250				; 000000faH
+	inc	ebx
+	inc	rdi
+	cmp	rdi, 250				; 000000faH
 	jl	$LL7@MAIN
-; Line 254
-	add	r12d, 250				; 000000faH
-	lea	rdx, QWORD PTR [r14+3132]
-	add	r13, 250				; 000000faH
-	cmp	r13, QWORD PTR $T56[rsp]
+; Line 415
+	add	r15d, 250				; 000000faH
+	add	r12, 250				; 000000faH
+	cmp	r12, QWORD PTR $T63[rsp]
 	jl	$LL4@MAIN
-	mov	r13, QWORD PTR labels_file_data$1$[rsp]
-	vmovaps	xmm10, XMMWORD PTR [rsp+1488]
-	vmovaps	xmm9, XMMWORD PTR [rsp+1504]
-	vmovaps	xmm8, XMMWORD PTR [rsp+1520]
+	vmovaps	xmm10, XMMWORD PTR [rsp+1744]
+	vmovaps	xmm9, XMMWORD PTR [rsp+1760]
 $LN3@MAIN:
 ; File W:\cpp\void\dr\plat-win32.c
 ; Line 32
-	lea	rcx, QWORD PTR Result$58[rsp]
+	lea	rcx, QWORD PTR Result$65[rsp]
 	call	QWORD PTR __imp_QueryPerformanceCounter
 ; Line 25
-	lea	rcx, QWORD PTR Result$60[rsp]
+	lea	rcx, QWORD PTR Result$67[rsp]
 	call	QWORD PTR __imp_QueryPerformanceFrequency
 ; File W:\cpp\void\dr\trace.c
 ; Line 57
-	vmovups	xmm0, XMMWORD PTR __traceblock__53$49[rsp+8]
-	mov	rcx, QWORD PTR Result$58[rsp]
-	sub	rcx, QWORD PTR Result$59[rsp]
-	vmovsd	xmm1, QWORD PTR __traceblock__53$49[rsp+24]
-	vmovaps	xmm7, XMMWORD PTR [rsp+1536]
-	vmovaps	xmm6, XMMWORD PTR [rsp+1552]
-	mov	r15, QWORD PTR [rsp+1568]
-	mov	r14, QWORD PTR [rsp+1576]
-	mov	r12, QWORD PTR [rsp+1624]
-	mov	rdi, QWORD PTR [rsp+1616]
-	mov	rsi, QWORD PTR [rsp+1608]
-	mov	rbx, QWORD PTR [rsp+1600]
-	vmovups	XMMWORD PTR $T76[rsp], xmm0
+	vmovups	xmm0, XMMWORD PTR __traceblock__56$55[rsp+8]
+	mov	rcx, QWORD PTR Result$65[rsp]
+	sub	rcx, QWORD PTR Result$66[rsp]
+	vmovsd	xmm1, QWORD PTR __traceblock__56$55[rsp+24]
+	vmovaps	xmm8, XMMWORD PTR [rsp+1776]
+	vmovaps	xmm7, XMMWORD PTR [rsp+1792]
+	vmovaps	xmm6, XMMWORD PTR [rsp+1808]
+	mov	r15, QWORD PTR [rsp+1824]
+	mov	r14, QWORD PTR [rsp+1832]
+	mov	r13, QWORD PTR [rsp+1840]
+	mov	r12, QWORD PTR [rsp+1880]
+	mov	rdi, QWORD PTR [rsp+1872]
+	mov	rsi, QWORD PTR [rsp+1864]
+	mov	rbx, QWORD PTR [rsp+1856]
+	vmovups	XMMWORD PTR $T90[rsp], xmm0
 	vxorps	xmm0, xmm0, xmm0
-	vmovsd	QWORD PTR $T76[rsp+16], xmm1
-	js	SHORT $LN461@MAIN
+	vmovsd	QWORD PTR $T90[rsp+16], xmm1
+	js	SHORT $LN557@MAIN
 ; Line 55
 	vcvtsi2sd xmm0, xmm0, rcx
-	jmp	SHORT $LN462@MAIN
-$LN461@MAIN:
+	jmp	SHORT $LN558@MAIN
+$LN557@MAIN:
 	mov	rax, rcx
 	and	ecx, 1
 	shr	rax, 1
 	or	rax, rcx
 	vcvtsi2sd xmm0, xmm0, rax
 	vaddsd	xmm0, xmm0, xmm0
-$LN462@MAIN:
-	mov	rcx, QWORD PTR Result$60[rsp]
+$LN558@MAIN:
+	mov	rcx, QWORD PTR Result$67[rsp]
 	vmulsd	xmm1, xmm0, QWORD PTR __real@408f400000000000
 	vxorps	xmm0, xmm0, xmm0
 	test	rcx, rcx
-	js	SHORT $LN459@MAIN
+	js	SHORT $LN555@MAIN
 	vcvtsi2sd xmm0, xmm0, rcx
-	jmp	SHORT $LN460@MAIN
-$LN459@MAIN:
+	jmp	SHORT $LN556@MAIN
+$LN555@MAIN:
 	mov	rax, rcx
 	and	ecx, 1
 	shr	rax, 1
 	or	rax, rcx
 	vcvtsi2sd xmm0, xmm0, rax
 	vaddsd	xmm0, xmm0, xmm0
-$LN460@MAIN:
+$LN556@MAIN:
 	vdivsd	xmm0, xmm1, xmm0
 ; Line 57
 	lea	r9, OFFSET FLAT:??_C@_1M@CAIDPHAA@?$AAT?$AAI?$AAM?$AAE?$AAD@
 	mov	edx, 2
 	lea	r8, OFFSET FLAT:??_C@_1DA@LCFOHEAK@?$AAT?$AAR?$AAA?$AAC?$AAE?$AA_?$AAB?$AAL?$AAO?$AAC?$AAK?$AA?5?$AA?$FL?$AA?$CF?$AAs@
-	lea	rcx, QWORD PTR $T76[rsp]
+	lea	rcx, QWORD PTR $T90[rsp]
 	vmovsd	QWORD PTR [rsp+32], xmm0
 	call	?OutputTraceMessage@@YAXUTRACE_LOCATION@@HPEB_WZZ ; OutputTraceMessage
 ; File W:\cpp\void\dr\plat-win32.c
 ; Line 525
+	mov	rcx, QWORD PTR labels_file_data$1$[rsp]
 	xor	edx, edx
 	mov	r8d, 32768				; 00008000H
-	mov	rcx, r13
 	call	QWORD PTR __imp_VirtualFree
 	mov	rcx, QWORD PTR images_file_data$1$[rsp]
 	xor	edx, edx
 	mov	r8d, 32768				; 00008000H
 	call	QWORD PTR __imp_VirtualFree
 ; File W:\cpp\void\dr-ai\num-ai.c
-; Line 299
+; Line 471
 	int	3
-; Line 300
+; Line 472
 	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
 	xor	rcx, rsp
 	call	__security_check_cookie
-	add	rsp, 1584				; 00000630H
-	pop	r13
+	add	rsp, 1848				; 00000738H
 	ret	0
 ?MAIN@@YAXXZ ENDP					; MAIN
 _TEXT	ENDS
