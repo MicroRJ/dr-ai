@@ -119,7 +119,7 @@ unsigned int xorshift32(unsigned int x)
 }
 
 ai_float rand_f(ai_float min, ai_float max)
-{ static unsigned int state = 97; // TODO(RJ)!
+{ static unsigned int state = 901823102; // TODO(RJ)!
   state = xorshift32(state);
   return (min + (ai_float)state/~0u * (max - min));
 }
@@ -215,7 +215,7 @@ static __forceinline ai_int vec_eql(ai_vec lhs, ai_vec rhs)
 
 static __forceinline void vec_rnd(ai_vec v)
 { for(int i = 0; i < v.len; ++ i)
-    v.mem[i] = rand_f(0.f, 1.f);
+    v.mem[i] = rand_f(-1.f, +1.f);
 }
 
 static void __forceinline __vectorcall vec_mov(ai_vec dst, ai_vec lhs)

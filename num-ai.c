@@ -1,14 +1,13 @@
 /**
+ *   Because we can't visualize fully fledged math on a primitive text editor, we're going to invent a limited and simple
+ *   ASCII semi-intermediate notation that'll help me and you understand and document math related code easier and quicker.
+ *   This notation is also used by a pre-processor to generate a website, you'll see the rendered math there.
+ *   ---
+ *   Although the math is simple, hopefully the combination of math, code and comments will help clear up any doubts you may have.
  *
- * ### Because we can't visualize fully fledged math on a primitive text editor, we're going to invent a limited and simple
- *     ASCII semi-intermediate notation that'll help me and you understand and document math related code easier and quicker.
- *     This notation is also used by a pre-processor to generate a website, you'll see the rendered math there.
- *     ---
- *     Although the math is simple, hopefully the combination of math, code and comments will help clear up any doubts you may have.
+ *   Let's give the notation a name, "Dayan's Notation", anything within back-ticks is Dayan's Notation.
  *
- * Let's give the notation a name, "Dayan's Notation", anything within back-ticks is Dayan's Notation.
- *
- * Here's the quite shallow Backus–Naur form.
+ *   Here's the quite shallow Backus–Naur form used by the parser.
  *
  * <statement-end-operator> ::= `;`
  * <unknown-operator> ::= `?`
@@ -70,50 +69,33 @@
  *
  *   The activation function, a brief explanation:
  *   ---
- *   We use partial derivatives to find sort of a "direction", a pointer towards some nice minimum.
+ *   We use partial derivatives to find sort of a "direction", a pointer towards some minimum.
  *
  *   For a second, let's think of them as oriented pointers with some variable magnitude.
  *
  *   Initially, they are most likely pointing towards the wrong place, and so it is the job of the
- *   algorithm to ever so slightly nudge each pointer, without overshooting, in a direction that works
- *   not just for it, but for every other pointer it is linked to.
+ *   algorithm to ever so slightly nudge each pointer, in a direction that works not just for it,
+ *   but for every other pointer it is linked to.
  *
  *   In a way, these pointers would be too credulous, too susceptible to disturbances, noise or just change
  *   in general if they were guided by the unfiltered output of a neuron.
  *
- *   By introducing that extra activation function, we're sort of normalizing the derivative by
- *   adding another step in the differential chain.
+ *   By introducing that extra activation function, we're adding another step to the derivation chain and thus
+ *   normalizing and filtering out noise.
  *
- *   Sigmoid also has some very interesting properties, for instance, values outside of the range ~ -5..5
- *   make no almost no difference, were as values between ~ -3..3 have the biggest effects.
+ *   Sigmoid also has some useful properties, for instance, values outside of the range ~ -5..5
+ *   make no almost no difference, were as values between ~ -3..3 have the biggest effect.
  *
  *   Is almost like a noise filter.
  *
  *   Sigmoid is just one of the many activation functions used today, so it is in your
  *   best interest too see which one works best for you once you have a firm understanding of the concept.
  *
- *   Let's think of it this way, let's say you're a bus driver, and you're on busy shift, the bus is packed.
- *   This is a bus with sixteen seats in total, two columns, and eight rows.
  *
- *   Now, in this alternate universe, there are no pre-planed routes, and you have to take each passenger to
- *   whatever destination they picked. However, these passengers happen to be monkeys, crazy, sporadic monkeys.
- *   Each monkey, with its left hand, is pointing to direction they'd like to go, and you also notice that each
- *   monkey, is looking at the two monkeys in the two front seats. And so when the two monkeys in the two front
- *   seats
+ *   Getting started.
+ *   ---
  *
- *   So, if you don't know the final destination of each monkey, and all you know is the direction, is it possible
- *   to somehow optimize how quickly you arrive at each destination?
- *
- *   Now, this isn't as simple as just going in the average direction.
- *   What if there isn't even a road in that direction? You have to disregard those, otherwise no monkeys are making it.
- *
- *   So you have to make a compromise and find a direction that pleases most of them.
- *
- *
- * ### Let's Begin.
- *
- *
- * ### We're Going To Use Subscripts A Lot, Here's What They Mean.
+ *   We're Going To Use Subscripts A Lot, Here's What They Mean.
  *
  * 0x00: d :: 'sample index'
  * 0x00: k :: 'layer index'
@@ -122,74 +104,92 @@
  * 0x00: i :: 'weight index'
  * 0x00: r :: 'neuron count'
  *
- * ### This is the first layer, the output layer.
+ *   This is the first layer, the output layer.
  *
- * 0x00: `k[0]`
+ * 0x00: k[0]
  *
- * ### This is is the last layer, the input layer. (Negative array indices).
+ *   This is is the last layer, the input layer. (Negative array indices).
  *
- * 0x00: `k[-1]`
+ * 0x00: k[-1]
  *
- * ### The Layer After `k` (closer to the input layer)
+ *   The Layer After `k` (closer to the input layer)
  *
  * 0x00: `k+1 == k ++`
  *
- * ### The Layer Before `k` (closer to the output layer)
+ *   The Layer Before `k` (closer to the output layer)
  *
  * 0x00: `k-1 == k --`
  *
- * ### Define our target output:
- *
- * 0x00: Y[d:j] := ?[d:j]
- *
- * ### Define Our Cost Function, For A Single Input - Output Pair To Be:
- *
- * 0x00: E[d:j] := 1/2 * pow<2>(A[0:j] - Y[d:j])
- *
- *       Notice how `E` uses `A[k:j]` and not `O[k:j]`.
- *
- * # Define our activation function to be:
+ *   Define our activation function to be:
  *
  * 0x00: sig(x) := 1/(1 + exp(- x))
  *
- * # And it's derivative:
+ *   And it's derivative:
  *
  * 0x00: sig"(x) := (1 - sig(x)) * sig(x)
  *
- * # Define the output of a neuron to be:
+ *   Define the unfiltered output of a neuron to be:
  *
  * 0x00: A[k:j] := sum(i, W[k:j,i] * O[k+1:j,i]) + B[k:j]
  *
- * # Define the normalized output of a neuron to be:
+ *   Define the output of a neuron to be:
  *
- * 0x00: O[k:j] := sig(A[k+1,j])
+ * 0x00: O[k:j] := sig(A[k,j])
  *
+ *   Define our target output:
  *
- *   Let's calculate all the partial derivatives necessary for the output layer. `(k = 0)`
+ * 0x00: Y[d:j]
  *
+ *   Define Our Cost Function, For A Single Input - Output Pair To Be:
  *
- *   Change in `E[d:j]` due to `A[k:j]`.
+ * 0x00: E[d:j](X) := 1/2 * pow<2>(O[0:j] - Y[d:j])
  *
- * 0x00: E[d:j]\\A[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])
+ *   Let's begin with the output layer: `k = 0`
  *
- *   We call this term the "error", and we'll use the dollar sign to denote it
+ *   What are we trying to do?
+ *   Find how much each neuron of the output layer affects each `E[d:j]` so that
+ *   we now how much to nudge each weight and bias appropriately.
  *
- * 0x00: $[k:j] := E[d:j]e\\A[k:j]
+ *   Let's find out how much `E[d:j]` is affected by the unfiltered output `A[k:j]` of a neuron.
  *
- *   We have to compute the error for every node of the output layer, here's the psuedo code.
+ *   Since `E[d:j]` is a function of `O[k:j]` and not a function of `A[k:j]` directly, we have to go through `O[k:j]`,
+ *   which is actually modulating `A[k:j]` through the activation function.
+ *
+ *   And so we get:
+ *
+ * 0x00: E[d:j]\\A[k:j] := E[d:j]\\O[k:j] * O[k:j]\\A[k:j]
+ *
+ *   The partial change in `E[d:j]` due to `A[k:j]` is the product of the change in `E[d:j]` due to `O[k:j]` and the change
+ *   in `O[k:j]` due to `A[k:j]`.
+ *
+ *   We call this term `E[d:j]\\A[k:j]` the "error", and we'll use the dollar sign to denote it.
+ *   This is what it looks fully resolved at the output layer:
+ *
+ * 0x00: $[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])
+ *
+ *   Since the error is defined per node at the output layer, we have to go over every one of its nodes `j`
+ *   and calculate it's error.
  *
  * 0x00: for(j..r[k]):
- * 0x00:  ?.[j] = sig"(A[k:j]) * (O[k:j] - Y[k:j])
+ * 0x00:  ?.[j] = (O[k:j] - Y[k:j]) * sig"(A[k:j])
  *
- *   Change In `A[k:j]` due to `B[k:j]`. For this one we don't have to do much.
+ *   Now that we have the `$` term, we know how much the cost function changes due to `A[k:j]`.
+ *   But we need to go further, how much does `A[k:j]` change due to `B[k:j]` and every single `W[k:j,i]`.
+ *
+ *   Change In `A[k:j]` due to `B[k:j]`.
+ *
+ *   For this one we don't have to do much.
  *
  * 0x00: A[k:j]\\B[k:j] := $[k:j] * 1 == $[k:j];
  *
+ *
  *   Change In `A[k:j]` due to `W[k:j,i]`
+ *
+ *   This one is a little bit more involved.
  *
  * 0x00: A[k:j]\\W[k:j,i] := $[k:j] * O[k+1:i]
  *
- *   Let's expand this to see expression, to see how it works for at least node 0.
+ *   Let's expand this expression a bit, to see how it works.
  *
  * 0x00: A[k:0]\\W[k:  0, 0  ] := $[k:0] * O[k+1:0]
  * 0x00: A[k:0]\\W[k:  0, 1  ] := $[k:0] * O[k+1:1]
@@ -201,31 +201,55 @@
  * 0x00: A[k:0]\\W[k:  3, .. ] := ..
  * 0x00: A[k:0]\\W[k: .., .. ] := ..
  *
- *   Here's the psuedo code using a for loop.
+ *   We see that `i` corresponds to the weight `i` of node `j` of layer `k` AND to the output of node `i` in layer `k+1`.
+ *   Each weight is responsible for one of the outputs of the next layer.
+ *
+ *   And so the change in `A[k=0:j=0]` due to `W[k=0:j=0,i]`, is how much `O[k+1:i]` is modulating that weight.
+ *
+ *   Here's the psuedo code that computes `A[0:j]\\W[0:j,i]`.
  *
  * 0x00: for(j..r[k]):
  * 0x00:  for(i..r[k+1]):
  * 0x00:   m[j][i] = $[k:j] * O[k+1:i]
  *
+ *   Now, why is `O[k+1:i]` the derivative of `A[k:j]\\W[k:j,i]`?
  *
- *   ---
+ *   A node, is a first-degree polynomial, exactly like this one:
+ *
+ * 0x00: A[k:j] =
+ * 0x00:   W[k:0,i=0] * O[k+1:i=0] +
+ * 0x00:   W[k:0,i=1] * O[k+1:i=1] +
+ * 0x00:   W[k:0,i=2] * O[k+1:i=2] + ...;
+ *
+ *   The only difference is, that we use the `sum()` operator instead.
+ *
+ * 0x00: A[k:0]\\W[k:0,i=0] := O[k+1:i=0]
+ * 0x00: A[k:0]\\W[k:0,i=1] := O[k+1:i=1]
+ * 0x00: A[k:0]\\W[k:0,i=2] := O[k+1:i=2]
+ *
+ *
  *   Hidden Layers, `k > 0`:
  *   ---
  *
- *   First let's establish that what we're ultimatly trying to do:
- *   Find out how much our weights and biases have affected the final error, the error of
- *   the final output layer.
+ *   First let's once again establish that what we're ultimatly trying to do:
+ *   Find out how much our weights and biases have affected `E[d:j]`.
  *
  *   This might sound as having to compute a long derivation chain that extends all the way back to the final layer,
- *   but it doesn't have to be that way. Let's instead accumulate the "error" term for every neuron in each layer as
- *   we move away from the output layer. It's as if we were instead bring the error with us.
- *   So we only focus on how much we've affected the error of the previous layer.
+ *   but it doesn't have to be that way.
+ *
+ *   Let's instead accumulate the `$` term, as we move away from the output layer. As if we were instead bring the
+ *   error with us. We only focus on how much we've affected the previous outputs.
+ *
+ *   Now, every single weight, of every single neuron, affects every single output of the previous layer.
+ *   So if we're ultimatly trying to compute `E[d:l]\\A[k:j]`, we have to also compute how much `A[k:j]` has affected
+ *   every `A[k-1:j=0..r[k-1]]`.
  *
  *
- *   Let's first note, once again, that the expression `E[d]\\A[k:j]` expands to:
- *   E[d]\\A[k:j] := E[d]\\O[k:j] * O[k:j]\\A[k:j]
+ *   E[d:l]\\A[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
  *
- *   $[k:j] := E[d]\\A[k:j] == sum(l..r[k-1], E[d]\\A[k-1:l] * A[k-1:l]\\A[k:l])
+ *   $[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
+ *
+ *
  *
  *   Pseudo Code Version
  *
@@ -312,7 +336,7 @@ static void __vectorcall net_prp_bwd(ai_net * net, ai_vec inp_v, ai_vec tar_v)
     for(ai_int l = 0; l < wei_o.row; ++ l)
     { acc += err_o.mem[l] * wei_o.mem[l * wei_o.vec_max + j];
     }
-    err_i.mem[j] = acc;
+    err_i.mem[j] *= acc;
   }
   for(ai_int j = 0; j < wei_i.row; ++ j)
   { for(ai_int i = 0; i < wei_i.col; ++ i)
@@ -407,13 +431,14 @@ VOID MAIN()
   ai_int sample_batch = 250;
   ai_int sample_count = img_num;
 
-  // 56000 ms for all samples avg
-  // 51000 ms for all samples avg (after sigmoid wide)
-  // 46000 ms for all samples avg (after sigmoid prime wide)
-  // for(;;)
+
+  for(;;)
   { TRACE_BLOCK("TIMED");
+
     for(ai_int sample_index = 0; sample_index < sample_count; sample_index += sample_batch)
-    { for(ai_int batch_index = 0; batch_index < sample_batch; ++ batch_index)
+    {
+      ai_float correct_predictions = 0.f;
+      for(ai_int batch_index = 0; batch_index < sample_batch; ++ batch_index)
       { ai_int image_index = sample_index + batch_index;
 
         const int label = label_array[image_index];
@@ -451,8 +476,15 @@ VOID MAIN()
           }
         }
 
-        TRACE_I("sample [%i:%-4i] lbl %i ->> prd %i %s", sample_index, batch_index, label, prd_idx,
-          (prd_idx==label) ? L"SUCCESS" : L"FAILED");
+        if(label == prd_idx)
+        { correct_predictions ++;
+        } else
+        { // correct_predictions --;
+        }
+
+
+        // TRACE_I("sample [%i:%-4i] lbl %i ->> prd %i %s", sample_index, batch_index, accuracy, label, prd_idx,
+        //   (prd_idx==label) ? L"SUCCESS" : L"FAILED");
 
         lay_upd(& net.lay_i, .1f);
         lay_upd(& net.lay_o, .1f);
@@ -460,6 +492,8 @@ VOID MAIN()
         // Sleep(10);
 
       }
+      ai_float accuracy = 100.f * (correct_predictions / sample_batch);
+      TRACE_I("accuracy %%%-3.2f", accuracy);
       // if(! stbi_write_png(FormatA("data\\sample\\image_%i.png", i), image_col_len, image_row_len, 1, pixel_data, 28))
       // { TRACE_E("failed to write image");
       //   __debugbreak();

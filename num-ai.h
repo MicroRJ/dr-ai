@@ -87,4 +87,30 @@ static unsigned int __forceinline int_flip(unsigned i)
           ((i & 0x0000FF00) << 0x08));
 }
 
+#ifdef _WIN32
+static void *ai_read_file_data(unsigned int *file_read_result, const char *file_name)
+{
+  HANDLE file_handle =
+    CreateFileA(file_name, GENERIC_READ, FILE_SHARE_WRITE|FILE_SHARE_READ, 0x00, OPEN_EXISTING, 0x00, 0x00);
+
+  void *file_data =
+    NULL;
+  if(INVALID_HANDLE_VALUE != file_handle)
+  { DWORD
+      file_size    = 0,
+      file_size_hi = 0,
+      file_read    = 0;
+    file_size = GetFileSize(file_handle, & file_size_hi);
+    file_data = VirtualAlloc(NULL, file_size, MEM_RESERVE|MEM_COMMIT, PAGE_READWRITE);
+    if(! ReadFile(file_handle, file_data, file_size, &file_read, 0x00))
+    { UnloadFileData(file_data);
+      file_data = NULL;
+    }
+    if(file_read_result) *file_read_result = file_read;
+    CloseHandle(file_handle);
+  }
+  return file_data;
+}
+#endif
+
 #endif
