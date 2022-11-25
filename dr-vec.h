@@ -1,21 +1,16 @@
+/**
+ * Copyright(C) Dayan Rodriguez, 2022-2023, All Rights Reserved.
+ **/
 #ifndef DR_VEC
 #define DR_VEC
+
+#include "dr-lan.c"
 
 #define FLOAT_ERROR_MAX (+ 0x1000)
 #define FLOAT_ERROR_MIN (- 0x1000)
 
 typedef float ai_float;
 typedef int   ai_int;
-
-
-// https://www.desmos.com/calculator/btdhngc1oq
-#ifndef sigmoid
-# define sigmoid(o) (1.0/(1.0+exp(-o)))
-#endif
-// Don't actually use this dude, this is just for illustration purposes.
-#ifndef sigmoid_prime
-# define sigmoid_prime(o) (sigmoid(o) * (1 - sigmoid(o)))
-#endif
 
 #if defined(__AVX2__)
 # define ai_lane                      __m512
@@ -59,6 +54,15 @@ typedef int   ai_int;
   (l.m128_f32[0x00] + l.m128_f32[0x01] + l.m128_f32[0x02] + l.m128_f32[0x03])
 #else
 // Welp...
+#endif
+
+// https://www.desmos.com/calculator/btdhngc1oq
+#ifndef sigmoid
+# define sigmoid(o) (1.0/(1.0+exp(-o)))
+#endif
+// Don't actually use this dude, this is just for illustration purposes.
+#ifndef sigmoid_prime
+# define sigmoid_prime(o) (sigmoid(o) * (1 - sigmoid(o)))
 #endif
 
 typedef struct ai_vec
@@ -198,6 +202,14 @@ static ai_vec new_vec10(
   v.mem[0x06] = s6; v.mem[0x07] = s7;
   v.mem[0x08] = s8; v.mem[0x09] = s9;
   return v;
+}
+
+
+static __forceinline void vec_zro(ai_vec v)
+{ drvs__zro(v.len, v.mem);
+}
+static __forceinline void vec_one(ai_vec v)
+{ drvs__one(v.len, v.mem);
 }
 
 
@@ -350,23 +362,9 @@ static ai_vec __forceinline __vectorcall vec_dsg_(ai_vec dst, ai_vec lhs)
 // Not sure if we're at the point in which we'd want multiple accumulators for higher precision.
 static ai_float __forceinline __vectorcall vec_dot(ai_vec lhs, ai_vec rhs)
 { Assert(lhs.len == rhs.len);
-
-#if defined(ai_lane)
-  ai_lane lane_acc = { };
-  for(ai_int i = 0; i < lhs.len; i += sizeof(ai_lane)/sizeof(ai_float))
-  { ai_lane lhs_l = ai_lane_load(lhs.mem + i);
-    ai_lane rhs_l = ai_lane_load(rhs.mem + i);
-    lane_acc = ai_lane_mul_add( lane_acc, lhs_l, rhs_l);
-  }
-  // TODO(RJ)!
-  return ai_lane_collapse_additive(lane_acc);
-#else
-  ai_float result = 0;
-  for(int i = 0; i < lhs.len; ++ i)
-  { result += lhs.mem[i]*rhs.mem[i];
-  }
-  return result;
-#endif
+  ai_float dst;
+  drvs__dot(lhs.len,&dst,lhs.mem,rhs.mem);
+  return dst;
 }
 
 // For a col matrix, the number of vectors has to the be the number of columns
@@ -429,6 +427,8 @@ static __forceinline ai_vec __vectorcall mat_dot_(ai_vec dst, ai_mat mat, ai_vec
 #ifndef mat_dot
 # define mat_dot(mat,src) mat_dot_(rpl_vec(src),mat,src)
 #endif
+
+
   for(ai_int idx = 0; idx < mat.min; ++ idx)
   { dst.mem[idx] = vec_dot(mat_vec(mat,idx),src);
   }

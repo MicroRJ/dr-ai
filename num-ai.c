@@ -265,6 +265,60 @@
  *    for(i..r[k+1]):
  *     .[j][i] = $[k:j] * O[k+1:i]
  * ### C Version
+ *  * Example A: `W[k:j,i]`
+ *   Visually, `k` would be above `W` and `j` below, `i` would be next to `j`.
+ * * Example B: `W[k[c:v]:j,i]`
+ *    Visually, `k` would be above `W` and `j` below, `i` would be next to `j`,
+ *    `c` would be above `k` and `v` below.
+ *   Subscript Inference:
+ *   Only when repetitiveness becomes obfuscating, AND if by pattern of repetition, the context
+ *   is unambiguous, AND it is in the best interest of the reader, it is then allowed to omit
+ *   the <subscript-argument> or one if its <operands>.
+ *   The subscript however, must be representative of the number of expressions there are in it.
+ * * Example C & D:
+ *     `w[k:j:0]` = `w[::0]`
+ *     `w[k]`     = `w[]`
+ * Let's rewrite this expression instead as:
+ *
+ * 0x00: $[k:j] := sig"(a[k:j]) * sum(l, $[k-1:l] * W[k-1:l:j])
+ * Let's expand this expression to see how it works:
+ *
+ * 0x00:
+ *  $[k:0] := sig"(a[k:0]) *
+ *    ( $[k-1: 0]* W[k-1 : 0: 0] +
+ *      $[   : 1]* W[    :  : 0] +
+ *      $[   : 2]* W[    :  : 0] +
+ *      $[   : 3]* W[    :  : 0] )
+ *
+ * Notice how the weight index is the same as j, 0. That is
+ * because we're only concerned with the weight that is scaling our output.
+ * All the other variables can be treated as 0's. {{explanation}}
+ *
+ *
+ * If you're somehow thinking about a matrix transposition, you're in the right path.
+ *   0  1  2  3  4     0  1  2
+ * 0 [W][W][W][W][W]   [W][W][W] 0 <
+ * 1 [W][W][W][W][W] T [W][W][W] 1 <
+ * 2 [W][W][W][W][W]   [W][W][W] 2 <
+ *    ^  ^  ^  ^  ^    [W][W][W] 3 <
+ *                     [W][W][W] 4 <
+ *
+ *
+ * To transpose a matrix is to rotate it. This could have a deeper meaning, depending on how you
+ * interpret them, e.i Linear Algebra, but to us, it means nothing but facilitating an operation.
+ * So no, it has nothing to do with going "backwards", let's stop lollygagging on 3Blue1Brown
+ * analogies and come back to the harsh reality, it's just a coincidence, believe me, I am not a mathematician.
+ *
+ * For the 'fast' implementation however, we're not going to do this, because transposing ~4KB worth of matrix
+ * every iteration sounds almost slower than Visual Studio.
+ * (28*28*4 + 16*10*4 + 10*10*4)/1024
+ * The whole point of transposing a matrix is to take advantage of SIMD, making memory that was sparse, contiguous.
+ * And you could make the case that transposing a matrix is a good way of doing this, and it is, if you don't know
+ * what you're talking about.
+ *
+ * Now, we already have SIMD working for the forward propagation stage, just not for the backwards one.
+ * So it's clear that we'll either have to make some sort of compromise. Let's not dwell on this too
+ * much though, let's write a loop instead and we'll figure something out later.
  **/
 #define KLARK_APPMODE_CONSOLE
 #include "dr-include.h"
@@ -281,19 +335,11 @@ static ai_vec __forceinline __vectorcall lay_prp_fwd(ai_lay * lay, ai_vec inp)
 }
 
 static void lay_upd(ai_lay *lay, ai_float alpha)
-{ // TODO(RJ): SPEED!
-  ai_vec bia_old = lay->bia;
-  ai_vec bia_new = lay->new_bia;
-  for(ai_int x = 0; x < bia_old.len; ++ x)
-  { ai_float y = -alpha * bia_new.mem[x];
-    bia_old.mem[x] += y;
-  }
-  ai_mat wei_old = lay->wei;
-  ai_mat wei_new = lay->new_wei;
-  for(ai_int x = 0; x < wei_old.min * wei_old.vec_max; ++ x)
-  { ai_float y = -alpha * wei_new.mem[x];
-    wei_old.mem[x] += y;
-  }
+{ ai_vec bia_old = lay->bia, bia_new = lay->new_bia;
+  drvs__maa(bia_old.len, bia_old.mem, bia_old.mem, bia_new.mem, -alpha);
+  ai_mat wei_old = lay->wei, wei_new = lay->new_wei;
+  drvs__maa(wei_old.min * wei_old.vec_max,
+   wei_old.mem, wei_old.mem, wei_new.mem, -alpha);
 }
 
 static void __forceinline net_prp_fwd(ai_net *net, ai_vec inp)
@@ -321,9 +367,13 @@ static void __vectorcall net_prp_bwd(ai_net * net, ai_vec inp_v, ai_vec tar_v)
     new_wei_o = lay_o.new_wei,
     new_wei_i = lay_i.new_wei;
 
-  vec_sub_(err_o, act_o, tar_v);
-  vec_dsg_(tmp_o, out_o);
-  vec_mul_(err_o, err_o, tmp_o);
+// KLARK_APP INFO:      num-ai.c, MAIN() [5516] accuracy %86.40
+// KLARK_APP INFO:      num-ai.c, MAIN() [5516] TRACE_BLOCK [TIMED] 12017.765300(ms)
+// KLARK_APP INFO:      num-ai.c, MAIN() [5516] accuracy %93.09
+// KLARK_APP INFO:      num-ai.c, MAIN() [5516] TRACE_BLOCK [TIMED] 12114.085300(ms)
+
+  drvs__aii_err_out(err_o.len, err_o.mem, tar_v.mem, act_o.mem);
+
   for(ai_int j = 0; j < wei_o.row; ++ j)
   { for(ai_int i = 0; i < wei_o.col; ++ i)
     { new_wei_o.mem[j * new_wei_o.vec_max + i] = err_o.mem[j] * act_i.mem[i];
@@ -331,6 +381,7 @@ static void __vectorcall net_prp_bwd(ai_net * net, ai_vec inp_v, ai_vec tar_v)
   }
 
   vec_dsg_(err_i, out_i);
+
   for(ai_int j = 0; j < wei_i.row; ++ j)
   { ai_float acc = 0;
     for(ai_int l = 0; l < wei_o.row; ++ l)
@@ -338,12 +389,12 @@ static void __vectorcall net_prp_bwd(ai_net * net, ai_vec inp_v, ai_vec tar_v)
     }
     err_i.mem[j] *= acc;
   }
+
   for(ai_int j = 0; j < wei_i.row; ++ j)
   { for(ai_int i = 0; i < wei_i.col; ++ i)
     { new_wei_i.mem[j * new_wei_i.vec_max + i] = err_i.mem[j] * inp_v.mem[i];
     }
   }
-  // Sleep(256);
 }
 
 static void net_grd_dsc(
@@ -368,45 +419,6 @@ VOID MAIN()
   unsigned int img_col_len = int_flip(((unsigned int *) images_file_data)[3]);
   unsigned char * img_mem = (unsigned char *)images_file_data + sizeof(int)*3;
 
-  { Assert(!! vec_eql(new_vec2(1, 1), new_vec2(1, 1)));
-    Assert(!  vec_eql(new_vec2(1, 0), new_vec2(1, 1)));
-
-
-    ai_mat mat = new_row_mat(2,2);
-    mat[0][0] = 1.f; mat[0][1] = 2.f;
-    mat[1][0] = 3.f; mat[1][1] = 4.f;
-
-    Assert(
-      vec_eql(
-        new_vec2(3.f,7.f),
-        mat_dot(mat, new_vec2(1.f,1.f))));
-
-    Assert(
-      vec_eql(
-        new_vec2(0.f, 0.f),
-        vec_mul(
-          new_vec2(0.f, 1.f),
-          new_vec2(1.f, 0.f))));
-    Assert(
-    vec_eql(
-      new_vec2(0.f, 0.f),
-      vec_add(
-        new_vec2(- 1.f,   1.f),
-        new_vec2(  1.f, - 1.f))));
-    Assert(0 == vec_dot(
-      new_vec2(0.f, 1.f),
-      new_vec2(1.f, 0.f)));
-    Assert(0 == vec_dot(
-      new_vec3(1.f, 0.f, 0.f),
-      new_vec3(0.f, 1.f, 0.f)));
-    Assert(0 == vec_dot(
-      new_vec3(1.f, 0.f, 0.f),
-      new_vec3(0.f, 0.f, 1.f)));
-    Assert(0 == vec_dot(
-      new_vec3(0.f, 1.f, 0.f),
-      new_vec3(0.f, 0.f, 1.f)));
-  }
-
   ai_vec valid_output_vectors[10] =
   { new_vec10(1.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f), // 0
     new_vec10(0.f, 1.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f), // 1
@@ -421,11 +433,8 @@ VOID MAIN()
   };
 
   ai_net net;
-  net.lay_i = new_lay(28*28, 16);
-  net.lay_o = new_lay(16,    10);
-  net.num   = img_num;
-  net.del   = 0.10f;
-  net.itr   = 500;
+  ai_net_ini(& net, 28*28, 16, 10);
+
   ai_vec   inp = new_vec(28*28);
   ai_float nor = 1.f / 255.f;
   ai_int sample_batch = 250;
@@ -435,38 +444,24 @@ VOID MAIN()
   for(;;)
   { TRACE_BLOCK("TIMED");
 
+    ai_float correct_predictions = 0.f;
+
     for(ai_int sample_index = 0; sample_index < sample_count; sample_index += sample_batch)
-    {
-      ai_float correct_predictions = 0.f;
-      for(ai_int batch_index = 0; batch_index < sample_batch; ++ batch_index)
+    { for(ai_int batch_index = 0; batch_index < sample_batch; ++ batch_index)
       { ai_int image_index = sample_index + batch_index;
-
         const int label = label_array[image_index];
-
-        // if(label != 0)
-        // { continue;
-        // }
-
         unsigned char *img_dat = img_mem + (img_col_len * img_row_len) * image_index;
-
         for(size_t i = 0; i < inp.len; ++ i)
         { inp.mem[i] = nor * img_dat[i];
         }
 
-        memset(net.lay_i.new_bia.mem, 0,
-          sizeof(ai_float) * net.lay_i.new_bia.len);
+        vec_zro(net.lay_o.new_bia);
+        vec_zro(net.lay_i.new_bia);
 
-        memset(net.lay_i.new_wei.mem, 0,
-          sizeof(ai_float) * net.lay_i.new_wei.min * net.lay_i.new_wei.vec_max);
-
-        memset(net.lay_o.new_bia.mem, 0,
-          sizeof(ai_float) * net.lay_o.new_bia.len);
-
-        memset(net.lay_o.new_wei.mem, 0,
-          sizeof(ai_float) * net.lay_o.new_wei.min * net.lay_o.new_wei.vec_max);
+        drvs__zro(net.lay_o.new_wei.min * net.lay_o.new_wei.vec_max, net.lay_o.new_wei.mem);
+        drvs__zro(net.lay_i.new_wei.min * net.lay_i.new_wei.vec_max, net.lay_i.new_wei.mem);
 
         net_grd_dsc(& net, inp, valid_output_vectors[label]);
-
         ai_float prd_val = -1;
         ai_int   prd_idx = -1;
         for(ai_int i = 0; i < net.lay_o.act.len; ++ i)
@@ -475,88 +470,24 @@ VOID MAIN()
             prd_idx = i;
           }
         }
-
         if(label == prd_idx)
         { correct_predictions ++;
         } else
         { // correct_predictions --;
         }
-
-
-        // TRACE_I("sample [%i:%-4i] lbl %i ->> prd %i %s", sample_index, batch_index, accuracy, label, prd_idx,
-        //   (prd_idx==label) ? L"SUCCESS" : L"FAILED");
-
         lay_upd(& net.lay_i, .1f);
         lay_upd(& net.lay_o, .1f);
-
-        // Sleep(10);
-
       }
-      ai_float accuracy = 100.f * (correct_predictions / sample_batch);
-      TRACE_I("accuracy %%%-3.2f", accuracy);
       // if(! stbi_write_png(FormatA("data\\sample\\image_%i.png", i), image_col_len, image_row_len, 1, pixel_data, 28))
       // { TRACE_E("failed to write image");
       //   __debugbreak();
       // }
     }
+
+    ai_float accuracy = 100.f * (correct_predictions / sample_count);
+    TRACE_I("accuracy %%%-3.2f", accuracy);
   }
   UnloadFileData(labels_file_data);
   UnloadFileData(images_file_data);
   __debugbreak();
 }
-
-
-// * Example A: `W[k:j,i]`
-//    Visually, `k` would be above `W` and `j` below, `i` would be next to `j`.
-// * Example B: `W[k[c:v]:j,i]`
-//    Visually, `k` would be above `W` and `j` below, `i` would be next to `j`,
-//    `c` would be above `k` and `v` below.
-//   Subscript Inference:
-//   Only when repetitiveness becomes obfuscating, AND if by pattern of repetition, the context
-//   is unambiguous, AND it is in the best interest of the reader, it is then allowed to omit
-//   the <subscript-argument> or one if its <operands>.
-//   The subscript however, must be representative of the number of expressions there are in it.
-// * Example C & D:
-//     `w[k:j:0]` = `w[::0]`
-//     `w[k]`     = `w[]`
-// Let's rewrite this expression instead as:
-//
-// 0x00: $[k:j] := sig"(a[k:j]) * sum(l, $[k-1:l] * W[k-1:l:j])
-// Let's expand this expression to see how it works:
-//
-// 0x00:
-//  $[k:0] := sig"(a[k:0]) *
-//    ( $[k-1: 0]* W[k-1 : 0: 0] +
-//      $[   : 1]* W[    :  : 0] +
-//      $[   : 2]* W[    :  : 0] +
-//      $[   : 3]* W[    :  : 0] )
-//
-// Notice how the weight index is the same as j, 0. That is
-// because we're only concerned with the weight that is scaling our output.
-// All the other variables can be treated as 0's. {{explanation}}
-//
-//
-// If you're somehow thinking about a matrix transposition, you're in the right path.
-//   0  1  2  3  4     0  1  2
-// 0 [W][W][W][W][W]   [W][W][W] 0 <
-// 1 [W][W][W][W][W] T [W][W][W] 1 <
-// 2 [W][W][W][W][W]   [W][W][W] 2 <
-//    ^  ^  ^  ^  ^    [W][W][W] 3 <
-//                     [W][W][W] 4 <
-//
-//
-// To transpose a matrix is to rotate it. This could have a deeper meaning, depending on how you
-// interpret them, e.i Linear Algebra, but to us, it means nothing but facilitating an operation.
-// So no, it has nothing to do with going "backwards", let's stop lollygagging on 3Blue1Brown
-// analogies and come back to the harsh reality, it's just a coincidence, believe me, I am not a mathematician.
-//
-// For the 'fast' implementation however, we're not going to do this, because transposing ~4KB worth of matrix
-// every iteration sounds almost slower than Visual Studio.
-// (28*28*4 + 16*10*4 + 10*10*4)/1024
-// The whole point of transposing a matrix is to take advantage of SIMD, making memory that was sparse, contiguous.
-// And you could make the case that transposing a matrix is a good way of doing this, and it is, if you don't know
-// what you're talking about.
-//
-// Now, we already have SIMD working for the forward propagation stage, just not for the backwards one.
-// So it's clear that we'll either have to make some sort of compromise. Let's not dwell on this too
-// much though, let's write a loop instead and we'll figure something out later.

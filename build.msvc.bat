@@ -5,6 +5,6 @@
 @SET myLinkerOptions=/INCREMENTAL:NO
 @SET myInclude=/I. /I.. /I..\vendor\stb
 
-@CALL cl %myCompilerOptions% %myDebugOptions% %myInclude% num-ai.c /link /SUBSYSTEM:CONSOLE /DEBUG %myLinkerOptions%
-@CALL cl %myCompilerOptions% %myReleaseOptions% %myInclude% /arch:AVX num-ai.c /Fenum-ai-avx.exe /link /SUBSYSTEM:CONSOLE %myLinkerOptions%
+@CALL cl %myCompilerOptions% -DDRL_256 %myDebugOptions% %myInclude% num-ai.c /link /SUBSYSTEM:CONSOLE /DEBUG %myLinkerOptions%
+@CALL cl %myCompilerOptions% -DDRL_256 %myReleaseOptions% %myInclude% /arch:AVX num-ai.c /Fenum-ai-avx.exe /link /SUBSYSTEM:CONSOLE %myLinkerOptions%
 @REM @CALL cl %myCompilerOptions% %myDebugOptions% %myInclude% /arch:AVX ai-vis.c /link /SUBSYSTEM:WINDOWS %myLinkerOptions%

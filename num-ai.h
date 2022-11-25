@@ -57,21 +57,33 @@ typedef struct ai_lay
   ai_vec out;
   ai_vec act;
 } ai_lay;
-
+/**
+ * For every network we're going to have at least two layers,
+ * I and and O.
+ *
+ * The I handles external input.
+ * The O handles internal output.
+ *
+ * The user must specify how many inputs the I layer takes,
+ * how many outputs I layer produces, and how many outputs
+ * the O layer produces.
+ **/
 typedef struct ai_net
-{ ai_lay   lay_i;
-  ai_lay   lay_o;
-  ai_int   num;
-  ai_int   itr;
-  ai_float del;
+{ ai_lay   lay_o;
+  ai_lay   lay_i;
+  ai_lay   layer[0x20];
+  ai_float alpha;
 } ai_net;
+
 
 static ai_lay new_lay(ai_int col_len, ai_int row_len)
 { ai_lay n;
-  n.wei     = new_row_mat(col_len,row_len);
-  n.act     = new_vec(row_len);
-  n.out     = new_vec(row_len);
-  n.bia     = new_vec(row_len);
+
+  n.wei = new_row_mat(col_len,row_len);
+  n.act = new_vec(row_len);
+  n.out = new_vec(row_len);
+  n.bia = new_vec(row_len);
+
   n.err     = new_vec(row_len);
   n.tmp     = new_vec(row_len);
   n.new_wei = rpl_mat(n.wei);
@@ -80,6 +92,15 @@ static ai_lay new_lay(ai_int col_len, ai_int row_len)
   return n;
 }
 
+static void ai_net_ini(ai_net *net, ai_int inp, ai_int con, ai_int out)
+{ net->lay_i = new_lay(inp, con);
+  net->lay_o = new_lay(con, out);
+}
+
+
+
+
+
 static unsigned int __forceinline int_flip(unsigned i)
 { return (((i & 0xFF000000) >> 0x18) |
           ((i & 0x000000FF) << 0x18) |
@@ -87,7 +108,6 @@ static unsigned int __forceinline int_flip(unsigned i)
           ((i & 0x0000FF00) << 0x08));
 }
 
-#ifdef _WIN32
 static void *ai_read_file_data(unsigned int *file_read_result, const char *file_name)
 {
   HANDLE file_handle =
@@ -111,6 +131,5 @@ static void *ai_read_file_data(unsigned int *file_read_result, const char *file_
   }
   return file_data;
 }
-#endif
 
 #endif
