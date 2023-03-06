@@ -3,3 +3,4 @@
 *.pdb
 *.asm
 *.obj
+data\*
