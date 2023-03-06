@@ -6,3 +6,5 @@ Please do point out my mistakes if you have the time and let me know of any sugg
 Once again, this is a very simple program and it does not use anything close to advanced techniques.
 To use this program you should have the sample data under the 'data' directory in this source tree,
 you can download the assets from: http://yann.lecun.com/exdb/mnist
+At the moment I have quite a silly dependency on one of my other projects, so remember to use
+--recursive when cloning.
