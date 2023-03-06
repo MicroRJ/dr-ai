@@ -1,264 +1,12 @@
-/*    Copyright(C) J. Dayan Rodriguez (RJ), 2022-2023, All rights reserved.
-**
-** --- Todos:
-**   - I think it would be good idea to have my own file format with the compressed images in a header file...
-**     That way it would just be a single header file for the whole project, a rather large header file, maybe not in the header file...
-**   - Much better random number generator...
-**
-**
-** --- Note: the following are my notes but do not consider them to be entirely truthful, in fact,
-**     they could be misleading if you're a novice, I am in no way an expert in this field either,
-**     so consider them to be more like personal notes and not notes to be learning from.
-**
-**     If you are interested in checkout the source I used for this implementation please see the included reference in this
-**     source directory.
-**
-** --- Note: The premise, and the way I look at it...
-**
-**     I've implemented very simple genetic algorithms in the past, these reassemble natural selection,
-**     only the fittest individuals get to survive and produce offspring that is ideally, better.
-**
-**     If you think about how you'd emulate the aforementioned scenario, you realize you'd at least three major things.
-**     First, the concept of an "individual" with some sort of potential, and then you need a way to evaluate how fit or
-**     successful they are based on how they've spent that potential, then you need a way to find the best individual,
-**     or individuals, if you're evaluating them based on multiple parameters - perhaps you're not just looking for the fastest, but
-**     also the strongest - to then somehow reproduce them.
-**
-**   Now, the following algorithm, is similar in the sense that you are trying to improve or get better over time, but
-**   they are entirely different in their approach.
-**
-**   For instance, from the genetic algorithm's perspective, there's no learning or improving for the 'individual' itself,
-**   in fact, the 'individual' is screwed in that regard, it is only the offspring that introduces mutation, the genetic algorithm
-**   only cares about the grand scheme of the game, who wins, it's a matter of harsh, cold probability.
-**
-**   However, with a neural algorithm the playing field changes, is that warm and lustrous beacon of hope that every individual innately
-**   has, the only true variable and our best weapon against despair, adaptability, learning how to get 'good' and doing so in
-**   a seemingly optimal manner. The 'optimal' part is also a field of research.
-**
-**   In other words, the genetic algorithm is the game, and the 'individual' is the neural algorithm,
-**   learning how to play it.
-**
-**   In a less romanticized way, a neural network is a set of functions, lots of them really, laid out according
-**   to which model we're implementing, you pass in an argument, you get an output, the question is, what
-**   are the parameters? And furthermore, what are the right parameters?
-**   And with that it becomes a little bit more obvious how this is just differential calculus, it's an
-**   amalgamation of observations and research.
-**
-**   Our algorithm is actually quite simple, in fact, it is really simple, however, it can recognize unseen digits
-**   with an accuracy of up to ~90% with just one pass in roughly less than half a second with only two layers,
-**   at 60,000 28 by 28 image samples, it's about 94 million pixels per second..
-**
-**   The accuracy could be more or less, it just depends on how long you let it train for, the more it gets used to the database,
-**   the better, but that does not mean it'll perform as good with a distinct data set.
-**   So you see, it is about finding what parameters work best for all the samples, the more parameters and layers the more detail,
-**   like seeing in higher resolution with depth perception, but of course, as with anything that requires computation, the more,
-**   the slower.
-**
-** --- Note: The math.
-**
-**   Let's start with the basics... and I should get back to this and actually explain the basics, limits, derivatives ...
-**
-** -- Note: `d` is the sample index subscript
-** -- Note: `k` is the layer index subscript
-** -- Note: `d` is the input index subscript
-** -- Note: `j` is the neuron index subscript
-** -- Note: `i` is the weight index subscript
-** -- Note: `r` is the neuron count subscript
-**
-**
-** -- Note: `k[0]`: is the first layer, the output layer
-**
-** -- Note: `k[-1]`: is is the last layer, the input layer (negative array indices)
-**
-** -- Note: `k+1`: the Layer After `k` (closer to the input layer)
-**
-** -- Note: `k-1`: the Layer Before `k` (closer to the output layer)
-**
-** -- Note: `sig(x) := 1/(1 + exp(- x))` is our activation function
-**
-** -- Note: `sig"(x) := (1-sig(x))*sig(x)` is our activation function's derivative
-**
-** -- Note: `A[k:j] := sum(i, W[k:j,i] * O[k+1:j,i]) + B[k:j]` is the output of our neuron before the activation function.
-**
-** -- Note: `O[k:j] := sig(A[k,j])` is the output of our neuron
-**
-** -- Note: `Y[d:j]` is our target output, (we compare the output of a neuron in the output layer to this)
-**
-** -- Note: `E[d:j](X) := 1/2 * pow<2>(O[0:j] - Y[d:j])` is our cost function, (notice how it takes `O[0:j]` and not `A[0:j]`)
-**
-**   Let's begin with the output layer: `k = 0`
-**
-**   What are we trying to do?
-**   Find how much each neuron of the output layer affects each `E[d:j]` so that
-**   we now how much to nudge each weight and bias appropriately.
-**
-**   Let's find out how much `E[d:j]` is affected by the unfiltered output `A[k:j]` of a neuron.
-**
-**   Since `E[d:j]` is a function of `O[k:j]` and not a function of `A[k:j]` directly, we have to go through `O[k:j]`,
-**   which is actually modulating `A[k:j]` through the activation function.
-**
-**   And so we get:
-**
-** 0x00: E[d:j]\\A[k:j] := E[d:j]\\O[k:j] * O[k:j]\\A[k:j]
-**
-**   The partial change in `E[d:j]` due to `A[k:j]` is the product of the change in `E[d:j]` due to `O[k:j]` and the change
-**   in `O[k:j]` due to `A[k:j]`.
-**
-**   We call this term `E[d:j]\\A[k:j]` the "error", and we'll use the dollar sign to denote it.
-**   This is what it looks fully resolved at the output layer:
-**
-** 0x00: $[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])
-**
-**   Since the error is defined per node at the output layer, we have to go over every one of its nodes `j`
-**   and calculate it's error.
-**
-** 0x00: for(j..r[k]):
-** 0x00:  ?.[j] = (O[k:j] - Y[k:j]) * sig"(A[k:j])
-**
-**   Now that we have the `$` term, we know how much the cost function changes due to `A[k:j]`.
-**   But we need to go further, how much does `A[k:j]` change due to `B[k:j]` and every single `W[k:j,i]`.
-**
-**   Change In `A[k:j]` due to `B[k:j]`.
-**
-**   For this one we don't have to do much.
-**
-** 0x00: A[k:j]\\B[k:j] := $[k:j] * 1 == $[k:j];
-**
-**
-**   Change In `A[k:j]` due to `W[k:j,i]`
-**
-**   This one is a little bit more involved.
-**
-** 0x00: A[k:j]\\W[k:j,i] := $[k:j] * O[k+1:i]
-**
-**   Let's expand this expression a bit, to see how it works.
-**
-** 0x00: A[k:0]\\W[k:  0, 0  ] := $[k:0] * O[k+1:0]
-** 0x00: A[k:0]\\W[k:  0, 1  ] := $[k:0] * O[k+1:1]
-** 0x00: A[k:0]\\W[k:  0, 2  ] := $[k:0] * O[k+1:2]
-** 0x00: A[k:0]\\W[k:  0, 3  ] := $[k:0] * O[k+1:3]
-** 0x00: A[k:0]\\W[k:  0, .. ] := $[k:0] * O[k+1:3]
-** 0x00: A[k:0]\\W[k:  1, .. ] := ..
-** 0x00: A[k:0]\\W[k:  2, .. ] := ..
-** 0x00: A[k:0]\\W[k:  3, .. ] := ..
-** 0x00: A[k:0]\\W[k: .., .. ] := ..
-**
-**   We see that `i` corresponds to the weight `i` of node `j` of layer `k` AND to the output of node `i` in layer `k+1`.
-**   Each weight is responsible for one of the outputs of the next layer.
-**
-**   And so the change in `A[k=0:j=0]` due to `W[k=0:j=0,i]`, is how much `O[k+1:i]` is modulating that weight.
-**
-**   Here's the pseudo code that computes `A[0:j]\\W[0:j,i]`.
-**
-** 0x00: for(j..r[k]):
-** 0x00:  for(i..r[k+1]):
-** 0x00:   m[j][i] = $[k:j] * O[k+1:i]
-**
-**   Now, why is `O[k+1:i]` the derivative of `A[k:j]\\W[k:j,i]`?
-**
-**   A neuron is a first-degree polynomial:
-**
-** 0x00: A[k:j] =
-** 0x00:   W[k:0,i=0] * O[k+1:i=0] +
-** 0x00:   W[k:0,i=1] * O[k+1:i=1] +
-** 0x00:   W[k:0,i=2] * O[k+1:i=2] + ...;
-**
-**   The only difference is, that we use the `sum()` operator instead.
-**
-** 0x00: A[k:0]\\W[k:0,i=0] := O[k+1:i=0]
-** 0x00: A[k:0]\\W[k:0,i=1] := O[k+1:i=1]
-** 0x00: A[k:0]\\W[k:0,i=2] := O[k+1:i=2]
-**
-**   Hidden Layers, `k > 0`:
-**   ---
-**
-**   First let's once again establish that what we're ultimately trying to do:
-**   Find out how much our weights and biases have affected `E[d:j]`.
-**
-**   This means computing a derivation chain that extends all the way back to the final or 'output' layer...
-**   Logically, you'd cache each derivative and we can call this term '$' (the error), and "back-propagate" it...
-**
-**   Now, every single weight, of every single neuron, affects every single output of the previous layer.
-**   So to compute `E[d:l]\\A[k:j]`, we have to also compute how much `A[k:j]` has affected `A[k-1:j=0..r[k-1]]`.
-**   And notice how I used '..' to signify a range or span of expressions.
-**
-**   E[d:l]\\A[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
-**
-**   $[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
-**
-**
-**
-**   Pseudo Code Version
-**
-** 0x00:
-**  for(j..r[k]):
-**   .[i] = sum(l..r[k-1]): $[k-1:l] * W[k-1:l:j] * sig"(a[k:j])
-**
-** ### Change In E Due To W
-** 0x00: E\\W[k:j:i] = $[k:j] * O[k+1:i]
-** 0x00:
-**  for(j..r[k]):
-**    for(i..r[k+1]):
-**     .[j][i] = $[k:j] * O[k+1:i]
-** ### C Version
-**  * Example A: `W[k:j,i]`
-**   Visually, `k` would be above `W` and `j` below, `i` would be next to `j`.
-** * Example B: `W[k[c:v]:j,i]`
-**    Visually, `k` would be above `W` and `j` below, `i` would be next to `j`,
-**    `c` would be above `k` and `v` below.
-**   Subscript Inference:
-**   Only when repetitiveness becomes obfuscating, AND if by pattern of repetition, the context
-**   is unambiguous, AND it is in the best interest of the reader, it is then allowed to omit
-**   the <subscript-argument> or one if its <operands>.
-**   The subscript however, must be representative of the number of expressions there are in it.
-** * Example C & D:
-**     `w[k:j:0]` = `w[::0]`
-**     `w[k]`     = `w[]`
-** Let's rewrite this expression instead as:
-**
-** 0x00: $[k:j] := sig"(a[k:j]) * sum(l, $[k-1:l] * W[k-1:l:j])
-** Let's expand this expression to see how it works:
-**
-** 0x00:
-**  $[k:0] := sig"(a[k:0]) *
-**    ( $[k-1: 0]* W[k-1 : 0: 0] +
-**      $[   : 1]* W[    :  : 0] +
-**      $[   : 2]* W[    :  : 0] +
-**      $[   : 3]* W[    :  : 0] )
-**
-** Notice how the weight index is the same as j, 0. That is
-** because we're only concerned with the weight that is scaling our output.
-** All the other variables can be treated as 0's. {{explanation}}
-**
-**
-** If you're somehow thinking about a matrix transposition, you're in the right path.
-**   0  1  2  3  4     0  1  2
-** 0 [W][W][W][W][W]   [W][W][W] 0 <
-** 1 [W][W][W][W][W] T [W][W][W] 1 <
-** 2 [W][W][W][W][W]   [W][W][W] 2 <
-**    ^  ^  ^  ^  ^    [W][W][W] 3 <
-**                     [W][W][W] 4 <
-**
-** To transpose a matrix is to rotate it. This could have a deeper meaning, depending on how you
-** interpret it, e.i Linear Algebra, but to us, it means nothing but facilitating an operation.
-**
-** For the 'fast' implementation however, we're not going to do this, because transposing ~4KB worth of matrix
-** every iteration sounds almost slower than Visual Studio.
-** (28*28*4 + 16*10*4 + 10*10*4)/1024
-** The whole point of transposing a matrix is to take advantage of SIMD, making memory that was sparse, contiguous.
-** And you could make the case that transposing a matrix is a good way of doing this, and it is, if you don't know
-** what you're talking about.
-**
-** Now, we already have SIMD working for the forward propagation stage, just not for the backwards one.
-** So it's clear that we'll either have to make some sort of compromise. Let's not dwell on this too
-** much though, let's write a loop instead and we'll figure something out later.
+/*
+** Copyright(C) J. Dayan Rodriguez (RJ), 2022-2023, All rights reserved.
 */
+#ifndef _DRAI
+#define _DRAI
 
-#ifndef Assert
-# define Assert(...) 0
-#endif
+// -- Todo: should introduce arenas so that I don't have to pre-allocate stuff, I can just push and pop?
 
-// -- Todo: how to detect this automatically?
+// -- Todo: Do this better?
 #if defined(_LANE_512)
 typedef __m512 lane_t;
 #elif defined(_LANE_256)
@@ -271,38 +19,47 @@ typedef float lane_t;
 
 #define lane_size_t (sizeof(lane_t)/sizeof(float))
 
+// -- Todo: get more acquainted with intrinsics, there's a lot of stuff I'm probably missing...
 #if defined(_LANE_512)
-#define lane_load(l)         _mm512_load_ps(l)
-#define lane_store(l,r)      _mm512_store_ps(l,r)
-#define lane_set1(r)         _mm512_set1_ps(r)
-#define lane_mul(l,r)        _mm512_mul_ps(l,r)
-#define lane_div(l,r)        _mm512_div_ps(l,r)
-#define lane_add(l,r)        _mm512_add_ps(l,r)
-#define lane_sub(l,r)        _mm512_sub_ps(l,r)
-#define lane_muladd(l,r0,r1) _mm512_fmadd_ps(r0,r1,l)
+# define lane_load(l)         _mm512_load_ps(l)
+# define lane_store(l,r)      _mm512_store_ps(l,r)
+# define lane_widen(r)        _mm512_set1_ps(r)
+# define lane_mul(l,r)        _mm512_mul_ps(l,r)
+# define lane_div(l,r)        _mm512_div_ps(l,r)
+# define lane_add(l,r)        _mm512_add_ps(l,r)
+# define lane_sub(l,r)        _mm512_sub_ps(l,r)
+# define lane_muladd(l,r0,r1) _mm512_fmadd_ps(r0,r1,l)
+# define lane_exp(r)          _mm512_exp_ps(r)
 #elif defined(_LANE_256)
-#define lane_load(l)         _mm256_load_ps(l)
-#define lane_store(l,r)      _mm256_store_ps(l,r)
-#define lane_set1(r)         _mm256_set1_ps(r)
-#define lane_mul(l,r)        _mm256_mul_ps(l,r)
-#define lane_div(l,r)        _mm256_div_ps(l,r)
-#define lane_add(l,r)        _mm256_add_ps(l,r)
-#define lane_sub(l,r)        _mm256_sub_ps(l,r)
-#define lane_muladd(l,r0,r1) _mm256_fmadd_ps(r0,r1,l)
-#define lane_exp(r)          _mm256_exp_ps(r)
+# define lane_load(l)         _mm256_load_ps(l)
+# define lane_store(l,r)      _mm256_store_ps(l,r)
+# define lane_widen(r)         _mm256_set1_ps(r)
+# define lane_mul(l,r)        _mm256_mul_ps(l,r)
+# define lane_div(l,r)        _mm256_div_ps(l,r)
+# define lane_add(l,r)        _mm256_add_ps(l,r)
+# define lane_sub(l,r)        _mm256_sub_ps(l,r)
+# define lane_muladd(l,r0,r1) _mm256_fmadd_ps(r0,r1,l)
+# define lane_exp(r)          _mm256_exp_ps(r)
 #elif defined(_LANE_128)
-#define lane_load(l)         _mm_load_ps(l)
-#define lane_store(l,r)      _mm_store_ps(l,r)
-#define lane_set1(r)         _mm_set1_ps(r)
-#define lane_mul(l,r)        _mm_mul_ps(l,r)
-#define lane_div(l,r)        _mm_div_ps(l,r)
-#define lane_add(l,r)        _mm_add_ps(l,r)
-#define lane_sub(l,r)        _mm_sub_ps(l,r)
-#define lane_muladd(l,r0,r1) _mm_fmadd_ps(r0,r1,l)
+# define lane_load(l)         _mm_load_ps(l)
+# define lane_store(l,r)      _mm_store_ps(l,r)
+# define lane_widen(r)        _mm_set1_ps(r)
+# define lane_mul(l,r)        _mm_mul_ps(l,r)
+# define lane_div(l,r)        _mm_div_ps(l,r)
+# define lane_add(l,r)        _mm_add_ps(l,r)
+# define lane_sub(l,r)        _mm_sub_ps(l,r)
+# define lane_muladd(l,r0,r1) _mm_fmadd_ps(r0,r1,l)
 #else
-# error 'TODO(RJ)'
+# define lane_load(l)         (*(l))
+# define lane_store(l,r)      (lane_load(l)=(r))
+# define lane_widen(r)        (r)
+# define lane_mul(l,r)        ((l)*(r))
+# define lane_div(l,r)        ((l)/(r))
+# define lane_add(l,r)        ((l)+(r))
+# define lane_sub(l,r)        ((l)-(r))
+# define lane_muladd(l,r0,r1) lane_add(l,lane_mul(r0,r1))
+# define lane_exp(r)          expf(r)
 #endif
-
 
 // -- Note: store vectors of arbitrary length but that are allocated efficiently, so padding may be present...
 typedef struct vector_t vector_t;
@@ -323,14 +80,10 @@ typedef struct layer_t layer_t;
 typedef struct layer_t
 { matrix_t wei;
   vector_t bia;
-  union
-  { vector_t new_bia;
-    vector_t err;
-  };
-  vector_t tmp;
-  matrix_t new_wei;
-  vector_t out;
   vector_t act;
+  vector_t err; // <-- the error term is also used to compute the new set of biases ...
+
+  matrix_t new_wei;
 } layer_t;
 
 typedef struct network_t network_t;
@@ -341,11 +94,23 @@ typedef struct network_t
   float     alpha;
 } network_t;
 
-// --- Note: we don't actually use this because there's a more efficient way ...
+typedef struct trainer_t trainer_t;
+typedef struct trainer_t
+{ int             image_x;
+  int             image_y;
+  int             image_size;
+  unsigned char * images;
+  unsigned char * labels;
+  int             length;
+  matrix_t        target;
+} trainer_t;
 
-// https://www.desmos.com/calculator/btdhngc1oq
-#define sigmoid(o) (1.0/(1.0+exp(-o)))
-#define sigmoid_prime(o) (sigmoid(o) * (1 - sigmoid(o)))
+typedef struct sample_t sample_t;
+typedef struct sample_t
+{ vector_t        value;
+  int             label;
+  vector_t        target;
+} sample_t;
 
 ccfunc ccinle float square_real32(float val);
 ccfunc ccinle float cube_real32(float val);
@@ -361,7 +126,6 @@ ccfunc ccinle void vec_sub(int, float *, float *, float *);
 ccfunc ccinle void vec_muladd(int, float *, float *, float *, float alpha);
 ccfunc ccinle void vec_dot(int, float *, float *, float *);
 ccfunc ccinle void vec_zro(int, float *);
-
 
 ccfunc ccinle float square_real32(float val)
 {
@@ -421,17 +185,17 @@ ccfunc ccinle void
 vec_muladd(int len, float *dst, float *lhs, float *rhs, float alpha)
 {
   for(int i=0; i<len; i+=lane_size_t)
-    lane_store(dst+i,lane_muladd(lane_load(lhs+i),lane_load(rhs+i),lane_set1(alpha)));
+    lane_store(dst+i,lane_muladd(lane_load(lhs+i),lane_load(rhs+i),lane_widen(alpha)));
 }
 
 
 ccfunc ccinle void
 vec_dot(int len, float *dst, float *lhs, float *rhs)
 {
-  // --- Note: not sure if we're at the point in which we'd want multiple accumulators for higher precision.
-  lane_t acc=lane_set1(0);
+  // --- Todo: do we need multiple accumulators, can we optimize for lesser stores?
+  lane_t acc=lane_widen(0);
 
-  // --- Todo: why can't I keep the result loaded in a register and keep accumulating?
+  // --- Todo: why can't I keep the result loaded and keep accumulating?
   for(int i=0; i<len; i+=lane_size_t)
     lane_store((float *)&acc,lane_muladd(acc,lane_load(lhs+i),lane_load(rhs+i)));
 
@@ -445,7 +209,7 @@ vec_dot(int len, float *dst, float *lhs, float *rhs)
 ccfunc ccinle void
 vec_zro(int len, float *dst)
 {
-  lane_t set=lane_set1(0.f);
+  lane_t set=lane_widen(0.f);
   for(int i=0; i<len; i+=lane_size_t)
     lane_store(dst+i,set);
 }
@@ -468,56 +232,36 @@ vec_max(int len)
 # define del_vec(vec) _aligned_free(vec.mem);
 #endif
 
-static __forceinline vector_t new_vec(int len)
-{
-  int  max = vec_max(len);
-  // TODO(RJ):
-  // ; this is temporary!
-  void  * mem = _aligned_malloc(sizeof(float) * max, 0x20);
-  // Todo: vec-zero
-  memset(mem, 0x00, sizeof(float) * max);
+ccfunc ccinle vector_t
+vector(int len)
+{ int max=vec_max(len);
+  void *mem=_aligned_malloc(sizeof(float)*max,0x20);
+  vec_zro(max,(float*)mem);
 
   vector_t v;
-  v.len = len;
-  v.max = max;
-  v.mem = (float *) mem;
+  v.len=len;
+  v.max=max;
+  v.mem=(float *)mem;
   return v;
 }
 
-// I wonder what template++ ppl are thinking right now...
-static vector_t new_vec10(
-  float s0, float s1,
-  float s2, float s3,
-  float s4, float s5,
-  float s6, float s7,
-  float s8, float s9 )
-{ vector_t v = new_vec(0x0A);
-  v.mem[0x00] = s0; v.mem[0x01] = s1;
-  v.mem[0x02] = s2; v.mem[0x03] = s3;
-  v.mem[0x04] = s4; v.mem[0x05] = s5;
-  v.mem[0x06] = s6; v.mem[0x07] = s7;
-  v.mem[0x08] = s8; v.mem[0x09] = s9;
-  return v;
-}
-
-// Create a new matrix.
-static matrix_t new_mat_(int col, int row, int min, int vec)
-{
 // For a col matrix, the number of vectors has to the be the number of columns
 // and the vector size has to be the number of rows.
 #ifndef new_col_mat
-# define new_col_mat(col,row) new_mat_(col,row,col,row)
+# define new_col_mat(col,row) matrix(col,row,col,row)
 #endif
 // For a row matrix, the number of vectors has to the be the number of rows
 // and the vector size has to be the number of columns.
 #ifndef new_row_mat
-# define new_row_mat(col,row) new_mat_(col,row,row,col)
+# define new_row_mat(col,row) matrix(col,row,row,col)
 #endif
-
-#ifndef rpl_mat
-# define rpl_mat(mat) new_mat_(mat.col,mat.row,mat.min,mat.vec_min)
+#ifndef matrix_clone
+# define matrix_clone(mat) matrix(mat.col,mat.row,mat.min,mat.vec_min)
 #endif
-
+// -- Note: when I say new row matrix, I mean that the number of vectors is the same as the number of rows.
+ccfunc matrix_t
+matrix(int col, int row, int min, int vec)
+{
   matrix_t m;
   m.col     = col;
   m.row     = row;
@@ -531,25 +275,25 @@ static matrix_t new_mat_(int col, int row, int min, int vec)
   return m;
 }
 
-static vector_t mat_vec(matrix_t mat, int index)
+ccfunc ccinle vector_t
+matrix_vector(matrix_t matrix, int index)
 { vector_t v;
-  v.mem = mat.mem + mat.vec_max * index;
-  v.len = mat.vec_min;
-  v.max = mat.vec_max;
+  v.mem = matrix.mem + matrix.vec_max * index;
+  v.len = matrix.vec_min;
+  v.max = matrix.vec_max;
   return v;
 }
 
+// -- Note: you can also think of this as, how many inputs, how many outputs, in that order...
 ccfunc layer_t
-new_lay(int col_len, int row_len)
+create_layer(int col_len, int row_len)
 { layer_t n;
-
   n.wei     = new_row_mat(col_len,row_len);
-  n.act     = new_vec(row_len);
-  n.out     = new_vec(row_len);
-  n.bia     = new_vec(row_len);
-  n.err     = new_vec(row_len);
-  n.tmp     = new_vec(row_len);
-  n.new_wei = rpl_mat(n.wei);
+  n.act     = vector(row_len);
+  n.bia     = vector(row_len);
+  n.err     = vector(row_len);
+  // -- Todo: this is what I'm using to cache the new set of weights and later interpolate ...
+  n.new_wei = matrix_clone(n.wei);
 
   vec_rnd(n.wei.min*n.wei.vec_max,n.wei.mem);
   vec_rnd(n.bia.len,n.bia.mem);
@@ -560,47 +304,49 @@ ccfunc ccinle vector_t
 layer_feed(layer_t *layer, vector_t x)
 {
   matrix_t w=layer->wei;
-  vector_t o=layer->out;
+  // vector_t o=layer->out;
   vector_t b=layer->bia;
   vector_t a=layer->act;
 
   ccassert(x.len==w.col);
-  ccassert(o.len==w.row);
   ccassert(b.len==w.row);
+  ccassert(a.len==w.row);
 
   int i;
 
   for(i=0;i<w.row;++i)
-    vec_dot(x.len,o.mem+i,w.mem+w.vec_max*i,x.mem);
+    vec_dot(x.len,a.mem+i,w.mem+w.vec_max*i,x.mem);
 
-  vec_add(o.len,o.mem,o.mem,b.mem);
-
-  ccassert(o.len==a.len);
+  vec_add(a.len,a.mem,a.mem,b.mem);
 
   // -- Note: We could have a callback here for custom activation functions...
-  lane_t n=lane_set1(1);
-  lane_t z=lane_set1(0);
-  for(i=0; i<o.len; i+=lane_size_t)
+  lane_t n=lane_widen(1);
+  lane_t z=lane_widen(0);
+  for(i=0; i<a.len; i+=lane_size_t)
     lane_store(a.mem+i,
-      // -- Note: apply the activation function, sigmoid..
-      lane_div(n,lane_add(n,lane_exp(lane_sub(z,lane_load(o.mem+i))))));
+      // sigmoid(o) := (1.0/(1.0+exp(-o)))
+      lane_div(n,lane_add(n,lane_exp(lane_sub(z,lane_load(a.mem+i))))));
   return a;
 }
 
 ccfunc ccinle void
 layer_update(layer_t *lay, float alpha)
 {
-  vector_t bia_old=lay->bia,bia_new=lay->new_bia;
-  vec_muladd(bia_old.len,bia_old.mem,bia_old.mem,bia_new.mem,-alpha);
+  // -- Note: interpolate towards the new set of weights and biases, note how we use
+  // negative alpha... this is because we want to reduce the error, the cost function
+  // tells use how far we are form the ideal result, this is our error...
 
-  matrix_t wei_old=lay->wei,wei_new=lay->new_wei;
-  vec_muladd(wei_old.min*wei_old.vec_max,wei_old.mem,wei_old.mem,wei_new.mem,-alpha);
+  vector_t b=lay->bia;
+  vec_muladd(b.len,b.mem,b.mem,lay->err.mem,-alpha);
+
+  matrix_t w=lay->wei,wei_new=lay->new_wei;
+  vec_muladd(w.min*w.vec_max,w.mem,w.mem,wei_new.mem,-alpha);
 }
 
 ccfunc ccinle void
 network_init(network_t *net, int inp, int con, int out)
-{ net->lay_i=new_lay(inp,con);
-  net->lay_o=new_lay(con,out);
+{ net->lay_i=create_layer(inp,con);
+  net->lay_o=create_layer(con,out);
 }
 
 ccfunc ccinle void
@@ -612,21 +358,17 @@ network_feed(network_t *net, vector_t inp)
 }
 
 ccfunc ccinle void
-network_reverse_feed(network_t * net, vector_t inp_v, vector_t tar_v)
+network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
 {
   layer_t
-    lay_o = net->lay_o,
-    lay_i = net->lay_i;
+    lay_o=network->lay_o,
+    lay_i=network->lay_i;
   vector_t
-    out_o = lay_o.out,
-    act_o = lay_o.act,
-    err_o = lay_o.err,
-    tmp_o = lay_o.tmp,
-
-    out_i = lay_i.out,
-    act_i = lay_i.act,
-    err_i = lay_i.err,
-    tmp_i = lay_i.tmp;
+    act_o=lay_o.act,
+    err_o=lay_o.err;
+  vector_t
+    act_i=lay_i.act,
+    err_i=lay_i.err;
   matrix_t
     wei_o     = lay_o.wei,
     wei_i     = lay_i.wei,
@@ -638,40 +380,89 @@ network_reverse_feed(network_t * net, vector_t inp_v, vector_t tar_v)
   int row,col,i;
   float acc;
 
-  lane_t n=lane_set1(1);
-  lane_t z=lane_set1(0);
+  lane_t n=lane_widen(1);
+  lane_t z=lane_widen(0);
 
-  // -- Todo: explain why this calculation is simpler than on the other layers..
+  //
+  // ** Here's our cost function:
+  //
+  // `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
+  //
+  // ** Note that the cost function is only defined for the outputs of neurons
+  // at layer `0`, the output layer.
+  //
+  // `E\\A[k:j] := E[d:j]\\O[k:j] * O[k:j]\\A[k:j]`
+  //
+  // ** Since `E` is a function of `O` and not `A`, we have to first find how much
+  // did `O` affect `E`, then find out how much did `A` affect `O`, and the result
+  // is how much did `A` affect `E`.
+  //
+  // ** We get this:
+  //
+  // `E[d:j]\\A[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])`
+  //
+  // ** And we call it the error, we use '$' to denote it.
+  //
+  // `$[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])`
+  //
+  // `for(j..r[k]):
+  //    $[k:j] = (O[k:j] - Y[k:j]) * sig"(A[k:j])`
+  //
   for(i=0; i<err_o.len; i+=lane_size_t)
   { lane_t a=lane_load(act_o.mem+i);
     lane_t y=lane_load(tar_v.mem+i);
-    lane_store(err_o.mem+i,
-      lane_mul(lane_sub(a,y),
-        // -- Note: calculate sigmoid prime...
-        lane_mul(lane_sub(n,a),a)));
+    lane_store(err_o.mem+i,lane_mul(lane_sub(a,y),lane_mul(lane_sub(n,a),a)));
   }
-
-  // -- Todo: speed!
+  // ** We keep following the derivation chain, now let's find out how our weights and biases
+  // affected `A`.
+  //
+  // `A[k:j]\\B[k:j] := $[k:j] * 1` (we don't have to do anything for this one)
+  //
+  // `A[k:j]\\W[k:j,i] := $[k:j] * O[k+1:i]`
+  //
+  // `for(j..r[k]):`
+  // ` for(i..r[k+1]):`
+  // `  A[k:j]\\W[k:j,i] = $[k:j] * O[k+1:i]`
+  //
+  // This reads as, for each index `j` of `r[k]`, the number of nodes in layer `k`,
+  // and for each index `i` of `r[k+1]`, the number of nodes in layer `k+1`, the partial
+  // the change in `A[k:j]` due to `W[k:j,i]` is the product of `$[k:j]` and `O[k+1:i]`.
+  //
+  ccassert(wei_o.col==wei_i.row);
+  //
+  // -- Note: the number of columns or inputs of layer `k` is the same as the number of
+  // outputs in layer `k+1`, hence `r[k]` = wei_o.row and `r[k+1]` = wei_o.col ..
+  //
   for(row=0;row<wei_o.row;++row)
     for(col=0;col<wei_o.col;++col)
       new_wei_o.mem[row*new_wei_o.vec_max+col]=err_o.mem[row]*act_i.mem[col];
+  //
+  //
+  // -- Note: for the rest of the layers, where `k` is not `0`, not the output layer.
+  //
+  //
+  // -- Note: here is the cost function again:
+  //
+  // `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
+  //
+  // -- Note: we're not at layer `0` anymore, so first, we need to figure out how much
+  // did our output affect the output of other neurons, and because one output of ours
+  // affects every other neuron in the previous layer this gets a little bit more intricate..
+  //
+  // E\\A[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
+  //
+  // for(j..r[k]):
+  //   err[k:j]=sum(l..r[k-1]): $[k-1:l] * W[k-1:l:j] * sig"(a[k:j])
+  //
+  //
+  ccassert(wei_i.row==wei_o.col);
 
-  // -- Todo: revise this.. there's possibly something wrong with it...
-  for(i=0; i<out_i.len; i+=lane_size_t)
-  {
-    // -- Note: why were we doing this? report to Jacob?..
-    // lane_t a=lane_div(n,lane_add(n,lane_exp(lane_sub(z,lane_load(out_i.mem+i)))));
-    // lane_t d=lane_mul(lane_sub(n,a),a);
-
-    lane_t a=lane_load(act_i.mem+i);
-    lane_store(err_i.mem+i,
-      // -- Note: calculate sigmoid prime..
-      lane_mul(lane_sub(n,a),a));
+  // -- Note: calculate sig"(a[k:j]) lane wide
+  for(i=0; i<wei_i.row; i+=lane_size_t)
+  { lane_t a=lane_load(act_i.mem+i);
+    lane_store(err_i.mem+i,lane_mul(lane_sub(n,a),a));
   }
 
-  // -- Note: this is so you see how they link together..
-  ccassert(wei_i.row==wei_o.col);
-  ccassert(wei_o.col==wei_i.row);
 
   // -- Todo: I can't fathom a transpose being faster here, we have to test it out..
   for(row=0;row<wei_i.row;++row)
@@ -690,13 +481,6 @@ network_reverse_feed(network_t * net, vector_t inp_v, vector_t tar_v)
 ccfunc ccinle void
 network_train(network_t *network, vector_t i, vector_t t)
 {
-  // --- Todo: actually reset all the layers..
-  vec_zro(network->lay_o.new_bia.len,network->lay_o.new_bia.mem);
-  vec_zro(network->lay_i.new_bia.len,network->lay_i.new_bia.mem);
-
-  vec_zro(network->lay_o.new_wei.min*network->lay_o.new_wei.vec_max,network->lay_o.new_wei.mem);
-  vec_zro(network->lay_i.new_wei.min*network->lay_i.new_wei.vec_max,network->lay_i.new_wei.mem);
-
   network_feed(network,i);
   network_reverse_feed(network,i,t);
 
@@ -705,7 +489,8 @@ network_train(network_t *network, vector_t i, vector_t t)
   layer_update(&network->lay_o,.1f);
 }
 
-static int network_prediction(network_t *net)
+ccfunc int
+network_prediction(network_t *net)
 { float prd_val=-1;
   int   prd_idx=-1;
   for(int i = 0; i < net->lay_o.act.len; ++ i)
@@ -716,3 +501,185 @@ static int network_prediction(network_t *net)
   }
   return prd_idx;
 }
+
+
+ccfunc ccinle unsigned int
+int_reverse(unsigned int i)
+{ return (((i & 0xFF000000) >> 0x18) |
+          ((i & 0x000000FF) << 0x18) |
+          ((i & 0x00FF0000) >> 0x08) |
+          ((i & 0x0000FF00) << 0x08));
+}
+
+ccfunc sample_t
+load_sample(trainer_t *trainer, vector_t buffer, int index)
+{
+  float normalize=1.f/255.f;
+
+  unsigned char *image=trainer->images+trainer->image_size*index;
+  sample_t sample;
+  sample.label=trainer->labels[index];
+  sample.target=matrix_vector(trainer->target,sample.label);
+
+  // -- Todo: this could be made SIMD too!
+  for(size_t n=0; n<trainer->image_size; ++n)
+    buffer.mem[n]=normalize*image[n];
+
+  return sample;
+}
+
+ccfunc int
+load_trainer(trainer_t *trainer)
+{
+  void
+    *labels_file=ccopenfile("data\\train-labels.idx1-ubyte","r"),
+    *images_file=ccopenfile("data\\train-images.idx3-ubyte","r");
+
+  if(!labels_file)
+  {
+    cctraceerr("could not find labels file");
+  }
+
+  if(!images_file)
+  {
+    cctraceerr("could not find images file");
+  }
+
+  if(!labels_file || !images_file)
+  {
+    return 0;
+  }
+
+  unsigned char *labels=(unsigned char*)ccpullfile(labels_file,0,0);
+  unsigned char *images=(unsigned char*)ccpullfile(images_file,0,0);
+
+  if(!labels)
+  {
+    cctraceerr("could not read labels file");
+  }
+
+  if(!images)
+  {
+    cctraceerr("could not read images file");
+  }
+
+  if(!labels || !images)
+  {
+    return 0;
+  }
+
+  // -- Note: decode the files ...
+  int total_labels=int_reverse(((int *)labels)[1]);
+  int total_images=int_reverse(((int *)images)[1]);
+
+  if(total_images!=total_labels)
+  {
+    cctracewar("image count %i differs from label count %i", total_images,total_labels);
+  }
+
+  // -- Todo: is this correct? was the y first? check out the source!
+  trainer->image_y=int_reverse(((int *)images)[2]);
+  trainer->image_x=int_reverse(((int *)images)[3]);
+  trainer->image_size=trainer->image_x*trainer->image_y;
+
+  trainer->labels=(unsigned char *)labels+sizeof(int)*2;
+  trainer->images=(unsigned char *)images+sizeof(int)*3;
+
+  trainer->length=total_images<total_labels?total_images:total_labels;
+
+  trainer->target=new_row_mat(10,10);
+  for(int i=0;i<10;++i)
+    matrix_vector(trainer->target,i).mem[i]=1;
+  return 1;
+}
+
+ccfunc int
+network_predict(network_t *network, vector_t x)
+{
+  network_feed(network,x);
+  return network_prediction(network);
+}
+
+void print_thisline(const char *s);
+void print_nextline();
+
+// -- Note: sample usage...
+ccfunc int
+load_trained_network(network_t *network)
+{
+  trainer_t trainer;
+  if(!load_trainer(&trainer))
+    return 0;
+
+  network_init(network,trainer.image_size,16,10);
+
+  vector_t buffer=vector(trainer.image_size);
+
+  int test_samples=10000;
+  int sample_index;
+  for(sample_index=0;sample_index<trainer.length-test_samples;++sample_index)
+  { sample_t sample=load_sample(&trainer,buffer,sample_index);
+    network_train(network,buffer,sample.target);
+  }
+
+  int correct_samples;
+  for(correct_samples=0;sample_index<trainer.length;++sample_index)
+  { sample_t sample=load_sample(&trainer,buffer,sample_index);
+    network_feed(network,buffer);
+
+    int p=network_prediction(network);
+    int is_correct=sample.label==p;
+    correct_samples+=is_correct;
+
+
+    float accuracy=100.f*(float)correct_samples/test_samples;
+    print_thisline(ccformat("accuracy: %.2f%%%%",accuracy));
+  }
+  print_nextline();
+
+  float accuracy=100.f*(float)correct_samples/test_samples;
+  cctracelog("test accuracy: %.2f%%%%",accuracy);
+
+  return 1;
+}
+
+
+
+// Note: these you have to implement for other operating system...
+#ifdef _WIN32
+void print_thisline(const char *s)
+{
+  HANDLE h=GetStdHandle(STD_OUTPUT_HANDLE);
+
+  CONSOLE_SCREEN_BUFFER_INFO i;
+  GetConsoleScreenBufferInfo(h,&i);
+
+  DWORD w;
+  WriteConsoleOutputCharacter(h,s,(int)strlen(s),i.dwCursorPosition,&w);
+}
+
+void print_nextline()
+{
+  HANDLE h=GetStdHandle(STD_OUTPUT_HANDLE);
+
+  CONSOLE_SCREEN_BUFFER_INFO i;
+  GetConsoleScreenBufferInfo(h,&i);
+
+  i.dwCursorPosition.Y++;
+  SetConsoleCursorPosition(h,i.dwCursorPosition);
+}
+#else
+void print_thisline(const char *s)
+{
+  printf(s);
+  print_nextline();
+}
+
+void print_nextline()
+{
+  printf("\n");
+}
+#endif
+
+
+#endif
