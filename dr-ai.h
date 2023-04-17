@@ -4,9 +4,17 @@
 #ifndef _DRAI
 #define _DRAI
 
-// -- Todo: should introduce arenas so that I don't have to pre-allocate stuff, I can just push and pop?
+# include <immintrin.h>
+# include <emmintrin.h>
+# include    <intrin.h>
 
-// -- Todo: Do this better?
+#ifndef ccfunc
+# define ccfunc static
+#endif
+#ifndef ccinle
+# define ccinle __forceinline
+#endif
+
 #if defined(_LANE_512)
 typedef __m512 lane_t;
 #elif defined(_LANE_256)
@@ -17,9 +25,13 @@ typedef __m128 lane_t;
 typedef float lane_t;
 #endif
 
-#define lane_size_t (sizeof(lane_t)/sizeof(float))
+#ifndef _LOOP_UNROLL
+# define _LOOP_UNROLL 4
+#endif
+#ifndef _LANE_SIZE
+# define _LANE_SIZE (sizeof(lane_t)/sizeof(float))
+#endif
 
-// -- Todo: get more acquainted with intrinsics, there's a lot of stuff I'm probably missing...
 #if defined(_LANE_512)
 # define lane_load(l)         _mm512_load_ps(l)
 # define lane_store(l,r)      _mm512_store_ps(l,r)
@@ -61,7 +73,11 @@ typedef float lane_t;
 # define lane_exp(r)          expf(r)
 #endif
 
-// -- Note: store vectors of arbitrary length but that are allocated efficiently, so padding may be present...
+
+// context:
+// Structure for storing vector vector types of arbitrary length,
+// the actual amount of memory allocated is a multiple of the lane size,
+// and it is stored in the max member.
 typedef struct vector_t vector_t;
 typedef struct vector_t
 { int      len, max;
@@ -75,17 +91,32 @@ typedef struct matrix_t
   int     vec_min, vec_max;
   int     col, row;
 } matrix_t;
-
+// context: 
+// layer structure: 
+// -     wei: which is the weight matrix,
+// -     bia: which is the bias vector,
+// -     act: which is the activated output,
+// -     err: which is error term propagated backwards and also doubles as the bias gradient,
+// - new_wei: which the new weight matrix
+//
+// Once a layer is "fed" backwards, we interpolate from the weight matrix (wei)
+// to the new weight matrix (new_wei), and from the bias vector (bia) to the new 
+// bias vector (err), thus learning.
+//
 typedef struct layer_t layer_t;
 typedef struct layer_t
 { matrix_t wei;
   vector_t bia;
   vector_t act;
-  vector_t err; // <-- the error term is also used to compute the new set of biases ...
-
+  vector_t err;
   matrix_t new_wei;
 } layer_t;
-
+// context:
+// network structure:
+// - lay_o: which is the final layer, the output layer at index 0,
+// - lay_i: which is the first layer, the input layer at index ARRAY_SIZE-1,
+// - layer: which is the intermediate layers,
+// - alpha: which is the learning rate, the interpolation factor used for learning
 typedef struct network_t network_t;
 typedef struct network_t
 { layer_t   lay_o;
@@ -112,30 +143,37 @@ typedef struct sample_t
   vector_t        target;
 } sample_t;
 
-ccfunc ccinle float square_real32(float val);
-ccfunc ccinle float cube_real32(float val);
-
 ccfunc ccinle unsigned int xorshift32(unsigned int x);
 ccfunc ccinle double xorshift_randreal64(double min, double max);
 ccfunc ccinle float  xorshift_randreal32(float min, float max);
 
+// context: 
+// - The following vector operator functions expect properly aligned, (aliasing-allowed)
+// and padded memory, this is to facilitate the use of SIMD, for that reason, the 
+// underlying memory should be a multiple of _LANE_SIZE*_LOOP_UNROLL, no less than 
+// _LANE_SIZE*_LOOP_UNROLL and properly aligned. The default allocator takes this into account.
+//
+// - The first parameter is the length of the vectors component wise, the underlying
+// allocation size of the memory is irrelevant as it is assumed to be properly 
+// allocated as aforementioned.
+// - The second parameter is the destination operand, then the left operand and finally
+// the right operand.
+//
 ccfunc ccinle void vec_mul(int, float *, float *, float *);
 ccfunc ccinle void vec_div(int, float *, float *, float *);
 ccfunc ccinle void vec_add(int, float *, float *, float *);
 ccfunc ccinle void vec_sub(int, float *, float *, float *);
-ccfunc ccinle void vec_muladd(int, float *, float *, float *, float alpha);
 ccfunc ccinle void vec_dot(int, float *, float *, float *);
+// context:
+// - This functions takes a length, a destination operand, 
+// a left and right operand and an alpha factor, the right operand is multiplied
+// by alpha and added to the left operand, the result is stored in destination.
+// - destination = left + right * alpha
+ccfunc ccinle void vec_muladd(int, float *, float *, float *, float alpha);
+// context:
+// - This function takes a single destination vector operand and it sets its
+// memory to zero.
 ccfunc ccinle void vec_zro(int, float *);
-
-ccfunc ccinle float square_real32(float val)
-{
-  return val*val;
-}
-
-ccfunc ccinle float cube_real32(float val)
-{
-  return val*val*val;
-}
 
 ccfunc ccinle unsigned int xorshift32(unsigned int x)
 { x ^= x << 13;
@@ -144,7 +182,7 @@ ccfunc ccinle unsigned int xorshift32(unsigned int x)
   return x;
 }
 
-// --- Todo: this isn't proper, see https://prng.di.unimi.it ...
+// todo!: this isn't proper, see https://prng.di.unimi.it ...
 ccfunc ccinle float xorshift_randreal32(float min, float max)
 { ccglobal ccthread_local unsigned int state = 901823102;
   state = xorshift32(state);
@@ -156,53 +194,93 @@ ccfunc ccinle float xorshift_randreal32(float min, float max)
 ccfunc ccinle void
 vec_mul(int len, float *dst, float *lhs, float *rhs)
 {
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_mul(lane_load(lhs+i),lane_load(rhs+i)));
 }
 
 ccfunc ccinle void
 vec_div(int len, float *dst, float *lhs, float *rhs)
 {
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_div(lane_load(lhs+i),lane_load(rhs+i)));
 }
 
 ccfunc ccinle void
 vec_add(int len, float *dst, float *lhs, float *rhs)
 {
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_add(lane_load(lhs+i),lane_load(rhs+i)));
 }
 
 ccfunc ccinle void
 vec_sub(int len, float *dst, float *lhs, float *rhs)
 {
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_sub(lane_load(lhs+i),lane_load(rhs+i)));
 }
 
 ccfunc ccinle void
 vec_muladd(int len, float *dst, float *lhs, float *rhs, float alpha)
 {
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_muladd(lane_load(lhs+i),lane_load(rhs+i),lane_widen(alpha)));
 }
 
-
 ccfunc ccinle void
-vec_dot(int len, float *dst, float *lhs, float *rhs)
+vec_dot(int len, 
+    float * dst, 
+    float * lhs, 
+    float * rhs)
 {
-  // --- Todo: do we need multiple accumulators, can we optimize for lesser stores?
-  lane_t acc=lane_widen(0);
+  lane_t acc[_LOOP_UNROLL];
 
-  // --- Todo: why can't I keep the result loaded and keep accumulating?
-  for(int i=0; i<len; i+=lane_size_t)
-    lane_store((float *)&acc,lane_muladd(acc,lane_load(lhs+i),lane_load(rhs+i)));
+#if _LOOP_UNROLL >= 1
+  acc[0]=lane_widen(0);
+#if _LOOP_UNROLL >= 2
+  acc[1]=lane_widen(0);
+#if _LOOP_UNROLL >= 4
+  acc[2]=lane_widen(0);
+  acc[3]=lane_widen(0);
+#endif//_LOOP_UNROLL >= 1
+#endif//_LOOP_UNROLL >= 2
+#endif//_LOOP_UNROLL >= 4
 
-  // -- Note: clearly, you could also make this SIMD.
+  for(int i=0; i<len; i += _LOOP_UNROLL*_LANE_SIZE)
+  {
+#if _LOOP_UNROLL >= 1
+    __assume((uintptr_t)(lhs+i+_LANE_SIZE*0)%_LANE_SIZE == 0);
+    acc[0]=lane_muladd(acc[0],
+      lane_load(lhs+i+_LANE_SIZE*0),lane_load(rhs+i+_LANE_SIZE*0));
+#if _LOOP_UNROLL >= 2
+    __assume((uintptr_t)(lhs+i+_LANE_SIZE*1)%_LANE_SIZE == 0);
+    acc[1]=lane_muladd(acc[1],
+      lane_load(lhs+i+_LANE_SIZE*1),lane_load(rhs+i+_LANE_SIZE*1));
+#if _LOOP_UNROLL >= 4
+    __assume((uintptr_t)(lhs+i+_LANE_SIZE*2)%_LANE_SIZE == 0);
+    acc[2]=lane_muladd(acc[2],
+      lane_load(lhs+i+_LANE_SIZE*2),lane_load(rhs+i+_LANE_SIZE*2));
+    __assume((uintptr_t)(lhs+i+_LANE_SIZE*3)%_LANE_SIZE == 0);
+    acc[3]=lane_muladd(acc[3],
+      lane_load(lhs+i+_LANE_SIZE*3),lane_load(rhs+i+_LANE_SIZE*3));
+#endif//_LOOP_UNROLL >= 1
+#endif//_LOOP_UNROLL >= 2
+#endif//_LOOP_UNROLL >= 4
+  }
+
+#if _LOOP_UNROLL >= 1
+  acc[0];
+#if _LOOP_UNROLL >= 2
+  acc[0]=lane_add(acc[0],acc[1]);
+#if _LOOP_UNROLL >= 4
+  acc[2]=lane_add(acc[2],acc[3]);
+  acc[0]=lane_add(acc[0],acc[2]);
+#endif//_LOOP_UNROLL >= 1
+#endif//_LOOP_UNROLL >= 2
+#endif//_LOOP_UNROLL >= 4
+
   float v=0.f;
-  for(int i=0;i<lane_size_t;i+=1)
-    v+=((float*)&acc)[i];
+  for(int i=0;i<_LANE_SIZE;i+=1)
+    v+=((float*)acc)[i];
   *dst=v;
 }
 
@@ -210,11 +288,11 @@ ccfunc ccinle void
 vec_zro(int len, float *dst)
 {
   lane_t set=lane_widen(0.f);
-  for(int i=0; i<len; i+=lane_size_t)
+  for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,set);
 }
 
-// -- Todo: this could be made so much faster ...
+// todo: this could be made purely intrinsic
 ccfunc ccinle void
 vec_rnd(int len, float *dst)
 {
@@ -223,9 +301,11 @@ vec_rnd(int len, float *dst)
 }
 
 ccfunc ccinle int
-vec_max(int len)
+vector_allocation_size(int len)
 {
-  return (lane_size_t-1+len)/lane_size_t*lane_size_t;
+  int z = _LOOP_UNROLL*_LANE_SIZE;
+
+  return (len + z - 1) / z * z;
 }
 
 #ifndef del_vec
@@ -234,7 +314,7 @@ vec_max(int len)
 
 ccfunc ccinle vector_t
 vector(int len)
-{ int max=vec_max(len);
+{ int max=vector_allocation_size(len);
   void *mem=_aligned_malloc(sizeof(float)*max,0x20);
   vec_zro(max,(float*)mem);
 
@@ -258,7 +338,7 @@ vector(int len)
 #ifndef matrix_clone
 # define matrix_clone(mat) matrix(mat.col,mat.row,mat.min,mat.vec_min)
 #endif
-// -- Note: when I say new row matrix, I mean that the number of vectors is the same as the number of rows.
+// note: when I say new row matrix, I mean that the number of vectors is the same as the number of rows.
 ccfunc matrix_t
 matrix(int col, int row, int min, int vec)
 {
@@ -268,7 +348,7 @@ matrix(int col, int row, int min, int vec)
   m.min     = min;
   m.max     = min;
   m.vec_min = vec;
-  m.vec_max = vec_max(vec);
+  m.vec_max = vector_allocation_size(vec);
 
   m.mem = (float *) _aligned_malloc(sizeof(float) * m.vec_max * min, 0x20);
   memset(m.mem, 0, sizeof(float) * m.vec_max * m.min);
@@ -284,7 +364,7 @@ matrix_vector(matrix_t matrix, int index)
   return v;
 }
 
-// -- Note: you can also think of this as, how many inputs, how many outputs, in that order...
+// note: you can also think of this as, how many inputs, how many outputs, in that order...
 ccfunc layer_t
 create_layer(int col_len, int row_len)
 { layer_t n;
@@ -292,7 +372,7 @@ create_layer(int col_len, int row_len)
   n.act     = vector(row_len);
   n.bia     = vector(row_len);
   n.err     = vector(row_len);
-  // -- Todo: this is what I'm using to cache the new set of weights and later interpolate ...
+  // todo: this is what I'm using to cache the new set of weights and later interpolate ...
   n.new_wei = matrix_clone(n.wei);
 
   vec_rnd(n.wei.min*n.wei.vec_max,n.wei.mem);
@@ -300,31 +380,40 @@ create_layer(int col_len, int row_len)
   return n;
 }
 
+// context: feeds the layer with input vector 'x',
+// returns the activated output of the layer.
 ccfunc ccinle vector_t
 layer_feed(layer_t *layer, vector_t x)
 {
+  // context: the weight matrix
   matrix_t w=layer->wei;
-  // vector_t o=layer->out;
+  // context: the bias vector
   vector_t b=layer->bia;
+  // context: the activated output of this layer
   vector_t a=layer->act;
 
+  // context: ensure this layer is valid and can 
+  // handle input vector 'x'
   ccassert(x.len==w.col);
   ccassert(b.len==w.row);
   ccassert(a.len==w.row);
 
+  // context: compute the output of this layer, the product of our weight 
+  // matrix and the input vector x.
   int i;
-
   for(i=0;i<w.row;++i)
     vec_dot(x.len,a.mem+i,w.mem+w.vec_max*i,x.mem);
-
+  // context: add the bias vector to the 'un-activated' output
   vec_add(a.len,a.mem,a.mem,b.mem);
 
-  // -- Note: We could have a callback here for custom activation functions...
+  // todo: have a callback here for custom activation functions
   lane_t n=lane_widen(1);
   lane_t z=lane_widen(0);
-  for(i=0; i<a.len; i+=lane_size_t)
+
+  // context: compute the activated output, we're using sigmoid
+  // where sigmoid is defined as sigmoid(o) := (1.0/(1.0+exp(-o)))
+  for(i=0; i<a.len; i+=_LANE_SIZE)
     lane_store(a.mem+i,
-      // sigmoid(o) := (1.0/(1.0+exp(-o)))
       lane_div(n,lane_add(n,lane_exp(lane_sub(z,lane_load(a.mem+i))))));
   return a;
 }
@@ -332,7 +421,7 @@ layer_feed(layer_t *layer, vector_t x)
 ccfunc ccinle void
 layer_update(layer_t *lay, float alpha)
 {
-  // -- Note: interpolate towards the new set of weights and biases, note how we use
+  // note: interpolate towards the new set of weights and biases, note how we use
   // negative alpha... this is because we want to reduce the error, the cost function
   // tells use how far we are form the ideal result, this is our error...
 
@@ -352,7 +441,6 @@ network_init(network_t *net, int inp, int con, int out)
 ccfunc ccinle void
 network_feed(network_t *net, vector_t inp)
 {
-  // -- Todo: feed all the layers you dude...
   layer_feed(& net->lay_o,
     layer_feed(& net->lay_i, inp));
 }
@@ -408,7 +496,7 @@ network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
   // `for(j..r[k]):
   //    $[k:j] = (O[k:j] - Y[k:j]) * sig"(A[k:j])`
   //
-  for(i=0; i<err_o.len; i+=lane_size_t)
+  for(i=0; i<err_o.len; i+=_LANE_SIZE)
   { lane_t a=lane_load(act_o.mem+i);
     lane_t y=lane_load(tar_v.mem+i);
     lane_store(err_o.mem+i,lane_mul(lane_sub(a,y),lane_mul(lane_sub(n,a),a)));
@@ -430,7 +518,7 @@ network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
   //
   ccassert(wei_o.col==wei_i.row);
   //
-  // -- Note: the number of columns or inputs of layer `k` is the same as the number of
+  // note: the number of columns or inputs of layer `k` is the same as the number of
   // outputs in layer `k+1`, hence `r[k]` = wei_o.row and `r[k+1]` = wei_o.col ..
   //
   for(row=0;row<wei_o.row;++row)
@@ -438,14 +526,14 @@ network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
       new_wei_o.mem[row*new_wei_o.vec_max+col]=err_o.mem[row]*act_i.mem[col];
   //
   //
-  // -- Note: for the rest of the layers, where `k` is not `0`, not the output layer.
+  // note: for the rest of the layers, where `k` is not `0`, not the output layer.
   //
   //
-  // -- Note: here is the cost function again:
+  // note: here is the cost function again:
   //
   // `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
   //
-  // -- Note: we're not at layer `0` anymore, so first, we need to figure out how much
+  // note: we're not at layer `0` anymore, so first, we need to figure out how much
   // did our output affect the output of other neurons, and because one output of ours
   // affects every other neuron in the previous layer this gets a little bit more intricate..
   //
@@ -457,14 +545,14 @@ network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
   //
   ccassert(wei_i.row==wei_o.col);
 
-  // -- Note: calculate sig"(a[k:j]) lane wide
-  for(i=0; i<wei_i.row; i+=lane_size_t)
+  // note: calculate sig"(a[k:j]) lane wide
+  for(i=0; i<wei_i.row; i+=_LANE_SIZE)
   { lane_t a=lane_load(act_i.mem+i);
     lane_store(err_i.mem+i,lane_mul(lane_sub(n,a),a));
   }
 
 
-  // -- Todo: I can't fathom a transpose being faster here, we have to test it out..
+  // todo: I can't fathom a transpose being faster here, we have to test it out..
   for(row=0;row<wei_i.row;++row)
   { acc=0;
     for(col=0;col<wei_o.row;++col)
@@ -472,7 +560,7 @@ network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
     err_i.mem[row]*=acc;
   }
 
-  // -- Todo: speed!
+  // todo: speed!
   for(row=0;row<wei_i.row;++row)
     for(col=0;col<wei_i.col;++col)
       new_wei_i.mem[row*new_wei_i.vec_max+col]=err_i.mem[row]*inp_v.mem[col];
@@ -484,7 +572,7 @@ network_train(network_t *network, vector_t i, vector_t t)
   network_feed(network,i);
   network_reverse_feed(network,i,t);
 
-  // --- Todo: actually update all the layers..
+  // todo!: actually update all the layers..
   layer_update(&network->lay_i,.1f);
   layer_update(&network->lay_o,.1f);
 }
@@ -521,7 +609,7 @@ load_sample(trainer_t *trainer, vector_t buffer, int index)
   sample.label=trainer->labels[index];
   sample.target=matrix_vector(trainer->target,sample.label);
 
-  // -- Todo: this could be made SIMD too!
+  // todo: this could be made SIMD too!
   for(size_t n=0; n<trainer->image_size; ++n)
     buffer.mem[n]=normalize*image[n];
 
@@ -568,7 +656,7 @@ load_trainer(trainer_t *trainer)
     return 0;
   }
 
-  // -- Note: decode the files ...
+  // note: decode the files ...
   int total_labels=int_reverse(((int *)labels)[1]);
   int total_images=int_reverse(((int *)images)[1]);
 
@@ -577,7 +665,7 @@ load_trainer(trainer_t *trainer)
     cctracewar("image count %i differs from label count %i", total_images,total_labels);
   }
 
-  // -- Todo: is this correct? was the y first? check out the source!
+  // todo: is this correct? was the y first? check out the source!
   trainer->image_y=int_reverse(((int *)images)[2]);
   trainer->image_x=int_reverse(((int *)images)[3]);
   trainer->image_size=trainer->image_x*trainer->image_y;
@@ -603,7 +691,7 @@ network_predict(network_t *network, vector_t x)
 void print_thisline(const char *s);
 void print_nextline();
 
-// -- Note: sample usage...
+// note: sample usage...
 ccfunc int
 load_trained_network(network_t *network)
 {
