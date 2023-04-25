@@ -4,6 +4,9 @@
 #ifndef _DRAI
 #define _DRAI
 
+#define   _BIAS_ADDITION_UPDATE_RULE
+#define _WEIGHT_ADDITION_UPDATE_RULE
+
 # include <immintrin.h>
 # include <emmintrin.h>
 # include    <intrin.h>
@@ -36,6 +39,8 @@ typedef float lane_t;
 # define lane_load(l)         _mm512_load_ps(l)
 # define lane_store(l,r)      _mm512_store_ps(l,r)
 # define lane_widen(r)        _mm512_set1_ps(r)
+# define lane_max(l,r)        _mm512_max_ps(l,r)
+# define lane_min(l,r)        _mm512_min_ps(l,r)
 # define lane_mul(l,r)        _mm512_mul_ps(l,r)
 # define lane_div(l,r)        _mm512_div_ps(l,r)
 # define lane_add(l,r)        _mm512_add_ps(l,r)
@@ -45,7 +50,9 @@ typedef float lane_t;
 #elif defined(_LANE_256)
 # define lane_load(l)         _mm256_load_ps(l)
 # define lane_store(l,r)      _mm256_store_ps(l,r)
-# define lane_widen(r)         _mm256_set1_ps(r)
+# define lane_widen(r)        _mm256_set1_ps(r)
+# define lane_max(l,r)        _mm256_max_ps(l,r)
+# define lane_min(l,r)        _mm256_min_ps(l,r)
 # define lane_mul(l,r)        _mm256_mul_ps(l,r)
 # define lane_div(l,r)        _mm256_div_ps(l,r)
 # define lane_add(l,r)        _mm256_add_ps(l,r)
@@ -56,6 +63,8 @@ typedef float lane_t;
 # define lane_load(l)         _mm_load_ps(l)
 # define lane_store(l,r)      _mm_store_ps(l,r)
 # define lane_widen(r)        _mm_set1_ps(r)
+# define lane_max(l,r)        _mm_max_ps(l,r)
+# define lane_min(l,r)        _mm_min_ps(l,r)
 # define lane_mul(l,r)        _mm_mul_ps(l,r)
 # define lane_div(l,r)        _mm_div_ps(l,r)
 # define lane_add(l,r)        _mm_add_ps(l,r)
@@ -74,10 +83,11 @@ typedef float lane_t;
 #endif
 
 
-// context:
-// Structure for storing vector vector types of arbitrary length,
-// the actual amount of memory allocated is a multiple of the lane size,
-// and it is stored in the max member.
+// CONTEXT:
+// vector structure: 
+// - len: which is the length of the mathematical vector,
+// - max: which is the component count of the vector including padding,
+// - mem: which is where the vector data is stored
 typedef struct vector_t vector_t;
 typedef struct vector_t
 { int      len, max;
@@ -91,12 +101,21 @@ typedef struct matrix_t
   int     vec_min, vec_max;
   int     col, row;
 } matrix_t;
-// context: 
+
+typedef struct nonlinear_t nonlinear_t;
+typedef struct nonlinear_t
+{
+  // the length, destination and the input value
+  void   (*function)(int, float *, float *);
+  // the length, destination and the output value of the function
+  void (*derivative)(int, float *, float *);
+} nonlinear_t;
+// CONTEXT: 
 // layer structure: 
 // -     wei: which is the weight matrix,
 // -     bia: which is the bias vector,
 // -     act: which is the activated output,
-// -     err: which is error term propagated backwards and also doubles as the bias gradient,
+// -     err: which is error term propagated backwards and also doubles as the bias vector,
 // - new_wei: which the new weight matrix
 //
 // Once a layer is "fed" backwards, we interpolate from the weight matrix (wei)
@@ -105,13 +124,14 @@ typedef struct matrix_t
 //
 typedef struct layer_t layer_t;
 typedef struct layer_t
-{ matrix_t wei;
-  vector_t bia;
-  vector_t act;
-  vector_t err;
-  matrix_t new_wei;
+{ matrix_t    wei;
+  vector_t    bia;
+  vector_t    act;
+  vector_t    err;
+  matrix_t    new_wei;
+  nonlinear_t nonlinear;
 } layer_t;
-// context:
+// CONTEXT:
 // network structure:
 // - lay_o: which is the final layer, the output layer at index 0,
 // - lay_i: which is the first layer, the input layer at index ARRAY_SIZE-1,
@@ -119,9 +139,11 @@ typedef struct layer_t
 // - alpha: which is the learning rate, the interpolation factor used for learning
 typedef struct network_t network_t;
 typedef struct network_t
-{ layer_t   lay_o;
-  layer_t   lay_i;
+{ 
+  // layer_t   lay_o;
+  // layer_t   lay_i;
   layer_t   layer[0x10];
+    int     count;
   float     alpha;
 } network_t;
 
@@ -147,7 +169,7 @@ ccfunc ccinle unsigned int xorshift32(unsigned int x);
 ccfunc ccinle double xorshift_randreal64(double min, double max);
 ccfunc ccinle float  xorshift_randreal32(float min, float max);
 
-// context: 
+// CONTEXT: 
 // - The following vector operator functions expect properly aligned, (aliasing-allowed)
 // and padded memory, this is to facilitate the use of SIMD, for that reason, the 
 // underlying memory should be a multiple of _LANE_SIZE*_LOOP_UNROLL, no less than 
@@ -164,13 +186,19 @@ ccfunc ccinle void vec_div(int, float *, float *, float *);
 ccfunc ccinle void vec_add(int, float *, float *, float *);
 ccfunc ccinle void vec_sub(int, float *, float *, float *);
 ccfunc ccinle void vec_dot(int, float *, float *, float *);
-// context:
+// CONTEXT:
+// - This function takes a lenght, a desitination operand,
+// a left and right operand and an alpha factor to interpolate between left and right
+// from left. 
+// - destination = left + (right - left) * alpha 
+ccfunc ccinle void vec_mix(int, float *, float *, float *, float  );
+// CONTEXT:
 // - This functions takes a length, a destination operand, 
 // a left and right operand and an alpha factor, the right operand is multiplied
 // by alpha and added to the left operand, the result is stored in destination.
 // - destination = left + right * alpha
-ccfunc ccinle void vec_muladd(int, float *, float *, float *, float alpha);
-// context:
+ccfunc ccinle void vec_mad(int, float *, float *, float *, float alpha);
+// CONTEXT:
 // - This function takes a single destination vector operand and it sets its
 // memory to zero.
 ccfunc ccinle void vec_zro(int, float *);
@@ -220,10 +248,50 @@ vec_sub(int len, float *dst, float *lhs, float *rhs)
 }
 
 ccfunc ccinle void
-vec_muladd(int len, float *dst, float *lhs, float *rhs, float alpha)
+vec_mad(int len, float *dst, float *lhs, float *rhs, float alpha)
 {
   for(int i=0; i<len; i+=_LANE_SIZE)
     lane_store(dst+i,lane_muladd(lane_load(lhs+i),lane_load(rhs+i),lane_widen(alpha)));
+}
+
+ccfunc ccinle void
+vec_max(int len, float *dst, float *lhs, float *rhs, float alpha)
+{
+  for(int i=0; i<len; i+=_LANE_SIZE)
+    lane_store(dst+i,lane_max(lane_load(lhs+i),lane_load(rhs+i)));
+}
+
+ccfunc ccinle void
+vec_min(int len, float *dst, float *lhs, float *rhs, float alpha)
+{
+  for(int i=0; i<len; i+=_LANE_SIZE)
+    lane_store(dst+i,lane_min(lane_load(lhs+i),lane_load(rhs+i)));
+}
+
+ccfunc ccinle void
+vec_sat(int len, float *dst, float *lhs)
+{
+  lane_t const_0 = lane_widen(0);
+  lane_t const_1 = lane_widen(1);
+  for(int i=0; i<len; i+=_LANE_SIZE)
+    lane_store(dst+i,lane_min(const_1,lane_max(const_0,lane_load(lhs+i))));
+}
+
+ccfunc ccinle void
+vec_mix(int len, float *dst, float *lhs, float *rhs, float alpha)
+{
+  for(int i=0; i<len; i+=_LANE_SIZE)
+  {
+    lane_t left=lane_load(lhs+i);
+    lane_store(dst+i,
+      lane_add(
+        lane_load(lhs+i),
+        lane_mul(
+          lane_sub(
+            lane_load(rhs+i),
+            lane_load(lhs+i)),
+          lane_widen(alpha))));
+  }
 }
 
 ccfunc ccinle void
@@ -300,6 +368,7 @@ vec_rnd(int len, float *dst)
     dst[i]=xorshift_randreal32(-1.f,+1.f);
 }
 
+
 ccfunc ccinle int
 vector_allocation_size(int len)
 {
@@ -314,7 +383,7 @@ vector_allocation_size(int len)
 
 ccfunc ccinle vector_t
 vector(int len)
-{ int max=vector_allocation_size(len);
+{   int max=vector_allocation_size(len);
   void *mem=_aligned_malloc(sizeof(float)*max,0x20);
   vec_zro(max,(float*)mem);
 
@@ -364,226 +433,327 @@ matrix_vector(matrix_t matrix, int index)
   return v;
 }
 
+ccfunc void function_sigmoid(int len, float *dst, float *lhs);
+ccfunc void derivative_sigmoid(int len, float *dst, float *lhs);
+
+ccfunc void function_relu(int len, float *dst, float *lhs);
+ccfunc void derivative_relu(int len, float *dst, float *lhs);
+
+const nonlinear_t nonlinear_kSIGMOID = {function_sigmoid,derivative_sigmoid};
+const nonlinear_t nonlinear_kRELU = {function_relu,derivative_relu};
+
+ccfunc void function_relu(int len, float *dst, float *lhs)
+{
+  vec_sat(len,dst,lhs);
+}
+
+ccfunc void derivative_relu(int len, float *dst, float *lhs)
+{
+  lane_t const_0 = lane_widen(0);
+  lane_t const_1 = lane_widen(1);
+
+  for(int i = 0; i < len; i += _LANE_SIZE)
+    lane_store(dst+i,lane_min(const_1,lane_max(lane_load(lhs+i),const_0)));
+}
+
+ccfunc void function_sigmoid(int len, float *dst, float *lhs)
+{
+  lane_t const_0 = lane_widen(0);
+  lane_t const_1 = lane_widen(1);
+
+  // where sigmoid is defined as sigmoid(o) := (1.0/(1.0+exp(-o)))
+  for(int i=0; i<len; i+=_LANE_SIZE)
+    lane_store(dst+i,
+      lane_div(const_1,lane_add(const_1,lane_exp(lane_sub(const_0,lane_load(lhs+i))))));
+}
+
+ccfunc void derivative_sigmoid(int len, float *dst, float *lhs)
+{
+  lane_t const_0 = lane_widen(0);
+  lane_t const_1 = lane_widen(1);
+
+  for(int i=0; i<len; i+=_LANE_SIZE)
+    lane_store(dst+i,lane_mul(lane_sub(const_1,lane_load(lhs+i)),lane_load(lhs+i)));
+}
+
 // note: you can also think of this as, how many inputs, how many outputs, in that order...
 ccfunc layer_t
-create_layer(int col_len, int row_len)
+create_layer(int col_len, int row_len, nonlinear_t nonlinear)
 { layer_t n;
-  n.wei     = new_row_mat(col_len,row_len);
-  n.act     = vector(row_len);
-  n.bia     = vector(row_len);
-  n.err     = vector(row_len);
+  n.wei       = new_row_mat(col_len,row_len);
+  n.act       = vector(row_len);
+  n.bia       = vector(row_len);
+  n.err       = vector(row_len);
   // todo: this is what I'm using to cache the new set of weights and later interpolate ...
-  n.new_wei = matrix_clone(n.wei);
+  n.new_wei   = matrix_clone(n.wei);
+  n.nonlinear = nonlinear;
 
   vec_rnd(n.wei.min*n.wei.vec_max,n.wei.mem);
   vec_rnd(n.bia.len,n.bia.mem);
   return n;
 }
 
-// context: feeds the layer with input vector 'x',
+// CONTEXT: feeds the layer with input vector 'x',
 // returns the activated output of the layer.
 ccfunc ccinle vector_t
 layer_feed(layer_t *layer, vector_t x)
 {
-  // context: the weight matrix
+  // CONTEXT: the weight matrix
   matrix_t w=layer->wei;
-  // context: the bias vector
+  // CONTEXT: the bias vector
   vector_t b=layer->bia;
-  // context: the activated output of this layer
+  // CONTEXT: the activated output of this layer
   vector_t a=layer->act;
 
-  // context: ensure this layer is valid and can 
+  // CONTEXT: ensure this layer is valid and can 
   // handle input vector 'x'
-  ccassert(x.len==w.col);
+  ccassert(x.len==w.col || cctraceerr("input vector is too big for weight matrix, %i > %i", 
+      x.len,w.col));
   ccassert(b.len==w.row);
   ccassert(a.len==w.row);
 
-  // context: compute the output of this layer, the product of our weight 
+  // CONTEXT: compute the output of this layer, the product of our weight 
   // matrix and the input vector x.
   int i;
   for(i=0;i<w.row;++i)
     vec_dot(x.len,a.mem+i,w.mem+w.vec_max*i,x.mem);
-  // context: add the bias vector to the 'un-activated' output
+
+  // CONTEXT: add the bias vector to the 'un-activated' output
   vec_add(a.len,a.mem,a.mem,b.mem);
 
-  // todo: have a callback here for custom activation functions
-  lane_t n=lane_widen(1);
-  lane_t z=lane_widen(0);
-
-  // context: compute the activated output, we're using sigmoid
-  // where sigmoid is defined as sigmoid(o) := (1.0/(1.0+exp(-o)))
-  for(i=0; i<a.len; i+=_LANE_SIZE)
-    lane_store(a.mem+i,
-      lane_div(n,lane_add(n,lane_exp(lane_sub(z,lane_load(a.mem+i))))));
+  ccassert(layer->nonlinear.function != 0);
+  layer->nonlinear.function(a.len,a.mem,a.mem);
   return a;
 }
 
+// CONTEXT: this functions updates a layer, the layer must have been 
+// reverse-fed beforehand.
 ccfunc ccinle void
 layer_update(layer_t *lay, float alpha)
 {
-  // note: interpolate towards the new set of weights and biases, note how we use
-  // negative alpha... this is because we want to reduce the error, the cost function
-  // tells use how far we are form the ideal result, this is our error...
+  vec_mad(
+    lay->bia.len,
+      lay->bia.mem,
+        lay->bia.mem,
+        lay->err.mem,-alpha);
+  vec_mad( 
+    lay->wei.min*lay->wei.vec_max,// CONTEXT: the stride of the vectors of the matrix (we take into account possibly padding)
+      lay->    wei.mem,// CONTEXT: our destination row
+      lay->    wei.mem,// CONTEXT: our left operand
+      lay->new_wei.mem,// CONTEXT: our right operand
+      -alpha);// CONTEXT: our negative alpha factor
+}
 
-  vector_t b=lay->bia;
-  vec_muladd(b.len,b.mem,b.mem,lay->err.mem,-alpha);
-
-  matrix_t w=lay->wei,wei_new=lay->new_wei;
-  vec_muladd(w.min*w.vec_max,w.mem,w.mem,wei_new.mem,-alpha);
+// CONTEXT: 
+// - This function creates a default neural network with its two primary layers,
+// the output layer is the last layer at index 0 and the input layer is the last layer 
+// in the array.
+// REMARKS:
+// - The number of inputs of each layer determines how many columns its weight matrix
+// will have and the number of outputs how many rows, it also determines the length
+// of the bias vector.
+// - Since we start with just two layers, 'inp' determines how many inputs the input
+// layer will have, 'con' determines how many outputs, 'con' also determines
+// how many inputs the output layer will have and finally 'out' determines how many 
+// outputs the output layer will have, this creates a fully linked neural network.
+ccfunc ccinle void
+network_init(
+  network_t *net,
+    int inp, int con, int out)
+{ 
+  net->count=0;
+  net->layer[net->count++]=create_layer(con,out,nonlinear_kSIGMOID);
+  net->layer[net->count++]=create_layer(con*4,con,nonlinear_kSIGMOID);
+  net->layer[net->count++]=create_layer(inp,con*4,nonlinear_kSIGMOID);
 }
 
 ccfunc ccinle void
-network_init(network_t *net, int inp, int con, int out)
-{ net->lay_i=create_layer(inp,con);
-  net->lay_o=create_layer(con,out);
-}
-
-ccfunc ccinle void
-network_feed(network_t *net, vector_t inp)
+network_feed(network_t *net, vector_t v)
 {
-  layer_feed(& net->lay_o,
-    layer_feed(& net->lay_i, inp));
+  for(int i=0; i<net->count; ++i)
+  {
+    v = layer_feed(&net->layer[net->count-1 - i], v);
+  }
+}
+
+// CONTEXT:
+// - This function implements the so called "back-propagation" algorithm,
+// it is simply put a technique for updating the weights and biases of the network
+// based on the error between the actual output and the desired output.
+// - In the process we must find the partial derivatives of each layer in respect to the
+// output function, since the output function is defined at the output layer, subsequent
+// layers must use an increasingly longer derivative chain however, this process is greatly
+// aided with the rather logical step of simply caching the error term of each layer and 
+// using it to find the partial derivatives of the upcoming.
+// REMARKS:
+// - It is helpful to visualize this process, especially if you're an experienced
+// graphics programmer or a renderer engineer, in which case this sort of math is trivial.
+// - Either way, think of a 2d graph, were you have some sort of curve, like simplex
+// noise, you're somewhere on that curve, and your goal is to find the global minimum (ideally),
+// this is the basic principle.
+//
+//
+// - We define our multi-variable cost function as:
+//  - E := 1/2 * (O[k=0:j] - Y[d:j])^2
+//   - Where [] is the subscript operator
+//   - Where k is the k'th layer
+//   - Where j is the j'th neuron
+//   - Where d is the d'th sample
+//   - Where O is the unactived output of a neuron
+//   - Where E is strictly defined to use the O[k=0,j], the output of the layer.
+//
+//  - To find how much O has affected E we compute:
+//   - E\\O[k:j] := E[d:j]\\A[k:j] * A[k:j]\\O[k:j]
+//    - Where the \\ symbol means derivative or partial derivative, depending on
+//      context.
+//    - The expressions reads as: the change in E with respect to O is
+//      the change in E due to A times the change in A due to O.
+//    - The expressions results in:
+//     - E[d:j]\\O[k:j] := (A[k:j] - Y[k:j]) * sig"(O[k:j])
+//      - Where " is the derivative operator for functions
+//      - This term is aliases as the "error" term, which
+//        we reference as $[k:j].
+//      - A pseudo code version is:
+//        for(j..r[k]):
+//          $[k:j] = (A[k:j] - Y[k:j]) * sig"(O[k:j])
+//       - Where r is the number of neurons the k'th layer has
+//       - The expression reads as:
+//        - For each index j in the range of the neuron count at layer k,
+//          the error at neuron j of layer k is the result of the output O minus the target 
+//          output Y times sigmoid prime of the output at layer k neuron j.
+// ** We keep following the derivation chain, now let's find out how our weights and biases
+// affected `A`.
+//
+// `A[k:j]\\B[k:j] := $[k:j] * 1` (we don't have to do anything for this one)
+//
+// `A[k:j]\\W[k:j,i] := $[k:j] * O[k+1:i]`
+//
+// `for(j..r[k]):`
+// ` for(i..r[k+1]):`
+// `  A[k:j]\\W[k:j,i] = $[k:j] * O[k+1:i]`
+//
+// This reads as, for each index `j` of `r[k]`, the number of nodes in layer `k`,
+// and for each index `i` of `r[k+1]`, the number of nodes in layer `k+1`, the partial
+// the change in `A[k:j]` due to `W[k:j,i]` is the product of `$[k:j]` and `O[k+1:i]`.
+//
+//
+// note: the number of columns or inputs of layer `k` is the same as the number of
+// outputs in layer `k+1`, hence `r[k]` = wei_o.row and `r[k+1]` = wei_o.col ..
+//
+// The rest of the layers:
+//
+//
+//
+// note: for the rest of the layers, where `k` is not `0`, not the output layer.
+//
+//
+// note: here is the cost function again:
+//
+// `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
+//
+// note: we're not at layer `0` anymore, so first, we need to figure out how much
+// did our output affect the output of other neurons, and because one output of ours
+// affects every other neuron in the previous layer this gets a little bit more intricate..
+//
+// E\\A[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
+//
+// for(j..r[k]):
+//   err[k:j]=sum(l..r[k-1]): $[k-1:l] * W[k-1:l:j] * sig"(a[k:j])
+//
+//
+ccfunc ccinle void
+network_error(layer_t k, vector_t x, vector_t y)
+{
+  // note:
+  // E := 1/2 * (O[k=0:j] - Y[d:j])^2
+  // 
+  // E\\O[k:j] := E[d:j]\\A[k:j] * A[k:j]\\O[k:j]
+  //
+  // note: store the second operand term
+  k.nonlinear.derivative(k.err.len,k.err.mem,k.act.mem);
+  // note: now compute the full expression taking into account the second
+  // operand term is already stored
+  for(int i=0; i<k.err.len; i+=_LANE_SIZE)
+    lane_store(k.err.mem+i,
+      lane_mul(lane_sub(lane_load(k.act.mem+i),lane_load(y.mem+i)),
+        lane_load(k.err.mem+i)));
+  
+  for(int row=0;row<k.wei.row;++row)
+    for(int col=0;col<k.wei.col;++col)
+      k.new_wei.mem[k.new_wei.vec_max*row+col]=k.err.mem[row]*x.mem[col];
 }
 
 ccfunc ccinle void
-network_reverse_feed(network_t * network, vector_t inp_v, vector_t tar_v)
+network_reverse_feed(network_t *network, vector_t inp_v, vector_t tar_v)
 {
-  layer_t
-    lay_o=network->lay_o,
-    lay_i=network->lay_i;
-  vector_t
-    act_o=lay_o.act,
-    err_o=lay_o.err;
-  vector_t
-    act_i=lay_i.act,
-    err_i=lay_i.err;
-  matrix_t
-    wei_o     = lay_o.wei,
-    wei_i     = lay_i.wei,
-    new_wei_o = lay_o.new_wei,
-    new_wei_i = lay_i.new_wei;
+  network_feed(network,inp_v);
 
-  ccassert(inp_v.len==wei_i.col);
+  layer_t *layer=network->layer;
 
-  int row,col,i;
-  float acc;
+  int k=0;
 
-  lane_t n=lane_widen(1);
-  lane_t z=lane_widen(0);
+  network_error(layer[k],layer[k+1].act,tar_v);
 
-  //
-  // ** Here's our cost function:
-  //
-  // `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
-  //
-  // ** Note that the cost function is only defined for the outputs of neurons
-  // at layer `0`, the output layer.
-  //
-  // `E\\A[k:j] := E[d:j]\\O[k:j] * O[k:j]\\A[k:j]`
-  //
-  // ** Since `E` is a function of `O` and not `A`, we have to first find how much
-  // did `O` affect `E`, then find out how much did `A` affect `O`, and the result
-  // is how much did `A` affect `E`.
-  //
-  // ** We get this:
-  //
-  // `E[d:j]\\A[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])`
-  //
-  // ** And we call it the error, we use '$' to denote it.
-  //
-  // `$[k:j] := (O[k:j] - Y[k:j]) * sig"(A[k:j])`
-  //
-  // `for(j..r[k]):
-  //    $[k:j] = (O[k:j] - Y[k:j]) * sig"(A[k:j])`
-  //
-  for(i=0; i<err_o.len; i+=_LANE_SIZE)
-  { lane_t a=lane_load(act_o.mem+i);
-    lane_t y=lane_load(tar_v.mem+i);
-    lane_store(err_o.mem+i,lane_mul(lane_sub(a,y),lane_mul(lane_sub(n,a),a)));
-  }
-  // ** We keep following the derivation chain, now let's find out how our weights and biases
-  // affected `A`.
-  //
-  // `A[k:j]\\B[k:j] := $[k:j] * 1` (we don't have to do anything for this one)
-  //
-  // `A[k:j]\\W[k:j,i] := $[k:j] * O[k+1:i]`
-  //
-  // `for(j..r[k]):`
-  // ` for(i..r[k+1]):`
-  // `  A[k:j]\\W[k:j,i] = $[k:j] * O[k+1:i]`
-  //
-  // This reads as, for each index `j` of `r[k]`, the number of nodes in layer `k`,
-  // and for each index `i` of `r[k+1]`, the number of nodes in layer `k+1`, the partial
-  // the change in `A[k:j]` due to `W[k:j,i]` is the product of `$[k:j]` and `O[k+1:i]`.
-  //
-  ccassert(wei_o.col==wei_i.row);
-  //
-  // note: the number of columns or inputs of layer `k` is the same as the number of
-  // outputs in layer `k+1`, hence `r[k]` = wei_o.row and `r[k+1]` = wei_o.col ..
-  //
-  for(row=0;row<wei_o.row;++row)
-    for(col=0;col<wei_o.col;++col)
-      new_wei_o.mem[row*new_wei_o.vec_max+col]=err_o.mem[row]*act_i.mem[col];
-  //
-  //
-  // note: for the rest of the layers, where `k` is not `0`, not the output layer.
-  //
-  //
-  // note: here is the cost function again:
-  //
-  // `E := 1/2 * pow<2>(O[0:j] - Y[d:j])`
-  //
-  // note: we're not at layer `0` anymore, so first, we need to figure out how much
-  // did our output affect the output of other neurons, and because one output of ours
-  // affects every other neuron in the previous layer this gets a little bit more intricate..
-  //
-  // E\\A[k:j] := sum(l..r[k-1], $[k-1:l] * A[k-1:l]\\A[k:l])
-  //
-  // for(j..r[k]):
-  //   err[k:j]=sum(l..r[k-1]): $[k-1:l] * W[k-1:l:j] * sig"(a[k:j])
-  //
-  //
-  ccassert(wei_i.row==wei_o.col);
+  for( k = 1; k < network->count-1; k += 1 )
+  {
+    layer[k].nonlinear.derivative(
+      layer[k].err.len,layer[k].err.mem,layer[k].act.mem);
 
-  // note: calculate sig"(a[k:j]) lane wide
-  for(i=0; i<wei_i.row; i+=_LANE_SIZE)
-  { lane_t a=lane_load(act_i.mem+i);
-    lane_store(err_i.mem+i,lane_mul(lane_sub(n,a),a));
+    // todo: I can't fathom a transpose being faster here, we have to test it out..
+    for(int row=0;row<layer[k+0].wei.row;++row)
+    { float acc=0;
+      for(int col=0;col<layer[k-1].wei.row;++col)
+        acc+=layer[k-1].err.mem[col]*
+             layer[k-1].wei.mem[col* layer[k-1].wei.vec_max+row];
+      layer[k].err.mem[row]*=acc;
+    }
+
+    // todo: speed!
+    for(int row=0;row<layer[k].wei.row;++row)
+      for(int col=0;col<layer[k].wei.col;++col)
+        layer[k].new_wei.mem[row*layer[k].new_wei.vec_max+col]=
+          layer[k].err.mem[row]*layer[k+1].act.mem[col];
   }
 
+  {
+    layer[k].nonlinear.derivative(
+      layer[k].err.len,layer[k].err.mem,layer[k].act.mem);
 
-  // todo: I can't fathom a transpose being faster here, we have to test it out..
-  for(row=0;row<wei_i.row;++row)
-  { acc=0;
-    for(col=0;col<wei_o.row;++col)
-      acc+=err_o.mem[col]*wei_o.mem[col*wei_o.vec_max+row];
-    err_i.mem[row]*=acc;
+    // todo: I can't fathom a transpose being faster here, we have to test it out..
+    for(int row=0;row<layer[k+0].wei.row;++row)
+    { float acc=0;
+      for(int col=0;col<layer[k-1].wei.row;++col)
+        acc+=layer[k-1].err.mem[col]*
+             layer[k-1].wei.mem[col* layer[k-1].wei.vec_max+row];
+      layer[k].err.mem[row]*=acc;
+    }
+
+    // todo: speed!
+    for(int row=0;row<layer[k].wei.row;++row)
+      for(int col=0;col<layer[k].wei.col;++col)
+        layer[k].new_wei.mem[row*layer[k].new_wei.vec_max+col]=
+          layer[k].err.mem[row]*inp_v.mem[col];
   }
-
-  // todo: speed!
-  for(row=0;row<wei_i.row;++row)
-    for(col=0;col<wei_i.col;++col)
-      new_wei_i.mem[row*new_wei_i.vec_max+col]=err_i.mem[row]*inp_v.mem[col];
 }
 
 ccfunc ccinle void
-network_train(network_t *network, vector_t i, vector_t t)
+network_train(network_t *network, vector_t y, vector_t x)
 {
-  network_feed(network,i);
-  network_reverse_feed(network,i,t);
+  network_reverse_feed(network,y,x);
 
-  // todo!: actually update all the layers..
-  layer_update(&network->lay_i,.1f);
-  layer_update(&network->lay_o,.1f);
+  for(int i=0; i<network->count; ++i)
+  {
+    layer_update(&network->layer[i],0.45f);
+  }
 }
 
 ccfunc int
 network_prediction(network_t *net)
 { float prd_val=-1;
   int   prd_idx=-1;
-  for(int i = 0; i < net->lay_o.act.len; ++ i)
-  { if(net->lay_o.act.mem[i] > prd_val)
-    { prd_val = net->lay_o.act.mem[i];
+  for(int i = 0; i < net->layer[0].act.len; ++ i)
+  { if(net->layer[0].act.mem[i] > prd_val)
+    { prd_val = net->layer[0].act.mem[i];
       prd_idx = i;
     }
   }

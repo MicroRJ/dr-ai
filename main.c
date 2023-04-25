@@ -8,11 +8,11 @@
 // Unzip the files and put the files under the data directory.
 
 // -- Note: load the sample files and train the network up to a certain threshold...
-int main(int c, char **s)
+int main(int _, char **__)
 {
 ccinit();
 ccdbenter("main");
-	ccdebuglog("program is currently running with debug features on");
+ccdebuglog("program is currently running with debug features on");
   network_t network;
   load_trained_network(&network);
 ccdbleave("main");
