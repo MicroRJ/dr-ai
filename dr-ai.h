@@ -661,14 +661,29 @@ network_feed(network_t *net, vector_t v)
 //   err[k:j]=sum(l..r[k-1]): $[k-1:l] * W[k-1:l:j] * sig"(a[k:j])
 //
 //
+
+// CONTEXT: this function computes the error term
+// at the output layer.
 ccfunc ccinle void
 network_error(layer_t k, vector_t x, vector_t y)
 {
-  // note:
-  // E := 1/2 * (O[k=0:j] - Y[d:j])^2
-  // 
-  // E\\O[k:j] := E[d:j]\\A[k:j] * A[k:j]\\O[k:j]
-  //
+  /*
+  **  The loss or cost function is defined as:
+  **
+  **  E := 1/2 * (O[k=0:j] - Y[d:j])^2
+  **
+  **  - The function of a neuron is defined as:
+  **
+  **  A) O[k:j] := sum(W[k:j] * O[k+1:j])
+  **  
+  **  We want to compute the following expressions:
+  **
+  **  A) E\\O[k:j] := E[d:j]\\A[k:j] * A[k:j]\\O[k:j] = (A[k:j] - Y[k:j]) * sig"(O[k:j])
+  **
+  **     - The change in E with respect to O of k and j
+  **     is the change in E due to A times the change in
+  **     A due to O, this is as per the chain rule.
+  */
   // note: store the second operand term
   k.nonlinear.derivative(k.err.len,k.err.mem,k.act.mem);
   // note: now compute the full expression taking into account the second
@@ -677,7 +692,8 @@ network_error(layer_t k, vector_t x, vector_t y)
     lane_store(k.err.mem+i,
       lane_mul(lane_sub(lane_load(k.act.mem+i),lane_load(y.mem+i)),
         lane_load(k.err.mem+i)));
-  
+  // note:
+  // 
   for(int row=0;row<k.wei.row;++row)
     for(int col=0;col<k.wei.col;++col)
       k.new_wei.mem[k.new_wei.vec_max*row+col]=k.err.mem[row]*x.mem[col];

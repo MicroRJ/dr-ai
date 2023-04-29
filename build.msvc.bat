@@ -5,4 +5,4 @@
 @SET myLinkerOptions=/INCREMENTAL:NO
 @CALL taskkill /f /im main.exe
 @REM @CALL cl %myCompilerOptions% -D_LANE_256 %myDebugOptions% /TP main.c /link /SUBSYSTEM:CONSOLE %myLinkerOptions%
-@CALL cl %myCompilerOptions% -D_LANE_256 %myReleaseOptions% main.c /link /SUBSYSTEM:CONSOLE %myLinkerOptions%
+@CALL cl %myCompilerOptions% -D_LANE_256 %myReleaseOptions% /I"C:\VulkanSDK\1.3.243.0\Include" main.c /link /SUBSYSTEM:CONSOLE %myLinkerOptions%
